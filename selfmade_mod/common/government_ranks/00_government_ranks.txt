@@ -1,0 +1,35 @@
+1 = {
+	advisor_pool = 1
+}
+
+2 = {
+	diplomats = 1
+	governing_capacity = 50
+	global_autonomy = -0.025
+	advisor_pool = 2
+	yearly_corruption = -0.1
+	unjustified_demands = -0.1
+	diplomatic_upkeep = 1
+	diplomatic_reputation = 0.5
+	development_cost_modifier = -0.05
+	num_accepted_cultures = 1
+	liberty_desire_from_subject_development = -0.1
+}
+
+3 = {
+	governing_capacity = 100
+	global_autonomy = -0.05
+	max_absolutism = 5
+	free_leader_pool = 1
+	diplomats = 1
+	advisor_pool = 3
+	yearly_corruption = -0.2
+	unjustified_demands = -0.2
+	diplomatic_upkeep = 2
+	diplomatic_reputation = 1
+	development_cost_modifier = -0.1
+	num_accepted_cultures = 2
+	liberty_desire_from_subject_development = -0.2
+}
+
+

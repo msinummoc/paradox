@@ -1,0 +1,59 @@
+
+
+expand_infrastructure_1 = {
+	picture = "expand_administration_cost"
+
+	allowed_num_of_buildings = 1
+	allowed_num_of_manufactories = 1
+	local_development_cost = -0.2
+	local_development_cost_modifier = -0.125
+	local_build_cost = -0.05
+	local_build_time = -0.1
+	province_trade_power_modifier = 0.2
+	trade_value_modifier = 0.1
+	local_manpower_modifier = 0.1
+	local_governing_cost = -0.03
+	local_friendly_movement_speed = 0.15
+	local_hostile_movement_speed = 0.15
+	merchants = 0.03
+	local_great_project_upgrade_cost = -0.05
+	min_local_autonomy = -10
+}
+expand_infrastructure_2 = {
+	picture = "expand_administration_cost"
+
+	allowed_num_of_buildings = 2
+	allowed_num_of_manufactories = 2
+	local_development_cost = -0.4
+	local_development_cost_modifier = -0.25
+	local_build_cost = -0.1
+	local_build_time = -0.2
+	province_trade_power_modifier = 0.4
+	trade_value_modifier = 0.2
+	local_manpower_modifier = 0.2
+	local_governing_cost = -0.06
+	local_friendly_movement_speed = 0.3
+	local_hostile_movement_speed = 0.3
+	merchants = 0.06
+	local_great_project_upgrade_cost = -0.1
+	min_local_autonomy = -20
+}
+expand_infrastructure_3 = {
+	picture = "expand_administration_cost"
+	
+	allowed_num_of_buildings = 3
+	allowed_num_of_manufactories = 3
+	local_development_cost = -0.6
+	local_development_cost_modifier = -0.375
+	local_build_cost = -0.15
+	local_build_time = -0.3
+	province_trade_power_modifier = 0.6
+	trade_value_modifier = 0.3
+	local_manpower_modifier = 0.3
+	local_governing_cost = -0.09
+	local_friendly_movement_speed = 0.45
+	local_hostile_movement_speed = 0.45
+	merchants = 0.09
+	local_great_project_upgrade_cost = -0.15
+	min_local_autonomy = -30
+}

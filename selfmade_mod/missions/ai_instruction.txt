@@ -1,0 +1,395 @@
+ai_inst_rus = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		ai = yes
+		OR = {tag = RUS tag = MOS}
+	}
+	has_country_shield = yes
+	ai_inst_rus_1 = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 30
+
+		provinces_to_highlight = {
+			region = russia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				total_development = 500
+				russia_region = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+	ai_inst_rus_2 = {
+		icon = mission_noble_council
+		required_missions = { ai_inst_rus_1 }
+		position = 31
+
+		provinces_to_highlight = {
+			OR = {
+				region = russia_region
+				region = ruthenia_region
+				region = crimea_region
+				region = ural_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			russia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ruthenia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ural_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+}
+
+ai_inst_tur = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		ai = yes
+		tag = TUR
+	}
+	has_country_shield = yes
+	ai_inst_tur_1 = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 30
+
+		provinces_to_highlight = {
+			OR = {
+				region = balkan_region
+				region = anatolia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			balkan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500	#Mission itself is rather ignorable, but the next one should be important for AI Hungary
+		}
+	}
+	ai_inst_tur_2 = {
+		icon = mission_noble_council
+		required_missions = { ai_inst_tur_1 }
+		position = 31
+
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			total_development = 1750
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	ai_inst_tur_3 = {
+		icon = mission_noble_council
+		required_missions = { ai_inst_tur_2 }
+		position = 32
+
+		provinces_to_highlight = {
+			OR = {
+				region = maghreb_region
+				region = carpathia_region
+				area = austria_proper_area
+				area = inner_austria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			maghreb_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			carpathia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			austria_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			inner_austria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	ai_inst_tur_4 = {
+		icon = mission_noble_council
+		required_missions = { ai_inst_tur_3 }
+		position = 33
+
+		provinces_to_highlight = {
+			OR = {
+				region = iberia_region
+				region = italy_region
+				region = persia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iberia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500	#Mission itself is rather ignorable, but the next one should be important for AI Hungary
+		}
+	}
+	
+}
+
+ai_inst_chn = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		ai = yes
+		OR = {
+			culture_group = east_asian
+			is_emperor_of_china = yes
+		}
+	}
+	has_country_shield = yes
+	ai_inst_chn_1 = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 30
+
+		provinces_to_highlight = {
+			superregion = china_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			china_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+}
+
+ai_inst_mug = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		ai = yes
+		tag = MUG
+	}
+	has_country_shield = yes
+	ai_inst_mug_1 = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 30
+
+		provinces_to_highlight = {
+			OR = {
+				region = hindusthan_region
+				region = west_india_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				total_development = 1000
+				hindusthan_region = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				west_india_region = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	ai_inst_mug_2 = {
+		icon = mission_noble_council
+		required_missions = { ai_inst_mug_1 }
+		position = 30
+
+		provinces_to_highlight = {
+			superregion = india_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			india_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+}
+
+ai_inst_fra = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		ai = yes
+		tag = FRA
+	}
+	has_country_shield = yes
+	ai_inst_fra_1 = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 30
+
+		provinces_to_highlight = {
+			region = france_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				total_development = 1000
+				france_region = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	ai_inst_fra_2 = {
+		icon = mission_noble_council
+		required_missions = { ai_inst_fra_1 }
+		position = 30
+
+		provinces_to_highlight = {
+			region = low_countries_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			low_countries_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+			
+		}
+		
+		effect = {
+			add_prestige = 1
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+}

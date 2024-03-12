@@ -1,0 +1,301 @@
+celestial_empire = {
+	icon = "celestial_empire"
+	allow_normal_conversion = no
+	potential = {
+		if = {
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
+			is_emperor_of_china = yes
+		}
+		else = {
+			OR = {
+				has_reform = celestial_empire
+				AND = {
+					culture_group = east_asian
+					num_of_cities = 50
+				}
+			}
+		}
+		NOT = { has_global_flag = empire_of_china_dismantled }
+	}
+	legacy_equivalent = celestial_empire_legacy
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = yes
+	nation_designer_trigger = {
+		culture_group = east_asian
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	factions = {
+		temples
+		enuchs
+		bureaucrats
+	}
+
+	fixed_rank = 3
+	start_territory_to_estates = 0.9
+
+	modifiers = {
+		prestige = 0.5
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
+		burghers_influence_modifier = -0.1
+		enuchs_influence = -0.1
+		governing_capacity = 600 #modified
+		yearly_corruption = -0.2
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		has_unify_china_cb = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {}
+	}
+}
+
+chinese_warlord = {
+	icon = "samurai"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animism
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+		if = {
+			limit = { is_subject = yes }
+			overlord = { has_reform = celestial_empire }
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animism
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+		if = {
+			limit = { is_subject = yes }
+			overlord = { has_reform = celestial_empire }
+		}
+	}
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
+		technology_group = chinese
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animism
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	fixed_rank = 2
+
+	modifiers = {
+		manpower_recovery_speed = 0.5
+		governing_capacity = 500
+		liberty_desire = 50
+		diplomatic_upkeep = -4  ###for quick uniting
+	}
+	
+	ai = {
+		factor = 1000
+	}
+
+	custom_attributes = {
+		has_unify_china_cb = yes
+	}
+}
+
+political_absolutism_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		administrative_efficiency = 0.025
+		max_absolutism_effect = 0.15
+	}
+	ai = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+
+polish_great_sejm = {
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	potential = {
+		have_had_reform = polish_great_sejm
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	nation_designer_trigger = {
+		has_dlc = "Lions of the North"
+	}
+	legacy_equivalent = feudal_monarchy
+	modifiers = {
+		nobles_influence_modifier = 0.05
+		max_absolutism = -20
+		global_unrest = -1 
+		reform_progress_growth = -0.25
+		yearly_corruption = 0.25
+		global_spy_defence = -0.8
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+
+polish_elective_monarchy = {
+	icon = "elective_monarchy"
+	allow_normal_conversion = no 
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = polish_elective_monarchy
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = polish_elective_monarchy
+			}
+		}
+	}
+	legacy_equivalent = elective_monarchy_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	nation_designer_trigger = {
+		has_dlc = "Lions of the North"
+	}
+	modifiers = {
+		global_unrest = -1
+		max_absolutism = -30
+		nobles_influence_modifier = 0.05
+		reform_progress_growth = -0.25
+		yearly_corruption = 0.25
+		global_spy_defence = -0.8
+	}
+
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
+	}
+
+	conditional = {
+		allow = { NOT = { has_dlc = "Res Publica" } }
+		custom_attributes = {
+			locked_government_type = yes
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}

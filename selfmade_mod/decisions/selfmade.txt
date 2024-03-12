@@ -1,0 +1,92 @@
+country_decisions = {
+	restore_chinese_empire = {
+        major = yes
+		potential = {
+			#government = monarchy
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				value = 50
+			}
+			NOT = {has_reform = celestial_empire}
+			OR = {
+				culture_group = east_asian
+				religion = confucianism
+				religion = vajrayana
+				religion = buddhism
+				religion = mahayana
+				religion = shinto
+				religion = animism
+			}
+		}
+		allow = {
+			NOT = {has_country_modifier = lost_mandate_of_heaven}
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				value = 106
+			}
+			OR = {
+				culture_group = east_asian
+				religion = confucianism
+				religion = vajrayana
+				religion = buddhism
+				religion = mahayana
+				religion = shinto
+				religion = animism
+				tag = YUA
+				tag = MSA
+				tag = MGE
+				tag = MCH
+				tag = QNG
+				tag = TIB
+				tag = MSA
+				has_reform = chinese_warlord 
+			}
+			has_any_disaster = no
+			OR = {
+				owns= 1816
+				owns= 1821
+				owns= 667
+			}
+		}
+		effect = {
+			hidden_effect = { dismantle_empire_of_china = yes }
+			dismantle_empire_of_china = no
+			clr_global_flag = empire_of_china_dismantled
+			change_technology_group = chinese
+			change_unit_type = chinese
+			set_country_flag = chinese
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government = monarchy
+				set_emperor_of_china = ROOT
+				add_government_reform = celestial_empire
+				set_mandate = 60
+				set_meritocracy = 100
+			}
+			add_prestige = 50
+			add_stability = 1
+		}
+		ai_weight = {
+			factor = 500 #Default
+		}
+	}
+	
+	annex_all_decision = {
+		major = yes
+		potential = {
+			always = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			every_province = {
+				cede_province = ROOT
+				add_core = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
+}

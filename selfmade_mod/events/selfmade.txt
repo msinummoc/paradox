@@ -1,0 +1,69 @@
+namespace = selfmade
+
+
+
+
+
+country_event = {
+	id = selfmade.0
+	title = selfmade.0.t
+	desc = selfmade.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	trigger = { 
+		
+		ai = yes
+		corruption = 100
+	}
+	immediate = {
+		release_all_possible_countries = yes
+		every_subject_country = {
+			ROOT = {
+				free_vassal = PREV
+			}
+		}
+		add_corruption = -100
+    }
+mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		
+	}
+}
+
+country_event = {
+	id = selfmade.1
+	title = selfmade.1.t
+	desc = selfmade.2.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	trigger = { 
+		
+		ai = yes
+		is_emperor_of_china = yes
+		NOT = { imperial_mandate = 1 }
+		corruption = 25
+	}
+mean_time_to_happen = {
+		months = 480
+	}
+	immediate = {
+		release_all_possible_countries = yes
+		every_subject_country = {
+			ROOT = {
+				free_vassal = PREV
+			}
+		}
+		#add_corruption = -100
+    }
+	
+	option = {
+		
+	}
+}
+
+
+
+
