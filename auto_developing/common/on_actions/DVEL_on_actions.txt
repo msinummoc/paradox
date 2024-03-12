@@ -1,0 +1,135 @@
+#When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
+
+# # country
+# on_colonial_liberation = {
+# 	remove_country_modifier = DVEL_colonial_growth_limiter
+# }
+
+# # country
+# on_colonial_reintegration = {
+# 	if = {
+# 		limit = {
+# 			is_subject = yes
+# 			NOT = { is_colonial_nation = yes }
+# 			NOT = { is_overseas_subject = yes }
+# 		}
+# 		add_country_modifier = { name = DVEL_subject_growth_limiter duration = -1 }
+# 		remove_country_modifier = DVEL_colonial_growth_limiter
+# 	} else_if = {
+# 		limit = {
+# 			is_subject = yes
+# 		}
+# 		remove_country_modifier = DVEL_subject_growth_limiter
+# 		add_country_modifier = { name = DVEL_colonial_growth_limiter duration = -1 }
+# 	} else = {
+# 		remove_country_modifier = DVEL_subject_growth_limiter
+# 		remove_country_modifier = DVEL_colonial_growth_limiter
+# 	}
+# }
+
+on_monthly_pulse = {
+	events = {
+		DVEL_events.200
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		DVEL_events.100
+	}
+}
+
+on_five_year_pulse_3 = {
+	events = {
+		DVEL_events.201
+	}
+}
+
+# province, general conversion through effects
+on_province_culture_changed = {
+	# 	on_province_culture_converted_estate_privilges_effect = yes
+	# 	judaism_on_province_culture_converted_effect = yes
+	# 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
+	# 	on_province_culture_change_effect = yes
+	add_province_modifier = {
+		name = DVEL_recently_converted
+		duration = 1800
+	}
+}
+
+# ROOT = Overlord, FROM = Minor
+on_dependency_gained = {
+	every_country = {
+		if = {
+			limit = {
+				is_subject = yes
+				NOT = { has_country_modifier = DVEL_subject_growth_limiter }
+				NOT = {
+					OR = {
+						is_colonial_nation = yes
+						is_overseas_subject = yes
+					}
+				}
+			}
+			add_country_modifier = {
+				name = DVEL_subject_growth_limiter
+				duration = -1
+			}
+			remove_country_modifier = DVEL_colonial_growth_limiter
+		} else_if = {
+			limit = {
+				is_subject = yes
+				NOT = { has_country_modifier = DVEL_colonial_growth_limiter }
+				OR = {
+					is_colonial_nation = yes
+					is_overseas_subject = yes
+				}
+			}
+			remove_country_modifier = DVEL_subject_growth_limiter
+			add_country_modifier = {
+				name = DVEL_colonial_growth_limiter
+				duration = -1
+			}
+		} else_if = {
+			limit = {
+				is_subject = no
+				OR = {
+					has_country_modifier = DVEL_subject_growth_limiter
+					has_country_modifier = DVEL_colonial_growth_limiter
+				}
+			}
+			remove_country_modifier = DVEL_subject_growth_limiter
+			remove_country_modifier = DVEL_colonial_growth_limiter
+		}
+	}
+}
+
+# # ROOT = Overlord, FROM = Minor
+# on_dependency_lost = {
+# 	FROM = {
+# 		if = {
+# 			limit = {
+# 				NOT = { is_colonial_nation = yes }
+# 				NOT = { is_overseas_subject = yes }
+# 			}
+# 			add_country_modifier = { name = DVEL_subject_growth_limiter duration = -1 }
+# 			remove_country_modifier = DVEL_colonial_growth_limiter
+# 		} else = {
+# 			remove_country_modifier = DVEL_subject_growth_limiter
+# 			add_country_modifier = { name = DVEL_colonial_growth_limiter duration = -1 }
+# 		}
+# 	}
+# }
+
+on_scorch_earth = { #ROOT - scorching country, FROM - scorched province
+	FROM = {
+		add_devastation = 10
+		add_permanent_province_modifier = {
+			name = DVEL_scorched
+			duration = 3600
+			hidden = yes
+		}
+		# owner = {
+		# }
+	}
+}

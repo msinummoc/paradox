@@ -1,0 +1,137 @@
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = { 105 226 233 }
+historical_idea_groups = {
+  administrative_ideas
+  religious_ideas
+  trade_ideas
+  quantity_ideas
+  offensive_ideas
+  expansion_ideas
+  economic_ideas
+  defensive_ideas
+}
+historical_units = {
+  steppe_riders
+  steppe_lancers
+  steppe_mounted_raiders
+  steppe_cavalry
+  steppe_uhlans
+  steppe_raiders
+  steppe_footmen
+  steppe_musketeers
+  steppe_infantry
+  steppe_rifles
+  reformed_steppe_rifles
+}
+monarch_names = {
+  "‘şV)nKQ #0" = 10 	# Atvuk #0
+  "‘	T™„ #0" = 10 	# Azmun #0
+  "‘	T&O #0" = 10 	# Azrun #0
+  "ßR&O #0" = 10 	# Chalun #0
+  "ßRÑ‘ #0" = 10 	# Changin #0
+  "Zi³u #0" = 10 	# Chuner #0
+  "?–	T¾WKQ #0" = 10 	# Ezdanok #0
+  "Oyrf #0" = 10 	# Itkun #0
+  "U(„GYKQ #0" = 10 	# Kaskazik #0
+  "UU #0" = 10 	# Kekhan #0
+  "U—g #0" = 10 	# Kelin #0
+  "dWpQ #0" = 10 	# Kenran #0
+  "ÈT—g #0" = 10 	# Khaylin #0
+  "–Ñ‘ #0" = 10 	# Kokin #0
+  "pQÕ` #0" = 10 	# Lants #0
+  "ÒRSr^ #0" = 10 	# Lergan #0
+  "†–nˆ #0" = 10 	# Longun #0
+  "	TÑ‘ #0" = 10 	# Luzgin #0
+  "™„	Tnˆ #0" = 10 	# Memzgun #0
+  "FzÌRdKQ #0" = 10 	# Mufchik #0
+  "±^àV #0" = 10 	# Napuin #0
+  "±ö^nˆ #0" = 10 	# Nyengun #0
+  "±)nÑ‘ #0" = 10 	# Nyunkin #0
+  "‘ßR‰R #0" = 10 	# Ochan #0
+  "kQLRnˆ #0" = 10 	# Palgun #0
+  "ôTSPŸÑ‘ #0" = 10 	# Parkizin #0
+  "ÅV›Rnˆ #0" = 10 	# Pilgun #0
+  "^Ì‘PŸKQ #0" = 10 	# Pulychkh #0
+  "^f #0" = 10 	# Pungat #0
+  "W0t—g #0" = 10 	# Rsholin #0
+  "‚(gfe #0" = 10 	# Smedun #0
+  "TXLNşVÑ‘ #0" = 10 	# Tavtugin #0
+  "şVS)n #0" = 10 	# Tolvin #0
+  "ğl)n #0" = 10 	# Tynvin #0
+  "LNKQ—g #0" = 10 	# Ukrin #0
+  "LNSU #0" = 10 	# Urkayn #0
+  "LNÌ‘ö^ #0" = 10 	# Uryam #0
+  "ÇTfe #0" = 10 	# Vadun #0
+  "Y`*X #0" = 10 	# Vyskan #0
+  "O	TÉbKQ #0" = 10 	# Ykylak #0
+  "YO‰v #0" = 10 	# Yudin #0
+  "Nb&O #0" = 10 	# Zarun #0
+  "?–äSKQ #0" = -10 	# Anguk #0
+  "?–YOKQ #0" = -10 	# Anyuk #0
+  "Å–PŸKQ #0" = -10 	# Yazik #0
+  "?–VyKQ #0" = -10 	# Azuk #0
+  "ßRFzKQ #0" = -10 	# Chamuk #0
+  "ßRÌRÌ‘KQ #0" = -10 	# Chavlik #0
+  "?–ÌR“^KQ #0" = -10 	# Efkuk #0
+  "?–(„LNÉb #0" = -10 	# Esavura #0
+  "?–	TäS #0" = -10 	# Ezguk #0
+  "OåTÌ‘KQ #0" = -10 	# Iglik #0
+  "k+YZiKQ #0" = -10 	# Khivchuk #0
+  ")R¯eúWyr #0" = -10 	# Liskit #0
+  "œÀN“^Éb #0" = -10 	# Lushkura #0
+  "œKQyrKQ #0" = -10 	# Lykhtkk #0
+  "<S+YşVKQ #0" = -10 	# Niftyuk #0
+  "eYk<SKQ #0" = -10 	# Okhnik #0
+  "ôT<SKQ #0" = -10 	# Panko #0
+  "®v÷–KQ #0" = -10 	# Pineyk #0
+  "âl³uÀNKQ #0" = -10 	# Ponashk #0
+  "şO<h¯eKQ #0" = -10 	# Pygsk #0
+  "®v	TKQ #0" = -10 	# Pygzyk #0
+  "nf—gKQ #0" = -10 	# Pylymk #0
+  "TXşVKQ #0" = -10 	# Tatuk #0
+  "ğlFzäSKQ #0" = -10 	# Tymguk #0
+  "LNÎTX #0" = -10 	# Ulita #0
+  "LNFzdW #0" = -10 	# Umkhun #0
+  "Velk #0" = -10
+  "Yurik #0" = -10
+  "Zuyuk #0" = -10
+}
+leader_names = {
+  Garpancha
+  Songolik
+  "yrüfp`" 	# Tymancha
+  "yr“^Sp`" 	# Tykulcha
+  "äS4b·^" 	# Gudeikon
+  Adiul
+  Khadiul
+  "êšN&Op`" 	# Dyaluncha
+  Aksik
+  Kepele
+  Gugdaul
+  "^SäSs|" 	# Burgumi
+  Vavlya
+  "æt&q" 	# Vadyo
+  Vankho
+  "OS9N" 	# Eldan
+  "aS-R¾" 	# Ka-cheda
+  Kilim
+  Agna
+  "0Œ+R¾" 	# Sebeda
+  "(„SĞcKQ" 	# Saltyk
+  Alvali
+  Akhtamak
+}
+ship_names = {
+  Kurkyl
+  Uligery
+  "Abai Geser"
+  "?–ÉbÆY	T·«ƒS9h" 	# Alamzhi Mergen
+  "Aiduurai Mergen"
+  Erensei
+  "Bukhu Khaara"
+  "Abai Geser"
+  Dalkha
+  Khormust
+  "S›RKQ" 	# Erlik
+}

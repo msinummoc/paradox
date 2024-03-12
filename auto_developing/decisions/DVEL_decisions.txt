@@ -1,0 +1,146 @@
+country_decisions = {
+	DVEL_manual_dev_window = {
+		major = yes
+		potential = {
+			has_global_flag = DVEL_no_manual_development_flag
+			ai = no
+			NOT = { has_country_modifier = DVEL_player_development_window }
+		}
+		allow = { }
+		effect = {
+			add_country_modifier = {
+				name = DVEL_player_development_window
+				duration = 30
+			}
+		}
+	}
+	DVEL_global_census = {
+		potential = {
+			has_global_flag = DVEL_debug_mode_flag
+			has_country_flag = DVEL_debug_target_flag
+			ai = no
+		}
+		allow = { }
+		effect = {
+			hidden_effect = {
+				REB = {
+					set_variable = { which = development0 value = 0 }
+					set_variable = { which = development10 value = 0 }
+					set_variable = { which = development20 value = 0 }
+					set_variable = { which = development30 value = 0 }
+					set_variable = { which = development40 value = 0 }
+					set_variable = { which = development50 value = 0 }
+					set_variable = { which = development60 value = 0 }
+					set_variable = { which = development70 value = 0 }
+					set_variable = { which = development80 value = 0 }
+					set_variable = { which = development90 value = 0 }
+					set_variable = { which = development100 value = 0 }
+					set_variable = { which = totalProvinces value = 0 }
+					every_province = {
+						limit = { development = 1 }
+						if = {
+							limit = { development = 100 }
+							PREV = {
+								change_variable = { which = development100 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 90 }
+							PREV = {
+								change_variable = { which = development90 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 80 }
+							PREV = {
+								change_variable = { which = development80 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 70 }
+							PREV = {
+								change_variable = { which = development70 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 60 }
+							PREV = {
+								change_variable = { which = development60 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 50 }
+							PREV = {
+								change_variable = { which = development50 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 40 }
+							PREV = {
+								change_variable = { which = development40 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 30 }
+							PREV = {
+								change_variable = { which = development30 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 20 }
+							PREV = {
+								change_variable = { which = development20 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else_if = {
+							limit = { development = 10 }
+							PREV = {
+								change_variable = { which = development10 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						} else = {
+							PREV = {
+								change_variable = { which = development0 value = 1 }
+								change_variable = { which = totalProvinces value = 1 }
+							}
+						}
+					}
+					set_variable = { which = development0Percentage which = development0 }
+					set_variable = { which = development10Percentage which = development10 }
+					set_variable = { which = development20Percentage which = development20 }
+					set_variable = { which = development30Percentage which = development30 }
+					set_variable = { which = development40Percentage which = development40 }
+					set_variable = { which = development50Percentage which = development50 }
+					set_variable = { which = development60Percentage which = development60 }
+					set_variable = { which = development70Percentage which = development70 }
+					set_variable = { which = development80Percentage which = development80 }
+					set_variable = { which = development90Percentage which = development90 }
+					set_variable = { which = development100Percentage which = development100 }
+					divide_variable = { which = development0Percentage which = totalProvinces }
+					divide_variable = { which = development10Percentage which = totalProvinces }
+					divide_variable = { which = development20Percentage which = totalProvinces }
+					divide_variable = { which = development30Percentage which = totalProvinces }
+					divide_variable = { which = development40Percentage which = totalProvinces }
+					divide_variable = { which = development50Percentage which = totalProvinces }
+					divide_variable = { which = development60Percentage which = totalProvinces }
+					divide_variable = { which = development70Percentage which = totalProvinces }
+					divide_variable = { which = development80Percentage which = totalProvinces }
+					divide_variable = { which = development90Percentage which = totalProvinces }
+					divide_variable = { which = development100Percentage which = totalProvinces }
+					multiply_variable = { which = development0Percentage value = 100 }
+					multiply_variable = { which = development10Percentage value = 100 }
+					multiply_variable = { which = development20Percentage value = 100 }
+					multiply_variable = { which = development30Percentage value = 100 }
+					multiply_variable = { which = development40Percentage value = 100 }
+					multiply_variable = { which = development50Percentage value = 100 }
+					multiply_variable = { which = development60Percentage value = 100 }
+					multiply_variable = { which = development70Percentage value = 100 }
+					multiply_variable = { which = development80Percentage value = 100 }
+					multiply_variable = { which = development90Percentage value = 100 }
+					multiply_variable = { which = development100Percentage value = 100 }
+				}
+			}
+			country_event = { id = DVEL_events.102 }
+		}
+	}
+}

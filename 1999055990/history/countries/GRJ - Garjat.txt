@@ -1,0 +1,338 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+technology_group = indian
+religion = hinduism
+primary_culture = garjati
+capital = 2049 	#  Khurda
+# Bhanj rulers of nearby Orissan feudatories
+1444.1.1 = {
+  monarch = {
+    name = "?ñÍè" 	# Adi
+    dynasty = "û^	T" 	# Bhanj
+    ADM = 2
+    DIP = 3
+    MIL = 2
+  }
+}
+1444.1.1 = {
+  heir = {
+    name = "QhTXO" 	# Santai
+    monarch_name = "QhTXO" 	# Santai
+    dynasty = "û^	T" 	# Bhanj
+    birth_date = 1444.1.1
+    death_Date = 1520.1.1
+    claim = 95
+    ADM = 3
+    DIP = 3
+    MIL = 2
+  }
+}
+1480.1.1 = {
+  monarch = {
+    name = "	NS" 	# Santai
+    dynasty = "û^	T" 	# Bhanj
+    ADM = 3
+    DIP = 3
+    MIL = 2
+  }
+}
+1480.1.1 = {
+  heir = {
+    name = "ﬂRz`" 	# Chhakai
+    monarch_name = "ﬂRz`" 	# Chhakai
+    dynasty = "û^	T" 	# Bhanj
+    birth_date = 1480.1.1
+    death_Date = 1560.1.1
+    claim = 95
+    ADM = 1
+    DIP = 0
+    MIL = 1
+  }
+}
+1520.1.1 = {
+  monarch = {
+    name = "ÂgV" 	# Chhakai
+    dynasty = "û^	T" 	# Bhanj
+    ADM = 1
+    DIP = 0
+    MIL = 1
+  }
+}
+1520.1.1 = {
+  heir = {
+    name = "…bKQ^¸f" 	# Lakshman
+    monarch_name = "…bKQ^¸f" 	# Lakshman
+    dynasty = "û^	T" 	# Bhanj
+    birth_date = 1520.1.1
+    death_Date = 1578.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 0
+  }
+}
+1560.1.1 = {
+  monarch = {
+    name = "LR≤R¸f" 	# Lakshman
+    dynasty = "û^	T" 	# Bhanj
+    ADM = 1
+    DIP = 2
+    MIL = 0
+  }
+}
+# Bhuyavamshas of Khurda
+1578.1.1 = {
+  monarch = {
+    name = "…blö±î∑V…b" 	# Ramachendra
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 1
+    DIP = 0
+    MIL = 0
+  }
+}
+1578.1.1 = {
+  heir = {
+    name = "eàbSZYËx" 	# Purusottam
+    monarch_name = "eàbSZYËx" 	# Purusottam
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1578.1.1
+    death_Date = 1628.1.1
+    claim = 95
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1607.1.1 = {
+  monarch = {
+    name = "eàbSZYËx" 	# Purusottam
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1607.1.1 = {
+  heir = {
+    name = "≥u…bâ∆Y»T" 	# Narasimha
+    monarch_name = "≥u…bâ∆Y»T" 	# Narasimha
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1607.1.1
+    death_Date = 1653.1.1
+    claim = 95
+    ADM = 2
+    DIP = 0
+    MIL = 3
+  }
+}
+1628.1.1 = {
+  monarch = {
+    name = "±êWÁP√ã" 	# Narasimha
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 2
+    DIP = 0
+    MIL = 3
+  }
+}
+1628.1.1 = {
+  heir = {
+    name = "ÙT…bÙT∑V…b" 	# Balabhadra
+    monarch_name = "ÙT…bÙT∑V…b" 	# Balabhadra
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1628.1.1
+    death_Date = 1662.1.1
+    claim = 95
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1654.1.1 = {
+  monarch = {
+    name = "FZWFZæè" 	# Balabhadra
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1654.1.1 = {
+  heir = {
+    name = "FzTRæè" 	# Mukunda
+    monarch_name = "FzTRæè" 	# Mukunda
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1628.1.1
+    death_Date = 1690.1.1
+    claim = 95
+    ADM = 0
+    DIP = 3
+    MIL = 1
+  }
+}
+1662.1.1 = {
+  monarch = {
+    name = "mrõQNñ" 	# Mukunda
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 0
+    DIP = 3
+    MIL = 1
+  }
+}
+1662.1.1 = {
+  heir = {
+    name = "Íè‘köNõè<h" 	# Dibyasingha
+    monarch_name = "Íè‘köNõè<h" 	# Dibyasingha
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1628.1.1
+    death_Date = 1720.1.1
+    claim = 95
+    ADM = 1
+    DIP = 3
+    MIL = 0
+  }
+}
+1690.1.1 = {
+  monarch = {
+    name = "–cFZÁP√ã" 	# Dibyasingha
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 1
+    DIP = 3
+    MIL = 0
+  }
+}
+1690.1.1 = {
+  heir = {
+    name = "»TKQÅú¿N≥u" 	# Harekrushna
+    monarch_name = "»TKQÅú¿N≥u" 	# Harekrushna
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1690.1.1
+    death_Date = 1725.1.1
+    claim = 95
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1720.1.1 = {
+  monarch = {
+    name = "˜f)RÊèWn±ê" 	# Harekrushna
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1720.1.1 = {
+  heir = {
+    name = "bÆv≥uØe" 	# Gopinath
+    monarch_name = "bÆv≥uØe" 	# Gopinath
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1700.1.1
+    death_Date = 1732.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 1
+  }
+}
+1725.1.1 = {
+  monarch = {
+    name = "øw‘k±êIy" 	# Gopinath
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 1
+    DIP = 2
+    MIL = 1
+  }
+}
+1725.1.1 = {
+  heir = {
+    name = "WidÓTNñW" 	# Ramachendra
+    monarch_name = "WidÓTNñW II" 	# Ramachendra II
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1700.1.1
+    death_Date = 1743.1.1
+    claim = 95
+    ADM = 2
+    DIP = 1
+    MIL = 0
+  }
+}
+1732.1.1 = {
+  monarch = {
+    name = "…blö±î∑V…b II" 	# Ramachendra II
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 2
+    DIP = 1
+    MIL = 0
+  }
+}
+1732.1.1 = {
+  religion = sunni
+}
+1732.1.1 = {
+  heir = {
+    name = "‘k…b	TœÇÃë" 	# Birakishore
+    monarch_name = "‘k…b	TœÇÃë" 	# Birakishore
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1732.1.1
+    death_Date = 1780.1.1
+    claim = 95
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1743.1.1 = {
+  monarch = {
+    name = "‘k…b˙WÕuS" 	# Birakishore
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1743.1.1 = {
+  heir = {
+    name = "Íè‘köNõè<h" 	# Dibyasingha
+    monarch_name = "Íè‘köNõè<h II" 	# Dibyasingha II
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1743.1.1
+    death_Date = 1795.1.1
+    claim = 95
+    ADM = 1
+    DIP = 1
+    MIL = 0
+  }
+}
+1780.1.1 = {
+  monarch = {
+    name = "–cFZÁP√ã" 	# Dibyasingha
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 1
+    DIP = 1
+    MIL = 0
+  }
+}
+1780.1.1 = {
+  heir = {
+    name = "FzTRæè" 	# Mukunda
+    monarch_name = "FzTRæè II" 	# Mukunda II
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    birth_date = 1743.1.1
+    death_Date = 1817.1.1
+    claim = 95
+    ADM = 0
+    DIP = 0
+    MIL = 0
+  }
+}
+1795.1.1 = {
+  monarch = {
+    name = "mrõQNñ II" 	# Mukunda II
+    dynasty = "Ëê6wµhÇ" 	# Bhuyavamsha
+    ADM = 0
+    DIP = 0
+    MIL = 0
+  }
+}

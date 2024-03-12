@@ -1,0 +1,7 @@
+MP1 = "countries/MingXianbei.txt"
+MP2 = "countries/MingLingbei.txt"
+MP3 = "countries/MingHezhong.txt"
+MP4 = "countries/MingBosi.txt"
+MP5 = "countries/MingTuhuoluo.txt"
+MP6 = "countries/MingWaicongling.txt"
+MP7 = "countries/MingChangcheng.txt"

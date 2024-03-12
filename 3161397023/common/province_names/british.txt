@@ -1,0 +1,1364 @@
+388 = "öNN"  # Aden
+377 = "?ñ“Ráò"  # Aleppo
+2313 = "âRagKQ"  # Antioch
+410 = "ÙT<hæè"  # Baghdad
+2326 = "ÙTSÍèöN"  # Bardia
+356 = "Ìs†Râ"  # Benghazi
+361 = "VW"  # Cairo
+382 = "'YlöÎXió"  # Damascus
+363 = "æès|√WTX"  # Damietta
+357 = "∑VS≥u"  # Derna
+364 = "†Rôl"  # Gaza
+411 = "idœÇS"  # Mosul
+1854 = "≥u^bSØe"  # Nablus
+360 = "˙W≥u"  # Qena
+362 = "W^XTX"  # Rosetta
+2315 = "œÇOÎX"  # Suez
+379 = {
+  "6wÔçíd∑Q"  # Jerusalem
+  "6wÔçíd∑Q"  # Jerusalem
+}
+358 = {
+  "öNÜSqS∑VÃëöN"  # Alexandria
+  "öNÜSqS∑VÃëöN"  # Alexandria
+}
+2011 = "ÍñWSYÊt"  # Shenandoah
+873 = "?ñØeXbÃëöN"  # Astoria
+893 = {
+  "∞eeYSoÇ"  # New Orleans
+  "∞eeYSoÇ"  # New Orleans
+}
+894 = "O—yS’l^˜ñ"  # Ecore Fabre
+896 = "<hpQ∑V≥l"  # Grand River
+897 = {
+  "SÛwŒW"  # Little Rock
+  "SÛwŒW"  # Little Rock
+}
+899 = {
+  "gY-gKQ"  # Ozarks
+  "ØenfógÚÉS∑V"  # Springfield
+}
+900 = {
+  "1WÔçfØe"  # St. Louis
+  "1WÔçfØe"  # St. Louis
+}
+905 = {
+  "∑^mtS^…b+Y"  # Council Bluff
+  "∑^mtS^…b+Y"  # Council Bluff
+}
+907 = {
+  "œÇ‚lØeyr"  # Sioux Post
+  "œÇ‚lØeyr"  # Sioux Post
+}
+908 = {
+  "f<SœÇæè"  # Minnesota
+  "1W›OW"  # St. Paul
+}
+910 = "˜ñ∑VVn"  # Red Lake
+911 = {
+  "NJSõS"  # Upper Peninsula
+  "√WØeaS≥uÙT"  # Escanaba
+}
+913 = "nf˜ñÃë∑V1k"  # Prairie du Chien
+914 = {
+  "<hógån"  # Green Bay
+  "<hógån"  # Green Bay
+}
+915 = {
+  "ÆveYÃëöN"  # Peoria
+  "ÆveYÃëöN"  # Peoria
+}
+918 = {
+  "mRÚÉØe"  # Memphis
+  "mRÚÉØe"  # Memphis
+}
+921 = "ÙTTÅúÂe"  # Baton Rouge
+925 = {
+  "pgKQê!X"  # Fort Jackson
+  "pgKQê!X"  # Fort Jackson
+}
+929 = {
+  "(Ñ·Q≥u"  # Savannah
+  "(Ñ·Q≥u"  # Savannah
+}
+930 = "÷vi`Øe"  # Gaines
+931 = "ChhŒW"  # Peachtree
+932 = {
+  "ÂgSØefe"  # Charleston
+  "ÂgSØefe"  # Charleston
+}
+934 = {
+  "≥u¿N=O“R"  # Nashborough
+  "≥u¿N=O“R"  # Nashborough
+}
+935 = "ÉlXb†R"  # Watauga
+936 = {
+  "ÿöqSHS"  # Overmountain
+  "´ÉÃëØefe"  # Morristown
+}
+939 = {
+  "^Íè2SaS"  # Paducah
+  "^Íè2SaS"  # Paducah
+}
+940 = {
+  "ÔçfØeÙuS"  # Louisville
+  "ÔçfØeÙuS"  # Louisville
+}
+941 = {
+  "»TW∑Vfe"  # Harrodstown
+  "»TW∑Vfe"  # Harrodstown
+}
+944 = {
+  "ï^yrãV"  # Detroit
+  "ï^yrãV"  # Detroit
+}
+945 = {
+  "¶û˙W˙ã"  # Mackinac
+  "¶û˙W˙ã!X"  # Fort Mackinac
+}
+946 = {
+  "Xb±ÉY"  # Toledo
+  "Xb±ÉY"  # Toledo
+}
+947 = {
+  "KQ)R+YpQ"  # Cleveland
+  "KQ)R+YpQ"  # Cleveland
+}
+948 = {
+  "õsKN√WTX"  # Marietta
+  "õsKN√WTX"  # Marietta
+}
+949 = "^bSÃëGY"  # Blue Ridge
+950 = {
+  "yä∆YØefe"  # Jamestown
+  "yä∆YØefe"  # Jamestown
+}
+952 = {
+  "yä∆YØe≥l"  # James River
+  "ÃëÎX·n"  # Richmond
+}
+953 = {
+  "löÃëpQ"  # Maryland
+  "âR≥u‚l)RØe"  # Annapolis
+}
+956 = {
+  "9ç…b∑VSÚÉöN"  # Philadelphia
+  "9ç…b∑VSÚÉöN"  # Philadelphia
+}
+958 = {
+  "pg≥uâeY"  # Geneseo
+  "pg≥uâeY"  # Geneseo
+}
+4872 = {
+  "^’lW"  # Buffalo
+  "^’lW"  # Buffalo
+}
+959 = {
+  "WRØeyr"  # Rochester
+  "WRØeyr"  # Rochester
+}
+960 = {
+  "eYØeZb"  # Oswego
+  "eYØeZb"  # Oswego
+}
+961 = {
+  "ØefWZKQØe!X"  # Fort Stanwix
+  "ØefWZKQØe!X"  # Fort Stanwix
+}
+963 = {
+  "eYSÙT<S"  # Albany
+  "eYSÙT<S"  # Albany
+}
+964 = {
+  "ØeKQÖQKQTXÍè"  # Schenectady
+  "ØeKQÖQKQTXÍè"  # Schenectady
+}
+965 = {
+  "Àu¶u"  # New York
+  "Àu¶uŒW"  # New York City
+}
+966 = {
+  "=OKQ·ê"  # Berkshires
+  "ØenfógÚÉS∑V"  # Springfield
+}
+967 = {
+  "WóVõS"  # Rhode Island
+  "nfWÙuâvØe"  # Providence
+}
+968 = {
+  "lö(Ñ¯ã^X"  # Massachusetts
+  "‚lÎXò"  # Boston
+}
+969 = {
+  ",gÅRò"  # Bennington
+  ",gÅRò"  # Bennington
+}
+970 = {
+  "∞eU^¿NS"  # New Hampshire
+  "4g(ÉÉØe"  # Portsmouth
+}
+973 = {
+  ")nÂTNS"  # Vancouver
+  ")nÂTNS"  # Vancouver
+}
+980 = "?ñÊtÜñ"  # Avalon
+981 = "˜ñ“â"  # Cape Ray
+982 = "^˜ñò“â"  # Cape Breton
+983 = "1r∑VNSãsPRõS"  # Prince Edward Isl.
+984 = "¨ÇÍè"  # Fundy
+985 = {
+  "ôÑKQò"  # Moncton
+  "ôÑKQò"  # Moncton
+}
+986 = "†RØeiO"  # Gaspe
+987 = {
+  ")néÉ"  # Windsor
+  ")néÉ"  # Windsor
+}
+988 = {
+  "!ï∆Y—y"  # Simcoe
+  "s|∑VkçØeyr"  # Midhurst
+}
+989 = {
+  "âR'Yeu"  # Ontario
+  "—ëØeò"  # Kingston
+}
+990 = "	N≥lŒW"  # Three Rivers
+992 = {
+  "kçS"  # Hull
+  "kçS"  # Hull
+}
+993 = {
+  "ôÑyr)RS"  # Montreal
+  "ôÑyr)RS"  # Montreal
+}
+994 = {
+  "AõSKQ"  # Quebec
+  "AõSKQŒW"  # Quebec City
+}
+996 = "ÖhaSÇÑ≥u"  # Mecatina
+998 = {
+  "ÃëÎX·n!X"  # Fort Richmond
+  "ÃëÎX·n!X"  # Fort Richmond
+}
+999 = "OÎX¸f"  # Eastmain
+1000 = {
+  "Åú¿syr!X"  # Fort Rupert
+  "Åú¿syr!X"  # Fort Rupert
+}
+1001 = {
+  "œÇ1WõsKN"  # Sault Ste. Marie
+  "œÇ1WõsKN"  # Sault Ste. Marie
+}
+1003 = {
+  "FzØe’lKQyrÃë"  # Moose Factory
+  "FzØe’lKQyrÃë"  # Moose Factory
+}
+1004 = {
+  "eYSÙT<S!X"  # Fort Albany
+  "eYSÙT<S!X"  # Fort Albany
+}
+1005 = "¶uKQ’lKQyrÃë"  # York Factory
+1006 = {
+  "N	TS"  # Churchill
+  "N	TS"  # Churchill
+}
+1007 = {
+  "˜ñån"  # Thunder Bay
+  "˜ñån"  # Thunder Bay
+}
+1008 = "˜ñ∑V≥l"  # Red River
+1009 = "ç&OØeÃëV"  # Berens River
+1010 = "Y¨Ç"  # Dauphin
+1011 = "^Øe"  # The Pas
+1174 = {
+  "ÉlSÙuØeån"  # Walvis Bay
+  "ÉlSÙuØeån"  # Walvis Bay
+}
+1177 = {
+  "Vnf"  # Cape
+  "Vnffe"  # Cape Town
+}
+1179 = {
+  "´É^XSån"  # Mossel Bay
+  "´É^XSån"  # Mossel Bay
+}
+1180 = {
+  "N&Ofe"  # East London
+  "N&Ofe"  # East London
+}
+1181 = {
+  "≥uTXS"  # Natal
+  "∑VÌs"  # Durban
+}
+833 = {
+  "?ñSb?ñån"  # Algoa Bay
+  "OKNéÉãv=n"  # Port Elizabeth
+}
+4782 = {
+  "(ÉÊt≥u"  # Tswana
+  "VÃëfe"  # Freetown
+}
+2003 = "ì^yrÖQ"  # Kootenai
+2007 = "±É^X∑V˜ñØe"  # Les Cedres
+2012 = "ËïV˜ñÖhb<h"  # Memphremagog
+2013 = "aSØeÔg"  # Casco
+2016 = "'YèyKQØe"  # Great Forks
+2017 = "√W∑VôÑò"  # Edmonton
+2018 = ">çØe¿s"  # Jasper
+2023 = "`ƒOf≥l7å"  # Wyoming Valley
+2512 = "yr…bVØe"  # Traverse
+2513 = {
+  "¶ûÍèê!X"  # Fort Madison
+  "¶ûÍèê!X"  # Fort Madison
+}
+2514 = {
+  "	T…bY“â"  # Cape Girardeau
+  "	T…bY“â"  # Cape Girardeau
+}
+2515 = "ÚS∆RØe!X"  # Fort Smith
+2517 = "s|SVn"  # Mille Lacs
+2520 = {
+  "S√W S"  # Little Egypt
+  "VW"  # Cairo
+}
+2521 = {
+  "(Ñ	T˙ã"  # Saginaw
+  "(Ñ	T˙ã"  # Saginaw
+}
+2522 = {
+  "'Y%`AmŒW"  # Grand Rapids
+  "'Y%`AmŒW"  # Grand Rapids
+}
+2523 = "áeÓh"  # Vincennes
+2524 = "pS,râR≥u"  # Indiana
+2525 = {
+  "mQhÇÑÙuS"  # Losantiville
+  "mQhÇÑÙuS"  # Losantiville
+}
+2526 = {
+  "RKQffe"  # Lexington
+  "RKQffe"  # Lexington
+}
+2527 = {
+  "ÂgTX™R†R"  # Chattanooga
+  "ÂgTX™R†R"  # Chattanooga
+}
+2531 = {
+  "®N(ÉÙuS"  # Huntsville
+  "®N(ÉÙuS"  # Huntsville
+}
+2538 = "ÚÉÌèØe"  # Fidius
+2539 = {
+  "V˜ñ∑VÃëKQ"  # Frederick
+  "V˜ñ∑VÃëKQ"  # Frederick
+}
+2540 = {
+  "eY‰SØeTX"  # Augusta
+  "eY‰SØeTX"  # Augusta
+}
+2541 = "—yeYÙu"  # Keowee
+2542 = {
+  "ZSèyyr"  # Beaufort
+  "ZSèyyr"  # Beaufort
+}
+2543 = "ïån"  # Long Bay
+2544 = {
+  "Ymyr"  # Charlotte
+  "Ymyr"  # Charlotte
+}
+2546 = "ÚÉS“â"  # Cape Fear
+2548 = "∞e≥l"  # New River
+2549 = {
+  "Ym(ÉÙuS"  # Charlottesville
+  "Ym(ÉÙuS"  # Charlottesville
+}
+2550 = "…b^Il˙ãKQ"  # Rappahannock
+2552 = "ÆvS0tS"  # Pearsall
+2554 = {
+  "ÙTSÑvid"  # Baltimore
+  "ÙTSÑvid"  # Baltimore
+}
+2555 = {
+  "9SyQ!X"  # Pittsburgh
+  "9SyQ!X"  # Pittsburgh
+}
+2557 = "â^pQGY"  # West Branch
+2558 = "aS(É˙WS"  # Catskills
+2559 = {
+  "–c∑^∑VW†R"  # Ticonderoga
+  "–c∑^∑VW†R"  # Ticonderoga
+}
+2560 = {
+  "Àu—ûáe"  # New Haven
+  "Àu—ûáe"  # New Haven
+}
+2561 = {
+  "nf)RÉØe"  # Plymouth
+  "nf)RÉØe"  # Plymouth
+}
+2562 = {
+  "˙Wi`"  # Keene
+  "˙Wi`"  # Keene
+}
+2563 = {
+  "iOôÑyr"  # Vermont
+  "ôÑ|V)R√W"  # Montpelier
+}
+2564 = "`yrqS	Å"  # White Mountains
+2566 = "aSØeNl"  # Castine
+2568 = "^X^S“â"  # Cape Sable
+2569 = {
+  "»T)R’lKQØe"  # Halifax
+  "»T)R’lKQØe"  # Halifax
+}
+2570 = "1W¶u"  # St. John
+2572 = "NWçSò"  # Campbelton
+2574 = "≥uâR"  # Nain
+2577 = "NõS=n"  # Seven Islands
+2580 = "Ùu´ÉTXGY"  # Wemotaci
+2582 = "Ãë´ÉØe˙W"  # Rimouski
+2586 = "˙ãyrÊt0t†R"  # Nottawasaga
+2587 = "lö<S˛Vóg"  # Manitoulin
+2595 = {
+  "ÒÇ	T)R≥l"  # English River
+  "…bKQWØeõS"  # Ile a la Crosse
+}
+2597 = "WS^pQGY"  # South Branch
+2588 = "KQm¿N"  # Cloche
+2592 = "^Xáe"  # Severn
+2593 = "OyQVn"  # Lake of the Woods
+2600 = "Vs|)Ri`"  # Vermillion
+2601 = "ìêÊó9h"  # Dunvegan
+2603 = {
+  "1W¶u!X"  # Fort St. John
+  "1W¶u!X"  # Fort St. John
+}
+2604 = "TNªlãsPRŒW"  # Prince George
+2605 = "ÇØeÊtnf"  # Shuswap
+2606 = {
+  "öNÜSqS∑VÃëöN!X"  # Fort Alexandria
+  "öNÜSqS∑VÃëöN!X"  # Fort Alexandria
+}
+2670 = {
+  "Y&OY"  # Toronto
+  "¶uKQ"  # York
+}
+2671 = "ôü∑V"  # Ronde
+4890 = "%n*YNS"  # Ottawa
+104 = {
+  "s|pQ"  # Milan
+  "s|pQ"  # Milan
+}
+4729 = {
+  "^YÊt"  # Padua
+  "^YÊt"  # Padua
+}
+134 = {
+  "ÙumN≥u"  # Vienna
+  "ÙumN≥u"  # Vienna
+}
+2746 = {
+  "ÙuN"  # Widdin
+  "ÙuN"  # Widdin
+}
+1084 = {
+  "¿sØe"  # Perth
+  "¿sØe"  # Perth
+}
+1085 = {
+  "óÙTyr"  # Hobart
+  "óÙTyr"  # Hobart
+}
+1086 = {
+  "?ñ∑V±É∑V"  # Adelaide
+  "?ñ∑V±É∑V=n"  # Port Adelaide
+}
+1087 = {
+  "®XS,g"  # Melbourne
+  "®XS,g"  # Melbourne
+}
+1088 = {
+  ",gÍèb"  # Bendigo
+  ",gÍèb"  # Bendigo
+}
+1089 = {
+  "ÙTmtØeyr"  # Bathurst
+  "eYpQªl"  # Orange
+}
+1090 = {
+  "â`<S"  # Sydney
+  "â`<S"  # Sydney
+}
+1091 = {
+  "'k…bZ"  # Orana
+  "æèZSŒW"  # Dubbo City
+}
+1092 = {
+  "¶û8YÃë=n"  # Port Macquarie
+  "¶û8YÃë=n"  # Port Macquarie
+}
+1093 = {
+  "^bS"  # Bulloo
+  "TXbfæè"  # Thargomindah
+}
+1094 = {
+  "9çôlwm∏S"  # Fraser Coast
+  "kçÙuån"  # Hervey Bay
+}
+2726 = {
+  "†RØe—y‡V"  # Gascoyne
+  "pg…bSò"  # Geraldton
+}
+2727 = {
+  "√WØeiOpQØe"  # Esperance
+  "√WØeiOpQØe"  # Esperance
+}
+2728 = {
+  "ÙTmtØeyrõS"  # Bathurst Island
+  "™R2S"  # Nguiu
+}
+2729 = {
+  "?ñ≥u∆Y"  # Arnhem
+  "N?ñ≥u∆Y"  # East Arnhem
+}
+2730 = {
+  "Êó^"  # Weipa
+  "Êó^fe"  # Weipa Town
+}
+2731 = {
+  "^g7å"  # Hope Vale
+  "ÔQi`Øe"  # Cairns
+}
+2732 = {
+  "dlØeÙuS"  # Townsville
+  "dlØeÙuSŒW"  # City of Townsville
+}
+2733 = {
+  "¶ûÔQ"  # Mackay
+  "¶ûÔQ"  # Mackay
+}
+2734 = {
+  "åÇ=Oyr=n"  # Port Albert
+  "åÇ=Oyr=n"  # Port Albert
+}
+2735 = {
+  "u‘kSqS"  # Mount Gambier
+  "u‘kSqS"  # Mount Gambier
+}
+2736 = {
+  "ónffe"  # Hopetown
+  "ónffe"  # Hopetown
+}
+4846 = {
+  "^ÿûØeò"  # Palmerston
+  "æèSáe"  # Darwin
+}
+4847 = {
+  "ÙTKQ)R"  # Barkly
+  "fWWSyr™n"  # Tennant Creek
+}
+4848 = {
+  "=OKQ"  # Burke
+  "=OKQfe"  # Burketown
+}
+4849 = {
+  "aSTYTX)RöN"  # Carpentaria
+  "˙ã¸ffe"  # Normanton
+}
+4850 = {
+  "<h±ÉØeò"  # Gladstone
+  "<h±ÉØeò"  # Gladstone
+}
+4851 = {
+  "3ñIQwm∏S"  # Sunshine Coast
+  "3ñIQwm∏SŒW"  # Sunshine Coast City
+}
+4852 = {
+  "=OÖQyr"  # Burnett
+  "—ë<hWO"  # Kingaroy
+}
+4853 = {
+  "^Åú"  # Paroo
+  "NW≥ulö…b"  # Cunnamulla
+}
+4854 = {
+  "^ÃëØeÌs"  # Brisbane
+  "^ÃëØeÌs"  # Brisbane
+}
+4855 = {
+  "´ÉÃës^üS"  # Moree Plains
+  "´ÉÃë"  # Moree
+}
+4856 = {
+  "TX∆YÉl`"  # Tamworth
+  "TX∆YÉl`"  # Tamworth
+}
+4857 = {
+  "ÀuaSØeS"  # Newcastle
+  "ÀuaSØeS"  # Newcastle
+}
+4858 = {
+  "O&O!ç"  # Wollongong
+  "O&O!ç"  # Wollongong
+}
+4859 = {
+  "*X˘W…b"  # Canberra
+  "*X˘W…b"  # Canberra
+}
+4860 = {
+  "S0W"  # Tablelands
+  "‰SS,g"  # Gouldburn
+}
+4861 = {
+  "ZS!ç"  # Bogong
+  "ÉlN†R"  # Wodonga
+}
+4862 = {
+  "dlò"  # Taunton
+  "dlò"  # Taunton
+}
+4863 = {
+  "lös|i`"  # Marmion
+  "Ilnfò"  # Hampton
+}
+4864 = {
+  "ÿûÃë"  # Murray
+  "´É…b"  # Moora
+}
+4865 = {
+  "?ñ¿N=Oò"  # Ashburton
+  "ÔQ…b(Ñ"  # Karratha
+}
+4866 = {
+  "ÆvS^…b"  # Pilbara
+  "—û∑VpQ=n"  # Port Hedland
+}
+4867 = {
+  "—ë=O)R"  # Kimberley
+  "OØeò"  # Easton
+}
+4868 = {
+  "gØeò"  # Launceston
+  "gØeò"  # Launceston
+}
+4869 = {
+  "fØefe"  # Queenstown
+  "fØefe"  # Queenstown
+}
+481 = "åvUa'Y"  # Bermuda
+482 = "ÙT»Tlö"  # Bahamas
+483 = "yrKQØe≤õS"  # Turks Islands
+484 = "—ûáe"  # Haven
+485 = "–cSØeò"  # Tillerston
+486 = "TŒòŒW"  # Windward City
+487 = "—ëØeò"  # Kingston
+488 = "∑^≥u=n"  # Connah's Quay
+489 = "wmüüõS"  # Turtle Island
+490 = "1WYs|<SKQ"  # St. Dominic
+491 = "∞e^táemt"  # New Ravenser
+492 = "b∑V‚lyr"  # Goldport
+493 = "1WXblöØe"  # St. Thomas
+494 = "1W˙W(É"  # St. Kitts
+495 = "1W'YkS"  # St. David
+496 = "1W^yrÃëKQ"  # St. Patrick
+497 = "INÂeõS"  # Lordsday Island
+498 = "<hógõS"  # Green Isle
+499 = "1W2óâ"  # St. Lucy
+500 = "1WáeÓhyr"  # St. Vincent
+501 = "‘k∆Y·ê"  # Bimshire
+502 = "yrÃë<SÇÑ"  # Trinity
+741 = "ÔQíd!X"  # Fort Caesar
+742 = "^±ÉKQ^`"  # Black Heath
+743 = "Üñ=n"  # Port Long
+744 = "eYÑSyr∆Y˜ñKQ"  # Oughtham Rake
+745 = "Zm‘k!X"  # Fort Willoughby
+746 = "s|∑VS^XKQØe"  # Middlesex
+747 = "?ñnfSKQWØe"  # Applecross
+748 = "=O)RR`"  # Bethlehem
+749 = "<hpQ∑VÙuKQ"  # Grandvick
+750 = "√WSØe=O“R"  # Ellesborough
+751 = "ÀuaSØeS"  # Newcastle
+752 = "`yrO∑V"  # White Woods
+753 = "S'Y≥l"  # Great Northern River
+754 = "‚lS˛V·ê"  # County Porto
+755 = "˜ñ—ë"  # Wreckin
+756 = "¯ã1Wån"  # All Saints Bay
+757 = ")n∑V∆Y"  # Wyndham
+758 = "∑Vmtyr≥l"  # Desert River
+759 = "4bôÑò"  # Diamondton
+760 = "eY∑V‚lyr"  # Oldport
+761 = "èyRØeyr"  # Fawchester
+762 = ",gyrO∑V"  # Burntwood
+763 = "—ëRØeyr"  # King's Chester
+764 = "1W›OW"  # St. Paul's
+765 = "»èi`—û∑V"  # Minehead
+766 = "±ÉØe=O“R"  # Riseborough
+768 = "eYKQØeyr"  # Awcester
+769 = "eY‰SØeTXØe!X"  # Fort Augustus
+772 = "Nnf…byr"  # Oriental Plate
+773 = "?ñpQ<SKQ·ê"  # Alnwickshire
+775 = "Ys|<Sò"  # Dormition
+776 = "<SSRØe"  # Ninechurches
+777 = "®N<hèy∑V"  # Hungerford
+778 = "9çS)néÉ"  # Fair Winds
+779 = "dlÍèS"  # Tawndyle
+780 = "NW∑VSlöØeò"  # Candlemaston
+781 = "„NâS=n"  # Port Desire
+782 = "=Oi`ÍèØepQ"  # Burntisland
+783 = "‡`upò"  # Wellington
+784 = "Z…^=n"  # Port William
+785 = "iO˛V)RöN!X"  # Fort Petulia
+786 = "^±ÉKQ≥l"  # Black River
+787 = "0tSyr—y(É"  # Saltcoats
+790 = "®N)R!X"  # Castle Henry
+791 = "aSTXlöâV"  # Catamarch
+792 = "—y¿s^…b+Y"  # Copper Bluff
+793 = "1W—yWS"  # St. Conan
+794 = "óSóO"  # Hoi-hoi
+795 = "pQyrÃëÓhyr"  # Llantrisant
+796 = "1WlöÔS"  # St. Mark's
+797 = "wmüü!X"  # Turtle Fort
+799 = "Sê<h…bØe!X"  # Castle Douglas
+800 = ")RyrSÙuKQóg"  # Little Wakeling
+801 = "ÖhY„NS"  # Meadowdrie
+802 = "1WÕkÆvØe"  # Our Lady of Peace
+803 = "<h…bØeò=OÃë"  # Glastonbury
+804 = "=OØe^ÃëGY"  # Busbridge
+805 = "Élfòwm"  # Walmington-on-Sea
+806 = "'Yì^Øeyr"  # Great Culster
+807 = "—ëØefe"  # Kingstown
+808 = "ì^Øe—y"  # Cusco
+809 = "TNªl!X"  # Fort George
+810 = "∞e^±Éò"  # New Brighton
+811 = "ñwôlKQ"  # Shawshank
+812 = "’kSfnfRØeyr"  # Bishopchester
+813 = "âôÑØeÙuKQ"  # Simonswyck
+814 = "eYÖQ—y+Y"  # One Cove
+815 = "≥R˜ñÇÑ∆Y"  # Lauretum
+816 = "dlçØe"  # Tombess
+817 = "aS±ÉS"  # Carlisle
+818 = "âR^WâZ"  # Ambrosia
+819 = "9NÆvS=n"  # Port Dampier
+820 = "√Wáe)R"  # Avonlea
+821 = "èy˛Vi`qS"  # Mount Fortune
+822 = "Øe˛VöNyrqS"  # Mount Stuart
+823 = "Øe˛VS(É=O<h"  # Stewartsburgh
+824 = "V˜ñi`âKQ"  # Fernswick
+825 = "NWyr=O˜ñ"  # Canterbury
+826 = "‡z<hS!X"  # Jungle Fort
+827 = "∞eâRagKQ"  # New Antioch
+828 = "aS(Ñ	T<SöN"  # Carthaginia
+829 = "lö<h∑V±É=n"  # Port Magdelene
+830 = "ÂgSØe!X"  # Fort Charles
+831 = "ÂgTX∆Y"  # Chatham
+832 = "˙ãØeZKQ"  # Northwick
+834 = "ó0ti`"  # Hawthorn
+835 = "Æv…b‚lW"  # Pila-Pala
+836 = "1W¶umt"  # St. Joseph
+837 = "âR∑VÉlS"  # Endeavour
+838 = "ìê≥u∆Y"  # Dunham
+839 = "ì^ØeaSyr"  # Cuscat
+840 = "NWÅRâR"  # Cunningham
+841 = "<hógO∑V"  # Greenwoods
+842 = "^Oò"  # Payton
+843 = "NS±ÉÎX"  # Wallace
+844 = "ôlnfRØeyr"  # Shappochester
+845 = "NWiOR"  # Campeachy
+846 = "‡`Sup“â"  # Whirling Cape
+847 = "™RyrS=n"  # Port Nutall
+848 = "?ñyQyrKQØe=n"  # Port Aztechs
+849 = "ÉlÃëS—y“R<S"  # Warrior Colony
+850 = "ØeXbKQ^Ãë˝lfe"  # Stoke Brizeton
+851 = "≥uØe=O“R"  # Naseborough
+852 = "ÖhmtKQ"  # Meseca
+853 = "ÙuØeyr∆Y‘kSKQ"  # Westham Birk
+854 = "Sê<h…bØe·ê"  # County Douglas
+855 = "V±ÉGY)R"  # Fletchley
+856 = "eYØeò∑^íÇ"  # Awston Common
+857 = "KQWØe‘k"  # Crosby
+858 = "ìêÙT=n"  # Dunbar's Harbour
+859 = "ÊóS¿N‚lyr"  # Welshport
+860 = "löS=O“R"  # Marlborough
+861 = "KQmiOíÇyr"  # Clovemount
+862 = "m˙W“â"  # Rocky Point
+863 = "1W^yrÃëKQ"  # Saint Patrick
+864 = "yä∆YØe!X"  # Fort James
+865 = "‚lyr<SJSõS"  # Botany Peninsula
+866 = "æèR¸f“â"  # Dutchman's Cape
+867 = "˜ñ∑VØeæèyrØe"  # Redstacks
+868 = "nfSkç)R"  # Pwllheli
+869 = "Æv≥u‚lyr"  # Pineport
+870 = "ØeXbKQò"  # Stockton
+871 = "aSáeÍè¿N=n"  # Port Cavendish
+872 = "‚lyrpQ"  # Portland
+873 = "?ñØeXbÃëöN"  # Astoria
+874 = "çupIl"  # Bellingham
+875 = "^…bV<h"  # Bullfrog
+876 = "‰QQŒW"  # Phoenix
+877 = "ÓhÇÑ≥uS"  # Sentinel
+878 = "`yrWKQ"  # White Rock
+879 = "myQ"  # Lords
+880 = "ØeTXèy∑V"  # Stafford
+881 = "†RÚÉS∑V"  # Garfield
+882 = "ãvôl"  # White Sands
+883 = "eYØeNl"  # Austin
+884 = "ÙuY)RöN"  # Victoria
+885 = "ØelKQ∑Vs^üS"  # Staked Plain
+886 = "Él`!X"  # Fort Worth
+887 = "<h˜ñnfpQ"  # Grapeland
+888 = "çfe"  # Baytown
+889 = ")néÉ"  # Windsor
+890 = "—ûØe˜^Øe"  # Hastings
+891 = "SêGYŒW"  # Dodge City
+892 = ")nÚÉS∑V"  # Winfield
+895 = ">mi`^…b+Y"  # Pine Bluff
+898 = "SÛwŒW"  # Little Rock
+901 = "ógØw"  # Lincoln
+902 = "O<hSfe"  # Eagletown
+903 = "eYlö»T"  # Omaha
+904 = "SêGY!X"  # Fort Dodge
+906 = "yä∆YØefe"  # Jamestown
+909 = "…b<h‘k"  # Rugby
+910 = "˜ñ∑VVn"  # Red Lake
+911 = "NJSõS"  # Upper Peninsula
+912 = "?ñZSØeèy∑V"  # Abbotsford
+916 = "‘kSyQfe"  # Beardstown
+917 = "ÆveYÃëöN"  # Peoria
+919 = "∞eeYSÙT<S"  # New Albany
+920 = "ÿûÃëÍèi`"  # Meridian
+922 = "Ymyr!X"  # Fort Charlotte
+923 = "9çÃëqS„S"  # Ferry Pass
+924 = "âRÙuGY"  # Ondwich
+926 = "yr˙WKQÃëKQ"  # Turkey Creek
+927 = "?ñyrpQÇÑKQÈn"  # Atlantic Beach
+928 = "1WlöKQØe"  # Saint Marks
+929 = "(Ñ·Q≥u"  # Savannah
+930 = "ChhŒW"  # Peachtree
+931 = "eY<hS0tnf!X"  # Fort Oglethorpe
+932 = "ÂgSØefe"  # Charleston
+933 = "<hógÙuS"  # Greenville
+934 = "≥u¿N=O“R"  # Nashborough
+935 = "ÉlXb†R"  # Watauga
+936 = "ÿöqSHS"  # Overmountain
+937 = "4bÙuÓhØe!X"  # Davidson's Fort
+938 = "KQ…b&Oâv·ê"  # Clarendon County
+939 = "^Íè2SaS"  # Paducah
+940 = "ÔçfØeÙuS"  # Louisville
+941 = "»TW∑Vfe"  # Harrodstown
+942 = "(ÑKQÙuS"  # Sackville
+943 = "Êói`!X"  # Fort Wayne
+944 = "âRZS^S"  # Annarbour
+945 = "¶û˙W˙ã"  # Mackinac
+946 = "QhæèØe˙W"  # Sandusky
+947 = "KQ)R+YpQ"  # Cleveland
+948 = "QReh·ê"  # Cambridgeshire
+949 = "^bSÃëGY"  # Blue Ridge
+950 = "˙ãèyKQGYÇÑ"  # Norfolk Cittie
+951 = "kç,gi`"  # Hebburn
+952 = "yä∆YØe≥l"  # James River
+953 = "löÃëpQ"  # Maryland
+954 = "O)R"  # Erie
+955 = "»TÃëØe=O<h"  # Harrisborough
+956 = "9ç…b∑VSÚÉöN"  # Philadelphia
+957 = "yr…bNS"  # Delaware
+958 = "^’lW"  # Buffalo
+959 = "WRØeyr"  # Rochester
+960 = "eYØeZb"  # Oswego
+961 = "ØefWZKQØe!X"  # Fort Stanwix
+962 = "â˝lâ"  # West Jersey
+963 = "eYSÙT<S"  # Albany
+964 = "ØeKQÖQKQTXÍè"  # Schenectady
+965 = "Àu¶u"  # New York
+966 = "=OKQ·ê"  # Berkshires
+967 = "WóVõS"  # Rhode Island
+968 = "‚lÎXò"  # Boston
+969 = ",gÅRò"  # Bennington
+970 = "∞eU^¿NS"  # New Hampshire
+971 = "Ìsb"  # Bangor
+972 = "8Y∑V…b-)nÂTNS"  # Quadra & Vancouver
+973 = ")nÂTNS"  # Vancouver
+974 = "√W—yç"  # Echo Bay
+975 = "˝VãsõS"  # King Island
+976 = "ZSÎX≤NãsõS"  # Prince of Wales
+977 = "m9hqS"  # Mount Logan
+978 = "âRKQ˜ñGY"  # Anchorage
+979 = "?ñYu3uõS"  # Aleut Islands
+980 = "?ñÊtÜñ"  # Avalon
+981 = "˜ñ“â"  # Cape Ray
+982 = "^˜ñò“â"  # Cape Breton
+983 = "1r∑VNSãsPRõS"  # Prince Edward Isl.
+984 = "¨ÇÍè"  # Fundy
+985 = "ôÑKQò"  # Moncton
+986 = "˝lâån"  # Jersey Cove
+987 = "<SöN†R…b"  # Niagara
+988 = "!ï∆Y—y"  # Simcoe
+989 = "âR'Yeu"  # Ontario
+990 = "	N≥lŒW"  # Three Rivers
+991 = "˝êŒî!X"  # Fort Tudor
+992 = "kçS"  # Hull
+993 = "íÇyrWöNS"  # Mount Royal
+994 = "AõSKQ"  # Quebec
+995 = "?ñ3uyr"  # Ushant
+996 = "ÖhaSÇÑ≥u"  # Mecatina
+997 = "˜ñ∑Vån"  # Red Bay
+998 = "ÃëÎX·n!X"  # Fort Richmond
+999 = "OÎX¸f"  # Eastmain
+1000 = "Åú¿syr!X"  # Fort Rupert
+1001 = "1WõsKNØe…bÆvyQ"  # Saint Mary's Rapids
+1002 = "»T∑Vê!X"  # Fort Hudson
+1003 = "FzØe’lKQyrÃë"  # Moose Factory
+1004 = "eYSÙT<S!X"  # Fort Albany
+1005 = "¶uKQ’lKQyrÃë"  # York Factory
+1006 = "N	TS"  # Churchill
+1007 = "˜ñån"  # Thunder Bay
+1008 = "˜ñ∑V≥l"  # Red River
+1009 = "ç&OØeÃëV"  # Berens River
+1010 = "»T“Rkç"  # Harlech
+1011 = "^Øe"  # The Pas
+1095 = "èyKQpQ≤õS"  # Falklands
+1104 = "Z…^∆YØe!X"  # Fort Williams
+1105 = "˙ãØepQ"  # Northland
+1809 = "¶ûKQU≥u"  # MacDonald
+1813 = "Øeyr—ë!X"  # Fort Sturgeon
+1881 = "1WlöN"  # St. Martin
+2002 = "w)RØeõS"  # Cowley's Islands
+2003 = "ì^yrÖQ"  # Kootenai
+2004 = "KQWØeÖQØeyrqS„S"  # Crowsnest Pass
+2005 = "»T±ÉKQ·ê"  # Harlechshire
+2006 = "ƒûÛw"  # Yellowstone
+2007 = "pQ∑VS!X"  # Fort Randall
+2008 = "KQ…bKQ!X"  # Fort Clark
+2009 = "Øe—y(É^…b+Y"  # Scottsbluff
+2010 = "∑^Ömƒr<h"  # Connecticut
+2011 = "0åWSYÑS"  # Shenandoah
+2012 = "ËïV˜ñÖhb<h"  # Memphremagog
+2013 = "aSØeÔg"  # Casco
+2014 = "¸fØeÚÉS∑V"  # Mansfield
+2015 = "iOÅRœÇ…bån"  # Peninsula Bay
+2016 = "'YèyKQØe"  # Great Forks
+2017 = "√W∑VôÑò"  # Edmonton
+2018 = ">çØe¿s"  # Jasper
+2019 = "∑^mtSŒW"  # Council City
+2020 = "ØeÖQKQÃëV"  # Snake River
+2021 = "˝Vãsån"  # King's Bay
+2022 = "Ymyr≤õS"  # Charlotte Islands
+2023 = "`ƒOf7å"  # Wyoming Valley
+2025 = "WSTNªlöN"  # South Georgia
+2476 = "pQ∑VÙu"  # Llandewi
+2477 = "OØeyr"  # Worcester
+2478 = "˙ãmtnf·ê"  # Northopshire
+2479 = "ØeZVr=O<h"  # Switzerberg
+2480 = "˜ñN"  # Reading
+2481 = "kpqS„SVn"  # Crater Lake
+2482 = "?ñnfS÷vyr"  # Applegate
+2483 = "ÃRSmGY"  # Fur Lodge
+2484 = "èy…b∑V)R“â"  # Cape Flattery
+2485 = "eYóg9SöN"  # Olympia
+2486 = "O∑VqS	Å"  # Wooded Mountains
+2487 = "Øe‚lNWjåØe"  # Spokane House
+2488 = "mVÇÑKQò"  # Penticton
+2489 = "?ñS‘ki`"  # Albion
+2490 = "–vVn"  # Salt Lake
+2491 = "∑VmtyrÖhY"  # Desert Meadow
+2492 = "˜ñ∑VWKQ"  # Redrock
+2493 = "V…b<hØeTX+Y"  # Flagstaff
+2494 = ")n<hyr!X"  # Fort Wingate
+2495 = "¿NWnf·ê"  # Shropshire
+2496 = "èy∆Y‘k·ê"  # Formbyshire
+2497 = "'YØenfóg"  # Big Spring
+2498 = "4bÙuØe!X"  # Fort Davis
+2499 = "—ëØeÙuS"  # Kingsville
+2500 = "^gO∑V"  # Brownwood
+2501 = "^±ÉKQ)R+Y"  # Blackleaf
+2502 = "Øe—y(És^üS"  # Scot's Plain
+2503 = "pQâVØeyr"  # Ranchester
+2504 = "ò=Oi`—yKQ"  # Dunbannock
+2505 = "…b‘k·ê"  # Rabyshire
+2506 = "âRNW=O"  # Uncumber
+2507 = "ó)ReYKQ"  # Holyoke
+2508 = "ÊómtÚÉS∑V"  # Weatherfield
+2509 = "≥R&OØe!X"  # Fort Lawrence
+2510 = "Z)RØeò"  # Williston
+2511 = "1rKNNVn"  # Lake Alice
+2512 = "yr…bVØe"  # Traverse
+2513 = "¶ûÍèê!X"  # Fort Madison
+2514 = "	T…bY“â"  # Cape Girardeau
+2515 = "ÚS∆RØe!X"  # Fort Smith
+2516 = "?ñmtVn"  # Lake Arthur
+2517 = "ZS∑V"  # Baude
+2518 = "∑V…bôÑ∑V"  # Drummond
+2519 = "√W¨ÇIl"  # Effingham
+2520 = "S√W S"  # Little Egypt
+2521 = "Vógyr"  # Flint
+2522 = "'Y%`AmŒW"  # Grand Rapids
+2523 = "wmO<hg∑V"  # High Ground
+2524 = "pS,râR≥u"  # Indiana
+2525 = "õèõè±ê–c"  # Cincinnati
+2526 = "RKQffe"  # Lexington
+2527 = "ÂgTX™R†R"  # Chattanooga
+2528 = "(Ñ…b!X"  # Fort Sarah
+2529 = "	T^Óh!X"  # Port Gibson
+2530 = "®N)R!X"  # Fort Henry
+2531 = "®N(ÉÙuS"  # Huntsville
+2532 = "TXØeaSbS(Ñ"  # Tuscaloosa
+2533 = "!ïiç∑V"  # Seaside
+2534 = "ƒOÃë¡"  # Orion
+2535 = "Ymyr!X"  # Port Charlotte
+2536 = "ÃëV<h±É(É"  # River Glades
+2537 = "a'Y)R7å"  # Italy Vale
+2538 = "ÚÉÌèØe"  # Fidius
+2539 = "V˜ñ∑VÃëKQ"  # Frederick
+2540 = "eY‰SØeTX"  # Augusta
+2541 = "—yeYÙu"  # Keowee
+2542 = "ZSèyyr"  # Beaufort
+2543 = "ïån"  # Long Bay
+2544 = "Ymyr"  # Charlotte
+2545 = "NWçSò"  # Campbelton
+2546 = "ÚÉS“â"  # Cape Fear
+2547 = "<hpQÙuS"  # Granville
+2548 = "∞e≥l"  # New River
+2549 = "Ym(ÉÙuS"  # Charlottesville
+2550 = "…b^Il˙ãKQ"  # Rappahannock
+2551 = "id9h!X"  # Fort Morgan
+2552 = "ÆvS0tS"  # Pearsall
+2553 = "<hógÃëGY"  # Green Ridge
+2554 = "ÙTSÑvid"  # Baltimore
+2555 = "9SyQ!X"  # Pittsburgh
+2556 = "(Ñÿû^Xyr"  # New Somerset
+2557 = "â^pQGY"  # West Branch
+2558 = "aS(É˙WS"  # Catskills
+2559 = "–c∑^∑VW†R"  # Ticonderoga
+2560 = "Àu—ûáe"  # New Haven
+2561 = "nf)RÉØe"  # Plymouth
+2562 = "˙Wi`"  # Keene
+2563 = "iOôÑyr"  # Vermont
+2564 = "`yrqS	Å"  # White Mountains
+2565 = "∞e(Ñÿû^Xyr·ê"  # New Somersetshire
+2566 = "aSØeNl"  # Castine
+2567 = "Oò"  # Eaton
+2568 = "^X^S“â"  # Cape Sable
+2569 = "»T)R’lKQØe"  # Halifax
+2570 = "1W¶u"  # St. John
+2571 = "V˜ñ∑VÃëKQò"  # Fredericton
+2572 = "NWçSò"  # Campbellton
+2573 = "nf…bÓhÇ"  # Placentia
+2574 = "≥uâR"  # Nain
+2575 = "ÖhSÙuS"  # Melville
+2576 = "»Tupò"  # Harrington
+2577 = "NõS=n"  # Seven Islands
+2578 = "∞e…bØeóg"  # New Rathlin
+2579 = "OØeupò"  # Islington
+2580 = "ÙuôÑyr"  # Weymont
+2581 = "ôl)Ráe7å"  # Sullivan Valley
+2582 = "Ãë´ÉØe˙W"  # Rimouski
+2583 = "1WâRmt∆Y"  # St. Anselm
+2584 = "áe∑VV"  # Wendover
+2585 = "%n*YNS"  # Ottawa
+2586 = "˙ãyrÊt0t†R"  # Nottawasaga
+2587 = "lö<S˛Vóg"  # Manitoulin
+2588 = "çSqS	Å"  # Bell Mountains
+2589 = "eYyr…bÆvyQ"  # Otter Rapids
+2590 = "Øe´É˙WèySØe"  # Smoky Falls
+2591 = "ónf!X"  # Fort Hope
+2592 = "^Xáe"  # Severn
+2593 = "OyQVn"  # Lake of the Woods
+2594 = "’lKQyrÃëVn"  # Lake Factory
+2595 = "KQ)RVn"  # Clear Lake
+2596 = "¶uKQò"  # Yorkton
+2597 = "WS^pQGY"  # South Branch
+2598 = "ØeZ+YyraS&Oyr"  # Swift Current
+2599 = "¶ûKQÿûÃë!X"  # Fort McMurray
+2600 = "Vs|)Ri`"  # Vermillion
+2601 = "ìêÊó9h"  # Dunvegan
+2602 = "˜ñ∑VÍèS"  # Red Deer
+2603 = "1W¶u!X"  # Fort St. John
+2604 = "TNªlãsPRŒW"  # Prince George
+2605 = "ÇØeÊtnf"  # Shuswap
+2606 = "öNÜSqS∑VÃëöN!X"  # Fort Alexandria
+2607 = "ÆvGYpQ"  # Peachland
+2609 = "Åú¿syr≤Nãs"  # Prince Rupert
+2610 = "ÑSSØeån"  # Earl's Cove
+2611 = "æèGY=n"  # Dutch Harbour
+2612 = "ôÑTX‰S"  # Montague
+2613 = "!ïyraS"  # Sitka
+2614 = "âR^ÃëGY"  # Ambridge
+2615 = "Ryr)n∑V"  # Chetwynd
+2616 = "<hógKQ‚lyr"  # Greekport
+2617 = "æèØeÇÑqS"  # Dusty Hills
+2618 = "»TôÑ∑V"  # Hammond
+2619 = "‚lS^Xyr·ê"  # Borsetshire
+2620 = "eYKQ)R"  # Oakleigh
+2621 = "‹bRØeyr"  # Bicester
+2622 = "∞e)nRØeyr"  # New Winchester
+2623 = "óyrpQØe"  # Hotlands
+2624 = "fW‘k·ê"  # Tenbyshire
+2624 = "fW‘k·ê"  # Tenbyshire
+2626 = "?ñØelâöN"  # Astecia
+2627 = "aSáeÍè¿N"  # Cavendish
+2628 = "Øw∑VS"  # Kendal
+2629 = "√WKQØe´ÉS·ê"  # Exmoorshire
+2630 = "ÔQ‡Vyr"  # Caint
+2631 = "—û∑VØeê"  # Head Stone
+2632 = "∞e^XSâ"  # New Selsey
+2633 = "=O≥u∑V"  # Bernard
+2634 = "!ïâR!X"  # Fort Sian
+2635 = "É^“R"  # Vanburgh
+2636 = ")RáeØefe"  # Livingstone
+2637 = "Àu‚lyr"  # Newport
+2638 = "Öh^S0tnf"  # Mablethorpe
+2639 = "N˝lâ"  # East Jersey
+2640 = "pQ9Nån"  # Landan Bay
+2641 = "ZSâ·ê"  # Percyshire
+2642 = "<h&OSêS"  # Glendower
+2643 = "ÊóS¿NRØeyr"  # Welshchester
+2644 = "ÙT±ÉS"  # Ballyree
+2645 = "WmtÙu^"  # Rotherwich
+2646 = "Qh∑VØeÃRyr"  # Saundersfoot
+2647 = "KQWZØe"  # Crossways
+2648 = "TX=Oò"  # Talburton
+2649 = "Ynf·ê"  # Shappshire
+2650 = "aSÖhS!X"  # Fort Carmel
+2651 = "ÊóØeyrZ^"  # Westwich
+2652 = "±ÉfØeyr"  # Leominster
+2653 = "NGYZSò"  # Church Wilton
+2654 = "»T<Sån"  # Honey Bay
+2655 = "OØeyrâVGY"  # Eastchurch
+2656 = "˝Vãs±ÇÌV"  # King's Garden
+2657 = "¶ûÍèê"  # Madison
+2658 = "√Wâvy"  # Eden Rock
+2659 = "upO∑V"  # Ringwood
+2660 = "ÉlÃëKQ!ï"  # Warwick Sea
+2661 = "âRÓhfe"  # Ansontown
+2662 = "aSTXTR^"  # Catacombes
+2663 = "ôÑ9hØe‚lyr"  # Morgansport
+2664 = "ØefWèy∑V"  # Stamford
+2665 = "ZSôÑyr"  # Beaumont
+2666 = "Qh∑VÓh"  # Sanderson
+2667 = "ÀuSs|Øe"  # Newmills
+2668 = "eYØeÉlØeyrÃë"  # Oswestry
+2669 = "gÙu2S"  # Longview
+2670 = "Y&OY"  # Toronto
+2671 = "ôü∑V"  # Ronde
+2672 = "óSò"  # Holton
+2803 = "yrSÉØe"  # Terrmouth
+2804 = "√WSÖhyr"  # Elmet
+2805 = "?ñÇÑØeKQWØe"  # Atiscross
+2806 = "Zyr∆Y‚l‡Vyr"  # Witham Point
+2807 = "±Éi`"  # Lion
+2808 = "√WÍèØe=OÃë"  # Eddisbury
+2809 = "jg∆Y·ê"  # Dunhamshire
+2810 = "Ùu…bSØefW"  # Wilaverstan
+2811 = "IlØefWò"  # Hunstanton
+2812 = "pQØeÇÑ¨Ç"  # Llanstephan
+2813 = "<hÃëKQfe"  # Gorwickston
+2814 = "?ñ‘klöS"  # Ablemarle
+2815 = "˜ñ∑V^Øe"  # Redheath
+2816 = "ÑS˜ñ"  # Erry
+2817 = "ôÑyr·ê"  # Montshire
+2818 = "1WÙTâeu"  # Saint Basil
+2819 = "Øe—yyr·ê"  # Scottshire
+2820 = "ÔQmt3tpQ∑V"  # Catherinesland
+2821 = "1rSpQ“â"  # Irish Cape
+2822 = "∞e±ÉØeyr"  # New Leicester
+2823 = "kQ¶^7å"  # Eight Valleys
+2824 = "aSÃëØe^ÅúKQ"  # Carisbrooke
+2825 = "^WmtW"  # Brotheroe
+2826 = "0tSç"  # Solebay
+2827 = "´É^˜ñ"  # Mowbray
+2828 = "ÔQØeyr"  # Caister
+2829 = "?ñ¿N‘k,g∑V"  # Ashby-on-the-Bend
+2830 = "1W|VóVqS"  # Saint Peter's Mount
+2831 = "=O^ÃëGY·ê"  # Busbridgeshire
+2832 = "?ñæRâv"  # Abingdon
+2833 = "löSâv·ê"  # Maldonshire
+2834 = "pQØeSV"  # Lansdowne
+2835 = "®N˜^âv"  # Huntingdon
+2836 = "ZSÍè)R"  # Bodely
+2837 = "1WÔQmt3t"  # Saint Catherine
+2838 = ")nGYSâ"  # Winchilsea
+2839 = "TNªlöNôl.o"  # Georgian Desert
+2840 = "≈ñT^Øe"  # Jacobus
+2841 = "ØeaS=O“R"  # Scarbrough
+2842 = "∞eZØeyridpQ"  # New Westmorland
+2843 = "QhZGY"  # Sandwich
+2844 = "»T∑VZKQ"  # Hardewick
+2845 = "1W¶u"  # Saint John
+2846 = "˙WØeaSyr"  # Kisscat
+2847 = "æèáeyrÃë"  # Daventry
+2848 = "∞eiOáeâ"  # New Pevensey
+2849 = ")nÚÉS∑V"  # Wingfield
+2850 = "?ñ∑VÃëâRèyØe"  # Adrianforth
+2851 = "nf˜ñØeyrZGY"  # Prestwich
+2852 = "LNnfØeyr˜ñ∆Y"  # Upstream
+2853 = "2S9S'k"  # Yippeayoo
+2854 = "-NÂg—y"  # Central Chacko
+2855 = "ó∆Y—û∑V"  # Holmhead
+2857 = "ôÑSÉØe"  # Mornmouth
+2858 = "1Wyä∆YØe"  # Saint James
+2859 = "∞e¶ûâöN"  # New Mercia
+2860 = "ÍèyQ=OÃë"  # Didsbury
+2861 = "?ñlö„NS"  # Armadale
+2862 = "√W)RØeò"  # Elliston
+2863 = "Él“RmtØefe"  # Warhawston
+2865 = "âVGYSØeò"  # Church Olston
+2866 = "ÊóØe"  # Wells
+2867 = "ógØwÙTØe"  # Lincoln Baths
+2868 = "1WO+YØe"  # Saint Ives
+2869 = "wm&OØew∑V"  # Helenscauld
+2870 = "V˜ñi`∆Y"  # Frethenham
+2871 = "»T“Rkç!X"  # Fort Harlech
+2872 = "ÔQ<SSÉl`"  # Kenilworth
+2873 = "pQGYÚÉS∑V"  # Letchfield
+2874 = "ÊóKQò"  # Waketon
+2875 = "çV)R"  # Beverly
+2876 = "˜ñmt)R"  # Wressle
+2877 = "—yKQÉØe"  # Cockermouth
+2878 = "GYupÑS∆Y"  # Chillingham
+2879 = "çú∑V)n"  # Bodwin
+2881 = "1W4bÙuØe"  # St. Davids
+2882 = "…b∑Vm"  # Ludlow
+2883 = "aSfe"  # Caerabon
+2884 = "^˜ñØw·ê"  # Breconshire
+2885 = "eYØeò"  # Olston
+2886 = "ÀuIl∆YÊóØe"  # Newham Wells
+2887 = "mV^çØe"  # Penzance
+2888 = "√WKQSñwS"  # Eccleshall
+2889 = "pQØe"  # Rhins
+2890 = "KQÃëfe"  # Creetown
+2891 = "ÖhZSS"  # Maybole
+2892 = "^≥Rò"  # Broughton
+2893 = "ìêØe∆Y±Éi`"  # Dunsimline
+2894 = "»TW÷vyr"  # Harrogate
+2895 = "lö∆YØe=OÃë"  # Malmesbury
+2896 = "(ÑmiOöN"  # Salopia
+2897 = ")n∑^∆Y·ê"  # Wincombshire
+2898 = "∞e(Ñÿûò"  # New Somerton
+2899 = "åÇyrS=O“R"  # Aethelborough
+2900 = "kç=Oyr!X"  # Herbertcastle
+2901 = "ÔQØeÇÑáe"  # Kesteven
+2902 = "ÅúKQfe"  # Rooketower
+2903 = "nfWKQyr"  # Procter
+2904 = "»T“R∆Y"  # Hallam
+2905 = "»T“R∆Y·ê"  # Hallamshire
+2906 = "ç∑Vupò·ê"  # Bedlingtonshire
+2907 = "YRØeyr"  # Dorchester
+2908 = "∞e´ÉKQ∆Y"  # New Morecambe
+2909 = "?ñØeyrÚÉS∑V"  # Astorfield
+2910 = "ÙuS=O<h"  # Werbergh
+2911 = "∞e—ûØe˜^Øe"  # New Hastings
+2912 = "Qh∑V·ê"  # Saundershire
+2913 = "∑V˜ñKQ·ê"  # Drakeshire
+2914 = "s|∑VSò"  # Middleton
+2915 = "Áe^WKQ"  # Old Brock
+2916 = "´É±ÉØe"  # Murless
+2917 = "KQ˜ñáe·ê"  # Cravenshire
+2918 = "Zm‘k"  # Willoughby
+2919 = "1WTNªl"  # Saint George
+2920 = "?ñnfS‘k"  # Appleby
+2921 = "ÍèR"  # Duchie
+2922 = "s|mtÃëqS"  # Mount Misery
+2923 = "NR†ò<SöN!X"  # Fort Britannica
+2924 = "ï'pQfe"  # Gallantown
+2925 = "ÉlS+Y·ê"  # Wolfeshire
+2926 = "=Oupò"  # Burlington
+2927 = "WS=n"  # Southport
+2928 = "Z<hò"  # Wigton
+2929 = "ØefWèy·ê"  # Stamforshire
+2930 = "TXSò"  # Tarleton
+2931 = "†RSØeòINYeŒW"  # Bishop Settle
+2933 = "0tØe?ñ“Rfe"  # Southallerton
+2934 = "^pQèy∑V!X"  # Castle Bronford
+2935 = "O∑VóS"  # Woodhall
+2937 = "œÇÃëWS"  # Surinam
+2938 = "wmKQIl∆Y"  # Hykeham
+2939 = "ÀuÊtKQ˜ñ	TØe"  # Newark Regis
+2940 = "^W∑VØelØe"  # Broadstairs
+2941 = "îN=nÍÅªlHS"  # Cinque Boroughs
+2942 = "áeyr˙ã"  # Ventnor
+2943 = "VWÖh·ê"  # Fromeshire
+2944 = "KQÃëKQjåÑSS"  # Crickhowell
+2945 = "OØeò"  # Easton
+2946 = "∞ekçÃëèyyr"  # New Hereford
+2947 = "ÊtW·ê"  # Varrowshire
+4570 = "WØeíÇyr"  # Rosemount
+4571 = "˙ã¸ffe"  # Normanton
+4572 = "XbbSKQ"  # Tollook
+4573 = "idSÚÉS∑V"  # Moorfields
+4574 = "^ÃëGYIl∆Y"  # Bridgeham
+4575 = "—ëØefe"  # Kings Town
+4576 = "W»T∑V"  # Rawhead
+4577 = "<hpQmt∆Yån"  # Grantham Bay
+4578 = "Y<h≥l"  # Dog River
+4579 = "^˜ñ9çS"  # Braefell
+4580 = "^SŒW"  # Palm City
+4581 = "âR∑VØeÙTKQ"  # Andersbank
+4582 = "TNyrpQ"  # Chotland
+4583 = "bS"  # Looe
+4584 = "—ë∑VØe—yyr"  # Kinderscout
+4585 = "Øe˙eèyyr"  # Swanfort
+4586 = "±ÉôÑ^S"  # Lemonhills
+4587 = "∞eÊóØe"  # New Wells
+4588 = "`’nñw"  # Wythenshawe
+4589 = "aS)Râv"  # Caledon
+4590 = "∞eir%m"  # New Oxford
+4591 = "yrZØw≥u∆Y"  # Twickenham
+4592 = "^bSÚÉSyQ"  # Bluefields
+4593 = "4bÙuØe)nyr"  # Devilswint
+4594 = ")nIlfe"  # Winhunton
+4595 = "∑V^Wyr"  # Debrotte
+4596 = "WOØeòÊtPü"  # Royston Vasey
+4597 = "Wèy∑V"  # Rorford
+4598 = "KQ…b≥u∆Y"  # Cranham
+4599 = "æèGYaSÇÑGY<h"  # Dutch Cottage
+4600 = "^Nò"  # Paddington
+4601 = "aSÍè9h"  # Cardigan
+4602 = "ÉlÃëKQ>mKQ"  # Warwick Pike
+4603 = "ÙTi`Øe=OÃë"  # Barnsbury
+4604 = "jg˙ãZKQ"  # Dunorwick
+4605 = "YiOèy∑V"  # Doverford
+4606 = "ÃëÊó,g∑V"  # Riverbend
+4607 = "ÆvyrÚÉS∑V"  # Peterfield
+4608 = "1WÍèöNm"  # Saint Diallo
+4609 = "èyKQØefe"  # Foxton
+4610 = "…b¿Ns|∑V"  # Rushmede
+4611 = "s|pQæè!X"  # Fort Miranda
+4612 = "nfógØeò"  # Princetown
+4613 = "…b¨Ç†RS"  # Laughing Gull
+4614 = "N	Tógò"  # Church Linton
+4615 = "ÙTØe·ê"  # Basshire
+4616 = "ÖQØeò"  # Neston
+4617 = "(ÑKQ^XØe"  # Saxes
+4618 = "ãsPR=n"  # Prince's Port
+4619 = "1Wﬁã·ê"  # Christmas County
+4620 = "†R)RâöN=n"  # Port-of-Galicia
+4621 = "ÉlSõèÑS∆Y"  # Walsingham
+4622 = "÷|ån"  # Sugar Bay
+4623 = ")nèy∑V·ê"  # Winfordshire
+4624 = "1WKQÃëØeXbV"  # Saint Christopher
+4625 = "eYógGY=n"  # Port Orange
+4626 = "^ÅúKQ!X"  # Fort Brooke
+4627 = "—y)RGYØe∑V3u"  # College Station
+4628 = "IlwKQ!X"  # Fort Hancock
+4629 = "Öh)RÉl`"  # Meriworth
+4630 = "WØeZS"  # Roswell
+4631 = "Êt!çqS"  # Wagon Mound
+4632 = "WSπe7å0W"  # South Valley
+4633 = "ãvˆîŒW"  # Silver City
+4634 = "?ñ^QY!X"  # Fort Apache
+4635 = "'káe!X"  # Fort Irwin
+4636 = "yrmKQ"  # Turlock
+4637 = "ZSÎX¸fån"  # Welshman's Bay
+4638 = "¡∑Vwm∆Y"  # Oundhym
+4639 = "±ÉôÑ<hW+Y"  # Lemon Grove
+4640 = "Œê^S"  # Longhill
+4641 = "áe^)R"  # Wembley
+4642 = "‘kØw^S"  # Beaconshill
+4643 = "0tò"  # Saughton
+4644 = "˜ñÅRò"  # Lennington
+4645 = "ØeÜñ"  # Sloane
+4646 = "—ëØe‚lyr"  # Kingsport
+4647 = "ógÑS∆YNóg"  # Ringham Wood
+4648 = "Æv∑Vs|S"  # Pidmill
+4649 = "âÖheY"  # Western Mayo
+4650 = "0tKQS"  # Saughall

@@ -1,0 +1,287 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = hannoverian
+religion = catholic
+technology_group = western
+capital = 55 	#  Oldenburg
+fixed_capital = 55 	#  Cannot move capital away from this province & no power cost to move to it
+1398.1.1 = {
+  monarch = {
+    name = "KQÃëØeÇÑâR VI" 	# Christian VI
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1378.1.1
+    adm = 1
+    dip = 3
+    mil = 1
+  }
+}
+1398.1.1 = {
+  heir = {
+    name = "ÍèyrÃë^" 	# Dietrich
+    monarch_name = "ÍèyrÃë^" 	# Dietrich
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1390.1.1
+    death_date = 1440.2.14
+    claim = 95
+    adm = 2
+    dip = 2
+    mil = 0
+  }
+}
+1423.1.1 = {
+  monarch = {
+    name = "ÍèyrÃë^" 	# Dietrich
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1390.1.1
+    adm = 2
+    dip = 2
+    mil = 0
+  }
+}
+1426.1.1 = {
+  heir = {
+    name = "KQÃëØeÇÑâR" 	# Christian
+    monarch_name = "KQÃëØeÇÑâR VI" 	# Christian VI
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1426.1.1
+    death_date = 1481.1.1
+    claim = 95
+    adm = 2
+    dip = 2
+    mil = 2
+  }
+}
+1440.2.14 = {
+  monarch = {
+    name = "KQÃëØeÇÑâR VI" 	# Christian VI
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1426.1.1
+    adm = 2
+    dip = 2
+    mil = 2
+  }
+  clear_scripted_personalities = yes
+  add_ruler_personality = charismatic_negotiator_personality
+}
+1440.2.14 = {
+  heir = {
+    name = "<h»T∑V" 	# Gerhard
+    monarch_name = "«Rbew <h»T∑V" 	# Gerhard der Mutige
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1430.1.1
+    death_date = 1500.2.22
+    claim = 95
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+}
+1454.1.1 = {
+  monarch = {
+    name = "«Rbew <h»T∑V" 	# Gerhard der Mutige
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1430.1.1
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+}
+1458.1.1 = {
+  heir = {
+    name = "?ñSê+Y" 	# Adolf
+    monarch_name = "?ñSê+Y" 	# Adolf
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1458.1.1
+    death_date = 1500.1.1
+    claim = 95
+    adm = 2
+    dip = 1
+    mil = 4
+  }
+}
+1483.1.1 = {
+  monarch = {
+    name = "?ñSê+Y" 	# Adolf
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1458.1.1
+    adm = 2
+    dip = 1
+    mil = 4
+  }
+}
+1483.1.1 = {
+  heir = {
+    name = "¶u" 	# Johann
+    monarch_name = "¶u V" 	# Johann V
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1460.1.1
+    death_date = 1526.2.10
+    claim = 95
+    adm = 6
+    dip = 2
+    mil = 2
+  }
+}
+1500.1.1 = {
+  monarch = {
+    name = "¶u V" 	# Johann V
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1460.1.1
+    adm = 1
+    dip = 3
+    mil = 2
+  }
+}
+1500.1.1 = {
+  heir = {
+    name = "¶u" 	# Johann
+    monarch_name = "¶u VI" 	# Johann VI
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1500.1.1
+    death_date = 1566.1.1
+    claim = 95
+    adm = 3
+    dip = 2
+    mil = 2
+  }
+}
+1526.2.10 = {
+  monarch = {
+    name = "¶u VI" 	# Johann VI
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1500.1.1
+    adm = 3
+    dip = 2
+    mil = 2
+  }
+}
+1526.2.10 = {
+  heir = {
+    name = "âRN" 	# Anton
+    monarch_name = "âRN I" 	# Anton I
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1505.1.1
+    death_date = 1573.1.23
+    claim = 95
+    adm = 3
+    dip = 3
+    mil = 1
+  }
+}
+1529.1.1 = {
+  religion = protestant
+}
+1566.1.1 = {
+  monarch = {
+    name = "âRN I" 	# Anton I
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1505.1.1
+    adm = 3
+    dip = 3
+    mil = 1
+  }
+}
+1566.1.1 = {
+  heir = {
+    name = "¶u" 	# Johann
+    monarch_name = "¶u VII" 	# Johann VII
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1540.9.9
+    death_date = 1603.11.13
+    claim = 95
+    adm = 1
+    dip = 4
+    mil = 2
+  }
+}
+1573.1.23 = {
+  monarch = {
+    name = "¶u VII" 	# Johann VII
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1540.9.9
+    adm = 1
+    dip = 4
+    mil = 2
+  }
+}
+1583.11.10 = {
+  heir = {
+    name = "âRN —ëyr" 	# Anton G¸nther
+    monarch_name = "âRN —ëyr I" 	# Anton G¸nther I
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1583.11.10
+    death_date = 1667.6.19
+    claim = 95
+    adm = 4
+    dip = 3
+    mil = 2
+  }
+}
+1603.11.13 = {
+  monarch = {
+    name = "âRN —ëyr I" 	# Anton G¸nther I
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1583.11.10
+    adm = 4
+    dip = 3
+    mil = 2
+  }
+}
+# United with Denmark 1667-1773
+1773.12.11 = {
+  monarch = {
+    name = "›OW I ØQ ƒOWØe" 	# Paul I von Ruﬂland 
+    dynasty = "ØQ eYSâv!X" 	# von Oldenburg
+    birth_date = 1754.10.1
+    adm = 1
+    dip = 1
+    mil = 0
+  }
+}
+1773.12.15 = {
+  monarch = {
+    name = "SÅyr»p eY‰SØeyr I" 	# Friedrich August I
+    dynasty = "ØQ wÉSØel‡V-bXbnf" 	# von Holstein-Gottorp
+    birth_date = 1711.9.20
+    adm = 2
+    dip = 2
+    mil = 3
+  }
+}
+1773.12.15 = {
+  heir = {
+    name = "|VóV SÅyr»p Z…^" 	# Peter Friedrich Wilhelm
+    monarch_name = "Z…^ I" 	# Wilhelm I
+    dynasty = "ØQ wÉSØel‡V-bXbnf" 	# von Holstein-Gottorp
+    birth_date = 1754.1.3
+    death_date = 1823.7.2
+    claim = 95
+    adm = 4
+    dip = 3
+    mil = 3
+  }
+}
+1785.7.7 = {
+  monarch = {
+    name = "Z…^ I" 	# Wilhelm I
+    dynasty = "ØQ wÉSØel‡V-bXbnf" 	# von Holstein-Gottorp
+    birth_date = 1754.1.3
+    adm = 4
+    dip = 3
+    mil = 3
+  }
+}
+1785.7.7 = {
+  heir = {
+    name = "|VóV" 	# Peter
+    monarch_name = "|VóV I" 	# Peter I
+    dynasty = "ØQ wÉSØel‡V-bXbnf" 	# von Holstein-Gottorp
+    birth_date = 1755.1.17
+    death_date = 1829.5.21
+    claim = 95
+    adm = 2
+    dip = 2
+    mil = 2
+  }
+}

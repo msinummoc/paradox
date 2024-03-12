@@ -1,0 +1,434 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+technology_group = indian
+religion = hinduism
+primary_culture = garjati
+capital = 2048 	#  Jeypore
+1444.1.1 = {
+  monarch = {
+    name = "Ùu≥uöNKQ" 	# Vinayak
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 2
+    MIL = 2
+  }
+}
+1444.1.1 = {
+  heir = {
+    name = "ÙuPüöNf∑V…b" 	# Viziachandra
+    monarch_name = "ÙuPüöNf∑V…b" 	# Viziachandra
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1444.1.1
+    death_Date = 1510.1.1
+    claim = 95
+    ADM = 1
+    DIP = 1
+    MIL = 2
+  }
+}
+1476.1.1 = {
+  monarch = {
+    name = "ÙuPüöN4t∑V…b" 	# Viziachandra
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 1
+    MIL = 2
+  }
+}
+1476.1.1 = {
+  heir = {
+    name = "ÙTRÙu" 	# Bhariva
+    monarch_name = "ÙTRÙu" 	# Bhariva
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1476.1.1
+    death_Date = 1527.1.1
+    claim = 95
+    ADM = 2
+    DIP = 3
+    MIL = 0
+  }
+}
+1510.1.1 = {
+  monarch = {
+    name = "jñÍw" 	# Bhariva
+    dynasty = "GbààW" 	# Sankara
+    ADM = 2
+    DIP = 3
+    MIL = 0
+  }
+}
+1510.1.1 = {
+  heir = {
+    name = "Ùu¿NÊt≥uæè" 	# Vishwanadha
+    monarch_name = "Ùu¿NÊt≥uæè" 	# Vishwanadha
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1510.1.1
+    death_Date = 1571.1.1
+    claim = 95
+    ADM = 1
+    DIP = 3
+    MIL = 2
+  }
+}
+1527.1.1 = {
+  monarch = {
+    name = "Ùu¿NÉl≥uæè" 	# Vishwanadha
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 3
+    MIL = 2
+  }
+}
+1527.1.1 = {
+  heir = {
+    name = "ÙuPüöNf∑V…b" 	# Viziachandra
+    monarch_name = "ÙuPüöNf∑V…b" 	# Viziachandra
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1527.1.1
+    death_Date = 1597.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 2
+  }
+}
+1571.1.1 = {
+  monarch = {
+    name = "'YõRWid" 	# Balarama
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 2
+    MIL = 2
+  }
+}
+1571.1.1 = {
+  heir = {
+    name = "6wœÇÙuNñ" 	# Yeshovanta
+    monarch_name = "6wœÇÙuNñ" 	# Yeshovanta
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1571.1.1
+    death_Date = 1610.1.1
+    claim = 95
+    ADM = 0
+    DIP = 3
+    MIL = 1
+  }
+}
+1597.1.1 = {
+  monarch = {
+    name = "6wÕuáeTX" 	# Yeshovanta
+    dynasty = "GbààW" 	# Sankara
+    ADM = 0
+    DIP = 3
+    MIL = 1
+  }
+}
+1597.1.1 = {
+  heir = {
+    name = "KQÃë^≥u" 	# Krishna
+    monarch_name = "KQÃë^≥u" 	# Krishna
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1597.1.1
+    death_Date = 1648.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 1
+  }
+}
+1610.1.1 = {
+  monarch = {
+    name = "KQÃë^≥u" 	# Krishna
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 2
+    MIL = 1
+  }
+}
+1610.1.1 = {
+  heir = {
+    name = "ÙuKQ…b∆Y" 	# Vikram
+    monarch_name = "ÙuKQ…b∆Y" 	# Vikram
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1610.1.1
+    death_Date = 1669.1.1
+    claim = 95
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1648.1.1 = {
+  monarch = {
+    name = "◊kØ›Ñ" 	# Vikram
+    dynasty = "GbààW" 	# Sankara
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1648.1.1 = {
+  heir = {
+    name = "KQÃë^≥u" 	# Krishna
+    monarch_name = "KQÃë^≥u II" 	# Krishna II
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1648.1.1
+    death_Date = 1672.1.1
+    claim = 95
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1669.1.1 = {
+  monarch = {
+    name = "KQÃë^≥u II" 	# Krishna II
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1669.1.1 = {
+  heir = {
+    name = "Ùu¿NNÙT…b" 	# Vishwambhara
+    monarch_name = "Ùu¿NNÙT…b" 	# Vishwambhara
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1640.1.1
+    death_Date = 1676.1.1
+    claim = 95
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1672.1.1 = {
+  monarch = {
+    name = "Ùu¿NÉl∆YÙT…b" 	# Vishwambhara
+    dynasty = "GbààW" 	# Sankara
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1672.1.1 = {
+  heir = {
+    name = "lö…b˙Wlö∑V»T≥u" 	# Mallakimardhana
+    monarch_name = "lö…b˙Wlö∑V»T≥u" 	# Mallakimardhana
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1650.1.1
+    death_Date = 1681.1.1
+    claim = 95
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1676.1.1 = {
+  monarch = {
+    name = "lö…b˙WlöSæè≥u" 	# Mallakimardhana
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1676.1.1 = {
+  heir = {
+    name = "√ã®h" 	# Hari
+    monarch_name = "√ã®h" 	# Hari
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1650.1.1
+    death_Date = 1684.1.1
+    claim = 95
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1681.1.1 = {
+  monarch = {
+    name = "√ã®h" 	# Hari
+    dynasty = "GbààW" 	# Sankara
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1681.1.1 = {
+  heir = {
+    name = "ÙT…b…bõs" 	# Balarama
+    monarch_name = "ÙT…b…bõs II" 	# Balarama II
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1650.1.1
+    death_Date = 1686.1.1
+    claim = 95
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1684.1.1 = {
+  monarch = {
+    name = "'YõRWid II" 	# Balarama II
+    dynasty = "GbààW" 	# Sankara
+    ADM = 3
+    DIP = 1
+    MIL = 2
+  }
+}
+1684.1.1 = {
+  heir = {
+    name = "WwQ±ê÷N ´ãÃëmtœb" 	# Ragunath Krishna
+    monarch_name = "WwQ±ê÷N ´ãÃëmtœb" 	# Ragunath Krishna
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1650.1.1
+    death_Date = 1708.1.1
+    claim = 95
+    ADM = 0
+    DIP = 0
+    MIL = 2
+  }
+}
+1686.1.1 = {
+  monarch = {
+    name = "WwQ±ê÷N ´ãÃëmtœb" 	# Ragunath Krishna
+    dynasty = "GbààW" 	# Sankara
+    ADM = 0
+    DIP = 0
+    MIL = 2
+  }
+}
+1686.1.1 = {
+  heir = {
+    name = "Wid√eNñW" 	# Ramchandra
+    monarch_name = "Wid√eNñW" 	# Ramchandra
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1681.1.1
+    death_Date = 1711.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 3
+  }
+}
+1708.1.1 = {
+  monarch = {
+    name = "Wid√eNñW" 	# Ramchandra
+    dynasty = "GbààW" 	# Sankara
+    ADM = 1
+    DIP = 2
+    MIL = 3
+  }
+}
+1708.1.1 = {
+  heir = {
+    name = "ÙT…b…bõs" 	# Balarama
+    monarch_name = "ÙT…b…bõs II" 	# Balarama II
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1681.1.1
+    death_Date = 1713.1.1
+    claim = 95
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1711.1.1 = {
+  monarch = {
+    name = "'YõRWid III" 	# Balarama III
+    dynasty = "GbààW" 	# Sankara
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1708.1.1 = {
+  heir = {
+    name = "Ùu¿NNÙT…b" 	# Vishwambhara
+    monarch_name = "Ùu¿NNÙT…b II" 	# Vishwambhara II
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1681.1.1
+    death_Date = 1713.1.1
+    claim = 95
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1713.1.1 = {
+  monarch = {
+    name = "Ùu¿NÉl∆YÙT…b II" 	# Vishwambhara II
+    dynasty = "GbààW" 	# Sankara
+    ADM = 0
+    DIP = 2
+    MIL = 0
+  }
+}
+1713.1.1 = {
+  heir = {
+    name = "…b±ê KQÃë^≥u" 	# Lala Krishna
+    monarch_name = "…b±ê KQÃë^≥u" 	# Lala Krishna
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1713.1.1
+    death_Date = 1758.1.1
+    claim = 95
+    ADM = 3
+    DIP = 2
+    MIL = 0
+  }
+}
+1752.1.1 = {
+  monarch = {
+    name = "WW ´ãÃëmtœb" 	# Lala Krishna
+    dynasty = "GbààW" 	# Sankara
+    ADM = 3
+    DIP = 2
+    MIL = 0
+  }
+}
+1752.1.1 = {
+  heir = {
+    name = "ÙuKQ…b∆Y" 	# Vikram
+    monarch_name = "ÙuKQ…b∆Y II" 	# Vikram II
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1752.1.1
+    death_Date = 1779.1.1
+    claim = 95
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1758.1.1 = {
+  monarch = {
+    name = "◊kØ›Ñ II" 	# Vikram II
+    dynasty = "GbààW" 	# Sankara
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1758.1.1 = {
+  heir = {
+    name = "Wid√eNñW" 	# Ramchandra
+    monarch_name = "…b∆Yf∑V…b II" 	# Ramchandra II
+    dynasty = "GbààW" 	# Sankara
+    birth_date = 1758.1.1
+    death_Date = 1830.1.1
+    claim = 95
+    ADM = 0
+    DIP = 3
+    MIL = 0
+  }
+}
+1779.1.1 = {
+  monarch = {
+    name = "öS√eNñW II" 	# Ramchandra II
+    dynasty = "GbààW" 	# Sankara
+    ADM = 0
+    DIP = 3
+    MIL = 0
+  }
+}

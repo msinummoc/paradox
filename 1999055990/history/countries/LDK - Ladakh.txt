@@ -1,0 +1,333 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = tibetan
+add_accepted_culture = kashmiri
+religion = vajrayana
+technology_group = indian
+capital = 2074 	#  Ladakh
+fixed_capital = 2074 	#  Cannot move capital away from this province & no power cost to move to it
+1430.1.1 = {
+  #Realm divided between 2 monarchs at this date.
+  monarch = {
+    name = "vVLR`ôT+t" 	# Gyalpo Takpa Bomlde
+    dynasty = "WSpg" 	# Namgyal
+    adm = 4
+    dip = 4
+    mil = 2
+  }
+}
+1430.1.1 = {
+  heir = {
+    name = "Éb˜às9N" 	# Lotus Chhogaldan
+    monarch_name = "Éb˜às9N" 	# Lotus Chhogaldan
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1430.1.1
+    death_Date = 1500.1.1
+    claim = 95
+    adm = 3
+    dip = 3
+    mil = 3
+  }
+}
+1470.1.1 = {
+  monarch = {
+    name = "Éb˜às9N" 	# Lotus Chhogaldan
+    dynasty = "WSpg" 	# Namgyal
+    adm = 3
+    dip = 3
+    mil = 3
+  }
+}
+1470.1.1 = {
+  heir = {
+    name = "Nb‰" 	# Tashi
+    monarch_name = "Nb‰" 	# Tashi
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1450.1.1
+    death_Date = 1532.1.1
+    claim = 95
+    adm = 2
+    dip = 1
+    mil = 2
+  }
+}
+1500.1.1 = {
+  monarch = {
+    name = "Nb‰" 	# Tashi
+    dynasty = "WSpg" 	# Namgyal
+    adm = 3
+    dip = 3
+    mil = 3
+  }
+}
+1515.1.1 = {
+  #Tashi produces no heirs, to solve this he arranges for his brother, who he previously blinded to secure his own succession, to have a child to succeed him.
+  heir = {
+    name = "Vrúe" 	# Tsewang
+    monarch_name = "Vrúe" 	# Tsewang
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1515.1.1
+    death_Date = 1555.1.1
+    claim = 95
+    adm = 3
+    dip = 3
+    mil = 5
+  }
+}
+1532.1.1 = {
+  monarch = {
+    name = "Vrúe" 	# Tsewang
+    dynasty = "WSpg" 	# Namgyal
+    adm = 3
+    dip = 3
+    mil = 5
+  }
+}
+1532.1.1 = {
+  heir = {
+    name = " R.Y" 	# Jamyang
+    monarch_name = " R.Y" 	# Jamyang
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1530.1.1
+    death_Date = 1610.1.1
+    claim = 95
+    adm = 2
+    dip = 1
+    mil = 2
+  }
+}
+1555.1.1 = {
+  monarch = {
+    name = " R.Y" 	# Jamyang
+    dynasty = "WSpg" 	# Namgyal
+    adm = 2
+    dip = 1
+    mil = 2
+  }
+}
+1555.1.1 = {
+  heir = {
+    name = "çP<h" 	# Singye
+    monarch_name = "çP<h" 	# Singye
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1550.1.1
+    death_Date = 1645.1.1
+    claim = 95
+    adm = 4
+    dip = 1
+    mil = 3
+  }
+}
+1610.1.1 = {
+  monarch = {
+    name = "çP<h" 	# Singye
+    dynasty = "WSpg" 	# Namgyal
+    adm = 4
+    dip = 1
+    mil = 3
+  }
+}
+1610.1.1 = {
+  heir = {
+    name = "·V9N" 	# Deldan
+    monarch_name = "·V9N" 	# Deldan
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1600.1.1
+    death_Date = 1666.1.1
+    claim = 95
+    adm = 5
+    dip = 1
+    mil = 1
+  }
+}
+1645.1.1 = {
+  monarch = {
+    name = "·V9N" 	# Deldan
+    dynasty = "WSpg" 	# Namgyal
+    adm = 5
+    dip = 1
+    mil = 1
+  }
+}
+1645.1.1 = {
+  heir = {
+    name = "·VÒR" 	# Delek
+    monarch_name = "·VÒR" 	# Delek
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1620.1.1
+    death_Date = 1695.1.1
+    claim = 95
+    adm = 2
+    dip = 1
+    mil = 2
+  }
+}
+1666.1.1 = {
+  monarch = {
+    name = "·VÒR" 	# Delek
+    dynasty = "WSpg" 	# Namgyal
+    adm = 2
+    dip = 1
+    mil = 2
+  }
+}
+1666.1.1 = {
+  heir = {
+    name = "<S›s" 	# Nyima
+    monarch_name = "<S›s" 	# Nyima
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1660.1.1
+    death_Date = 1750.1.1
+    claim = 95
+    adm = 2
+    dip = 4
+    mil = 2
+  }
+}
+1695.1.1 = {
+  monarch = {
+    name = "<S›s" 	# Nyima
+    dynasty = "WSpg" 	# Namgyal
+    adm = 2
+    dip = 4
+    mil = 2
+  }
+}
+1695.1.1 = {
+  heir = {
+    name = "·VÍ–" 	# Deskyong
+    monarch_name = "·VÍ–" 	# Deskyong
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1680.1.1
+    death_Date = 1770.1.1
+    claim = 95
+    adm = 1
+    dip = 0
+    mil = 0
+  }
+}
+1750.1.1 = {
+  monarch = {
+    name = "·VÍ–" 	# Deskyong
+    dynasty = "WSpg" 	# Namgyal
+    adm = 1
+    dip = 0
+    mil = 0
+  }
+}
+1750.1.1 = {
+  heir = {
+    name = "mVªc" 	# Phuntsog
+    monarch_name = "mVªc" 	# Phuntsog
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1700.1.1
+    death_Date = 1775.1.1
+    claim = 70
+    adm = 1
+    dip = 1
+    mil = 1
+  }
+}
+1752.1.1 = {
+  government_rank = 1
+}
+1770.1.1 = {
+  monarch = {
+    name = "mVªc" 	# Phuntsog
+    dynasty = "WSpg" 	# Namgyal
+    adm = 1
+    dip = 1
+    mil = 1
+  }
+}
+1770.1.1 = {
+  heir = {
+    name = "(„Í–" 	# Saskyong
+    monarch_name = "(„Í–" 	# Saskyong
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1690.1.1
+    death_Date = 1780.1.1
+    claim = 95
+    adm = 1
+    dip = 1
+    mil = 1
+  }
+}
+1775.1.1 = {
+  monarch = {
+    name = "(„Í–" 	# Saskyong
+    dynasty = "WSpg" 	# Namgyal
+    adm = 1
+    dip = 1
+    mil = 1
+  }
+}
+1775.1.1 = {
+  heir = {
+    name = "Vrúe" 	# Tsewang
+    monarch_name = "Vrúe II" 	# Tsewang II
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1730.1.1
+    death_Date = 1810.1.1
+    claim = 95
+    adm = 2
+    dip = 0
+    mil = 2
+  }
+}
+1780.1.1 = {
+  monarch = {
+    name = "Vrúe II" 	# Tsewang II
+    dynasty = "WSpg" 	# Namgyal
+    adm = 2
+    dip = 0
+    mil = 2
+  }
+}
+1780.1.1 = {
+  heir = {
+    name = "!kæe" 	# Tsetan
+    monarch_name = "!kæe" 	# Tsetan
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1750.1.1
+    death_Date = 1820.1.1
+    claim = 95
+    adm = 4
+    dip = 1
+    mil = 1
+  }
+}
+1809.1.1 = {
+  government_rank = 2
+}
+1810.1.1 = {
+  monarch = {
+    name = "!kæe" 	# Tsetan
+    dynasty = "WSpg" 	# Namgyal
+    adm = 4
+    dip = 1
+    mil = 1
+  }
+}
+1810.1.1 = {
+  heir = {
+    name = "!kís˜às" 	# Tsepel Tondup
+    monarch_name = "!kís˜às" 	# Tsepel Tondup
+    dynasty = "WSpg" 	# Namgyal
+    birth_date = 1780.1.1
+    death_Date = 1834.1.1
+    claim = 95
+    adm = 0
+    dip = 1
+    mil = 0
+  }
+}
+1820.1.1 = {
+  monarch = {
+    name = "!kís˜às" 	# Tsepel Tondup
+    dynasty = "WSpg" 	# Namgyal
+    adm = 0
+    dip = 1
+    mil = 0
+  }
+}

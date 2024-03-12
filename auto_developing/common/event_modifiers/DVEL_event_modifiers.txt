@@ -1,0 +1,81 @@
+# DVEL_peacetime_reconstruction = {
+# 	global_monthly_devastation = -0.17
+# 	global_supply_limit_modifier = 1
+# }
+
+DVEL_player_development_window = {
+	development_cost_modifier = -9
+}
+
+DVEL_no_manual_dev_1 = {
+	development_cost_modifier = 9
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+	# advisor_cost = 0.5
+}
+DVEL_no_manual_dev_2 = {
+	development_cost_modifier = 9
+	country_admin_power = -2
+	country_diplomatic_power = -2
+	country_military_power = -3
+	advisor_cost = 0.5
+}
+DVEL_no_manual_dev_3 = {
+	development_cost_modifier = 9
+	country_admin_power = -3
+	country_diplomatic_power = -3
+	country_military_power = -3
+	advisor_cost = 1
+}
+
+DVEL_subject_growth_limiter = {
+	development_cost = 0.1
+}
+DVEL_colonial_growth_limiter = {
+	development_cost = 0.3
+}
+
+DVEL_raided = {
+	local_development_cost = 0.05
+}
+
+DVEL_scorched = {
+	local_hostile_attrition = 1
+	local_monthly_devastation = 0.25
+	local_warscore_cost_modifier = -0.1
+}
+
+DVEL_recently_converted = {
+	local_culture_conversion_cost = 3
+}
+
+# et_plague_tribal = {
+# 	tribal_development_growth = -0.5
+# }
+
+# et_famine_tribal = {
+# 	tribal_development_growth = -0.5
+# }
+
+# et_drought_tribal = {
+# 	tribal_development_growth = -0.5
+# }
+
+# et_plague = {
+# 	local_development_cost = 0.5
+# 	local_manpower_modifier = -0.5
+# 	garrison_growth = -0.5
+# }
+
+# et_famine = {
+# 	local_development_cost = 0.5
+# 	local_manpower_modifier = -0.5
+# 	garrison_growth = -0.5
+# }
+
+# et_drought = {
+# 	local_development_cost = 0.5
+# 	local_manpower_modifier = -0.5
+# 	garrison_growth = -0.5
+# }

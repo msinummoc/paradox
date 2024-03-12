@@ -1,0 +1,322 @@
+#mp1 frontier ideas
+MP1_ideas = {
+	start = {
+		fort_maintenance_modifier = -0.2
+		defensiveness = 0.10
+		may_explore = yes
+		colonists = 1
+	}
+	
+	bonus = {
+		trade_steering = 0.2
+	}
+	
+	trigger = {
+		tag = MP1
+	}
+	free = yes		#will be added at load.
+	
+	MP1_xianbei_frontier = {
+		auto_explore_adjacent_to_colony = yes
+	}
+	MP1_push_west = {
+		global_colonial_growth = 30
+	}
+	MP1_native = {
+		native_uprising_chance = -0.5
+		native_assimilation = 0.5
+	}
+	MP1_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP1_adaptive = {
+		land_attrition = -0.2
+	}
+	MP1_mobility = {
+		leader_land_manuever = 1
+		movement_speed = 0.1
+	}
+	MP1_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+}
+
+#mp2 frontier ideas
+MP2_ideas = {
+	start = {
+		naval_maintenance_modifier = -0.2
+		light_ship_cost = -0.2
+		may_explore = yes
+		colonists = 1
+	}
+	
+	bonus = {
+		trade_steering = 0.2
+	}
+	
+	trigger = {
+		tag = MP2
+	}
+	free = yes		#will be added at load.
+	
+	MP2_lingbei_frontier = {
+		auto_explore_adjacent_to_colony = yes
+	}
+	MP2_push_east = {
+		global_colonial_growth = 10
+	}
+	MP2_native = {
+		native_uprising_chance = -0.5
+		native_assimilation = 0.5
+	}
+	MP2_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP2_adaptive = {
+		land_attrition = -0.2
+	}
+	MP2_navy = {
+		naval_forcelimit_modifier = 0.25
+		naval_morale = 0.2
+	}
+	MP2_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+}
+
+#mp3 shield ideas
+MP3_ideas = {
+	start = {
+		infantry_power = 0.1
+		missionary_maintenance_cost = 0.25
+		missionaries = 1
+	}
+	
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	
+	trigger = {
+		tag = MP3
+	}
+	free = yes		#will be added at load.
+	
+	MP3_army = {
+		discipline = 0.05
+	}
+	MP3_religion = {
+		missionary_maintenance_cost = 0.2
+		global_missionary_strength = 0.02
+		tolerance_own = 2
+		religious_unity = 0.25
+		missionaries = 1
+	}
+	MP3_expand = {
+		province_warscore_cost = -0.1
+		core_creation = -0.2
+		
+	}
+	MP3_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP3_supply = {
+		land_attrition = -0.2
+	}
+	MP3_fort = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	MP3_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+}
+
+#mp4 shield ideas
+MP4_ideas = {
+	start = {
+		infantry_power = 0.1
+		missionary_maintenance_cost = 0.25
+		missionaries = 1
+	}
+	
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	
+	trigger = {
+		tag = MP4
+	}
+	free = yes		#will be added at load.
+	
+	MP4_army = {
+		discipline = 0.05
+	}
+	MP4_religion = {
+		missionary_maintenance_cost = 0.2
+		global_missionary_strength = 0.02
+		tolerance_own = 2
+		religious_unity = 0.25
+		missionaries = 1
+	}
+	MP4_expand = {
+		province_warscore_cost = -0.1
+		core_creation = -0.2
+		
+	}
+	MP4_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP4_supply = {
+		land_attrition = -0.2
+	}
+	MP4_fort = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	MP4_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+}
+
+#mp5 shield ideas
+MP5_ideas = {
+	start = {
+		infantry_power = 0.1
+		missionary_maintenance_cost = 0.25
+		missionaries = 1
+	}
+	
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	
+	trigger = {
+		tag = MP5
+	}
+	free = yes		#will be added at load.
+	
+	MP5_army = {
+		discipline = 0.05
+	}
+	MP5_religion = {
+		missionary_maintenance_cost = 0.2
+		global_missionary_strength = 0.02
+		tolerance_own = 2
+		religious_unity = 0.25
+		missionaries = 1
+	}
+	MP5_expand = {
+		province_warscore_cost = -0.1
+		core_creation = -0.2
+		
+	}
+	MP5_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP5_supply = {
+		land_attrition = -0.2
+	}
+	MP5_fort = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	MP5_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+}
+
+#mp6 shield ideas
+MP6_ideas = {
+	start = {
+		infantry_power = 0.1
+		missionary_maintenance_cost = 0.25
+		missionaries = 1
+	}
+	
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	
+	trigger = {
+		tag = MP6
+	}
+	free = yes		#will be added at load.
+	
+	MP6_army = {
+		discipline = 0.05
+	}
+	MP6_religion = {
+		missionary_maintenance_cost = 0.2
+		global_missionary_strength = 0.02
+		tolerance_own = 2
+		religious_unity = 0.25
+		missionaries = 1
+	}
+	MP6_expand = {
+		province_warscore_cost = -0.1
+		core_creation = -0.2
+		
+	}
+	MP6_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP6_supply = {
+		land_attrition = -0.2
+	}
+	MP6_fort = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	MP6_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+}
+
+#mp7 def ideas
+MP7_ideas = {
+	start = {
+		infantry_power = 0.1
+		garrison_size = 0.2
+		defensiveness = 0.2
+	}
+	
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	
+	trigger = {
+		tag = MP7
+	}
+	free = yes		#will be added at load.
+	
+	MP7_army = {
+		discipline = 0.05
+	}
+	MP7_garrison = {
+		garrison_size = 0.2
+		global_garrison_growth = 0.25
+	}
+	MP7_attrition = {
+		hostile_attrition = 1.5
+	}
+	MP7_culture = {
+		culture_conversion_cost = -0.5
+	}
+	MP7_supply = {
+		land_attrition = -0.2
+	}
+	MP7_fort = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.2
+	}
+	MP7_spirit = {
+		land_morale = 0.1
+		leader_land_manuever = 1
+	}
+}

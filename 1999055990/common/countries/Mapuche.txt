@@ -1,0 +1,78 @@
+#Country Name: Please see filename.
+graphical_culture = northamericagfx
+color = { 225 71 35 }
+revolutionary_colors = { 14 9 5 }
+historical_idea_groups = {
+  defensive_ideas
+  religious_ideas
+  offensive_ideas
+  maritime_ideas
+  trade_ideas
+  spy_ideas
+  diplomatic_ideas
+  economic_ideas
+}
+historical_units = {
+  south_american_spearmen
+  south_american_warfare
+  inca_mountain_warfare
+  incan_slingshots
+  incan_axemen
+  south_american_gunpowder_warfare
+  south_american_reformed_gunpowder_warfare
+  south_american_arquebusier
+  westernized_incan
+  reformed_westernized_incan
+  incan_guerilla_warfare
+}
+leader_names = {
+  "?–ôT	Tú‹" 	# Abajino
+  "?–³RaS<SšN" 	# Araucanía
+  Choll-Choll
+  Lonko
+  Picunche
+  "nfWÛkïQ" 	# Promaucae
+  "zA›" 	# Toqui
+  "i`äSbSR" 	# Nguluche
+  "ôu)RR" 	# Huilliche
+  "Éb+YA›i`R" 	# Lafquenche
+}
+monarch_names = {
+  "‰RaSs|Éb #0" = 10 	# Ancamilla #0
+  "Nampai #0" = 10
+  "®vGYWS #0" = 10 	# Pichiñán #0
+  "Coñoepán #0" = 10
+  "³uáwÃWSyrÌ‘>m #0" = 10 	# Nahueltripai #0
+  "s|ÉbJnfÃW #0" = 10 	# Millarapue #0
+  "s|ÉbÒRS«ƒ #0" = 10 	# Millalelmo #0
+  "±ƒ+YNb9ƒ #0" = 30 	# Lautaro #0
+  "iOÉblšN #0" = 30 	# Paillamachu #0
+  "áwÃW…m“^Éb #0" = 30 	# Huenecura #0
+  "Œ‚ÉbôubS #0" = 30 	# Aillavilu #0
+  "Catrileo #0" = 10
+  "WSÑy #0" = 10 	# Ñanco #0
+  "Melín #0" = 10
+  "wâl)RNW #0" = 35 	# Caupolicán #0
+  "OpQäSŞ #0" = 10 	# Illangulién #0
+  "Colipí #0" = 10
+  "Pinolevi #0" = 10
+  "Purrán #0" = 10
+  "Mañil #0" = 10
+  "A›ÉbXo #0" = 10 	# Quilapán #0
+  "Pelantaro #0" = 10
+  "Suyai #0" = -1
+  "Yaima #0" = -1
+  "Ailén #0" = -1
+}
+ship_names = {
+  "nf&O" 	# Purén
+  "ÔkeYÔkeY" 	# Biobío
+  "“^ÉbÉbôT" 	# Curalaba
+  "&OÑyR" 	# Loncoche
+  "şVaSiOS" 	# Tucapel
+  "lšÌ‘æ—Ëu" 	# Marihueñu
+  "lšTXúWXb³l" 	# Mataquito
+  "TNú‹¯e" 	# Chonos
+  "âlšN" 	# Poya
+  "wâl)RNW" 	# Caupolicán
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+	 DVEL_manual_dev_window_title:0 "DVEL: Start Development Window"
+	 DVEL_manual_dev_window_desc:0 "Enable manual development for a month (useful for agendas and missions)"
+	 DVEL_global_census_title:0 "DVEL: Global Census"
+	 DVEL_global_census_desc:0 "Calculate global census?"

@@ -1,0 +1,185 @@
+government = tribal
+add_government_reform = gond_kingdom
+government_rank = 1
+technology_group = indian
+religion = hinduism
+primary_culture = gondi
+capital = 4452 	#  Ratanpur
+#Haihayas of Ratanpur, heirs to the Haihayas/Kalachuris of Tripuri
+#Dynasty started in 875
+1426.1.1 = {
+  monarch = {
+    name = "æidWÐcFZ" 	# Kamaldeva
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 3
+    DIP = 1
+    MIL = 3
+  }
+}
+1436.1.1 = {
+  monarch = {
+    name = "QhKQ)R^X" 	# Shankersai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+1454.1.1 = {
+  monarch = {
+    name = "«ƒU^X" 	# Mohansai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 2
+    MIL = 3
+  }
+}
+1472.1.1 = {
+  monarch = {
+    name = "TXý^X" 	# Dadusai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 3
+    DIP = 1
+    MIL = 2
+  }
+}
+1497.1.1 = {
+  monarch = {
+    name = "nfW0tTXlš^X" 	# Purosottamasai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1519.1.1 = {
+  monarch = {
+    name = "ôTÈT^X" 	# Baharsai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1546.1.1 = {
+  monarch = {
+    name = "aSÉblb^X" 	# Kalyansai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1583.1.1 = {
+  monarch = {
+    name = "ÉbKQÀNüf^X" 	# Lakshmansai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 1
+    MIL = 1
+  }
+}
+1591.1.1 = {
+  monarch = {
+    name = "QhaSÌ‘^X" 	# Shankarsai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1606.1.1 = {
+  monarch = {
+    name = "ñOmrN–" 	# Kumud
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1617.1.1 = {
+  monarch = {
+    name = "yrÌ‘^ís^X" 	# Tribhubansai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1632.1.1 = {
+  monarch = {
+    name = "><h«ƒIl^X" 	# Jagmohansai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 2
+    MIL = 1
+  }
+}
+1645.1.1 = {
+  monarch = {
+    name = "?–·VÌ‘^X" 	# Adlisai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 1
+    DIP = 1
+    MIL = 2
+  }
+}
+1659.1.1 = {
+  monarch = {
+    name = "Éb	Tyr^X" 	# Ranjitsai
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1685.1.1 = {
+  monarch = {
+    name = "TXKQTX›" 	# Taktasingh
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 1
+    DIP = 0
+    MIL = 1
+  }
+}
+1689.1.1 = {
+  monarch = {
+    name = "Éb>›<h·Væt" 	# Rajsinghdeva
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1720.1.1 = {
+  monarch = {
+    name = "(„¾›<h" 	# Sardarsingh
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1732.1.1 = {
+  monarch = {
+    name = "ÉbäS³u›<h" 	# Raghunatsingh
+    dynasty = "Ã‹OÃ‹6w" 	# Haihaya
+    ADM = 3
+    DIP = 2
+    MIL = 0
+  }
+}
+1732.1.1 = {
+  heir = {
+    name = "«ƒIl›<h" 	# Mohansingh
+    monarch_name = "«ƒIl›<h" 	# Mohansingh
+    dynasty = "wmÈTšN" 	# Haihaya
+    birth_date = 1720.1.1
+    death_Date = 1787.1.1
+    claim = 95
+    ADM = 2
+    DIP = 0
+    MIL = 1
+  }
+}
+#Conquered by Bhonsles of Nagpur in 1740.

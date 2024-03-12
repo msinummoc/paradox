@@ -1,0 +1,15 @@
+DVEL_medieval_age_modifier = {
+	development_cost = -0.7 # from 1.5
+}
+DVEL_discovery_age_modifier = {
+	development_cost = -0.4 # from 1
+}
+DVEL_reformation_age_modifier = {
+	development_cost = -0.1 # from 0.5
+}
+DVEL_absolutism_age_modifier = {
+	development_cost = 0.05 # from 0.15
+}
+DVEL_revolution_age_modifier = {
+	development_cost = 0.15 # from -0.15
+}

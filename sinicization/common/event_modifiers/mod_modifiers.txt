@@ -1,0 +1,28 @@
+confucian_education = {
+	global_missionary_strength = 0.02
+	tolerance_heathen = -1
+	missionary_maintenance_cost = 0.2
+	picture = "local_missionary_strength"
+}
+
+elite_chinese_army = {
+	discipline = 0.10
+	defensiveness = 0.20
+	infantry_power = 0.20
+	land_morale = 0.20
+	land_maintenance_modifier = 0.25
+	army_tradition_decay = -0.015
+	picture = "army_tradition"
+}
+
+relocate_population_china = {
+	global_colonial_growth = 20	
+	auto_explore_adjacent_to_colony = yes
+	picture = "colonists"
+}
+
+china_integrated_subjects = {
+	vassal_income = -0.1
+	reduced_liberty_desire = 60
+	picture = "country_diplomatic_power"
+}

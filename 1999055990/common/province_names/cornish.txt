@@ -1,0 +1,11 @@
+233 = "·^ƒlS" 	# Kernow 	# Cornwall
+4373 = "·V)n¯e" 	# Dewnens 	# Devon
+4130 = "¯eyrÉb·V…Q¯e" 	# Stradneth 	# Somerset
+4374 = "jgWyrÌ‘<h¯e" 	# Durotriges 	# Dorset
+234 = "SÖv" 	# Belgae 	# Hampshire
+236 = "&Ofe" 	# Loundres 	# London
+237 = "ir%m" 	# Rysoghen 	# Oxford
+4370 = "<hpQTXmV¯e" 	# Grantapons 	# Cambridge
+245 = "„Sfk±ƒKQ" 	# Evrek 	# York
+373 = "ý—gi`" 	# Dulynn 	# Dublin
+4369 = "ïQ÷–ê	Tf" 	# Ceredigion 	# Carmarthen

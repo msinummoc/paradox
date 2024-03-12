@@ -1,0 +1,62 @@
+#Natives
+graphical_culture = westerngfx
+color = { 203 164 103 }
+# Used for colonial nations
+historical_idea_groups = {
+  expansion_ideas
+  trade_ideas
+  plutocracy_ideas
+  economic_ideas
+  quality_ideas
+  maritime_ideas
+  quantity_ideas
+  administrative_ideas
+}
+monarch_names = {
+  "lš®v #0" = 10 	# Mapi #0
+  "ËRY #0" = 10 	# Quando #0
+  "OÉb #0" = 10 	# Illa #0
+  "Ì‘lšKQ #0" = 10 	# Rimac #0
+  "‚„0t #0" = 10 	# Tiso #0
+  "“^‰ #0" = 10 	# Cusi #0
+  "…hTX #0" = 10 	# Mayta #0
+  "WaS #0" = 10 	# Roca #0
+  "POiO #0" = 10 	# Zope #0
+  "“^Ì‘šNXb #0" = 10 	# Curiatao #0
+  "ÜtKQÉb #0" = 10 	# Guacra #0
+  "…hOÉb #0" = 10 	# Maila #0
+  "9NúW #0" = 10 	# Tanqui #0
+  "ğl®v #0" = 10 	# Taipi #0
+  "Qhæ #0" = -1 	# Sanga #0
+}
+leader_names = {
+  "ğlN" 	# Tywan
+  "XbXb" 	# Toto
+  "Å–ôu" 	# Iawi
+  " R(„³u" 	# Gasana
+  "`?–" 	# Wyoh
+  "OÉb" 	# Illa
+  "…hOÉb" 	# Maila
+  "úWPO" 	# Quizo
+  "9NúW" 	# Tanqui
+  "yrÉbNY" 	# Taraque
+  "TX‰ƒ" 	# Tari
+  "^¯w" 	# Pacon
+}
+ship_names = {
+  "šNÆYW" 	# Yamro
+  "Qh R" 	# Sanga
+  "›s<S" 	# Mani
+  "FzTXÉb" 	# Mutara
+  " R(„³u" 	# Gasana
+  "2S^" 	# Yuhi
+  "úWpgÌ‘" 	# Kigeri
+  "¯wôT" 	# Kemba
+  "?–·VW" 	# Adero
+  "?–fV" 	# Ayan
+  "lškê" 	# Mahdi
+  "1rÅ`" 	# Gukunda
+  "KN" 	# Nalungo
+  "úWmm" 	# Kilolo
+  " R^	T" 	# Gahiji
+}

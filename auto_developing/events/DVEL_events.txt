@@ -1,0 +1,1100 @@
+namespace = DVEL_events
+
+country_event = { # initialization
+	id = DVEL_events.0
+	title = DVEL_events.0.t
+	desc = DVEL_events.0.desc
+
+	fire_only_once = yes
+
+	trigger = { ai = no }
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			# 118 = {
+			# 	add_province_triggered_modifier = DVEL_monthly_dev_pulsar
+			# 	add_province_triggered_modifier = DVEL_annual_dev_pulsar
+			# }
+			if = {
+				limit = { is_mod_active = "Ante Bellum" }
+				set_global_flag = DVEL_AB_flag
+			} else_if = {
+				limit = { is_mod_active = "Voltaire's Nightmare" }
+				set_global_flag = DVEL_VN_flag
+			} else_if = {
+				limit = { is_mod_active = "Anbennar: A Fantasy Total Conversion" }
+				set_global_flag = DVEL_Anb_flag
+			} else_if = {
+				limit = { is_mod_active = "Post Finem" }
+				set_global_flag = DVEL_PF_flag
+			} else_if = {
+				limit = { is_mod_active = "Europa Expanded" }
+				set_global_flag = DVEL_EE_flag
+			} else_if = {
+				limit = { is_mod_active = "The Odd Empires" }
+				set_global_flag = DVEL_TOE_flag
+			}
+		}
+	}
+
+	option = { # default settings
+		name = DVEL_events.0.a
+		highlight = yes
+		
+		clr_global_flag = DVEL_debug_mode_flag
+		clr_country_flag = DVEL_debug_target_flag
+		#set_global_flag = DVEL_no_manual_development_flag
+		
+		set_global_flag = DVEL_no_culture_spread_flag
+		clr_global_flag = DVEL_spread_to_same_group_flag
+		clr_global_flag = DVEL_spread_to_accepted_flag
+		# clr_global_flag = DVEL_test_culture_spread_flag
+		
+		set_global_flag = DVEL_anti_trigger_flag
+		clr_country_flag = DVEL_auto_drain_flag
+		
+		clr_global_flag = DVEL_draining
+		# hidden_effect = {
+		# 	118 = { remove_province_triggered_modifier = DVEL_mana_drain_monthly_pulsar }
+		# }
+
+		set_global_flag = DVEL_disasters
+	}
+
+	option = { # custom setup
+		name = DVEL_events.0.b
+		country_event = { id = DVEL_events.1 }
+	}
+	
+	option = { # dev settings
+		#dev settings
+		name = DVEL_events.0.c
+		
+		set_global_flag = DVEL_debug_mode_flag
+		set_country_flag = DVEL_debug_target_flag
+		set_global_flag = DVEL_no_manual_development_flag
+		
+		clr_global_flag = DVEL_no_culture_spread_flag
+		clr_global_flag = DVEL_spread_to_same_group_flag
+		clr_global_flag = DVEL_spread_to_accepted_flag
+		# clr_global_flag = DVEL_test_culture_spread_flag
+		
+		set_global_flag = DVEL_anti_trigger_flag
+		clr_country_flag = DVEL_auto_drain_flag
+		
+		clr_global_flag = DVEL_draining
+		# hidden_effect = {
+		# 	118 = { remove_province_triggered_modifier = DVEL_mana_drain_monthly_pulsar }
+		# }
+
+		set_global_flag = DVEL_disasters
+	}
+}
+
+country_event = { # debug mode setup
+	id = DVEL_events.1
+	title = DVEL_events.1.t
+	desc = DVEL_events.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DVEL_events.1.a
+		set_global_flag = DVEL_debug_mode_flag
+		set_country_flag = DVEL_debug_target_flag
+	}
+	
+	option = {
+		name = DVEL_events.1.b
+		highlight = yes
+
+		clr_global_flag = DVEL_debug_mode_flag
+		clr_country_flag = DVEL_debug_target_flag
+	}
+	
+	after = {
+		country_event = { id = DVEL_events.2 }
+	}
+}
+
+country_event = { # manual development setup
+	id = DVEL_events.2
+	title = DVEL_events.2.t
+	desc = DVEL_events.2.desc
+	
+	is_triggered_only = yes
+	
+	option = { # no manual development
+		name = DVEL_events.2.a
+		highlight = yes
+
+		set_global_flag = DVEL_anti_trigger_flag
+		set_global_flag = DVEL_no_manual_development_flag
+	}
+	
+	option = { # allow manual development
+		name = DVEL_events.2.b
+		
+		set_global_flag = DVEL_anti_trigger_flag
+		clr_global_flag = DVEL_no_manual_development_flag
+	}
+
+	after = {
+		country_event = { id = DVEL_events.3 }
+	}
+}
+
+country_event = { # culture spread setup
+	id = DVEL_events.3
+	title = DVEL_events.3.t
+	desc = DVEL_events.3.desc
+	
+	is_triggered_only = yes
+	
+	option = { #no spread
+		name = DVEL_events.3.a
+		
+		set_global_flag = DVEL_no_culture_spread_flag
+		clr_global_flag = DVEL_spread_to_same_group_flag
+		clr_global_flag = DVEL_spread_to_accepted_flag
+		# clr_global_flag = DVEL_test_culture_spread_flag
+	}
+	
+	option = { #spread to non-accepted
+		name = DVEL_events.3.b
+		highlight = yes
+
+		clr_global_flag = DVEL_no_culture_spread_flag
+		clr_global_flag = DVEL_spread_to_same_group_flag
+		clr_global_flag = DVEL_spread_to_accepted_flag
+		# clr_global_flag = DVEL_test_culture_spread_flag
+
+		set_global_flag = DVEL_anti_trigger_flag
+	}
+	
+	option = { #spread to own group and non-accepted
+		name = DVEL_events.3.c
+		
+		clr_global_flag = DVEL_no_culture_spread_flag
+		set_global_flag = DVEL_spread_to_same_group_flag
+		clr_global_flag = DVEL_spread_to_accepted_flag
+		# clr_global_flag = DVEL_test_culture_spread_flag
+
+		set_global_flag = DVEL_anti_trigger_flag
+	}
+	
+	option = { #spread everywhere
+		name = DVEL_events.3.d
+		
+		clr_global_flag = DVEL_no_culture_spread_flag
+		set_global_flag = DVEL_spread_to_same_group_flag
+		set_global_flag = DVEL_spread_to_accepted_flag
+		# clr_global_flag = DVEL_test_culture_spread_flag
+
+		set_global_flag = DVEL_anti_trigger_flag
+	}
+	
+	after = {
+		country_event = { id = DVEL_events.4 }
+	}
+}
+
+country_event = { # auto drain setup
+	id = DVEL_events.4
+	title = DVEL_events.4.t
+	desc = DVEL_events.4.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DVEL_events.4.a
+		
+		set_country_flag = DVEL_auto_drain_flag
+		set_global_flag = DVEL_draining
+		hidden_effect = {
+			118 = {
+				add_province_triggered_modifier = DVEL_mana_drain_monthly_pulsar
+			}
+		}
+	}
+	
+	option = {
+		name = DVEL_events.4.b
+		highlight = yes
+
+		clr_country_flag = DVEL_auto_drain_flag
+		clr_global_flag = DVEL_draining
+		hidden_effect = {
+			118 = {
+				remove_province_triggered_modifier = DVEL_mana_drain_monthly_pulsar
+			}
+		}
+	}
+
+	# after = {
+	# 	country_event = { id = DVEL_events.5 }
+	# }
+}
+
+# country_event = { # disaster setup
+# 	id = DVEL_events.5
+# 	title = DVEL_events.5.t
+# 	desc = DVEL_events.5.desc
+	
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 		name = DVEL_events.5.a
+# 		highlight = yes
+		
+# 		set_global_flag = DVEL_disasters
+# 	}
+	
+# 	option = {
+# 		name = DVEL_events.4.b
+		
+# 		clr_global_flag = DVEL_disasters
+# 	}
+# }
+
+country_event = { # The Big One
+	id = DVEL_events.100
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owns = 118
+		had_global_flag = {
+			flag = DVEL_anti_trigger_flag
+			days = 330
+		}
+	}
+	
+	# mean_time_to_happen = {
+	# 	days = 30
+	# }
+	
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = DVEL_anti_trigger_flag
+		}
+	}
+	
+	option = {
+		hidden_effect = {
+			every_country = {
+				limit = { DVEL_is_right_government = yes }
+				DVEL_country_dev_math = yes
+				if = {
+					limit = { NOT = { has_global_flag = DVEL_no_culture_spread_flag } }
+					save_event_target_as = DVEL_owner_dummy
+					DVEL_country_culture_math = yes
+				}
+				every_owned_province = {
+					limit = {
+						is_city = yes
+						is_core = owner
+						controlled_by = owner
+					}
+					if = { # anti 0 dev
+						limit = { NOT = { base_tax = 1 } }
+						set_base_tax = 1
+						if = {
+							limit = { has_global_flag = DVEL_debug_mode_flag }
+							REB = {
+								change_variable = { which = devAdded value = 1 }
+							}
+							owner = {
+								if = {
+									limit = { has_country_flag = DVEL_debug_target_flag }
+									change_variable = { which = playerNetDev value = 1 }
+								} else_if = {
+									limit = {
+										is_subject_other_than_tributary_trigger = yes
+										overlord = { has_country_flag = DVEL_debug_target_flag }
+									}
+									overlord = {
+										change_variable = { which = subjectNetDev value = 1 }
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = { NOT = { base_production = 1 } }
+						set_base_production = 1
+						if = {
+							limit = { has_global_flag = DVEL_debug_mode_flag }
+							REB = {
+								change_variable = { which = devAdded value = 1 }
+							}
+							owner = {
+								if = {
+									limit = { has_country_flag = DVEL_debug_target_flag }
+									change_variable = { which = playerNetDev value = 1 }
+								} else_if = {
+									limit = {
+										is_subject_other_than_tributary_trigger = yes
+										overlord = { has_country_flag = DVEL_debug_target_flag }
+									}
+									overlord = {
+										change_variable = { which = subjectNetDev value = 1 }
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = { NOT = { base_manpower = 1 } }
+						set_base_manpower = 1
+						if = {
+							limit = { has_global_flag = DVEL_debug_mode_flag }
+							REB = {
+								change_variable = { which = devAdded value = 1 }
+							}
+							owner = {
+								if = {
+									limit = { has_country_flag = DVEL_debug_target_flag }
+									change_variable = { which = playerNetDev value = 1 }
+								} else_if = {
+									limit = {
+										is_subject_other_than_tributary_trigger = yes
+										overlord = { has_country_flag = DVEL_debug_target_flag }
+									}
+									overlord = {
+										change_variable = { which = subjectNetDev value = 1 }
+									}
+								}
+							}
+						}
+					}
+					DVEL_province_dev_math = yes
+					if = { # development effects
+						limit = {
+							NOT = { check_variable = { which = netDevCost value = 2.5 } }
+							check_variable = { which = netDevCost value = -2 }
+						}
+						random_list = { #once every 40 years
+							29 = { }
+							1 = {
+								DVEL_add_development = yes
+								modifier = { factor = 0.5 NOT = { OR = { has_owner_accepted_culture = yes has_owner_culture = yes } } }
+								modifier = { factor = 0.75 NOT = { is_state = yes } }
+								modifier = { factor = 0.75 owner = { is_at_war = yes } }
+								modifier = { factor = 1.3 province_has_center_of_trade_of_level = 2 }
+								modifier = { factor = 1.3 province_has_center_of_trade_of_level = 3 }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.5 } } }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.45 } } }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.4 } } }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.35 } } }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.3 } } }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.25 } } }
+								modifier = { factor = 1.05 NOT = { check_variable = { which = netDevCost value = 0.2 } } }
+								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.15 } } }
+								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.1 } } }
+								modifier = { factor = 1.2 NOT = { check_variable = { which = netDevCost value = 0.05 } } }
+								modifier = { factor = 1.3 NOT = { check_variable = { which = netDevCost value = 0 } } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.6 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.7 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.8 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.9 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 1.0 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.1 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.2 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.3 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.4 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.6 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.8 } }
+								modifier = { factor = 0.8 check_variable = { which = netDevCost value = 2 } }
+								modifier = { factor = 0.7 check_variable = { which = netDevCost value = 2.2 } }
+								modifier = { factor = 2 NOT = { development = 5 } }
+								modifier = { factor = 2 NOT = { development = 10 } }
+								modifier = { factor = 1.2 development = 10 }
+								modifier = { factor = 1.3 development = 20 }
+								modifier = { factor = 1.4 development = 30 }
+								modifier = { factor = 1.4 AND = { development = 40 is_year = 1600 } }
+								modifier = { factor = 1.3 AND = { development = 50 is_year = 1650 } }
+								modifier = { factor = 1.2 AND = { development = 60 is_year = 1700 } }
+								modifier = { factor = 1.2 AND = { development = 70 is_year = 1750 } }
+								modifier = { factor = 1.1 owner = { stability = 3 } }
+								modifier = { factor = 1.1 owner = { stability = 2 } }
+								modifier = { factor = 0.9 NOT = { owner = { stability = 1 } } }
+								modifier = { factor = 0.9 NOT = { owner = { stability = 0 } } }
+								modifier = { factor = 0.9 NOT = { owner = { stability = -1 } } }
+								modifier = { factor = 0.9 NOT = { owner = { stability = -2 } } }
+								modifier = { factor = 0.25 owner = { OR = { primitives = yes is_primitive = yes } } }
+								#modifier = { factor = 1.25 owner = { ai = yes NOT = { is_subject = yes } } }
+								modifier = { factor = 1.25 is_prosperous = yes }
+						
+							}
+						}
+					}
+					if = { # culture spread
+						limit = {
+							NOT = { has_global_flag = DVEL_no_culture_spread_flag }
+							NOT = { nationalism = 1 }
+							NOT = { DVEL_is_right_culture = yes }
+							NOT = { has_province_modifier = DVEL_recently_converted }
+						}
+						DVEL_province_culture_math = yes
+						if = { # passive spread
+							limit = {
+								NOT = { check_variable = { which = netCultureCost value = 2 } }
+								check_variable = { which = netCultureCost value = -3 }
+							}
+							if = { # neighbor per 250 years
+								limit = {
+									any_neighbor_province = {
+										owned_by = event_target:DVEL_owner_dummy
+										DVEL_is_right_culture = yes
+									}
+								}
+								random_list = {
+									249 = { }
+									1 = {
+										random_list = {
+											9 = {
+												random_neighbor_province = {
+													limit = {
+														owned_by = event_target:DVEL_owner_dummy
+														DVEL_is_right_culture = yes
+													}
+													PREV = { change_culture = PREV }
+												}
+											}
+											1 = { change_culture = event_target:DVEL_owner_dummy }
+										}
+										if = {
+											limit = { has_global_flag = DVEL_debug_mode_flag }
+											REB = { change_variable = { which = cultureSpreads value = 1 } }
+										}
+										modifier = { factor = 0.5 NOT = { tolerance_to_this = 2 } }
+										modifier = { factor = 0.5 NOT = { tolerance_to_this = 0 } }
+										modifier = { factor = 0.25 NOT = { is_state = yes } }
+										modifier = { factor = 0.25 is_owned_by_trade_company = yes }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.8 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.6 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.4 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.2 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = 0 } } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.2 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.4 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.6 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.8 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 1 } }
+									}
+								}
+							} else = { # enclave per 1000 years
+								random_list = {
+									999 = { }
+									1 = {
+										change_culture = owner
+										if = {
+											limit = { has_global_flag = DVEL_debug_mode_flag }
+											REB = { change_variable = { which = cultureSpreads value = 1 } }
+										}
+										modifier = { factor = 0.5 NOT = { tolerance_to_this = 2 } }
+										modifier = { factor = 0.5 NOT = { tolerance_to_this = 0 } }
+										modifier = { factor = 0.25 NOT = { is_state = yes } }
+										modifier = { factor = 0.25 is_owned_by_trade_company = yes }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.8 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.6 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.4 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = -0.2 } } }
+										modifier = { factor = 2 NOT = { check_variable = { which = netCultureCost value = 0 } } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.2 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.4 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.6 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 0.8 } }
+										modifier = { factor = 0.5 check_variable = { which = netCultureCost value = 1 } }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			set_global_flag = DVEL_anti_trigger_flag
+			if = {
+				limit = { has_global_flag = DVEL_debug_mode_flag }
+				every_country = {
+					limit = { has_country_flag = DVEL_debug_target_flag }
+					country_event = { id = DVEL_events.101 }
+				}
+				# log = "----------DVEL----------"
+				# log = "Global Dev Added: [REB.devAdded.GetValue]"
+				# log = "Global Dev Removed: [REB.devRemoved.GetValue]"
+				# log = "Global Migrations: [REB.migrations.GetValue]"
+				# log = "Global Culture Spreads: [REB.cultureSpreads.GetValue]"
+				# log = "----------DVEL----------"
+			}
+		}
+	}
+}
+
+country_event = { # yearly report
+	id = DVEL_events.101
+	title = DVEL_events.101.t
+	desc = DVEL_events.101.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DVEL_events.101.a
+	}
+	
+	# option = {
+	# 	name = DVEL_events.101.b
+	# 	clr_country_flag = DVEL_debug_target_flag
+	# 	if = {
+	# 		limit = { NOT = { any_country = { has_country_flag = DVEL_debug_target_flag } } }
+	# 		clr_global_flag = DVEL_debug_mode_flag
+	# 	}
+	# }
+	
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = DVEL_debug_mode_flag }
+				REB = {
+					set_variable = { which = devAdded value = 0 }
+					set_variable = { which = devRemoved value = 0 }
+					set_variable = { which = migrations value = 0 }
+					set_variable = { which = cultureSpreads value = 0 }
+				}
+				every_country = {
+					limit = { has_country_flag = DVEL_debug_target_flag }
+					set_variable = { which = playerNetDev value = 0 }
+					set_variable = { which = subjectNetDev value = 0 }
+				}
+			}
+		}
+	}
+}
+
+
+country_event = { # census
+	id = DVEL_events.102
+	title = DVEL_events.102.t
+	desc = DVEL_events.102.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DVEL_events.102.a
+	}
+}
+
+# country_event = { # auto census
+# 	id = DVEL_events.103
+# 	hidden = yes
+
+# 	trigger = {
+# 		had_global_flag = {
+# 			flag = DVEL_auto_census_flag
+# 			days = 3600
+# 		}
+# 		owns = 118
+# 	}
+
+# 	immediate = {
+# 		clr_global_flag = DVEL_auto_census_flag
+# 	}
+
+# 	option = {
+# 		log = "DVEL Global Census"
+# 		log = "Total Province Count: [REB.totalProvinces.GetValue]"
+# 		log = "100+: [REB.development100.GetValue] ([REB.development100Percentage.GetValue]%)"
+# 		log = "90-99: [REB.development90.GetValue] ([REB.development90Percentage.GetValue]%)"
+# 		log = "80-89: [REB.development80.GetValue] ([REB.development80Percentage.GetValue]%)"
+# 		log = "70-79: [REB.development70.GetValue] ([REB.development70Percentage.GetValue]%)"
+# 		log = "60-69: [REB.development60.GetValue] ([REB.development60Percentage.GetValue]%)"
+# 		log = "50-59: [REB.development50.GetValue] ([REB.development50Percentage.GetValue]%)"
+# 		log = "40-49: [REB.development40.GetValue] ([REB.development40Percentage.GetValue]%)"
+# 		log = "30-39: [REB.development30.GetValue] ([REB.development30Percentage.GetValue]%)"
+# 		log = "20-29: [REB.development20.GetValue] ([REB.development20Percentage.GetValue]%)"
+# 		log = "10-19: [REB.development10.GetValue] ([REB.development10Percentage.GetValue]%)"
+# 		log = "0-9: [REB.development0.GetValue] ([REB.development0Percentage.GetValue]%)"
+# 	}
+
+# 	after = {
+# 		set_global_flag = DVEL_auto_census_flag
+# 	}
+# }
+
+country_event = { # monthly
+	id = DVEL_events.200
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owns = 118
+	}
+	
+	option = {
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = DVEL_draining }
+				DVEL_mana_drain = yes
+			}
+			DVEL_devastation_effect = yes
+			DVEL_apply_modifiers = yes
+			
+		}
+	}
+}
+
+country_event = { # 5 years
+	id = DVEL_events.201
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owns = 118
+	}
+	
+	option = {
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = extended_timeline_mod }
+				DVEL_et_age_modifiers = yes
+			} else_if = {
+				limit = { has_global_flag = DVEL_TOE_flag }
+				DVEL_toe_age_modifiers = yes
+			}
+		}
+	}
+}
+
+
+
+
+# if = {
+# 	limit = {
+# 		is_year = 1000
+# 		NOT = {
+# 			OR = {
+# 				has_province_modifier = DVEL_drought
+# 				has_province_modifier = DVEL_famine
+# 				has_province_modifier = DVEL_plague
+# 			}
+# 		}
+# 	}
+# 	random_list = { #once every 20 years
+# 		19 = { }
+# 		1 = {
+# 			province_event = { id = DVEL_events.300 days = 3 }
+# 			modifier = { factor = 2 has_terrain = jungle }
+# 			modifier = { factor = 10 any_neighbor_province = { has_province_modifier = DVEL_plague } }
+# 			modifier = { factor = 1.67 check_variable = { which = netDevCost value = 2.0 } }
+# 			modifier = { factor = 1.67 check_variable = { which = netDevCost value = 2.2 } }
+# 			modifier = { factor = 1.67 check_variable = { which = netDevCost value = 2.4 } }
+# 			modifier = { factor = 1.67 check_variable = { which = netDevCost value = 2.6 } }
+# 			modifier = { factor = 1.67 check_variable = { which = netDevCost value = 2.8 } }
+# 			modifier = { factor = 0.67 owner = { stability = 3 } }
+# 			modifier = { factor = 0.67 owner = { stability = 2 } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = 1 } } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = 0 } } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = -1 } } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = -2 } } }
+# 			modifier = { factor = 0.33 is_capital = yes owner = { total_development = 150 } }
+# 			modifier = { factor = 0.33 is_capital = yes owner = { total_development = 300 } }
+# 			modifier = { factor = 0.5 province_has_center_of_trade_of_level = 1 }
+# 			modifier = { factor = 0.5 province_has_center_of_trade_of_level = 2 }
+# 			modifier = { factor = 4 owner = { OR = { primitives = yes is_primitive = yes } } }
+# 			modifier = { factor = 0.8 owner = { ai = yes NOT = { is_subject = yes } } }
+# 		}
+# 	}
+# 	random_list = { #once every 15 years
+# 		14 = { }
+# 		1 = {
+# 			province_event = { id = DVEL_events.301 days = 6 }
+# 			modifier = { factor = 1.5 has_terrain = desert }
+# 			modifier = { factor = 1.25 has_terrain = steppe }
+# 			modifier = { factor = 1.25 has_terrain = savannah }
+# 			modifier = { factor = 1.25 has_terrain = mountain }
+# 			modifier = { factor = 1.25 check_variable = { which = netDevCost value = 1.6 } }
+# 			modifier = { factor = 1.25 check_variable = { which = netDevCost value = 1.8 } }
+# 			modifier = { factor = 1.25 check_variable = { which = netDevCost value = 2.0 } }
+# 			modifier = { factor = 1.25 check_variable = { which = netDevCost value = 2.2 } }
+# 			modifier = { factor = 1.67 check_variable = { which = netDevCost value = 2.4 } }
+# 			modifier = { factor = 0.67 owner = { stability = 3 } }
+# 			modifier = { factor = 0.67 owner = { stability = 2 } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = 1 } } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = 0 } } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = -1 } } }
+# 			modifier = { factor = 1.33 NOT = { owner = { stability = -2 } } }
+# 			modifier = { factor = 0.33 is_capital = yes owner = { total_development = 150 } }
+# 			modifier = { factor = 0.33 is_capital = yes owner = { total_development = 300 } }
+# 			modifier = { factor = 0.5 province_has_center_of_trade_of_level = 1 }
+# 			modifier = { factor = 0.5 province_has_center_of_trade_of_level = 2 }
+# 			modifier = { factor = 4 owner = { OR = { primitives = yes is_primitive = yes } } }
+# 			modifier = { factor = 0.8 owner = { ai = yes NOT = { is_subject = yes } } }
+# 		}
+# 			modifier = {
+# 				factor = 0.8
+# 				development = 25
+# 			}
+# 			modifier = {
+# 				factor = 0.7
+# 				development = 30
+# 			}
+# 			modifier = {
+# 				factor = 0.6
+# 				development = 35
+# 			}
+# 			modifier = {
+# 				factor = 0.4
+# 				development = 40
+# 			}
+# 			modifier = {
+# 				factor = 1.4
+# 				owner = { adm_tech = 26 }
+# 			}
+# 			modifier = {
+# 				factor = 1.4
+# 				owner = { adm_tech = 36 }
+# 			}
+# 			modifier = {
+# 				factor = 3
+# 				is_capital = yes owner = { total_development = 150 }
+# 			}
+# 			modifier = {
+# 				factor = 3
+# 				is_capital = yes owner = { total_development = 300 }
+# 			}
+# 		}
+# }
+
+# province_event = { # Plague
+# 	id = DVEL_events.300
+# 	title = DVEL_events.300.t
+# 	desc = DVEL_events.300.desc
+# 	picture = PLAGUE_eventPicture
+
+# 	trigger = {
+# 		OR = {
+# 			AND = {
+# 				development = 20
+# 				NOT = { province_has_center_of_trade_of_level = 1 }
+# 			}
+# 			AND = {
+# 				development = 24
+# 				NOT = { province_has_center_of_trade_of_level = 2 }
+# 			}
+# 			development = 28
+# 		}
+# 		NOT = { has_province_modifier = DVEL_plague }
+# 		owner = { NOT = { has_country_modifier = DVEL_plague_tribal } }
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 3200
+
+# 		modifier = {
+# 			factor = 0.5
+# 			has_terrain = jungle
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			any_neighbor_province = { has_province_modifier = et_plague }
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			development = 25
+# 		}
+# 		modifier = {
+# 			factor = 0.4
+# 			development = 30
+# 		}
+# 		modifier = {
+# 			factor = 0.3
+# 			development = 35
+# 		}
+# 		modifier = {
+# 			factor = 0.2
+# 			development = 40
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			development = 45
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			owner = { adm_tech = 26 }
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			owner = { adm_tech = 36 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_capital = yes
+# 			owner = { total_development = 150 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_capital = yes
+# 			owner = { total_development = 300 }
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			province_has_center_of_trade_of_level = 1
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			province_has_center_of_trade_of_level = 2
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = "et.EVTOPTA69"
+# 		if = {
+# 			limit = { government = native }
+# 			add_country_modifier = {
+# 				name = et_plague_tribal
+# 				duration = 3650
+# 			}
+# 		}
+# 		else = {
+# 			if = { 
+# 				limit = { base_tax = 4 }
+# 				add_base_tax = -3
+# 			}
+# 			if = { 
+# 				limit = { base_production = 4 }
+# 				add_base_production = -3
+# 			}
+# 			if = { 
+# 				limit = { base_manpower = 4 }
+# 				add_base_manpower = -3
+# 			}
+# 		}
+# 		add_province_modifier = {
+# 			name = et_plague
+# 			duration = 1825
+# 		}
+# 	}
+# }
+
+# #Famine
+# province_event = {
+# 	id = et.70
+# 	title = "et.EVTNAME70"
+# 	desc = "et.EVTDESC70"
+# 	picture = FAMINE_eventPicture
+
+# 	trigger = {	
+# 		development = 16
+# 		owner = { NOT = { has_institution = medicine } }
+# 		owner = { NOT = { adm_tech = 55 } }
+# 		NOT = { has_province_modifier = et_famine }
+# 		owner = { NOT = { has_country_modifier = et_famine_tribal } }
+# 		OR = {
+# 			NOT = { province_has_center_of_trade_of_level = 1 }
+# 			has_terrain = desert
+# 			has_terrain = mountain
+# 			has_terrain = savannah
+# 			has_terrain = steppe
+# 		}
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 4000
+
+# 		modifier = {
+# 			factor = 0.6
+# 			has_terrain = desert
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			has_terrain = steppe
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			has_terrain = savannah
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			has_terrain = mountain
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			development = 20
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			development = 25
+# 		}
+# 		modifier = {
+# 			factor = 0.7
+# 			development = 30
+# 		}
+# 		modifier = {
+# 			factor = 0.6
+# 			development = 35
+# 		}
+# 		modifier = {
+# 			factor = 0.4
+# 			development = 40
+# 		}
+# 		modifier = {
+# 			factor = 1.4
+# 			owner = { adm_tech = 26 }
+# 		}
+# 		modifier = {
+# 			factor = 1.4
+# 			owner = { adm_tech = 36 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_capital = yes
+# 			owner = { total_development = 150 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_capital = yes
+# 			owner = { total_development = 300 }
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = "et.EVTOPTA70"
+# 		if = {
+# 			limit = { government = native }
+# 			add_country_modifier = {
+# 				name = et_famine_tribal
+# 				duration = 3650
+# 			}
+# 		}
+# 		else = {
+# 			if = { 
+# 				limit = { base_tax = 3 }
+# 				add_base_tax = -2
+# 			}
+# 			if = { 
+# 				limit = { base_production = 3 }
+# 				add_base_production = -2
+# 			}
+# 			if = { 
+# 				limit = { base_manpower = 3 }
+# 				add_base_manpower = -2
+# 			}
+# 		}
+# 		add_province_modifier = {
+# 			name = et_famine
+# 			duration = 1825
+# 		}
+# 	}
+# }
+
+# #Drought
+# province_event = {
+
+# 	id = et.71
+# 	title = "et.EVTNAME71"
+# 	desc = "et.EVTDESC71"
+# 	picture = FAMINE_eventPicture
+
+# 	trigger = {	
+# 		development = 10
+# 		owner = { NOT = { has_institution = medicine } }
+# 		owner = { NOT = { adm_tech = 55 } }
+# 		owner = { NOT = { has_country_modifier = et_drought_tribal } }
+# 		OR = {
+# 			has_terrain = desert
+# 			has_terrain = mountain
+# 			has_terrain = savannah
+# 			has_terrain = steppe
+# 		}
+# 		NOT = { has_province_modifier = et_drought }
+# 		NOT = { province_has_center_of_trade_of_level = 2 }
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 2400
+
+# 		modifier = {
+# 			factor = 0.6
+# 			has_terrain = desert
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			development = 15
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			development = 20
+# 		}
+# 		modifier = {
+# 			factor = 0.8
+# 			development = 25
+# 		}
+# 		modifier = {
+# 			factor = 0.7
+# 			development = 30
+# 		}
+# 		modifier = {
+# 			factor = 0.6
+# 			development = 35
+# 		}
+# 		modifier = {
+# 			factor = 1.2
+# 			owner = { adm_tech = 26 }
+# 		}
+# 		modifier = {
+# 			factor = 1.2
+# 			owner = { adm_tech = 36 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_capital = yes
+# 			owner = { total_development = 150 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_capital = yes
+# 			owner = { total_development = 300 }
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			province_has_center_of_trade_of_level = 1
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = "et.EVTOPTA71"
+# 		if = {
+# 			limit = { government = native }
+# 			add_country_modifier = {
+# 				name = et_drought_tribal
+# 				duration = 3650
+# 			}
+# 		}
+# 		else = {
+# 			if = { 
+# 				limit = { base_tax = 3 }
+# 				add_base_tax = -2
+# 			}
+# 			if = { 
+# 				limit = { base_production = 3 }
+# 				add_base_production = -2
+# 			}
+# 			if = { 
+# 				limit = { base_manpower = 3 }
+# 				add_base_manpower = -2
+# 			}
+# 		}
+# 		add_province_modifier = {
+# 			name = et_drought
+# 			duration = 1825
+# 		}
+# 	}
+# }

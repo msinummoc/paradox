@@ -1,0 +1,51 @@
+DVEL_peacetime_reconstruction = {
+	potential = { always = no DVEL_is_right_government = yes }
+	trigger = {
+		stability = 1
+		NOT = { is_at_war = yes }
+		NOT = { has_any_disaster = yes }
+	}
+	global_monthly_devastation = -0.07
+	global_supply_limit_modifier = 1
+}
+
+# hole_in_on_action = {
+# 	potential = {
+# 		has_global_flag = DVEL_debug_mode_flag
+# 		ai = no
+# 	}
+# 	trigger = {
+# 		any_country = {
+# 			OR = {
+# 				AND = {
+# 					is_subject = yes
+# 					NOT = { is_colonial_nation = yes }
+# 					NOT = { is_overseas_subject = yes }
+# 					OR = {
+# 						NOT = { has_country_modifier = DVEL_subject_growth_limiter }
+# 						has_country_modifier = DVEL_colonial_growth_limiter
+# 					}
+# 				}
+# 				AND = {
+# 					is_subject = yes
+# 					OR = {
+# 						is_colonial_nation = yes
+# 						is_overseas_subject = yes
+# 					}
+# 					OR = {
+# 						has_country_modifier = DVEL_subject_growth_limiter
+# 						NOT = { has_country_modifier = DVEL_colonial_growth_limiter }
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { is_subject = yes }
+# 					OR = {
+# 						has_country_modifier = DVEL_subject_growth_limiter
+# 						has_country_modifier = DVEL_colonial_growth_limiter
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	recover_navy_morale_speed = 0.01
+# }

@@ -1,0 +1,605 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = pahari
+religion = hinduism
+capital = 509 	#  Kangra
+1390.1.1 = {
+  monarch = {
+    name = "Öh<h f∑V" 	# Megh Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 2
+    ADM = 1
+    MIL = 2
+  }
+}
+1390.1.1 = {
+  heir = {
+    name = "»TÃëf∑V" 	# Hari Chand
+    monarch_name = "»TÃëf∑V I" 	# Hari Chand I
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1380.1.1
+    death_date = 1420.1.1
+    claim = 95
+    DIP = 1
+    ADM = 1
+    MIL = 3
+  }
+}
+1405.1.1 = {
+  monarch = {
+    name = "»TÃëf∑V I" 	# Hari Chand I
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 1
+    ADM = 1
+    MIL = 3
+  }
+}
+#Brother of Hari Chand:
+1405.1.1 = {
+  heir = {
+    name = "aSpQf∑V" 	# Karan Chand
+    monarch_name = "aSpQf∑V II" 	# Karan Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1390.1.1
+    death_date = 1430.1.1
+    claim = 95
+    DIP = 0
+    ADM = 3
+    MIL = 2
+  }
+}
+1420.1.1 = {
+  monarch = {
+    name = "aSpQf∑V II" 	# Karan Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 3
+    MIL = 2
+  }
+}
+1420.1.1 = {
+  heir = {
+    name = "Qh(ÑSf∑V" 	# Sansar Chand
+    monarch_name = "Qh(ÑS f∑V I" 	# Sansar Chand I
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1400.1.1
+    death_date = 1450.1.1
+    claim = 95
+    DIP = 1
+    ADM = 1
+    MIL = 1
+  }
+}
+1430.1.1 = {
+  monarch = {
+    name = "Qh(ÑS f∑V I" 	# Sansar Chand I
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 1
+    ADM = 1
+    MIL = 1
+  }
+}
+1430.1.1 = {
+  heir = {
+    name = "∑VÊt†R f∑V" 	# Devangga Chand
+    monarch_name = "∑VÊt†R f∑V" 	# Devangga Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1420.1.1
+    death_date = 1465.1.1
+    claim = 95
+    DIP = 3
+    ADM = 2
+    MIL = 3
+  }
+}
+1450.1.1 = {
+  monarch = {
+    name = "∑VÊt†R f∑V" 	# Devangga Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 3
+    ADM = 2
+    MIL = 3
+  }
+}
+1450.1.1 = {
+  heir = {
+    name = "≥u&O∑V…b f∑V" 	# Narendra Chand
+    monarch_name = "∑VÊt†R f∑V" 	# Devangga Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1430.1.1
+    death_date = 1480.1.1
+    claim = 95
+    DIP = 2
+    ADM = 1
+    MIL = 1
+  }
+}
+1465.1.1 = {
+  monarch = {
+    name = "≥u&O∑V…b f∑V" 	# Narendra Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 2
+    ADM = 1
+    MIL = 1
+  }
+}
+1465.1.1 = {
+  heir = {
+    name = "œÇÙu…bf∑V" 	# Suvira Chand
+    monarch_name = "œÇÙu…bf∑V" 	# Suvira Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1450.1.1
+    death_date = 1490.1.1
+    claim = 95
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1480.1.1 = {
+  monarch = {
+    name = "œÇÙu…bf∑V" 	# Suvira Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1480.1.1 = {
+  heir = {
+    name = "nf…böN<h f∑V" 	# Prayag Chand
+    monarch_name = "nf…böN<h f∑V" 	# Prayag Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1470.1.1
+    death_date = 1510.1.1
+    claim = 95
+    DIP = 3
+    ADM = 1
+    MIL = 0
+  }
+}
+1490.1.1 = {
+  monarch = {
+    name = "nf…böN<h f∑V" 	# Prayag Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 3
+    ADM = 1
+    MIL = 0
+  }
+}
+1490.1.1 = {
+  heir = {
+    name = "…b∆Y f∑V" 	# Ram Chand
+    monarch_name = "…b∆Y f∑V" 	# Ram Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1480.1.1
+    death_date = 1528.1.1
+    claim = 95
+    DIP = 2
+    ADM = 1
+    MIL = 1
+  }
+}
+1510.1.1 = {
+  monarch = {
+    name = "…b∆Y f∑V" 	# Ram Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 2
+    ADM = 1
+    MIL = 1
+  }
+}
+1510.1.1 = {
+  heir = {
+    name = "æèid f∑V" 	# Dharam Chand
+    monarch_name = "æèid f∑V" 	# Dharam Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1468.1.1
+    death_date = 1563.1.1
+    claim = 95
+    DIP = 4
+    ADM = 1
+    MIL = 0
+  }
+}
+1528.1.1 = {
+  monarch = {
+    name = "æèid f∑V" 	# Dharam Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 4
+    ADM = 1
+    MIL = 0
+  }
+}
+1528.1.1 = {
+  heir = {
+    name = "lö<SaS f∑V" 	# Manika Chand
+    monarch_name = "lö<SaS f∑V" 	# Manika Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1495.1.1
+    death_date = 1570.1.1
+    claim = 95
+    DIP = 2
+    ADM = 2
+    MIL = 2
+  }
+}
+1563.1.1 = {
+  monarch = {
+    name = "lö<SaS f∑V" 	# Manika Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 2
+    ADM = 2
+    MIL = 2
+  }
+}
+1563.1.1 = {
+  heir = {
+    name = ">çOf∑V" 	# Jai Chand
+    monarch_name = ">çO f∑V V" 	# Jai Chand V
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1510.1.1
+    death_date = 1585.1.1
+    claim = 95
+    DIP = 1
+    ADM = 1
+    MIL = 1
+  }
+}
+1570.1.1 = {
+  monarch = {
+    name = ">çO f∑V V" 	# Jai Chand V
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 1
+    ADM = 1
+    MIL = 1
+  }
+}
+1570.1.1 = {
+  heir = {
+    name = "‘kÍèf∑V" 	# Bidhi Chand
+    monarch_name = "‘kÍèf∑V" 	# Bidhi Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1550.1.1
+    death_date = 1607.1.1
+    claim = 95
+    DIP = 5
+    ADM = 1
+    MIL = 3
+  }
+}
+1585.1.1 = {
+  monarch = {
+    name = "‘kÍèf∑V" 	# Bidhi Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 5
+    ADM = 1
+    MIL = 3
+  }
+}
+1585.1.1 = {
+  heir = {
+    name = "yrÃëWaSf∑V" 	# Triloka Chand
+    monarch_name = "yrÃëWaSf∑V" 	# Triloka Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1560.1.1
+    death_date = 1612.1.1
+    claim = 95
+    DIP = 3
+    ADM = 1
+    MIL = 3
+  }
+}
+1607.1.1 = {
+  monarch = {
+    name = "yrÃëWaSf∑V" 	# Triloka Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 3
+    ADM = 1
+    MIL = 3
+  }
+}
+1608.1.1 = {
+  heir = {
+    name = "»TÃëf∑V" 	# Hari Chand
+    monarch_name = "»TÃëf∑V II" 	# Hari Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1608.1.1
+    death_date = 1627.1.1
+    claim = 95
+    DIP = 1
+    ADM = 2
+    MIL = 1
+  }
+}
+1612.1.1 = {
+  monarch = {
+    name = "»TÃëf∑V II" 	# Hari Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 1
+    ADM = 2
+    MIL = 1
+  }
+}
+1612.1.1 = {
+  heir = {
+    name = "fæèÌsf∑V" 	# Chandarbhan Chand
+    monarch_name = "fæèÌsf∑V" 	# Chandarbhan Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1580.1.1
+    death_date = 1660.1.1
+    claim = 95
+    DIP = 3
+    ADM = 1
+    MIL = 3
+  }
+}
+1621.1.1 = {
+  capital = 511 	#  Garhwal
+}
+1627.1.1 = {
+  monarch = {
+    name = "fæèÌsf∑V" 	# Chandarbhan Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 3
+    ADM = 1
+    MIL = 3
+  }
+}
+1627.1.1 = {
+  heir = {
+    name = "Ùupg" 	# Vijay
+    monarch_name = "Ùupg …b∆Yf∑V" 	# Vijay Ram Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1590.1.1
+    death_date = 1687.1.1
+    claim = 95
+    DIP = 0
+    ADM = 1
+    MIL = 4
+  }
+}
+1660.1.1 = {
+  monarch = {
+    name = "Ùupg …b∆Yf∑V" 	# Vijay Ram Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 1
+    MIL = 4
+  }
+}
+1660.1.1 = {
+  heir = {
+    name = "LN,r" 	# Udi
+    monarch_name = "LN,r …b∆Yf∑V" 	# Udi Ram Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1640.1.1
+    death_date = 1690.1.1
+    claim = 95
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1687.1.1 = {
+  monarch = {
+    name = "LN,r …b∆Yf∑V" 	# Udi Ram Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1687.1.1 = {
+  heir = {
+    name = "‘k∆Yf∑V" 	# Bhim Chand
+    monarch_name = "‘k∆Yf∑V" 	# Bhim Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1660.1.1
+    death_date = 1697.1.1
+    claim = 95
+    DIP = 0
+    ADM = 1
+    MIL = 2
+  }
+}
+1690.1.1 = {
+  monarch = {
+    name = "‘k∆Yf∑V" 	# Bhim Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 1
+    MIL = 2
+  }
+}
+1690.1.1 = {
+  heir = {
+    name = "?ñ…b∆Y f∑V" 	# Alam Chand
+    monarch_name = "?ñ…b∆Y f∑V II" 	# Alam Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1680.1.1
+    death_date = 1700.1.1
+    claim = 95
+    DIP = 0
+    ADM = 1
+    MIL = 0
+  }
+}
+1697.1.1 = {
+  monarch = {
+    name = "?ñ…b∆Y f∑V II" 	# Alam Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 1
+    MIL = 0
+  }
+}
+1697.1.1 = {
+  heir = {
+    name = "»Ts|S f∑V" 	# Hamir Chand
+    monarch_name = "»Ts|S f∑V" 	# Hamir Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1690.1.1
+    death_date = 1747.1.1
+    claim = 95
+    DIP = 3
+    ADM = 4
+    MIL = 3
+  }
+}
+1700.1.1 = {
+  monarch = {
+    name = "»Ts|S f∑V" 	# Hamir Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 3
+    ADM = 4
+    MIL = 3
+  }
+}
+1700.1.1 = {
+  heir = {
+    name = "?ñ‘kf∑V" 	# Abhay Chand
+    monarch_name = "?ñ‘kf∑V" 	# Abhay Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1700.1.1
+    death_date = 1750.1.1
+    claim = 95
+    DIP = 0
+    ADM = 1
+    MIL = 0
+  }
+}
+1747.1.1 = {
+  monarch = {
+    name = "?ñ‘kf∑V" 	# Abhay Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 1
+    MIL = 0
+  }
+}
+1747.1.1 = {
+  heir = {
+    name = "Øe)R±ê†R f∑V" 	# Shrinagar Chand
+    monarch_name = "Øe)R±ê†R f∑V" 	# Shrinagar Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1730.1.1
+    death_date = 1750.6.1
+    claim = 95
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1750.1.1 = {
+  monarch = {
+    name = "Øe)R±ê†R f∑V" 	# Shrinagar Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1750.1.1 = {
+  heir = {
+    name = ">çs|Sf∑V" 	# Ghamir Chand
+    monarch_name = ">çs|Sf∑V" 	# Ghamir Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1730.1.1
+    death_date = 1751.1.1
+    claim = 95
+    DIP = 2
+    ADM = 4
+    MIL = 2
+  }
+}
+1750.6.1 = {
+  monarch = {
+    name = ">çs|Sf∑V" 	# Ghamir Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 2
+    ADM = 4
+    MIL = 2
+  }
+}
+1750.6.1 = {
+  heir = {
+    name = "†R¸ff∑V" 	# Ghamand Chand
+    monarch_name = "†R¸ff∑V" 	# Ghamand Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1730.1.1
+    death_date = 1774.1.1
+    claim = 95
+    DIP = 3
+    ADM = 3
+    MIL = 4
+  }
+}
+1751.1.1 = {
+  monarch = {
+    name = "†R¸ff∑V" 	# Ghamand Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 3
+    ADM = 3
+    MIL = 4
+  }
+}
+1751.1.1 = {
+  heir = {
+    name = "l<hf∑V" 	# Tegh Chand
+    monarch_name = "l<hf∑V" 	# Tegh Chand
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1750.1.1
+    death_date = 1775.1.1
+    claim = 95
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1774.1.1 = {
+  monarch = {
+    name = "l<hf∑V" 	# Tegh Chand
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1774.1.1 = {
+  heir = {
+    name = "Qh(ÑSf∑V" 	# Sansar Chand
+    monarch_name = "Qh(ÑS f∑V II" 	# Sansar Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1765.1.1
+    death_date = 1823.1.1
+    claim = 95
+    DIP = 4
+    ADM = 2
+    MIL = 2
+  }
+}
+1775.1.1 = {
+  monarch = {
+    name = "Qh(ÑS f∑V II" 	# Sansar Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    DIP = 4
+    ADM = 2
+    MIL = 2
+  }
+}
+1775.1.1 = {
+  heir = {
+    name = "?ñ<SÅú∑V f∑V" 	# Anirudh Chand
+    monarch_name = "?ñ<SÅú∑V f∑V II" 	# Anirudh Chand II
+    dynasty = "aSXbGY" 	# Katoch
+    birth_date = 1765.1.1
+    death_date = 1833.1.1
+    claim = 95
+    DIP = 2
+    ADM = 0
+    MIL = 0
+  }
+}

@@ -1,0 +1,175 @@
+gyeongbok_palace = {
+	start = 735 #Hanseong
+	date = 1394.01.01
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 2
+	type = monument
+
+	build_trigger = {
+		OR = {
+			AND = {
+				OR = {
+					culture = korean_new
+					culture = korean
+					culture = chaoxian
+				}
+				province_is_or_accepts_culture = yes
+				OR = { 
+					province_is_or_accepts_religion = {
+						religion = confucianism
+					}	
+					has_owner_harmonized_religion = yes
+				}	
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = enable_korean_palace_flag
+				}
+			}
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			AND = {
+				OR = {
+					culture = korean_new
+					culture = korean
+					culture = chaoxian
+				}
+				province_is_or_accepts_culture = yes
+				OR = { 
+					province_is_or_accepts_religion = {
+						religion = confucianism
+					}	
+					has_owner_harmonized_religion = yes
+				}	
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = enable_korean_palace_flag
+				}
+			}
+		}	
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			AND = {
+				OR = {
+					culture = korean_new
+					culture = korean
+					culture = chaoxian
+				}
+				province_is_or_accepts_culture = yes
+				OR = { 
+					province_is_or_accepts_religion = {
+						religion = confucianism
+					}	
+					has_owner_harmonized_religion = yes
+				}	
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = enable_korean_palace_flag
+				}
+			}
+		}	
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.05
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			advisor_cost = -0.05
+			global_autonomy = -0.025
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+			local_development_cost = -0.05
+		}
+		country_modifiers = {
+			advisor_cost = -0.1
+			monarch_admin_power = 1
+			global_autonomy = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.15
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		country_modifiers = {
+			advisor_cost = -0.2
+			monarch_admin_power = 2
+			global_autonomy = -0.1	
+		}
+		on_upgraded = {
+		}
+	}
+}

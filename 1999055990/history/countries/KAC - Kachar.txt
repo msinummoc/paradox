@@ -1,0 +1,537 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+primary_culture = chin
+religion = hinduism
+technology_group = indian
+capital = 570 	#  Dimapur
+1380.1.1 = {
+  monarch = {
+    name = "lš<S^" 	# Manipha
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 0
+    MIL = 3
+  }
+}
+1400.1.1 = {
+  heir = {
+    name = "Éb¾^" 	# Ladapha
+    monarch_name = "Éb¾^" 	# Ladapha
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1400.1.1
+    death_date = 1480.1.1
+    ADM = 0
+    DIP = 2
+    MIL = 2
+  }
+}
+1410.1.1 = {
+  monarch = {
+    name = "Éb¾^" 	# Ladapha
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 2
+    MIL = 2
+  }
+}
+1410.1.1 = {
+  heir = {
+    name = "—ÉbnfÈT" 	# Khorapha
+    monarch_name = "—ÉbnfÈT" 	# Khorapha
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1400.1.1
+    death_date = 1480.1.1
+    ADM = 0
+    DIP = 1
+    MIL = 1
+  }
+}
+1450.1.1 = {
+  monarch = {
+    name = "|TÉb^" 	# Khorapha
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 1
+    MIL = 1
+  }
+}
+1450.1.1 = {
+  heir = {
+    name = "f—Éb^" 	# Khunkhorapha
+    monarch_name = "f—Éb^" 	# Khunkhorapha
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1420.1.1
+    death_date = 1500.1.1
+    ADM = 0
+    DIP = 1
+    MIL = 0
+  }
+}
+1480.1.1 = {
+  monarch = {
+    name = "f—Éb^" 	# Khunkhorapha
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 1
+    MIL = 0
+  }
+}
+1480.1.1 = {
+  heir = {
+    name = "·V0tnfÈT" 	# Detsungpha
+    monarch_name = "·V0tnfÈT" 	# Detsungpha
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1450.1.1
+    death_date = 1520.1.1
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1500.1.1 = {
+  monarch = {
+    name = "·V0tnfÈT" 	# Detsungpha
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1520.1.1 = {
+  heir = {
+    name = "<S^wm ³uÉblb" 	# Nirbhay Narayan
+    monarch_name = "<S^wm ³uÉblb" 	# Nirbhay Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1520.1.1
+    death_date = 1576.1.1
+    ADM = 2
+    DIP = 1
+    MIL = 3
+  }
+}
+1531.1.1 = {
+  capital = 573 	#  Maibong
+}
+#Rulers at Maibong:
+1540.1.1 = {
+  monarch = {
+    name = "<S^wm ³uÉblb" 	# Nirbhay Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 1
+    MIL = 3
+  }
+}
+1540.1.1 = {
+  heir = {
+    name = "ÈTÌ‘…h¯eæt" 	# Harmesvar
+    monarch_name = "ÈTÌ‘…h¯eæt" 	# Harmesvar
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1520.1.1
+    death_date = 1576.1.1
+    ADM = 0
+    DIP = 0
+    MIL = 0
+  }
+}
+1550.1.1 = {
+  monarch = {
+    name = "ÈTÌ‘…h¯eæt" 	# Harmesvar
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 0
+    MIL = 0
+  }
+}
+1550.1.1 = {
+  heir = {
+    name = "…h R ³uÉbšN³u" 	# Megha Narayana
+    monarch_name = "…h R ³uÉbšN³u" 	# Megha Narayana
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1530.1.1
+    death_date = 1583.1.1
+    ADM = 1
+    DIP = 2
+    MIL = 0
+  }
+}
+1576.1.1 = {
+  monarch = {
+    name = "…h R ³uÉbšN³u" 	# Megha Narayana
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 1
+    DIP = 2
+    MIL = 0
+  }
+}
+1576.1.1 = {
+  heir = {
+    name = "(„yrœ¾üf" 	# Satrrudaman
+    monarch_name = "(„yrœ¾üf" 	# Satrrudaman
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1550.1.1
+    death_date = 1613.1.1
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1583.1.1 = {
+  monarch = {
+    name = "(„yrœ¾üf" 	# Satrrudaman
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1583.1.1 = {
+  heir = {
+    name = "±S³uÉblb" 	# Nar Narayan
+    monarch_name = "±S³uÉblb" 	# Nar Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1570.1.1
+    death_date = 1637.1.1
+    ADM = 0
+    DIP = 3
+    MIL = 0
+  }
+}
+1613.1.1 = {
+  monarch = {
+    name = "±S³uÉblb" 	# Nar Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 3
+    MIL = 0
+  }
+}
+1613.1.1 = {
+  heir = {
+    name = "Ôk¾ôT ³uÉblb" 	# Bhimdarpa Narayan
+    monarch_name = "Ôk¾ôT ³uÉblb" 	# Bhimdarpa Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1600.1.1
+    death_date = 1637.6.1
+    ADM = 1
+    DIP = 3
+    MIL = 0
+  }
+}
+1637.1.1 = {
+  monarch = {
+    name = "Ôk¾ôT ³uÉblb" 	# Bhimdarpa Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 1
+    DIP = 3
+    MIL = 0
+  }
+}
+1637.6.1 = {
+  monarch = {
+    name = "àV·VÉbôTSÉb^ ±WšN" 	# Indraballabh Naraya
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 2
+    MIL = 0
+  }
+}
+1637.6.1 = {
+  heir = {
+    name = "ÔkÌ‘¾ôT ³uÉblb" 	# Birdarpa Narayan
+    monarch_name = "ÔkÌ‘¾ôT ³uÉblb" 	# Birdarpa Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1620.1.1
+    death_date = 1681.1.1
+    ADM = 3
+    DIP = 3
+    MIL = 3
+  }
+}
+1675.1.1 = {
+  monarch = {
+    name = "ÔkÌ‘¾ôT ³uÉblb" 	# Birdarpa Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 3
+    DIP = 3
+    MIL = 3
+  }
+}
+1675.1.1 = {
+  heir = {
+    name = " Rœ·Væt	T ³uÉblb" 	# Garurdhwaj Narayan
+    monarch_name = " Rœ·Væt	T ³uÉblb" 	# Garurdhwaj Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1670.1.1
+    death_date = 1690.1.1
+    ADM = 2
+    DIP = 1
+    MIL = 0
+  }
+}
+1681.1.1 = {
+  monarch = {
+    name = " Rœ·Væt	T ³uÉblb" 	# Garurdhwaj Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 1
+    MIL = 0
+  }
+}
+1681.1.1 = {
+  heir = {
+    name = "lšaS·Væt	T" 	# Makardhwaj
+    monarch_name = "lšaS·Væt	T" 	# Makardhwaj
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1672.1.1
+    death_date = 1690.1.1
+    ADM = 2
+    DIP = 0
+    MIL = 0
+  }
+}
+1685.1.1 = {
+  monarch = {
+    name = "lšaS·Væt	T" 	# Makardhwaj
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 0
+    MIL = 0
+  }
+}
+1685.1.1 = {
+  heir = {
+    name = "LNãNšNêTX" 	# Udayaditya
+    monarch_name = "LNãNšNêTX" 	# Udayaditya
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1672.1.1
+    death_date = 1695.1.1
+    ADM = 2
+    DIP = 0
+    MIL = 1
+  }
+}
+1690.1.1 = {
+  monarch = {
+    name = "LNãNšNêTX" 	# Udayaditya
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 0
+    MIL = 1
+  }
+}
+1690.1.1 = {
+  heir = {
+    name = "TXÆYÉb·Væt	T ³uÉblb" 	# Tamradhwaj Narayan
+    monarch_name = "TXÆYÉb·Væt	T ³uÉblb" 	# Tamradhwaj Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1675.1.1
+    death_date = 1708.1.1
+    ADM = 0
+    DIP = 0
+    MIL = 1
+  }
+}
+1699.1.1 = {
+  monarch = {
+    name = "TXÆYÉb·Væt	T ³uÉblb" 	# Tamradhwaj Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 0
+    MIL = 1
+  }
+}
+1699.1.1 = {
+  heir = {
+    name = "f·VÉbôT" 	# Chandraprabha
+    monarch_name = "f·VÉbôT" 	# Chandraprabha
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    female = yes
+    birth_date = 1680.1.1
+    death_date = 1720.1.1
+    ADM = 3
+    DIP = 4
+    MIL = 1
+  }
+}
+1708.1.1 = {
+  monarch = {
+    name = "f·VÉbôT" 	# Chandraprabha
+    dynasty = "êlš(„" 	# Dimasa
+    female = yes
+    ADM = 3
+    DIP = 4
+    MIL = 1
+  }
+}
+1708.1.1 = {
+  heir = {
+    name = "Ï‚Éb¾^ ³uÉblb" 	# Suradarpa Narayan
+    monarch_name = "Ï‚Éb¾^ ³uÉblb" 	# Suradarpa Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1690.1.1
+    death_date = 1730.1.1
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1720.1.1 = {
+  monarch = {
+    name = "Ï‚Éb¾^ ³uÉblb" 	# Suradarpa Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 1
+    DIP = 1
+    MIL = 1
+  }
+}
+1720.1.1 = {
+  heir = {
+    name = "¾›s·Væt	T ³uÉblb" 	# Dharmadhwaj Narayan
+    monarch_name = "¾›s·Væt	T ³uÉblb" 	# Dharmadhwaj Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1700.1.1
+    death_date = 1735.1.1
+    ADM = 1
+    DIP = 3
+    MIL = 1
+  }
+}
+1730.1.1 = {
+  monarch = {
+    name = "¾›s·Væt	T ³uÉblb" 	# Dharmadhwaj Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 1
+    DIP = 3
+    MIL = 1
+  }
+}
+1730.1.1 = {
+  heir = {
+    name = "úWÌ‘f·VÉb ³uÉblb" 	# Kirichandra Narayan
+    monarch_name = "úWÌ‘f·VÉb ³uÉblb" 	# Kirichandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1710.1.1
+    death_date = 1745.1.1
+    ADM = 2
+    DIP = 3
+    MIL = 1
+  }
+}
+1735.1.1 = {
+  monarch = {
+    name = "úWÌ‘f·VÉb ³uÉblb" 	# Kirichandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 2
+    DIP = 3
+    MIL = 1
+  }
+}
+1735.1.1 = {
+  heir = {
+    name = "b¾Rf·VÉb ³uÉblb" 	# Gopichandra Narayan
+    monarch_name = "b¾Rf·VÉb ³uÉblb" 	# Gopichandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1720.1.1
+    death_date = 1757.1.1
+    ADM = 3
+    DIP = 3
+    MIL = 2
+  }
+}
+1745.1.1 = {
+  monarch = {
+    name = "b¾Rf·VÉb ³uÉblb" 	# Gopichandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 3
+    DIP = 3
+    MIL = 2
+  }
+}
+1745.1.1 = {
+  heir = {
+    name = "ÈTÌ‘Qh·VÉb" 	# Harischandra
+    monarch_name = "ÈTÌ‘Qh·VÉb" 	# Harischandra
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1730.1.1
+    death_date = 1772.1.1
+    ADM = 1
+    DIP = 3
+    MIL = 1
+  }
+}
+1757.1.1 = {
+  monarch = {
+    name = "ÈTÌ‘Qh·VÉb" 	# Harischandra
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 1
+    DIP = 3
+    MIL = 1
+  }
+}
+1757.1.1 = {
+  heir = {
+    name = "KQÌ‘^³uf·VÉb ³uÉblb" 	# Krishnachandra Narayan
+    monarch_name = "KQÌ‘^³uf·VÉb ³uÉblb" 	# Krishnachandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1740.1.1
+    death_date = 1813.1.1
+    ADM = 3
+    DIP = 4
+    MIL = 1
+  }
+}
+1772.1.1 = {
+  monarch = {
+    name = "KQÌ‘^³uf·VÉb ³uÉblb" 	# Krishnachandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 3
+    DIP = 4
+    MIL = 1
+  }
+}
+1772.1.1 = {
+  heir = {
+    name = "b¾Rf·VÉb ³uÉblb" 	# Gobindchandra Narayan
+    monarch_name = "b¾Rf·VÉb ³uÉblb" 	# Gobindchandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    claim = 90
+    birth_date = 1760.1.1
+    death_date = 1830.1.1
+    ADM = 0
+    DIP = 2
+    MIL = 1
+  }
+}
+1813.1.1 = {
+  monarch = {
+    name = "b¾Rf·VÉb ³uÉblb" 	# Gobindchandra Narayan
+    dynasty = "êlš(„" 	# Dimasa
+    ADM = 0
+    DIP = 2
+    MIL = 1
+  }
+}

@@ -1,0 +1,82 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = luba
+religion = shamanism
+technology_group = central_african
+unlock_cult = mwari_cult
+unlock_cult = central_african_ancestor_cult
+unlock_cult = cwezi_cult
+unit_type = sub_saharan
+capital = 4100 	#  Luapala
+1430.1.1 = {
+  monarch = {
+    name = "FzfWæè" 	# Mutanda
+    dynasty = "^…b" 	# Shila
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+} 	# Fictional. Just fill the gap until we get to the known rulers. Here, Kazembe represent assorted people of the region, such as the Shila.
+1500.1.1 = {
+  monarch = {
+    name = "∆YÊtlö" 	# Mfwama
+    dynasty = "â…b" 	# Shila
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+} 	# Also Fictional
+1560.1.1 = {
+  monarch = {
+    name = "∆Y˙eb" 	# Mwongo
+    dynasty = "â…b" 	# Shila
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+} 	# Fictional
+1680.1.1 = {
+  monarch = {
+    name = "∆Y˙ã±ê" 	# Munona
+    dynasty = "â…b" 	# Shila
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+} 	# Fictional
+1740.1.1 = {
+  monarch = {
+    name = "i`u†R ‘kÜñæè" 	# Ng'anga Bilonda
+    dynasty = "aS˛fç" 	# Kazembe
+    adm = 2
+    dip = 3
+    mil = 5
+  }
+} 	# Arriving in the region chasing his father's killers. Establish a realm. 
+1745.1.1 = {
+  monarch = {
+    name = "NWˆ^√R ∆YmVÙT" 	# Kanyembo Mpemba
+    dynasty = "aS˛fç" 	# Kazembe
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+}
+1760.1.1 = {
+  monarch = {
+    name = "bSKQÙu(Ñ O&O†R" 	# Lukwesa Ilunga
+    dynasty = "aS˛fç" 	# Kazembe
+    adm = 2
+    dip = 4
+    mil = 3
+  }
+}
+1805.1.1 = {
+  monarch = {
+    name = "NWˆ^√R KQ±ÉaS õsO" 	# Kanyembo Keleka Mayi
+    dynasty = "aS˛fç" 	# Kazembe
+    adm = 2
+    dip = 3
+    mil = 3
+  }
+}

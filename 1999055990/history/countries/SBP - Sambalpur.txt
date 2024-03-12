@@ -1,0 +1,281 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+technology_group = indian
+religion = hinduism
+primary_culture = garjati
+capital = 553 	#  Sambalpur
+1444.1.1 = {
+  monarch = {
+    name = "Ébs|·V" 	# Ramai Dev
+    dynasty = "ågU" 	# Chauhan
+    ADM = 3
+    DIP = 3
+    MIL = 3
+  }
+}
+1465.1.1 = {
+  heir = {
+    name = "ôTSÉbÆY" 	# Balram
+    monarch_name = "ôTSÉbÆY" 	# Balram
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1465.1.1
+    death_Date = 1534.1.1
+    claim = 95
+    ADM = 2
+    DIP = 2
+    MIL = 3
+  }
+}
+1494.1.1 = {
+  monarch = {
+    name = "ôTSÉbÆY" 	# Balram
+    dynasty = "ågU" 	# Chauhan
+    ADM = 0
+    DIP = 1
+    MIL = 0
+  }
+}
+1494.1.1 = {
+  heir = {
+    name = "lšjgaS" 	# Madhukar
+    monarch_name = "lšjgaS" 	# Madhukar
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1494.1.1
+    death_Date = 1578.1.1
+    claim = 95
+    ADM = 2
+    DIP = 0
+    MIL = 1
+  }
+}
+1534.1.1 = {
+  monarch = {
+    name = "lšjgaS" 	# Madhukar
+    dynasty = "ågU" 	# Chauhan
+    ADM = 2
+    DIP = 0
+    MIL = 1
+  }
+}
+1534.1.1 = {
+  heir = {
+    name = ">O›<h" 	# Jai Singh
+    monarch_name = ">O›<h" 	# Jai Singh
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1534.1.1
+    death_Date = 1611.1.1
+    claim = 95
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1578.1.1 = {
+  monarch = {
+    name = ">O›<h" 	# Jai Singh
+    dynasty = "ågU" 	# Chauhan
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1578.1.1 = {
+  heir = {
+    name = "ôuSôT·VÉb" 	# Veerbhadra
+    monarch_name = "ôuSôT·VÉb" 	# Veerbhadra
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1578.1.1
+    death_Date = 1637.1.1
+    claim = 95
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1611.1.1 = {
+  monarch = {
+    name = "ôuSôT·VÉb" 	# Veerbhadra
+    dynasty = "ågU" 	# Chauhan
+    ADM = 2
+    DIP = 2
+    MIL = 2
+  }
+}
+1611.1.1 = {
+  heir = {
+    name = "³u›<h" 	# Narsingh
+    monarch_name = "³u›<h" 	# Narsingh
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1611.1.1
+    death_Date = 1648.1.1
+    claim = 95
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+1637.1.1 = {
+  monarch = {
+    name = "³u›<h" 	# Narsingh
+    dynasty = "ågU" 	# Chauhan
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+1637.1.1 = {
+  heir = {
+    name = "ÉbS ›<h" 	# Lal Singh
+    monarch_name = "ÉbS ›<h" 	# Lal Singh
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1637.1.1
+    death_Date = 1670.1.1
+    claim = 95
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+1648.1.1 = {
+  monarch = {
+    name = "ÉbS ›<h" 	# Lal Singh
+    dynasty = "ågU" 	# Chauhan
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+1648.1.1 = {
+  heir = {
+    name = "ê?–›<h" 	# Deo Singh
+    monarch_name = "ÉbS ›<h" 	# Lal Singh
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1648.1.1
+    death_Date = 1670.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 0
+  }
+}
+1670.1.1 = {
+  monarch = {
+    name = "ê?–›<h" 	# Deo Singh
+    dynasty = "ågU" 	# Chauhan
+    ADM = 1
+    DIP = 2
+    MIL = 0
+  }
+}
+1670.1.1 = {
+  heir = {
+    name = "ågyrÉb(„S" 	# Chhatrasal
+    monarch_name = "ågyrÉb(„S" 	# Chhatrasal
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1670.1.1
+    death_Date = 1725.1.1
+    claim = 95
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1690.1.1 = {
+  monarch = {
+    name = "ågyrÉb(„S" 	# Chhatrasal
+    dynasty = "ågU" 	# Chauhan
+    ADM = 0
+    DIP = 2
+    MIL = 3
+  }
+}
+1690.1.1 = {
+  heir = {
+    name = "?–	Tyr ›<h" 	# Ajit Singh
+    monarch_name = "?–	Tyr ›<h" 	# Ajit Singh
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1690.1.1
+    death_Date = 1732.1.1
+    claim = 95
+    ADM = 2
+    DIP = 2
+    MIL = 1
+  }
+}
+1725.1.1 = {
+  monarch = {
+    name = "?–	Tyr ›<h" 	# Ajit Singh
+    dynasty = "ågU" 	# Chauhan
+    ADM = 2
+    DIP = 2
+    MIL = 1
+  }
+}
+1725.1.1 = {
+  heir = {
+    name = "?–ôT¥N ›<h" 	# Abhai Singh
+    monarch_name = "?–ôT¥N ›<h" 	# Abhai Singh
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1725.1.1
+    death_Date = 1778.1.1
+    claim = 95
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1732.1.1 = {
+  monarch = {
+    name = "?–ôT¥N ›<h" 	# Abhai Singh
+    dynasty = "ågU" 	# Chauhan
+    ADM = 3
+    DIP = 3
+    MIL = 1
+  }
+}
+1725.1.1 = {
+  heir = {
+    name = "ôTSôT·VÉb" 	# Balbhadra
+    monarch_name = "ôTSôT·VÉb" 	# Balbhadra
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1725.1.1
+    death_Date = 1782.1.1
+    claim = 95
+    ADM = 3
+    DIP = 2
+    MIL = 1
+  }
+}
+1778.1.1 = {
+  monarch = {
+    name = "ôTSôT·VÉb" 	# Balbhadra
+    dynasty = "ågU" 	# Chauhan
+    ADM = 3
+    DIP = 2
+    MIL = 1
+  }
+}
+1778.1.1 = {
+  heir = {
+    name = ">lbTX" 	# Jayanta
+    monarch_name = ">lbTX" 	# Jayanta
+    dynasty = "ågU" 	# Chauhan
+    birth_date = 1778.1.1
+    death_Date = 1818.1.1
+    claim = 95
+    ADM = 1
+    DIP = 2
+    MIL = 2
+  }
+}
+1782.1.1 = {
+  monarch = {
+    name = ">lbTX" 	# Jayanta
+    dynasty = "ågU" 	# Chauhan
+    ADM = 1
+    DIP = 2
+    MIL = 2
+  }
+}
+# Maratha and then British rule until 1820

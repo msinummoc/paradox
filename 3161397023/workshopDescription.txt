@@ -1,0 +1,83 @@
+A Fan Fork of the New World Colony Names mod, originally made by Cwrwi, located here: https://steamcommunity.com/sharedfiles/filedetails/?id=1375379791
+
+The original haven't been updated since 2019 however, cannot be run on the latest versions of the game, and can thus be considered abandoned.
+This project aims to restore the mod to its former glory.
+
+[b]Fully playable on 1.34, but does not contain province names in certain languages for the provinces added in Leviathan, for which I need help.[/b]
+[hr][/hr]
+[b]Help so far:[/b]
+Friedemann: German Australia
+Annozoker: Italian America & Oceania
+Darth Revan: Leviathan American provinces and a bunch of provinces here and there in Turkish
+BurndenAce: English and French Canada
+gorillaswithAKs: Scots Gaelic and Irish Gaelic New World
+𝕵𝖆𝖈𝖐𝕮𝖍𝖔𝖜: Chinese, Korean, Vietnamese and (Alaskan) Ainu provinces both in the old world and in the new
+Autokratoas: Helped with creating the bootleg Polish naming
+xarope-alugavel: Russian and Arabic New world & Oceania
+Buck Henderson: Scottish American Leviathan province names
+Oceanic: Arabic New World
+
+[hr][/hr]
+Want to help? Head over to https://github.com/Danarca/EU4-New-World-Colony-Names-Fan-Fork or start a thread below!
+
+[hr][/hr]
+[b]Content so far:[/b]
+Ainu Alaskan provinces
+British Culture Group new World (Except Leviathan provinces)
+Spanish new World (Except Leviathan provinces)
+Mexican and Platinean (based on above)
+Catalan new world (Except Leviathan provinces)
+Danish new world (Except Leviathan provinces)
+Dutch new world (Except Leviathan provinces)
+Chinese Culture Group, entire world
+Russian Culture Group new world and Australia
+English new world (Except Leviathan provinces (outside Canada))
+American (based on above)
+French new world (Except Leviathan provinces (outside Canada))
+Quebecois and Louisianian (based on above)
+Flemish new world (Except Leviathan provinces)
+German new world (Except Leviathan provinces) and Australia
+Greek new world (Except Leviathan provinces)
+Highland Scottish (Scots Gaelic) new world
+Hungarian new world (Except Leviathan provinces)
+Irish (Gaelic) new world
+Japanese Culture Group new world (Except Leviathan provinces)
+Korean (And Sinicised variant) entire world
+Latin Culture Group (Italian) new world and Oceania
+Ming-specific entire world
+Norwegian new world (Except Leviathan provinces)
+Polish bootleg new world (Except Leviathan provinces)
+Portuguese new world (Except Leviathan provinces)
+Brazilian (based on above)
+Roman new world (Except Leviathan provinces)
+Scottish new world
+Swedish new world (Except Leviathan provinces)
+Turkish new world
+Vietnamese (And Sinicised variant) entire world
+Welsh new world (Except Leviathan provinces)
+Yuan-specific entire world
+Arabic new world and some of Oceania
+Andalusian new world and some of Oceania
+[hr][/hr]
+ORIGINAL WORKSHOP TEXT
+[hr][/hr]
+[EN/FR/ES/DE/PT] English: This mod adds a dynamic name for every single province in the New World for English, Scottish, French, Castilian, Portuguese, Catalan, Dutch, German, Italian, Flemish, Latin, Turkish, Welsh, Japanese, Norwegian, Danish, Swedish, Polish, Hungarian, Greek and Chinese Cultures. No longer will AI Spanish Canada refuse to name its provinces on the grounds that Spain wasn’t there historically!
+
+Where known, historical names have been used and where not- either a country never colonised it (England in Brazil) or claimed it but never actually settled there (France in most of Louisiana)- appropriate names have been used instead. That means Spanish and Portuguese names are heavy on the saints, English, Scottish and Dutch much less so.
+
+Feedback is welcome! If you think I’m wrong about something or have missed something out, tell me (where possible please link to a source) and I’ll put it right.
+
+[b]Compatibility[/b]
+1.29 Compatible.
+This mod is not Ironman compatible because adding dynamic province names mucks up the checksum. Thanks, Paradox!
+Compatible with almost all other mods. This comes with the caveat that if a mod adds loads of provinces in the Americas, the effectiveness of this mod is going to be reduced, but it will still work.
+This mod is now ET Compatible!
+The only mods it’s not compatible with are other mods that add dynamic province names.
+Not currently compatible with random new world.
+Compatible with every language of vanilla eu4 and every language mod that uses the Latin alphabet.
+
+1 rate up = 1 smile
+1 favorite = 1 tell Paradox to stop dynamic province names changing the checksum
+
+Thanks to Comrade Dongo for doing most the German and for help with Swedish, Annozoker for the Italian, Emc18 for the Catalan names and editing the Castilian, MattBrant for editing the Portuguese, GULAG for helping with Norwegian, Krille for helping with the Swedish, pluvionix for the Japanese, Phantom Thief for the Turkish, Stimmung for the Latin, Voltaire, Imaginaryfriendo and Falang for Polish, Scratchmen for Hungarian, Soundwave339 for Greek and [strike]Van♂年夕阳红[/strike] 𝕵𝖆𝖈𝖐𝕮𝖍𝖔𝖜 for Chinese.
+[hr][/hr]

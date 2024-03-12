@@ -1,0 +1,205 @@
+#China superregion
+660 = "âÃSHr≥u" 	# Saiseungbannap 	# Sibsongbanna
+661 = "'Yt" 	# Dailei 	# Dali
+662 = "ëNWS" 	# Wunnam 	# Yunnan
+663 = "^WS" 	# Kwongnam 	# Guangnan
+664 = "ÃQëN" 	# Lingwun 	# Lingyun
+665 = "áwÜ^" 	# Shiuhing 	# Shiuhing
+666 = "<tﬁT" 	# Kingchow 	# Kingchow
+667 = "^ﬁT" 	# Canton 	# Canton
+668 = "≥oËï" 	# Macau 	# Macau
+669 = "èyﬁT" 	# Fukchow 	# Fuzhou
+670 = "cçﬁT" 	# Gungchow 	# Ganzhou
+671 = "ïôl" 	# Cheungsa 	# Changsha
+672 = "fkuñ" 	# Moling 	# Wuling
+673 = "Gï‹è" 	# Junyuen 	# Zhenyuan
+674 = "5ç3ñ" 	# Kwaiyeung 	# Guiyang
+679 = "b˝ê" 	# Singdo 	# Chengdu
+680 = "ÕëÜ^" 	# Chunghing 	# Chongqing
+681 = "úRf" 	# Yicheung 	# Yichang
+682 = "fkf" 	# Mocheung 	# Wuchang
+683 = "WSf" 	# Namcheung 	# Nanchang
+684 = "mgﬁT" 	# Hongchow 	# Hangzhou
+685 = "lbﬁT" 	# Yeungchow 	# Yangzhou
+686 = "âRÜ^" 	# Onhing 	# Anqing
+687 = "WS3ñ" 	# Namyeung 	# Nanyang
+688 = "VS" 	# Hoifung 	# Kaifeng
+689 = "Il-N" 	# Honjung 	# Hanzhong
+690 = "RóﬁT" 	# Chingchow 	# Qingzhou
+691 = "NmWS" 	# Jainam 	# Jinan
+692 = "`Ü^" 	# Waihing 	# Huaiqing
+693 = "*YüS" 	# Taiyuen 	# Taiyuan
+694 = "s^3ñ" 	# Pingyeung 	# Pingyang
+695 = "≥lÙï" 	# Hawgan 	# Hejian
+696 = "›OöR" 	# Boding 	# Baoding
+697 = "'YT" 	# Daitung 	# Datong
+698 = "ÅRY" 	# Ningha 	# Ningxia
+699 = "pQﬁT" 	# Lanchow 	# Lanzhou
+700 = "ââR" 	# Sai-on 	# Xi'an
+703 = "b∑V" 	# Singtak 	# Chengde
+707 = "âsËï" 	# Yukmoon 	# Yumen
+708 = ".Vñc" 	# Jeungyik 	# Zhangye
+#738 Sakam
+1816 = "S¨N" 	# Peking 	# Beijing	#Note: The word "Peking" might have come from the Portuguese, but they got it from the Cantonese first. So "Peking" is correct for the Cantonese
+1821 = "WS¨N" 	# Namking 	# Nanjing
+1822 = "œÇﬁT" 	# Sochow 	# Suzhou
+1824 = ")nﬁT" 	# Wunchow 	# Wenzhou
+1829 = "…lﬁT" 	# Chuenchow 	# Quanzhou
+1833 = "	TâR" 	# Gut-on 	# Ji'an
+1836 = "m3ñ" 	# Lokyeung 	#  Luoyang
+1838 = "T•w" 	# Hapfei 	# Hefei
+1840 = "Bhóg" 	# Kwailam 	# Guilin
+2136 = "±RS" 	# Suenfa 	# Xuanhua
+2137 = "'YT" 	# Daiming 	# Daming
+2138 = "fköR" 	# Moding 	# Wuding
+2139 = "±ÉﬁT" 	# Loichow 	# Laizhou
+2140 = "VQﬁT" 	# Yinchow 	# Yanzhou
+2141 = "êVﬁT" 	# Chuichow 	# Xuzhou
+2142 = "ÓmâR" 	# Wai-on 	# Huai'an
+2143 = "‰Q3ñ" 	# Fungyeung 	# Fengyang
+2144 = "ñ3ñ" 	# Fauyeung 	# Fuyang
+2145 = "Gïml" 	# Junkong 	# Zhenjiang
+2146 = "ÅR˝V" 	# Ningkwok 	# Ningguo
+2147 = "ÀVﬁT" 	# Faichow 	# Huizhou
+2148 = "ÕutQ" 	# Siuhing 	# Shaoxin
+2149 = "ÅR‚l" 	# Ningbaw 	# Ningbo
+2150 = "—ëNS" 	# Kamwa 	# Jinhua
+2151 = "1ë3ñ" 	# Bawyeung 	# Poyang
+2152 = "˙^ÅR" 	# Kinning 	# Jianning
+2153 = "NlﬁT" 	# Dingchow 	# Tingzhou
+2165 = "nf1m" 	# Poyi 	# Pu'er
+2166 = "∑VèR" 	# Tak-wung 	# Dehong
+2167 = "KNml" 	# Laikong 	# Lijiang
+2168 = "≠dﬁT" 	# Bawchow 	# Bozhou
+2169 = "ñ-N" 	# Longchung 	# Langzhong
+2170 = "ågÚf" 	# Sungkuk 	# Songqu
+2171 = "Dâ3ñ" 	# Seungyeung 	# Xiangyang
+2172 = "FÉﬁT" 	# Gingchow 	# Jingzhou
+2173 = "Öluñ" 	# Yuenling 	# Yuanling
+2174 = "aà3ñ" 	# Hangyeung 	# Hengyang
+2175 = "klÅR" 	# Yu-ning 	# Runing
+2176 = "FUN" 	# Seungyau 	# Shangqiu
+2177 = "ÅRfk" 	# Ningmo 	# Ningwu
+2178 = "^oâR" 	# Low-on 	# Lu'an
+2179 = "ˆ^âR" 	# Yin-on 	# Yan'an
+2180 = ")Y4l" 	# Tinsui 	# Tianshui
+2181 = "s^…Q" 	# Pingleung 	# Pingliang
+2182 = "…QﬁT" 	# Leungchow 	# Liangzhou
+2183 = ".mﬁT" 	# Tochow 	# Taozhou
+2184 = "âÅR" 	# Saining 	# Xining
+2748 = "˙^f" 	# Kincheung 	# Jianchang
+4194 = "8ls^" 	# Wingping 	# Yongping
+4195 = "wöR" 	# Chunding 	# Zhending
+4196 = "wmﬁT" 	# Hoichow 	# Haizhou
+4197 = "ƒûﬁT" 	# Wongchow 	# Huangzhou
+4198 = "‰Q‘" 	# Fungcheung 	# Fengxiang
+4199 = "‹î¡N" 	# Tongyen 	# Tongren
+#Manchuria region
+704 = "ÅR‹è" 	# Ningyuen 	# Ningyuan
+726 = "àl3ñ" 	# Sumyeung 	# Shenyang
+729 = "=OõR" 	# Baklik 	# Bohori
+730 = "	Tóg" 	# Gutlam 	# Girin
+1033 = "ì^uòõS" 	# Fuyipdo 	# Sakhalin
+1048 = "ô^Wà" 	# Miugai 	# Miyoo Gasan
+1049 = "wmpQ·l" 	# Hoilanpau 	# Haiilanboo
+1053 = "tQâR" 	# Hing-on 	# Hinggan
+2106 = "wm¬S4T" 	# Hoisumwai 	# Furdan
+2107 = "ÅR‰STX" 	# Ninggutap 	# Ningguta
+2108 = "Ús%f" 	# Wunchun 	# Huncun
+2112 = "âRN" 	# Ondung 	# Andong
+2113 = "÷vﬁT" 	# Goichow 	# Gaizhou
+4200 = "|TpQ" 	# Fulan 	# Hulan
+4201 = "˙^ﬁT" 	# Ginchow 	# Jianzhou
+#Indochina region
+600 = "'YŒW" 	# Daising 	# Ayutthaya
+601 = ".tÔSl" 	# Sohawtai 	# Sukhothai
+602 = "n±É" 	# Chingloi 	# Chiang Rai
+607 = "∞eﬁT" 	# Sunchow 	# Vijaya
+610 = "nS" 	# Chingfa 	# Thanh Hoa
+613 = "N¨N" 	# Dungging 	# Dong Kinh
+616 = "ÿös^" 	# Goping 	# Cao Bang
+1016 = "≥lYó" 	# Hawjing 	# Ha Tinh
+1022 = "òS=n" 	# Yin-gong 	# Indrapura
+2371 = "qSW" 	# Sanlaw 	# Song La
+2372 = "wm2ñ" 	# Hoifong 	# Hai Phong
+2373 = "zòS" 	# Shunfa 	# Hue
+2374 = "ÀÇÑ^" 	# Ngajong 	# Kauthara
+2375 = "âüS" 	# Saiyuen 	# Tay Nguyen
+#Korea region
+732 = "∏TtQ" 	# Hamhing 	# Hamheung
+733 = "ƒûﬁT" 	# Wongchow 	# Hwangju
+734 = "üSﬁT" 	# Yuenchow 	# Wonju
+735 = "IlŒW" 	# Honsing 	# Hanseong
+736 = "SﬁT" 	# Seungchow 	# Sangju
+737 = "hQﬁT" 	# Chuenchow 	# Jeonju
+1013 = "nﬁT" 	# Chingchow 	# Cheongju
+1845 = "s^‰X" 	# Pingyeung 	# Pyeongyang
+2694 = "mluñ" 	# Gongling 	# Gangneung
+2741 = "NmﬁT" 	# Jaichow 	# Jeju
+2742 = "mQGï" 	# Lukjun 	# Yukjin
+2743 = "jïŒW" 	# Gangsing 	# Gyeongseong
+2744 = "ÅRπè" 	# Ningbin 	# Nyeongbyeon
+2745 = "Ü^ﬁT" 	# Hingchow 	# Gyeongju
+4227 = "KfﬁT" 	# Junchow 	# Jinju
+4228 = "WﬁT" 	# Lawchow 	# Naju
+4229 = "‡VﬁT" 	# Jungchow 	# Chungju
+4230 = "4lüS" 	# Suiyuen 	# Suwon
+4231 = "wmﬁT" 	# Hoichow 	# Haeju
+4232 = "mlLu" 	# Gonggai 	# Ganggye
+#Japan region
+1012 = "(Ñid" 	# Satmaw 	# Satsuma
+1014 = "0NT" 	# Funghau 	# Bungo
+1015 = "≤QÛu" 	# Chungsing 	# Okinawa
+1017 = "hT2ñ" 	# Chowfong 	# Suo
+1018 = "˙QëN" 	# Chutwan 	# Izumo
+1019 = "≠dËx" 	# Bawmaw 	# Harima
+1020 = "¨N˝ê" 	# Gingdo 	# Kyoto
+1021 = "Dd%m" 	# Sipjun 	# Settsu
+1023 = "äçMR" 	# Yuetchin 	# Echizen
+1024 = "äçT" 	# Yuethau 	# Echigo
+1025 = "ÀMR" 	# Yuchin 	# Uzen
+1026 = "FñMR" 	# Lukchin 	# Rikuzen
+1027 = "8^Fñ" 	# Seungluk 	# Hitachi
+1028 = "fkœÖ" 	# Mojong 	# Musashi
+1029 = "2uêe" 	# Gapfei 	# Kai
+1030 = ">S.V" 	# Meyjeung 	# Owari
+1031 = "N›T" 	# Seungchuen 	# Kamikawa
+#1032 The Kurils
+1818 = "QrMR" 	# Jukchin 	# Chikuzen
+1819 = "WPO" 	# Tojaw 	# Tosa
+1820 = "?ñ‚l" 	# A-baw 	# Awa
+1825 = "âRzÇ" 	# On-ngai 	# Aki
+1830 = "FOlö" 	# Danma 	# Tajima
+1832 = "'YåT" 	# Daiwo 	# Yamato
+1835 = "éSm" 	# Meynung 	# Mino
+1837 = "äç-N" 	# Yuetchung 	# Etchu
+1839 = "èö≥l" 	# Chunhaw 	# Suruga
+1843 = "NŒë" 	# Seungyeh 	# Kozuke
+1847 = "T◊V" 	# Hauji 	# Shiribeshi
+1852 = "AS‹w" 	# Sapsing 	# Tokachi
+4131 = "FñeY" 	# Luk-o 	# Mutsu
+4180 = "ÂeT" 	# Yat-heung 	# Hyuga
+4181 = "•wT" 	# Feihau 	# Higo
+4182 = "•wMR" 	# Feichin 	# Hizen
+4183 = "Ûw¡â" 	# Sekgin 	# Iwami
+4184 = "YMR" 	# Beychin 	# Bizen
+4185 = "9NT" 	# Danhau 	# Tango
+4186 = "OàN" 	# Yiyu 	# Iyo
+4187 = "™uO" 	# Gei-yi 	# Kii
+4188 = "·OSm" 	# Shunnung 	# Shinano
+4189 = "¯v!j" 	# Seungmo 	# Sagami
+4190 = "NI`" 	# Hajung 	# Shimousa
+4191 = "NŒë" 	# Hayeh 	# Shimotsuke
+4192 = "ÀT" 	# Yuhau 	# Ugo
+4193 = "!nõS" 	# Do-do 	# Oshima
+4359 = "OøR" 	# Yisai 	# Ise
+4360 = "	N≥l" 	# Samhaw 	# Mikawa
+#Others
+385 = ")Yπe" 	# Tinfong 	# Mecca
+534 = "‰SÃë" 	# Gulei 	# Malabar
+558 = "NSlŒW" 	# Wasising 	# Patna
+596 = "·nLR†R" 	# Moonlakga 	# Malacca
+598 = "mV®N" 	# Panghang 	# Pahang
+1203 = "ªûóg0W" 	# Malamday 	# Malindi
+1205 = "(g®ö˝êmg" 	# Mukkwatdochuk 	# Mogadishu
+2095 = "FZW∆uØe" 	# Bawlawnaysi 	# Varanasi

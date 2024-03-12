@@ -1,0 +1,1008 @@
+481 = "Fz¾"  # Bermudas
+482 = "°enfWôu‰v‰šN"  # Nueva Providencia
+483 = "'YşVSaS"  # Gran Turca
+484 = "ÉbôT³u"  # La Habana
+485 = "«ƒ™Ÿ"  # Morón
+486 = "sQTX³u«ƒ"  # Guantánamo
+487 = "1W0WšNåT·VÉbæ— R"  # Santiago de la Vega
+488 = "Éb(„ôT³u"  # La Sabana
+489 = "XbSşV R"  # Tortuga
+490 = "1WYfT"  # Santo Domingo
+491 = "“^Éb‰Á"  # Curación
+492 = "âlYÎT"  # Puerto Rico
+493 = "1WXblš¯e"  # Santo Tomás
+494 = "1WKQÌ‘¯eXbætS"  # San Cristóbal
+495 = "Üt¾bSiO"  # Guadalupe
+496 = "1W›sKNšN·VÜt¾bSiO"  # Sta. María de Guadalupe
+497 = "Ys|<SaS"  # Dominica
+498 = "lš‚„<SaS"  # Martinica
+499 = "1WbS‰šN"  # Santa Lucía
+500 = "1Wôuîhyr"  # San Vicente
+501 = "ôTôTY¯e"  # Barbados
+502 = "yrËz<S¾"  # Trinidad
+741 = "“^lš³u"  # Cumaná
+742 = "‰Rb¯eşVÉb"  # Angostura
+743 = "ÃW^XúWZS"  # Esequibo
+744 = "O(„S!X"  # Fuerte Isabel
+745 = "W—¯eŒn"  # Bahía de los Rojos
+746 = "1W0WšNåTaS6w³u"  # Santiago de Cayena
+747 = "SÒ‰"  # Cabo Norte
+748 = "&O"  # Belén
+749 = "°eXb±ƒY"  # Nueva Toledo
+750 = "1WjŒSk·VäS¯eüf"  # San Jorge de Guzmán
+751 = "1WaSm¯e!X"  # Fuerte San Carlos
+752 = "YÉb¾¯e"  # Doradas
+753 = "Ì‘eY<hpQ·V"  # Río Grande
+754 = "lšS³uæ— RYS"  # Malnavegador
+755 = "1WKQœ¯e"  # Santa Cruz
+756 = "ôTOšN"  # Bahía
+757 = "?–…hÌ‘b!X"  # Fuerte Amérigo
+758 = "°ewmi`"  # Nueva Jaén
+759 = "êšNüf‚„³u"  # Diamantina
+760 = "^X RYS=n"  # Puerto Segador
+761 = "1WÃW¯e®v)RşV"  # Espíritu Santo
+762 = "wm×vwm¸S"  # Costa Pirata
+763 = "Ì‘eY·Vi`W"  # Río de Enero
+764 = "1W^^m"  # San Pablo
+765 = "1Wm&O0t"  # San Lorenzo
+766 = "°e1W0WšNåT"  # Nueva Santiago
+768 = "ÜtOÉb"  # Guayra
+769 = "ÉbbS¯e"  # La Luz
+772 = "LNœÜtO"  # Uruguay
+773 = "N¸S"  # Banda Oriental
+775 = "?–YR‰Á"  # Asunción
+776 = "·^^Xnf‰Á"  # Concepción
+777 = "1Wáw¯eXb"  # San Justo
+778 = "^œRú‹¯eŒ‚)R¯e"  # Buenos Aires
+779 = "fWêS"  # Tandil
+780 = "NW·VÉbÌ‘šN"  # Candelaria
+781 = "·V^X?–Y=n"  # Puerto Deseado
+782 = "kp0W›S"  # Tierra del Fuego
+783 = "lš R±ƒ…Q¯e"  # Magallanes
+784 = "1WiO·VW·VÉb^¯e"  # San Pedro de la Paz
+785 = "iO)n<SšN™l.o"  # Desierto Pehuenia
+786 = "aSè•"  # Carmen
+787 = "ôTS^±ƒ0t"  # Valparaíso
+790 = "WSågÑy"  # Chaco Austral
+791 = "aSTXlšaS"  # Catamarca
+792 = "Ñy®všNâl"  # Copiapo
+793 = "OúWKQ"  # Iquique
+794 = "áwáwO"  # Jujuy
+795 = "âlXb‰"  # Potosí
+796 = "1WlšÑy¯e·V?–Ì‘aS"  # San Marcos de Arica
+797 = "eY¯eyrÌ‘šNTu÷–šNSÎW"  # Real Villa de Austria
+799 = "SågÑy"  # Chaco Boreal
+800 = "GYúWXb¯e"  # Chiquitos
+801 = "eYWiO(„"  # Oropesa
+802 = "Éb^¯e"  # La Paz
+803 = "1W‚„‰lšyrÌ‘<S¾·V"  # Santísima Trinidad
+804 = "nfú‹"  # Puno
+805 = "?–÷–úW^"  # Arequipa
+806 = "³u¯eaS"  # Nasca
+807 = "?–ísïQ"  # Abancay
+808 = "“^¯eÑy"  # Cuzco
+809 = ")Rlš"  # Lima
+810 = "NaSæ—)RaS"  # Huancavelica
+811 = "jŒÈT"  # Jauja
+812 = "aSTXôueY"  # Cartavio
+813 = "1WO<h³u‰'k"  # San Ignacio
+814 = "ætªRÑy"  # Huánuco
+815 = "m÷–Xb"  # Loreto
+816 = "şVÆY¯e"  # Tumbes
+817 = "°efaS"  # Nueva Cuenca
+818 = "ôTpQaS¯e"  # Barrancas
+819 = "ÜtšNúWS"  # Guayaquil
+820 = "úWY"  # Quito
+821 = "Üb(„"  # Baeza
+822 = "aSKQTX"  # Caqueta
+823 = "waS"  # Cauca
+824 = "lšÌ‘úWTX"  # Mariquita
+825 = "ZSbTX"  # Bogota
+826 = "úW^Y"  # Quibdó
+827 = "‰R‚„eYúWšN"  # Antioquía
+828 = "aSTXk³u"  # Cartagena
+829 = "lš<h¾±ƒ³u"  # Magdalena
+830 = "°e(„«ƒÉb"  # Nueva Zamora
+831 = " RÉb R¯e"  # Caracas
+832 = "ÈT"  # Tunja
+834 = "ôTÌ‘³u¯e"  # Barinas
+835 = "^³ulš"  # Panamá
+836 = "aSTXb"  # Cartago
+837 = "GYWS·V R"  # Chinandega
+838 = "«ƒ¯eúWXb"  # Mosquito
+839 = "1W(„SætY"  # San Salvador
+840 = "yrœ^m"  # Trujillo
+841 = "ÜtyrlšÉb"  # Guatemala
+842 = "Vm÷–¯e"  # Flores
+843 = "ôT)R¯e"  # Balis
+844 = "áwGYfW·V(„Ébb(„"  # Juchitán de Zaragoza
+845 = "1WÉb(„m"  # San Lázaro
+846 = "lš—gR"  # Malinche
+847 = "ætşVÑyŒn"  # Bahías de Huatulco
+848 = "ÃWSTNyr"  # El Chote
+849 = "<h÷–W"  # Guerrero
+850 = "nfÃW^Éb·V(„Ébb(„"  # Puebla de Zaragoza
+851 = "ÉbLN<SÁ"  # La Unión
+852 = "…h‰Ñy"  # México
+853 = "Ébæt¯eyraS"  # La Huasteca
+854 = "yr®vKQ"  # Tepic
+855 = "ÃWWTX"  # Elota
+856 = "(„aSyraS¯e"  # Zacatecas
+857 = "1W‚„^‰'k"  # San Tiburcio
+858 = "TXÛk)R^¯e"  # Tamaulipas
+859 = "°e R)R‰šN"  # Nueva Galicia
+860 = "^^¯eúWšNW"  # Papasquiaro
+861 = "Ñy?–æ—Éb"  # Coahuila
+862 = "ÜtOlš¯e·V(„Ébb(„"  # Guaymas de Zaragoza
+863 = "S^0t"  # Paso del Norte
+864 = "GYætæt"  # Chihuahua
+865 = "N R)Ry<SšN"  # Baja California
+866 = "m÷–XbÒ‰"  # Cabo Loreto
+867 = "aSôu)RšN"  # Cahuilla
+868 = "m¯e‰Rk±ƒ¯e"  # Los Ángeles
+869 = "™„yr÷–"  # Monterrey
+870 = "…hS^X·V"  # Merced
+871 = "1Wm(„"  # Santa Rosa
+872 = "ÑyÉbŒg7Œ"  # Corazón del Valle
+873 = "LN…h¾"  # Húmeda
+874 = "ÌRaS"  # Fuca
+875 = "Ñyyr¯e"  # Cortez
+876 = "şVKQŒg"  # Tucsón
+877 = "…h(„"  # Mesa
+878 = "?–S^KQSïQ"  # Albuquerque
+879 = "1WlšªRÃWS"  # San Manuel
+880 = "?–Éb«ƒ(„"  # Alamosa
+881 = "0tÑyW"  # Socorro
+882 = "?–Éb«ƒbY"  # Alamogordo
+883 = "1W‰RN<SeY"  # San Antonio
+884 = "ÉbôTOšN"  # La Bahía
+885 = "ÃW¯eTXaSYs^ŸS"  # Llano Estacado
+886 = "ætÑy"  # Huaco
+887 = "m¯eyrÈT¯e"  # Los Tejas
+888 = " RSæ—¯eÎW"  # Villa Gálvez
+889 = "ÑyWÉbY"  # Colorado
+890 = "(„)R³u"  # Salina
+891 = "miO¯eÎW"  # Villa López
+892 = "ÃWSàVáQyr"  # El Infante
+893 = "!(„±ƒ¯e"  # González
+894 = "NSGYTX"  # Juachita
+895 = "yrÌ‘?–³u"  # Triana
+896 = "¢uÎW"  # Pájaro Rojo
+897 = "aS·V™Ÿ"  # Cadrón
+898 = "?–ÜteupQY"  # Agua Llorando
+899 = "Ñy)R³u·VnfW«ƒ"  # Colina de Plomo
+900 = "S1Wïf¯e"  # San Luis del Norte
+901 = "NÎWPR"  # Siete Ciudades
+902 = "s|Ï‚Ì‘"  # Misuri
+903 = "ÑyÉbŒg³l"  # Corazón del Río
+904 = "s|³u¯e·VÃW¯e^<SšN"  # Minas de España
+905 = "(„<hÉbYÑyÉbŒg"  # Sagrado Corazon
+906 = "Ì‘(„!X"  # Fuerte Lisa
+907 = "1Wáw‰RÎW"  # Villa San Juan
+908 = "?–÷–)RšNú‹"  # Arellano
+909 = "Éb¯eÉbÈT¯e"  # Las Lajas
+910 = "Y¯e=n"  # Dos Puertos
+911 = "6wWqS"  # Montaña de Hierro
+912 = "…Q<hÉb¯ep^"  # Cascadas Negras
+913 = "·V0tXb"  # De Soto
+914 = "WSnfÉb·VÉb"  # Pradera del Sol
+915 = "Éb÷–y›s"  # La Reforma
+916 = "1WÉbÕlOS"  # San Rafael
+917 = "lšÉb¯e®v³u"  # Malaspina
+918 = "ôTpQaS¯e"  # Barrancas
+919 = "şV?–iOeu"  # Tuapelho
+920 = " R)R…QW"  # Gallinero
+921 = "1W R^Ì‘ÃWS"  # San Gabriel
+922 = "yTX÷–(„aSmTX"  # Fortaleza Carlota
+923 = "ÃW¯eaSÔkšN"  # Escambia
+924 = "aS¯eTX"  # Castaño
+925 = "TX¯eúWúW"  # Tasquiqui
+926 = "lššNaS"  # Mayaca
+927 = "1W?–äS¯e÷^"  # San Agustin
+928 = "1WlšÑy¯e"  # San Marcos
+929 = "^*m"  # Gijón
+930 = "æ—¯eaS"  # Huesca
+931 = "ì„^XÌ‘šN"  # Ponceria
+932 = "yTX÷–(„aSm¯e"  # Fortaleza Carlos
+933 = "°e^&O‰šN"  # Nueva Palencia
+934 = "yrkYS"  # Tejedor
+935 = "Ì‘eY<hÌ‘ÈTSæt"  # Río Grijalva
+936 = "(„ÉbYqS"  # Monte Salado
+937 = "—?–Éb"  # Joara
+938 = "°e^yrÌ‘šN"  # Neopatria
+939 = "^YaS¯e"  # Padoucas
+940 = "ïf¯eôu)RšN"  # Luisvilla
+941 = "(„)R³u¯e"  # Salinas
+942 = "?–SôTÉb›"  # Albarracín
+943 = "1WÃWS…h…Q^SY"  # San Hermenegildo
+944 = "°eeYWiO(„"  # Nueva Oropesa
+945 = "^&O‰šN"  # Palencia
+946 = "Xb±ƒY·VNSOšN"  # Toledo de Juahiya
+947 = "NSOšN"  # Juahiya
+948 = "1WKQÉbÉb"  # Santa Clara
+949 = "OGYyrO¯e"  # Ichthys
+950 = "òƒ<hW?–"  # Figueroa
+951 = "0ŒY"  # Ciedo
+952 = "jgÃWW"  # Duero
+953 = "SÉbnfÉbTX"  # La Plata del Norte
+954 = "kR¯e"  # Jeriez
+955 = "Y¯em(„¯e"  # Dos Rosas
+956 = "Ì‘eY·VÏ‚S"  # Río del Sur
+957 = "·VÉb<hÉb"  # Delaguerra
+958 = "bSSlš"  # Lurma
+959 = "°eÑyœ<SšN"  # Nueva Coruña
+960 = "™„TXkáw¯eXb"  # Montaje Justo
+961 = "aS¯eaS¾·V±ƒÁ"  # Cascada de León
+962 = "°eQhfW·V"  # Nueva Santander
+963 = "N«ƒ)Rú‹¯e"  # Molinos Orientales
+964 = "‹vö”Vn"  # Lago Plateado
+965 = "°eôT^XW±"  # Nueva Barcelona
+966 = "úWâlúW"  # Quipoqui
+967 = "à`aSİO"  # Juicapau
+968 = "ôu¯eTX?–±ƒ<h÷–"  # Vista Alegre
+969 = "?–)RšNlš"  # Alhama
+970 = "°e?–^pQyr¯e"  # Nova Abrantes
+971 = "b…h¯eŒn"  # Bahía de Gomez
+972 = "1WKQœ¯e·VªRaS"  # Santa Cruz de Nuca
+973 = "8Y·VÉb"  # Quadra
+974 = "ÃWÑyŒn"  # Bahía de Eco
+975 = "÷–O›S"  # Isla del Rey
+976 = "?–¯eşVÌ‘šN¯e‹sPRÎW"  # Príncipe de Asturias
+977 = "KQÌ‘¯eXbqS"  # Monte Cristo
+978 = "‰RKQÉbk"  # Anclaje
+979 = "?–bS‚„šN³u¯e²›S"  # Islas Aleutianas
+980 = "1WKQÉbÉbŒn"  # Bahía Santa Clara
+981 = "9SWSYÒ‰"  # Cabo Fernando
+982 = "Ôk¯eaSšN›S"  # Isla Vizcaya
+983 = "<hÉb³u¾›S"  # Isla Granada
+984 = "s|³u¯eŒn"  # Bahía de Minas
+985 = "^aS<SaS"  # Jicanica
+986 = "1W0WšNåTÒ‰"  # Cabo Santiago
+987 = "<SšN RÉb"  # Niágara
+988 = "NS™Ÿ"  # Juarón
+989 = "1W?–<h¾"  # Santa Águeda
+990 = "yr÷–¯eÌ‘eY¯e"  # Tres Ríos
+991 = "1WÌ‘aSY"  # San Ricardo
+992 = "?–SôT·VXb…h¯e"  # Alba de Tormes
+993 = "1WÔkTXS"  # San Vital
+994 = "KQO"  # Quebey
+995 = "1W^XôT¯e‚„‰R"  # San Sebastián
+996 = "O&O"  # Irún
+997 = "³u¾Ò‰"  # Cabo de Nada
+998 = "GYúWFz?–"  # Chicimua
+999 = "÷–jgÄ–^pQÑy"  # Reducción Blanco
+1000 = "0NYŒn"  # Fondo de la Bahía
+1001 = "1W›sKNšN%`AmÎW"  # Rápidos Sta María
+1002 = "?–	TÉb!X"  # Fuerte Aguilar
+1003 = "ôT¯eKQ¯e!X"  # Fuerte Vázquez
+1004 = "8Y·VW!X"  # Fuerte Quadro
+1005 = "yrÉb¯eTXlšÉb!X"  # Fuerte Trastámara
+1006 = "Ì‘eY¾…Q¯e"  # Rio Danés
+1007 = "yrœÃWú‹Œn"  # Bahia del Trueno
+1008 = "¢u³lÎW"  # Río Rojo
+1009 = "^¯eTXè•yr³l"  # Río Bustamente
+1010 = "?–¯eşVÌ‘šN¯e!X"  # Fuerte Asturias
+1011 = "1W›sKNšN·VÉb^¯e"  # Sta María de La Paz
+1095 = "lšSôu³u¯e"  # Malvinas
+1104 = "ôTQh"  # Bazán
+1105 = "SÁ”Éb"  # Tierra del Norte
+1809 = "?–Éb³u!X"  # Fuerte de Arana
+1813 = "iO·VÉbS!X"  # Fuerte Pedral
+1881 = "1Wlš÷^"  # San Martín
+2002 = " RÉb^b¯e²›S"  # Islas Galápagos
+2003 = "1WaSm¯e"  # San Carlos
+2004 = "‚„òƒaS"  # Beatifica
+2005 = "1W÷–¯e…h¯e"  # San Lesmes
+2006 = "s|‰¾‰"  # Mixidaxi
+2007 = "1W?–lšW"  # San Amaro
+2008 = "1WeYäS)ReY"  # San Augurio
+2009 = "àViOÌ‘eY"  # Imperio
+2010 = "áwÃW…Q‚„Ñy"  # Juenetico
+2011 = "1WeY)RšN"  # Santa Oria
+2012 = "1W<SXb"  # San Benito
+2013 = "°e³uâl±ƒ¯e"  # Nueva Nápoles
+2014 = "O¯e±ƒ<SeY¯e"  # Isleños
+2015 = "1W³uTX)RšN"  # Santa Natalia
+2016 = "ÃWSyr…QYS"  # El Tenedor
+2017 = "1W‰R³u"  # Santa Ana
+2018 = "i`yrÉb¾"  # Entrada
+2019 = "KQ÷–¯e®v"  # Crespi
+2020 = "ÒkÇ†³l"  # Río de Serpientes
+2021 = "Ï‚¯eÑyS"  # Suscol
+2022 = "lšÉb¯e®v³u²›S"  # Islas Malaspina
+2023 = "NSOeYs|³u"  # Juaiomina
+2025 = "WSyè•yrÉb"  # Formentera del Sur
+2476 = "1Wíb"  # San Diego
+2477 = "ÉbQh‚„¯elš"  # La Santísima
+2478 = "Á”ÉbÕlk¯e"  # Tierra Fages
+2479 = "(„KQÉbè•Xb"  # Sacramento
+2480 = "9SWSY³l"  # Rio Fernando
+2481 = "?–ÉbbÒ‰"  # Cabo Arago
+2482 = "1Wlš›Rú‹êšNÑyú‹"  # San Marino Diácono
+2483 = "aSÉbs|euS"  # Cala Millor
+2484 = "?–jgÉb‰ÁÒ‰"  # Cabo Adulación
+2485 = "eY—g®všN"  # Olimpia
+2486 = "ÃWS<hpQ"  # El Gran
+2487 = "iOWVn"  # Perro Lago
+2488 = "1Wïf¯eSyrpQ"  # San Luis Beltrán
+2489 = "k…hÉb¯ep^"  # Cascadas Gemelas
+2490 = "GYGY^"  # Chichipa
+2491 = "Éb¯eôu R¯e"  # Las Vegas
+2492 = "Ébb7Œ"  # Valle del Lago
+2493 = "^…h…QyQ"  # Jiménez
+2494 = "ÃWSlš^O¯e"  # El Malpaís
+2495 = "ÉbÈTÉb"  # La Jara
+2496 = "Éb*mTX"  # La Junta
+2497 = "iOÑy¯e"  # Pecos
+2498 = "yrupÜt"  # Terlingua
+2499 = "Ì‘eY^Ébƒl"  # Rio Bravo
+2500 = "1W‰RkW"  # San Ángelo
+2501 = "Oâl³u"  # Hipona
+2502 = "ì„Xb·VWâl"  # Punto de Lobo
+2503 = "ì„TX?–WÈTS"  # Punta Alojar
+2504 = "kSüfú‹iO·VW"  # Hermano Pedro
+2505 = "nfÃW^W%`AmÎW"  # Pueblo Rápidos
+2506 = ")R^Éb¾"  # Librada
+2507 = "-NNS÷–¯e"  # Centro Juárez
+2508 = "çenfi`yr"  # Puente Viejo
+2509 = "XbiOaS"  # Topeka
+2510 = "‚„eY R"  # Tioga
+2511 = "êšN^WVn"  # Lago del Diablo
+2512 = "1WS³uY"  # San Bernado
+2513 = "ÃWS?–^"  # El Arpa
+2514 = "°elš·VÌ‘"  # Nuevo Madrid
+2515 = "1W—^XaSÉbQh¯e"  # San José Calasanz
+2516 = "m¯e?–¾¯e"  # Los Adaes
+2517 = "ÜtS<S‰Á"  # Guarnición
+2518 = "?–âl¯eXbS"  # Apóstol
+2519 = "1WyrS«ƒ"  # San Telmo
+2520 = "O(„SÎW"  # Ciudad de Isabel
+2521 = "áwÃWâlO R"  # Juepoyga
+2522 = "8YÉblšO"  # Qualamasiu
+2523 = "‹sPRÎW"  # Pueblo Príncipe
+2524 = "?–s|¯eTX·V"  # Amistad
+2525 = "››³uXb"  # Cincinato
+2526 = "ÃW¯eTX‰Á‰f"  # Estación Sion
+2527 = "Â‰u–ÎW"  # Colina Observación
+2528 = "?–ÜtVÌ‘šN"  # Aguafría
+2529 = "m¯eú‹ R±ƒ¯e"  # Los Nogales
+2530 = "1Wïf¯e=n"  # Puerto San Luis
+2531 = "ÃWS«ƒ(„s|šN"  # Hermosa Mía
+2532 = "·V0tTX"  # Desota
+2533 = "^^X·V±ƒf"  # Ponce de León
+2534 = "ÉbZi?–"  # La Chua
+2535 = "iOWÌ‘¾YIm‚‚ÎW"  # Pascua Florida
+2536 = "yrk¯eTX"  # Tegesta
+2537 = "<hÉb‰šN÷–šNS"  # Gracia Real
+2538 = "Éb(„Üt¾"  # La Saguada
+2539 = "yrÉb¯eTXlšÉb"  # Trastámara
+2540 = "m¯e™„‚„“^W¯e"  # Los Montículos
+2541 = "1WÑy&OôT"  # Santa Columba
+2542 = "1WÃW±ƒ³u"  # Santa Elena
+2543 = "•ŒnÎW"  # Bahía Larga
+2544 = "ÿuÎ‘ÎW"  # Hacienda Verde
+2545 = "eYN^X"  # Ochuse
+2546 = "1WaS‰S¾"  # Santa Casilda
+2547 = "÷–OŒn"  # Bahía del Rey
+2548 = "°eÌ‘eY"  # Nuevo Río
+2549 = "1Wíb?–SaSÉb"  # San Diego Alcalá
+2550 = "1WYf	TXb"  # Santo Dominguito
+2551 = "aSS(„¾"  # Calzada
+2552 = "ÃW¦‰'k"  # Eboncio
+2553 = "1WW¾"  # San Roda
+2554 = "1W·V‰m¯e"  # Santo de Silos
+2555 = "1W'kÉb)RšN"  # Santa Eulalia
+2556 = "VÉbè•b7Œ"  # Valle Flamenco
+2557 = "1WLNm^'k"  # San Eulogio
+2558 = "1W9SWSY"  # Fernando el Santo
+2559 = "”NVnÎW"  # Cinco Estanques
+2560 = "1Wôuîhyr=n"  # Puerto San Vicente
+2561 = "1WVmÉbÒ‰"  # Cabo Santa Flora
+2562 = "1WiO÷–(„aSlš"  # Sant Pere Sacama
+2563 = "µxğSÎW"  # Montañas Verdes
+2564 = "™„yr^XÉbyr"  # Montserrat
+2565 = "1WO<Sb"  # San Íñigo
+2566 = "‰Rnf)RšNŒn"  # Bahía Amplia
+2567 = "1Wáw‰R·VêeY¯e"  # San Juan de Dios
+2568 = "ZSætÒ‰"  # Cabo de Huelva
+2569 = "^Sjg"  # Pardo
+2570 = "(„?–!"  # Sahagún
+2571 = "eYSyr R"  # Ortega
+2572 = "1Wáw)R‰R"  # San Julián
+2573 = "1WKQÉbÉb›S"  # Isla Santa Clara
+2574 = "1WO‰·VW!X"  # Fuerte San Isidro
+2575 = "1WO‰·VWŒn"  # Bahía San Isidro
+2576 = "ÃWS²›S"  # El Archipiélago
+2577 = "yrËz<S¾·VŒn"  # Bahía de la Trinidade
+2578 = "?–Œg‰i`›S"  # Isla de la Asunción
+2579 = "1WkW<S«ƒ"  # San Jerónimo
+2580 = "NS™„TX³u"  # Juamontana
+2581 = "1W³RÉb"  # Santa Laura
+2582 = "1W±ƒ‚„‰šN"  # Santa Leticia
+2583 = "×Smw1Wáw‰RÎW"  # San Juan Bautista
+2584 = "1WiO9KQXb"  # San Perfecto
+2585 = "?–,gêeY"  # Abundio
+2586 = "1W?–Yy"  # Santo Adolfo
+2587 = "‡v¶RÒ‰"  # Promontorio Real
+2588 = "Ÿ”|iÎW"  # Las Campanas
+2589 = "ªRyrÌ‘eY³l"  # Río Nutrio
+2590 = "?–LNlš¾¯ep^"  # Cascadas Ahumadas
+2591 = "aS¯eXbS·VÉbú‹"  # Castor de Verano
+2592 = "üf(„³u÷–¯e"  # Manzanares
+2593 = "âl¯eKQ¯eVn"  # Lago de los Bosques
+2594 = "ê¯eyrÌ‘XbVn"  # Distrito de Lagos
+2595 = "úW¯eYKQáw‰R"  # Quis-Toq-Juan
+2596 = "1W<SSY"  # San Benildo
+2597 = "^Xæ—)R†–"  # Cervellón
+2598 = "Ş˜pÎW"  # Corrientes Rápidas
+2599 = "iO·VWVn"  # Estanque Pedro
+2600 = "Éb^¯e³l"  # Río de la Paz
+2601 = "Xb÷–¯e«ƒÉb÷–¯e"  # Torres Morales
+2602 = "¢uÎW"  # Ciervo Rojo
+2603 = "ptqS"  # Montaña Rosa
+2604 = "1W0WšNåT!X"  # Fuerte Santiago
+2605 = "aSÆYbSiO¯e"  # Camloupes
+2606 = "³u¯eÑy"  # Nazko
+2607 = "Á”Éb·VÉbú‹"  # Tierra de Verano
+2609 = "1WiO·VWú‹Éb¯eÑy"  # San Pedro Nolasco
+2610 = "aSÉb·VTR·V"  # Cala del Conde
+2611 = "®vmXbÒ‰"  # Cabo Piloto
+2612 = "ÑySYæt"  # Córdova
+2613 = "1Wyr÷–(„"  # Santa Teresa
+2614 = "°e±ƒÁ"  # Nuevo León
+2615 = "kÏ‚¯e›sKNšN"  # Jesús María
+2616 = "“^“^SiO"  # Cucurpe
+2617 = "k÷–¯e"  # Jerez
+2618 = "1WôTôTÉb"  # Santa Bárbara
+2619 = "(„S‚„eu"  # Saltillo
+2620 = "·VW‰Ì‘eY7Œ"  # Valle de los Cirios
+2621 = "Üt¾ÉbÈTÉb"  # Guadalajara
+2622 = "(„«ƒÉb"  # Zamora
+2623 = "æ—TX«ƒ"  # Huetamo
+2624 = "(„âlyrpQ"  # Zapotlan
+2624 = "(„âlyrpQ"  # Zapotlan
+2626 = "1WôTXbW"  # San Bartolo
+2627 = "?–aSnfÑy"  # Acapulco
+2628 = "yriO?–aS"  # Tepeaca
+2629 = "°e‰RyrKQÉb"  # Nueva Antequera
+2630 = "1W0WšNåTşV¯eyrÉb"  # Santiago Tuxtla
+2631 = "?–aS2SNW"  # Acayucan
+2632 = "ÃWS«ƒ(„7Œ"  # Villahermosa
+2633 = "…hÌ‘¾·V2SaSfW"  # Mérida de Yucatán
+2634 = "^Ébƒl=n"  # Puerto Bravo
+2635 = "İ„qSÎW"  # Montes Azules
+2636 = "aS¯e‚„eu1W9)RiO"  # Castillo San Felipe
+2637 = "1WiO·VWÏ‚Éb"  # San Pedro Sula
+2638 = "ÃW¯e“^àVyrÉb"  # Escuintla
+2639 = "1WeY÷– RÌ‘eY"  # San Olegario
+2640 = "yräS‰ RSôT"  # Tegucigalpa
+2641 = "1Wïf¯eTX®vÑy"  # San Luis Tampico
+2642 = "1W—^XaSm¯e"  # San José Carlos
+2643 = "?–ætm¯e"  # Ávalos
+2644 = "nfÃW^Éb"  # Puebla
+2645 = "!•ætTX…Q—"  # Zihuatanejo
+2646 = "nfyrÉb"  # Putla
+2647 = "ÉbKQœ¯e"  # Veracruz
+2648 = "KQœyQ<hpQ·V"  # Cruz Grande
+2649 = "°e^ÆYnf†–³u"  # Nueva Pamplona
+2650 = "aSè•ÎW"  # Ciudad del Carmen
+2651 = "÷–šNS·V(„)R³u¯e"  # Real de Salinas
+2652 = "«ƒ÷–m¯e=n"  # Puerto Morelos
+2653 = "(„aSyriOúW¯e"  # Sacatepéquez
+2654 = "ôTÉbÑy?–"  # Baracoa
+2655 = "Éb¯e·V)R‰šN¯e"  # Las Delicias
+2656 = "1W›sKNšN"  # Santa María
+2657 = "‹Yg¸STu1W0WšNåT"  # Santiago de la Buena Esperanza
+2658 = "?–Ï‚?–"  # Azua
+2659 = "‹vö”=n"  # Puerto Plata
+2660 = "lš³uÜt"  # Managua
+2661 = "ÉbbS¯e·VO³u"  # La Luz de Siuna
+2662 = "ÑylššNÜt"  # Comayagua
+2663 = "<SÑyšN"  # Nicoya
+2664 = "ÉbÜt¯e"  # Veraguas
+2665 = "m¯eÃW¯e"  # Los Ais
+2666 = "1W(„ôT"  # San Saba
+2667 = "Éb÷–Y"  # Laredo
+2668 = "lš·V÷–ûlVn"  # Laguna Madre
+2669 = "yrÈT¯eÃW¯eyr"  # Tejas de Este
+2670 = "Ñyâl¯eyrÉb"  # Compostela
+2671 = "O¯e^<SeYÉb"  # Española
+2672 = "1WâlÕn^šN³u"  # Santa Potenciana
+2803 = "eYÌ‘ú‹Ñy"  # Orinoco
+2804 = "Üt‰^‚„"  # Guasipati
+2805 = "lšşV—g"  # Maturín
+2806 = "Üt^Éb"  # Guajira
+2807 = "?–STX<hÉb‰šN"  # Altagracia
+2808 = "1W‰R³u·VÑyW"  # Santa Ana de Coro
+2809 = "aSÉbZS0t"  # Calabozo
+2810 = "?–nf÷–"  # Apure
+2811 = "?–TXôTâl"  # Atabapo
+2812 = "âl÷–"  # Pore
+2813 = "…hÌ‘¾"  # Mérida
+2814 = "…hTX"  # Meta
+2815 = "aS÷–ú‹=n"  # Puerto Carreno
+2816 = "ÜtôušN÷–"  # Guaviare
+2817 = "LNOÉb"  # Huila
+2818 = "âl^lb"  # Popayán
+2819 = "¾Ş"  # Darién
+2820 = "ÃW¯e…hÉb¾¯e"  # Esmeraldas
+2821 = "®vLNÉb"  # Piura
+2822 = "GYKQÉb¦u"  # Chiclayo
+2823 = "kQ7ŒÎW"  # Ocho Valles
+2824 = "NaSísôT"  # Huancabamba
+2825 = "®v¯eÑyísôT"  # Piscobamba
+2826 = "m¯eGYFz¯e"  # Los Chimus
+2827 = "ætÉb¯e"  # Huaraz
+2828 = "kS«ƒ(„7Œ"  # Villa Hermosa
+2829 = "?–šNôuÌ‘"  # Ayaviri
+2830 = "eYQh Ryr"  # Auzangate
+2831 = "‚„NS³uÑy"  # Tihuanaco
+2832 = "1W—?–	TàV"  # San Joaquín
+2833 = "1WÍk›s)RšNÎW"  # Madre de Dios
+2834 = "qSÁe1WKQœ¯e"  # Santa Cruz de la Sierra
+2835 = "Xb±ƒY·VnfÉbTX"  # Toledo de Plata
+2836 = "şV“^üf"  # Tucumán
+2837 = "1WaSTX3tZ"  # Santa Catalina
+2838 = "TXÌ‘ÈT"  # Tarija
+2839 = "nf³u·V?–TXaSlš"  # Puna de Atacama
+2840 = "aSÉblš"  # Calama
+2841 = "‰RXbÕl R¯eTX"  # Antofagasta
+2842 = "1W0WšNåT·VSÃW¯eyrW"  # Santiago del Estero
+2843 = "ÉbÌ‘eYÈT"  # La Rioja
+2844 = "RiO¯e"  # Chepes
+2845 = "1Wáw‰R"  # San Juan
+2846 = "úWúW(„aSyr"  # Quisquisacate
+2847 = "1Wïf¯e"  # San Luis
+2848 = "1W9"  # Santa Fe
+2849 = "W(„Ì‘eY"  # Rosario
+2850 = "™„yrôuêeY"  # Montevideo
+2851 = "VV,gXb¯e"  # Fray Bentos
+2852 = "(„SXb"  # Salto
+2853 = "ÑyŞyr¯e"  # Corrientes
+2854 = "-NågÑy"  # Chaco Central
+2855 = "s|‰eY…Q¯e"  # Misiones
+2857 = "WSÌ‘eY<hpQ·V"  # Rio Grande del Sur
+2858 = "1W0WšNåT"  # Santiago
+2859 = "OTXnf?–"  # Itapúa
+2860 = "ïQpQê"  # Querandi
+2861 = "Íu^X"  # Sauce
+2862 = "ÑyÑ‘ZS"  # Coquimbo
+2863 = "…Q<hW³l"  # Rio Negro
+2865 = "nfÃWSR"  # Puelches
+2866 = "eYÉbætÌ‘šN"  # Olavarria
+2867 = "m¯eXo^¯e"  # Los Pampas
+2868 = "1W‰R<SeY"  # San Antonio
+2869 = "‹v±‚ÎW"  # Florida Blanca
+2870 = "yræ—lšnf"  # Tehuelmapu
+2871 = "âlšN"  # Poya
+2872 = "PŸúWšNs|"  # Chiquiyami
+2873 = "ôTSêôušN"  # Valdivia
+2874 = "ÃWHQ"  # Aisén
+2875 = "Zi^yr"  # Chubut
+2876 = "?–Ébæt"  # Alava
+2877 = "è•Y(„"  # Mendoza
+2878 = "(„STX"  # Salta
+2879 = "1WyrKQÉb"  # Santa Tecla
+2881 = "Ñy&OôT"  # Corumba
+2882 = "ZS¦!X"  # Fuerte Borbón
+2883 = "…hmêšN"  # Melodia
+2884 = "?–SôT·VÌ‘¯eyr"  # Alba de Liste
+2885 = "ú‹Éb¯eÑy"  # Nolasco
+2886 = "lššNS·V"  # Mayalde
+2887 = "VgwÎW"  # La Conquista
+2888 = "ÜtúW"  # Guaqui
+2889 = "æ—Slš"  # Huelma
+2890 = "Ì‘ôTåT(„"  # Ribagorza
+2891 = "Xb÷–ú‹Au±‚7Œ"  # Toreno Villaflor
+2892 = "1WXbÌ‘ÔkeY"  # Santo Toribio
+2893 = "÷–ôu)RšN"  # Revilla
+2894 = "1Wáw‰R·V÷–O"  # San Juan del Rey
+2895 = "ÃWS^Sb"  # El Burgo
+2896 = "1WÃW¯eyrís"  # San Esteban
+2897 = "SpQ R"  # Berlanga
+2898 = "°eQhXb"  # Nuevo Santo
+2899 = "ØšTXÎW"  # Altas Torres
+2900 = "1W9)R^X¯e"  # San Felices
+2901 = "aS(„·V÷–O"  # Casar del Rey
+2902 = "s|<hSşVÉb"  # Miguelturra
+2903 = "Éb¯eÉbZS÷–¯e"  # Las Labores
+2904 = "KQÌ‘nfTX³u0W"  # Campo de Criptana
+2905 = "ôTS·VaS^Éb¯e"  # Valdecabras
+2906 = "aS³uôuÉb¯e"  # Canaveras
+2907 = " R‰³uW"  # Garcinarro
+2908 = "ôTS«ƒ0t"  # Valhermoso
+2909 = "¾R·VS"  # Vindel
+2910 = "?–SNWşV·V"  # Alcantud
+2911 = "Íu÷–ÈT¯e"  # Zaorejas
+2912 = "«ƒ…Qæt"  # Moneva
+2913 = "aS¯eiO"  # Caspe
+2914 = "Ñ‘Xb"  # Quinto
+2915 = "(„¯eTXb"  # Sastago
+2916 = "ôTôT¯eyrW"  # Barbastro
+2917 = "Éb¯e“^?–÷–"  # Lascuarre
+2918 = "^<Seu"  # Panillo
+2919 = "1W¸S³u¯eTX‰šN"  # Santa Anastasia
+2920 = "0t¯e·V÷–O"  # Sos del Rey
+2921 = "Y)RšN1WÍkÎW"  # N. Sra. de la Victoria
+2922 = "›sKNšNØšŸS"  # Meseta de María
+2923 = "Ì‘ôT·V^X)RšN"  # Ribadesella
+2924 = "^XWÌ‘eY"  # Selorio
+2925 = "aS¯eyr)RÁ"  # Castrillón
+2926 = "“^êRW"  # Cudillero
+2927 = "aS¾ôuY"  # Cadavedo
+2928 = "bS?–aS"  # Luarca
+2929 = "³uôušN"  # Navia
+2930 = "ÉbaSÌ‘¾·V"  # La Caridad
+2931 = "aS(„Ì‘6wb"  # Casariego
+2933 = "Ì‘ôT·VeY"  # Ribadeo
+2934 = "?–pQ¾"  # Aranda
+2935 = "W?–"  # Roa
+2937 = "°eaS^X÷–¯e"  # Nueva Cáceres
+2938 = "ôT?–¦"  # Bahabón
+2939 = "(„Éb(„"  # Zaraza
+2940 = ")RiOyQ"  # Lipez
+2941 = "1W0WšNåT·VætÌ‘"  # Santiago de Huari
+2942 = "ågSaS¯e"  # Charcas
+2943 = "ågågâlšN¯e"  # Chachapoyas
+2944 = "LNaSšN)R"  # Ucayali
+2945 = "2SÌ‘lšÜt¯e"  # Yurimaguas
+2946 = "úWÅ–aS¯e"  # Quillacas
+2947 = "?–Qh RW"  # Azángaro
+4570 = "1Wlš÷^yr¯e…hbSNW"  # San Martín Texmelucan
+4571 = "“^ÃW³uætaS"  # Cuernavaca
+4572 = "XbbSaS"  # Toluca
+4573 = "yrKQ^‚„yrpQN1WVg‰¯eÑy"  # San Francisco de Tecpatitlán
+4574 = "lš(„s|yrÉb"  # Mazamitla
+4575 = "m¯e÷–6w¯e"  # Los Reyes
+4576 = "¦‚Ç‚0W"  # El Carrizal
+4577 = "1WKQÉbÉbŒn"  # Golfo de Santa Clara
+4578 = "lš(„yrpQ"  # Mazatlán
+4579 = "?–…haS"  # Ameca
+4580 = "Ñy)Rlš"  # Colima
+4581 = "GYSXo›b"  # Chilpancingo
+4582 = "yrætNW"  # Tehuacán
+4583 = "°e(„Ébb(„"  # Nueva Zaragoza
+4584 = "æt(„aS"  # Oaxaca
+4585 = "1WlšÑy¯eşV¯eyrÉb"  # San Marcos Tuxtla
+4586 = "Éb·^wêšN"  # La Concordia
+4587 = "1WlšyreYO¯eTXpQ"  # San Mateo Ixtatán
+4588 = "°eaSS"  # Nuevo Bécal
+4589 = "ì„TXnfÉbîh‚„šN"  # Punta Placentia
+4590 = "1Ws|<hS·Vlš<S"  # San Miguel de Maní
+4591 = "ôT)RšNY)R·V"  # Valladolid
+4592 = "ì„TXbS¾"  # Punta Gorda
+4593 = "ì„TX·VaS›³u¯e"  # Punta de Caxinas
+4594 = "1WYfT·VÑyís"  # Santo Domingo de Cobán
+4595 = "1W—^X·V¾æ—·V"  # San José de David
+4596 = "Ì‘eYÏ‚‰'k"  # Riosucio
+4597 = "lš‚„³u"  # Matina
+4598 = "ÈTÉb^"  # Jalapa
+4599 = "‰ªR"  # Sinú
+4600 = "?–ÜtGYaS"  # Aguachica
+4601 = "LN^S7Œ"  # Valle de Upar
+4602 = "^†–"  # Girón
+4603 = "«ƒ<SúWÉb"  # Moniquirá
+4604 = "^¯eXb"  # Pasto
+4605 = "?–ÄuÃW"  # Azuay
+4606 = "SÑy?–æ—Éb"  # Coahuila del Norte
+4607 = "1W0WšNåT·VaS)R"  # Santiago de Cali
+4608 = "?–ågÜt¯e"  # Achaguas
+4609 = "ôTúW‰…hXb"  # Barquisimeto
+4610 = "1WôTôTÉb·VVy)RšN"  # Santa Bárbara de Zulia
+4611 = "ôT±ƒÉb"  # Valera
+4612 = "°eæt&O‰šN"  # Nueva Valencia
+4613 = "?–³R÷–"  # Araure
+4614 = "Üt¯ejg?–)RXb"  # Guasdualito
+4615 = "sQ®všN"  # Guanpia
+4616 = "ôT^XW±·V1W^XW"  # Barcelona del Cerro Santo
+4617 = "1W“^¯eXb‚„eY"  # San Custodio
+4618 = "Éb^¯e¾·VÉb"  # La Paz Verdadera
+4619 = "Éb³uôu¾·V"  # La Navidad
+4620 = "?–Xb<hpQ·V"  # Hato Grande
+4621 = "O-W"  # Higüey
+4622 = "lšfW(„¯e"  # Matanzas
+4623 = "1W¯e®vÌ‘şV¯e"  # Sancti Spiritus
+4624 = "Üt…Q"  # Guane
+4625 = "°eÃW¯es|S³u"  # Nova Esmirna
+4626 = "fW^=n"  # Puerta Tanpa
+4627 = "ÃW¯eTX‰Á·VÑyR^'k"  # Estación de Collegio
+4628 = "ÃWS^0t"  # El Paso
+4629 = "mlš·VNS÷–¯e"  # Loma de Juárez
+4630 = "ÑyW³u"  # Corona
+4631 = "?–Üt…Q<hÉbGYúWTX"  # Agua Negra Chiquita
+4632 = "jgS^X"  # Dulce
+4633 = "Ôk¯eTXqS"  # Sierra Vista
+4634 = "÷–jg‰Á1WaSm¯e"  # Reducción San Carlos
+4635 = "1W³u‚„'k"  # San Bernadino
+4636 = "lšÌ‘âl(„"  # Mariposa
+4637 = "1WVg‰¯eÑy"  # San Francisco
+4638 = "Éb¯eÉbZS÷–¯e0W"  # Rancho Las Putas
+4639 = "i`^X³u¾"  # Ensenada
+4640 = "?–Üt¯eaSŞyr¯e"  # Aguascalientes
+4641 = "Ym÷–N"  # Dolores
+4642 = "°e7ŒÎW"  # Villanueva
+4643 = "1Wïf¯eâlXb‰"  # San Luís Potosí
+4644 = "°e<hpQ·VaS(„"  # Nuevo Casas Grandes
+4645 = "Œg^÷–÷–yr"  # Sombrerete
+4646 = "0tú‹Éb"  # Sonora
+4647 = "jgpQb"  # Durango
+4648 = "aS…QÉb¯e"  # Canelas
+4649 = "1W›sKNšN·V³uƒleYæt"  # Santa Maria de Navojohua
+4650 = "1W‚„‰lšyrÌ‘<S¾·V·V®v‚„KQ"  # Santísima Trinidad del Pitic
+197 = "W^X)RÁ"  # Rosellón
+211 = "Ôk)R…Q'k¯e"  # Pirineos
+212 = "kW³u"  # Gerona
+214 = "?–Éb!"  # Aragón
+220 = "ôT&O‰šN"  # Valencia
+221 = "FzS‰šN"  # Murcia
+222 = "?–S…h)RšN"  # Almería
+223 = "<h—g³u¾"  # Granada
+224 = "^Xôu)RšN"  # Sevilla
+225 = "ÑySYôT"  # Córdoba
+226 = "^^ÉbTXS"  # Gibraltar
+231 = "'kâlXb"  # Oporto
+232 = "^Ébu(„"  # Braganza
+333 = "ôT÷–?–Ì‘"  # Baleares
+367 = "?–0t÷–¯e"  # Azores
+1748 = "ÈTi`"  # Jaén
+1749 = "aS‚„¯e"  # Cádiz
+1750 = "?–)RNWyr"  # Alicante
+1851 = "ÑyàV^Éb"  # Coímbra
+90 = "VpQ·V¯e"  # Flandes
+92 = "^Ébísyr"  # Brabante
+96 = "^XpQ¾"  # Zelanda
+97 = "eYpQ¾"  # Holanda
+98 = "LNyr÷–KQ"  # Utreque
+99 = "-WS·V÷–¯e"  # Güeldres
+100 = "VÌ‘‰šN"  # Frisia
+1742 = "—g^Sb"  # Limburgo
+1744 = "‰RşVÃWS®všN"  # Antuerpia
+1865 = "uyr"  # Gante
+102 = "<S(„"  # Niza
+103 = "®všN™„yr"  # Piamonte
+104 = "†–ôT‚„šN"  # Lombardía
+106 = "«ƒ·V³u"  # Módena
+109 = "üfşV?–"  # Mantua
+112 = "…Q‰šN"  # Venecia
+114 = "Wlš<SšN"  # Romaña
+116 = "Vm&O‰šN"  # Florencia
+120 = "?–^œ0t¯e"  # Abruzos
+121 = "³uâlÒR¯e"  # Nápoles
+124 = "…h^³u"  # Mesina
+127 = "^XS·V<SšN"  # Cerdeña
+205 = "(„ZSšN"  # Saboya
+1247 = "ÑyS^X R"  # Córcega
+1875 = "“^…QeY"  # Cúneo
+173 = "ÉbâlSyr"  # Labort
+88 = "?–Syr‰šN"  # Artesia
+89 = "®vaSêšN"  # Picardía
+91 = "ÃWYt"  # Henao
+93 = "RÈT"  # Lieja
+94 = "bSîh^b"  # Luxemburgo
+168 = "ú‹üfêšN"  # Normandía
+174 = "äS6w³u"  # Guyena
+175 = "?–Slš<SšNKQ"  # Armañac
+176 = "?–S…Q"  # Bearne
+178 = "‰Rk'k"  # Anjeo
+180 = "âlOşV"  # Poitú
+183 = "VpQ‰šN›S"  # Isla de Francia
+184 = "eYS&OÃW(„Y"  # Orleanesado
+186 = "åg^<SšN"  # Champaña
+189 = "m÷–³u"  # Lorena
+190 = "ZSâl…Q¯e"  # Borbonés
+192 = "âlb<SšN"  # Borgoña
+193 = "VpQÑyTR¾Y"  # Franco Condado
+195 = "÷–«ƒ›"  # Lemosín
+196 = "Xbm(„"  # Tolosa
+198 = "œS-W"  # Ruergüe
+199 = "eYôu<SšN"  # Auvernia
+200 = "&OÜtYKQ"  # Lenguadoc
+201 = "nfW‡e(„"  # Provenza
+202 = "TR¾Y³u›"  # Condado Venaissin
+203 = ")Rf…Q^X"  # Lionese
+204 = "ãNòƒ³uY"  # Delfinado
+1879 = "?–&OŒg"  # Alenzón
+41 = "Nnfœ‰šN"  # Prusia Oriental
+42 = "ôTSs|šN"  # Varmia
+43 = "9N‰<h"  # Dánzig
+44 = "‰R^Sb"  # Hamburgo
+46 = "…hKQ&O^b"  # Mecklemburgo
+47 = "‰âl…hÉb<SšN"  # Pomerania Occidental
+48 = "Nâl…hÉb<SšN"  # Pomerania Oriental
+50 = "^pQ·V^b"  # Brandeburgo
+53 = "bS…Q^b"  # Luneburgo
+55 = "eYS·V^b"  # Oldemburgo
+57 = "^&OôuKQ"  # Brunswick
+60 = "NbS(„‰šN"  # Alta Lusacia
+61 = "(„*m<SšN"  # Sajonia
+62 = ")Rnf‰šN"  # Lipsia
+63 = "şV—g^šN"  # Turingia
+64 = "NôTôu6wÉb"  # Baja Baviera
+65 = "Fz<SGY"  # Múnich
+67 = "ªR&O<h"  # Núremberg
+69 = "TR¯efW(„"  # Constanza
+72 = "^Ì‘¯ebôušN"  # Brisgovia
+75 = "?–S(„‰šN"  # Alsacia
+76 = "(„S¯e^b"  # Salzburgo
+78 = "lš!‰šN"  # Maguncia
+79 = "fkS¯e^b"  # Wurzburgo
+80 = "yr÷–ôuÌ‘¯e"  # Tréveris
+81 = "ÃW^X"  # Hesse
+82 = "¯eyrÕl)RšN"  # Vestfalia
+85 = "ÑyW<SšN"  # Colonia
+86 = "Fz<S¯eyr"  # Muñiste
+110 = "yr&OXb"  # Trento
+128 = "aS—g‚„šN"  # Carintia
+129 = "aS<SeYÉb"  # Carniola
+132 = "ÃW¯e‚„)RšN"  # Estiria
+134 = "6w³u"  # Viena
+165 = "S³u"  # Berna
+166 = "ôTS·V¯eTXÕn"  # Waldstätten
+1757 = "N^Éb‚„³uY"  # Alto Palatinado
+1758 = "‰R'kôu"  # Hanóver
+1760 = "Ñy^&O(„"  # Coblenza
+1761 = "^Éb‚„³uY"  # Palatinado
+1763 = "NbS(„‰šN"  # Baja Lusacia
+1769 = "bÌ‘‰šN"  # Gorizia
+1841 = "lšÌ‘i`^b"  # Mariemburgo
+1857 = "³Ri`^b"  # Lauenburgo
+1868 = "eY<h¯e^b"  # Augsburgo
+1869 = "Ï‚Ì‘GY"  # Zúrich
+1870 = "1W Rm"  # San Galo
+1873 = "<hÌ‘0t<SšN"  # Grisonia
+1874 = "^÷–lš"  # Brema
+1876 = "+YpQKQyyr"  # Fráncfort
+1878 = "?–úW¯e<hpQ"  # Aquisgrán
+1931 = "NVÌ‘‰šN"  # Frisia oriental
+96 = "^XpQ¾"  # Zelanda
+97 = "eYpQ¾"  # Holanda
+98 = "LNyr÷–KQ"  # Utreque
+99 = "-WS·V÷–¯e"  # Güeldres
+100 = "VÌ‘‰šN"  # Frisia
+90 = "VpQ·V¯e"  # Flandes
+92 = "^Ébísyr"  # Brabante
+1744 = "‰RşVÃWS®všN"  # Antuerpia
+1865 = "uyr"  # Gante
+488 = "Éb(„ôT³u"  # La Sabana
+490 = "1WYfT"  # Santo Domingo
+492 = {
+  "âlYÎT"  # Puerto Rico
+  "1Wáw‰R"  # San Juan
+}
+836 = "aSSTXb"  # Cartago
+839 = "1W(„SætY"  # San Salvador
+840 = "yrœ^m"  # Trujillo
+852 = {
+  "…h‰Ñy7Œ"  # Valle de México
+  "…h‰ÑyÎW"  # Ciudad de México
+}
+854 = "yr®vKQ"  # Tepic
+855 = "lš(„yrpQ"  # Mazatlan
+857 = "1Wïf¯eâlXb‰"  # San Luis Potosi
+860 = "jgpQb"  # Durango
+862 = "0tú‹Éb"  # Sonora
+863 = "S^0t"  # Paso del Norte
+864 = "GYætæt"  # Chihuahua
+865 = {
+  "N R)Ry<SšN"  # Baja California
+  "1W^œú‹"  # San Bruno
+}
+866 = {
+  "m¯eaSâl¯e"  # Los Cabos
+  "1WUO^X·VSaSâl"  # San José del Cabo
+}
+1101 = "?–^Xyr"  # Aceite
+2614 = "°e±ƒÁ"  # Nuevo Leon
+2616 = "“^“^SiO"  # Cucurpe
+2618 = "1WôTôTÉb"  # Santa Barbara
+2619 = "(„S‚„eu"  # Saltillo
+2620 = "i`^X³u¾"  # Ensenada
+2623 = "æ—TX«ƒ"  # Huetamo
+2626 = "XbbSaS"  # Toluca
+2628 = "yriO?–aS"  # Tepeaca
+2637 = "aSôTeu¯e=n"  # Puerto Caballos
+2640 = "yräS‰ RSôT"  # Tegucigalpa
+2644 = "nfÃW^Éb"  # Puebla
+2647 = {
+  "ÉbKQœ¯e"  # Veracruz
+  "ÉbKQœ¯e"  # Veracruz
+}
+2658 = "?–Ï‚?–"  # Azua
+2659 = "‹vö”=n"  # Puerto Plata
+2662 = "ÑylššNÜt"  # Comayagua
+2667 = "Éb÷–Y"  # Laredo
+2668 = "Ì‘eY^Ébƒl"  # Rio Bravo
+868 = {
+  "m¯e‰Rk÷–¯e"  # Los Angeles
+  "m¯e‰Rk÷–¯e"  # Los Angeles
+}
+869 = {
+  "™„yr÷–"  # Monterrey
+  "™„yr÷–"  # Monterrey
+}
+877 = {
+  "şVKQîh"  # Tucson
+  "şV¯eTR"  # Tuscon
+}
+880 = {
+  "1W9"  # Santa Fe
+  "1W9"  # Santa Fe
+}
+881 = "0tÑyW"  # Socorro
+883 = {
+  "1W‰R<SeY"  # San Antonio
+  "1W‰R<SeY"  # San Antonio
+}
+884 = "ÉbôTOšN"  # La Bahia
+885 = "ÃW¯eTXaSYs^ŸS"  # Llano Estacado
+887 = "m¯eyrÈT¯e"  # Los Tejas
+888 = {
+  "lšÉbY›S"  # Isla de Malhado
+  " RSôu¯e7Œ"  # Villa Gálvez
+}
+897 = "aS·V†–"  # Cadron
+900 = {
+  "1Wïf¯e"  # San Luis
+  "1Wïf¯e"  # San Luis
+}
+902 = "s|Ï‚Ì‘"  # Misuri
+918 = "ôTpQaS¯e"  # Barancas
+926 = "lššNaS"  # Mayaca
+927 = {
+  "1W?–äS¯e÷^"  # San Agustin
+  "1W?–äS¯e÷^"  # San Agustin
+}
+2021 = {
+  "1WVg‰¯eÑy"  # San Francisco
+  "1WVÉb‰¯eÑy"  # San Fracisco
+}
+2476 = {
+  "1Wíb"  # San Diego
+  "1Wíb"  # San Diego
+}
+2498 = {
+  "ÃWS^0t"  # El Paso
+  "ÃWS^0t"  # El Paso
+}
+2499 = "WSÌ‘eY<hpQ·V"  # Rio Grande
+2514 = "°elš·VÌ‘"  # Nuevo Madrid
+2516 = "m¯e?–¾¯e"  # Los Adaes
+2529 = "m¯eú‹ R±ƒ¯e"  # Los Nogales
+2536 = "yrk¯eTX"  # Tegesta
+2542 = "1WÃW±ƒ³u"  # Santa Elena
+2665 = "m¯eÃW¯e"  # Los Ais
+2666 = "1W(„ôT"  # San Saba
+4351 = "…Q<hW¯e"  # Negros
+487 = "1W0WšNåT"  # Santiago
+491 = "“^ÉbÍu"  # Curasao
+481 = "Fz¾"  # La Bermuda
+1881 = "1Wlš÷^"  # San Martín
+494 = "1WjŒSk"  # San Jorge
+495 = "1W›sKNšN‰RĞcÜt"  # St María Antigua
+496 = "Üt¾bSiO"  # Guadalupe
+498 = "lš‚„<SaS"  # Martinica
+499 = "1WbS‰šN"  # San Luzia
+500 = "1Wôuîhyr"  # San Vicente
+501 = "ôTôTY"  # Barbado
+2473 = "Ï‚(„"  # Susa
+1306 = "1WXb…h"  # Santo Tomé
+1103 = "1W?–âlm<SšN"  # Santa Apolonia
+1986 = "°eaS÷–Y<SšN"  # Nueva Caledonia
+1994 = "1WVg‰¯eÑy"  # San Francisco
+1997 = "-N*Ys^m›S"  # Isla de Pacífico Central
+1988 = "^¯e“^?–›S"  # Isla de Pascua
+1098 = "1WÃW±ƒ³u›S"  # Isla Santa Elena
+2002 = " RÉb^b¯e²›S"  # Islas Galápagos
+1987 = "0t‰6w¾·V²›S"  # Islas de la Sociedad
+1725 = "şV?–«ƒşV²›S"  # Archipiélago Tuamotu
+1238 = "(„m™„²›S"  # Islas Salomón
+1991 = "	TSyr²›S"  # Islas Gilbert
+1993 = "m¯es^TXY¯e"  # Los Pintados
+1096 = "S·VÒ‰"  # Cabo Verde
+2025 = "1WiO·VW›S"  # Isla San Pedro
+1095 = "lšSôu³u¯e²›S"  # Islas Malvinas
+4720 = "	T…Q^Éb"  # Ginebra
+1177 = {
+  "aSƒl"  # Cabo
+  "aSƒlÎW"  # Ciudad del Cabo
+}

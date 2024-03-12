@@ -1,0 +1,69 @@
+#England
+233 = "·^<Sôu" 	# Cernyw 	# Cornwall
+4373 = "·V+YHYyr" 	# Dyfnaint 	# Devon
+4130 = "YåeKN0W" 	# Gwlad yr Haf 	# Somerset
+4374 = "aS(„Sm" 	# Caersallog 	# Dorset
+234 = "KQS)nyr" 	# Caerwynt 	# Hampshire
+236 = "&Ofe" 	# Llundain 	# London
+237 = "ir%m" 	# Rhydychen 	# Oxford
+4370 = "QReh" 	# Caergrawnt 	# Bedfordshire
+240 = "âlO¯e" 	# Powys 	# Shrewsbury
+245 = "ÃWVW" 	# Efrog 	# York
+4785 = "U7Œ" 	# Cwm y Don 	# Sheffield
+4367 = "„SaS¬‚" 	# Y Cefn 	# Hull
+4368 = "ïQyr±ƒ¯e" 	# Catraeth 	# Scarborough
+235 = "YV" 	# Dofr 	# Kent
+4375 = "ïQS<hZ" 	# Cilgwri 	# Chester
+244 = "<hZ0t¦" 	# Gwersyllbom 	# Lancashire
+247 = "üfïQ<Sf" 	# Manceinion 	# Cumbria
+246 = "aS¯eyr®”<h" 	# Castellnewydd 	# Northumberland
+239 = "ïQm" 	# Caerloyw 	# Gloucester
+4372 = "ïQSZyr<h" 	# Caerlwytgoed 	# Coventry
+4371 = "aS+Y¾S" 	# Caerfuddal 	# Sussex
+4376 = "ïQÒRS" 	# Caerlyr 	# Leicester
+238 = "Y·V" 	# Dwrdu 	# Essex
+1860 = "NW<h" 	# Dwyrain Lloegr 	# Norfolk
+1861 = "pQaSNQ" 	# Llancarw 	# Derby
+243 = "—gY" 	# Lindo 	# Lincoln
+#Scotland
+4365 = "lšYt›S" 	# Ynys Manaw 	# Man
+249 = "Œ‚Sá" 	# Aeron 	# Ayrshire
+248 = "÷–N<SeYi`" 	# Lleuddiniawn 	# Lothain
+253 = "kÒR·V²›S" 	# Ynysoedd Heledd 	# Outer Hebrides
+4364 = "•›S" 	# Yr Ynys Hir 	# Inner Hebrides
+4362 = "…h—g÷–<h·V" 	# Merin Rheged 	# Dumfries
+4363 = ")R’‚ôuVn" 	# Llyn Llumonwy 	# Argyll
+250 = "-WÌ‘·V³lãS" 	# Moryd Gweryd 	# Perth
+369 = "Œ‚k›S" 	# Ynysoedd Erch 	# Orkney
+1978 = "‚yrpQ›S" 	# Ynys Shealtainn 	# Shetland
+1979 = "ÕlW›S" 	# Ynys Fharo 	# Faroe Islands
+252 = "—g<S¯e" 	# Llynness 	# Inverness
+4110 = "S?–Sís" 	# Gogledd yr Alban 	# Sutherland
+4361 = "eYTXê<S" 	# Otadyni 	# Roxburghshire
+#Ireland
+373 = "ı—g" 	# Dulyn 	# Dublin
+4121 = "LNS¯eyr" 	# Wlster 	# Ulster
+372 = "SÃWS˜" 	# Gogledd Iwerddon 	# Tyrone
+4118 = "KQmKQ" 	# Corc 	# Cork
+#Wales
+4369 = "aSŒ‚ÒRætÒRfe" 	# Caerfyrddin 	# Carmarthen
+4366 = "TÕlıàV" 	# Trefaldwyn 	# Montgomery
+241 = "id9hôu<h" 	# Morgannwg 	# Glamorgan
+#Patagonia
+785 = ")RIRO" 	# Lle Cul
+2875 = "nf¯ei—ªn" 	# Nant y Pysgod
+2871 = "ky·V7Œ" 	# Cwm Hyfryd
+2870 = "pS,r‰REmén" 	# Rhyd yr Indiaid
+2868 = "‰RşV=n" 	# Porth Antur
+#Misc
+4385 = "wmáS²›S" 	# Ynysoedd y Sianal 	# Channel Islands
+168 = "ú‹¯eüf•^" 	# Norddmandi 	# Caen
+167 = "?–=Oîh" 	# Abersyn 	# Caux
+174 = "Üt¯enˆ" 	# Gwasgwyn 	# Gascogne
+112 = "òƒ<S¯e" 	# Fenis 	# Venezia
+118 = "œüfàV" 	# Rhufain 	# Rome
+379 = "6wï’d·Q" 	# Caersalem 	# Jerusalem
+1987 = {
+  "°epQæ—SnfSäSàV	TSb<hÌ‘à`Si`·VW^SpQ‚„‰)ReYbbbk" 	# New Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
+  "°epQæ—SnfSäSàV	TSb<hÌ‘à`Si`·VW^SpQ‚„‰)ReYbbbk" 	# New Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
+} 	# Society Islands

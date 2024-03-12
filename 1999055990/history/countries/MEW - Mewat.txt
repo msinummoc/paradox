@@ -1,0 +1,364 @@
+government = monarchy
+add_government_reform = rajput_kingdom
+government_rank = 1
+primary_culture = rajput
+religion = sunni
+technology_group = indian
+capital = 520 	#  Mewat
+fixed_capital = 520 	#  Cannot move capital away from this province & no power cost to move to it
+religious_school = shafii_school
+#Meo Cheifs
+1422.1.1 = {
+  if = {
+    limit = {
+      NOT = {
+        has_dlc = "Dharma"
+      }
+    }
+    add_government_reform = feudalism_reform
+  }
+  monarch = {
+    name = ">çÅú Wl" 	# Jallu Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    DIP = 1
+    MIL = 2
+    ADM = 1
+  }
+}
+1422.1.1 = {
+  heir = {
+    name = "åÇ»T»è∑V Wl" 	# Ahmad Khan
+    monarch_name = "åÇ»T»è∑V Wl" 	# Ahmad Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    birth_date = 1390.1.1 	# Made up
+    death_date = 1466.1.1
+    claim = 95
+    DIP = 2
+    MIL = 1
+    ADM = 2
+  }
+}
+1441.1.1 = {
+  monarch = {
+    name = "åÇ»T»è∑V Wl" 	# Ahmad Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    DIP = 2
+    MIL = 1
+    ADM = 2
+  }
+  clear_scripted_personalities = yes
+  add_ruler_personality = bold_fighter_personality
+}
+1441.1.1 = {
+  heir = {
+    name = "?ñÍè“RWl" 	# Adil Khan
+    monarch_name = "?ñÍè“RWl" 	# Adil Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    birth_date = 1410.1.1 	# Made up
+    death_date = 1482.1.1
+    claim = 95
+    DIP = 1
+    MIL = 1
+    ADM = 1
+  }
+}
+1466.1.1 = {
+  monarch = {
+    name = "?ñÍè“RWl" 	# Adil Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    DIP = 1
+    MIL = 1
+    ADM = 1
+  }
+}
+1466.1.1 = {
+  heir = {
+    name = "»TQh Wl" 	# Hasan Khan
+    monarch_name = "»TQh Wl" 	# Hasan Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    birth_date = 1420.1.1 	# Made up
+    death_date = 1527.3.17
+    claim = 95
+    DIP = 4
+    MIL = 4
+    ADM = 4
+  }
+}
+1482.1.1 = {
+  monarch = {
+    name = "»TQh Wl" 	# Hasan Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    DIP = 4
+    MIL = 4
+    ADM = 4
+  }
+}
+1482.1.1 = {
+  heir = {
+    name = "≥ukçS" 	# Naher
+    monarch_name = "≥ukçS Wl" 	# Naher Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    birth_date = 1450.1.1 	# Made up
+    death_date = 1560.1.1 	# Made up
+    claim = 95
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+1527.3.17 = {
+  monarch = {
+    name = "≥ukçS Wl" 	# Naher Khan
+    dynasty = "ÖhÊtyr" 	# Mewati
+    ADM = 3
+    DIP = 2
+    MIL = 3
+  }
+}
+#Bharatpur
+1660.1.1 = {
+  monarch = {
+    name = "bì^…b" 	# Gokula
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 2
+    ADM = 3
+    MIL = 4
+  }
+  religion = hinduism
+  government = monarchy
+  add_government_reform = feudalism_reform
+}
+1660.1.1 = {
+  heir = {
+    name = "…b∆Y" 	# Ram
+    monarch_name = "…b∆Yõè<h" 	# Ram Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1640.1.1
+    death_date = 1695.1.1
+    claim = 95
+    DIP = 2
+    ADM = 2
+    MIL = 3
+  }
+}
+1670.1.1 = {
+  monarch = {
+    name = "…b∆Yõè<h" 	# Ram Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 2
+    ADM = 2
+    MIL = 3
+  }
+}
+1670.1.1 = {
+  heir = {
+    name = "TN…b¸f" 	# Churaman
+    monarch_name = "TN…b¸fõè<h" 	# Churaman Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1660.1.1
+    death_date = 1722.1.1
+    claim = 95
+    DIP = 3
+    ADM = 4
+    MIL = 4
+  }
+}
+1695.1.1 = {
+  monarch = {
+    name = "TN…b¸fõè<h" 	# Churaman Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 3
+    ADM = 4
+    MIL = 4
+  }
+}
+1695.1.1 = {
+  heir = {
+    name = "ÙTÊe" 	# Badan
+    monarch_name = "ÙTÊe õè<h" 	# Badan Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1695.1.1
+    death_date = 1756.1.1
+    claim = 95
+    DIP = 2
+    ADM = 5
+    MIL = 3
+  }
+}
+1722.1.1 = {
+  monarch = {
+    name = "ÙTÊe õè<h" 	# Badan Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 2
+    ADM = 5
+    MIL = 3
+  }
+}
+1722.1.1 = {
+  heir = {
+    name = "œÇ…bpg löS" 	# Suraj Mal
+    monarch_name = "œÇ…bpg löS" 	# Suraj Mal
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1707.1.1
+    death_date = 1763.1.1
+    claim = 95
+    DIP = 3
+    ADM = 4
+    MIL = 5
+  }
+}
+1756.1.1 = {
+  monarch = {
+    name = "œÇ…bpg löS" 	# Suraj Mal
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 3
+    ADM = 4
+    MIL = 5
+  }
+}
+1756.1.1 = {
+  heir = {
+    name = ">çÊt^S" 	# Jawahir
+    monarch_name = ">çÊt^Sõè<h" 	# Jawahir Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1725.1.1
+    death_date = 1768.1.1
+    claim = 95
+    DIP = 3
+    ADM = 2
+    MIL = 1
+  }
+}
+1767.1.1 = {
+  monarch = {
+    name = ">çÊt^Sõè<h" 	# Jawahir Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 3
+    ADM = 2
+    MIL = 1
+  }
+}
+1767.1.1 = {
+  heir = {
+    name = "…bfW" 	# Ratan
+    monarch_name = "…bfW õè<h" 	# Ratan Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1730.1.1
+    death_date = 1769.1.1
+    claim = 95
+    DIP = 0
+    ADM = 1
+    MIL = 1
+  }
+}
+1768.1.1 = {
+  monarch = {
+    name = "…bfW õè<h" 	# Ratan Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 0
+    ADM = 1
+    MIL = 1
+  }
+}
+1768.1.1 = {
+  heir = {
+    name = "KQ¿NÃë" 	# Keshri
+    monarch_name = "KQ¿NÃëõè<h" 	# Keshri Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1767.1.1
+    death_date = 1776.1.1
+    claim = 95
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1769.1.1 = {
+  monarch = {
+    name = "KQ¿NÃëõè<h" 	# Keshri Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    DIP = 0
+    ADM = 0
+    MIL = 0
+  }
+}
+1769.1.1 = {
+  heir = {
+    name = "…b	Tyr" 	# Ranjit
+    monarch_name = "…b	Tyr õè<h" 	# Ranjit Singh
+    dynasty = "õèâ<SÊtS" 	# Sinsiniwar
+    birth_date = 1740.1.1
+    death_date = 1805.1.1
+    claim = 95
+    DIP = 2
+    ADM = 2
+    MIL = 0
+  }
+}
+#Alwar state
+1775.1.1 = {
+  monarch = {
+    name = "nf…bTXnf õè<h" 	# Pratap Singh
+    dynasty = "aSGYÊt»T" 	# Kachwaha
+    DIP = 0
+    MIL = 2
+    ADM = 0
+  }
+}
+1779.1.1 = {
+  heir = {
+    name = "ÙTKQTXÊt õè<h" 	# Bakhtawar Singh
+    monarch_name = "ÙTKQTXÊt õè<h" 	# Bakhtawar Singh
+    dynasty = "aSGYÊt»T" 	# Kachwaha
+    birth_date = 1779.1.1
+    death_date = 1815.1.27
+    claim = 65 	# Rather distant relation
+    DIP = 1
+    MIL = 4
+    ADM = 1
+  }
+}
+1791.1.1 = {
+  monarch = {
+    name = "ÙTKQTXÊt õè<h" 	# Bakhtawar Singh
+    dynasty = "aSGYÊt»T" 	# Kachwaha
+    DIP = 1
+    MIL = 4
+    ADM = 1
+  }
+}
+1791.1.1 = {
+  heir = {
+    name = "ÙT“RNõè<h" 	# Balwant Singh
+    monarch_name = "ÙT“RNõè<h" 	# Balwant Singh
+    dynasty = "aSGYÊt»T" 	# Kachwaha
+    birth_date = 1779.1.1
+    death_date = 1815.1.1 	# really died in exile in 1845
+    claim = 65 	# Deposed and replaced with:
+    ADM = 2
+    DIP = 1
+    MIL = 2
+  }
+}
+1815.1.1 = {
+  heir = {
+    name = "‘kHY õè<h" 	# Binay Singh
+    monarch_name = "‘kHY õè<h" 	# Binay Singh
+    dynasty = "aSGYÊt»T" 	# Kachwaha
+    birth_date = 1815.1.1
+    death_date = 1857.8.1
+    claim = 75
+    DIP = 1
+    MIL = 3
+    ADM = 2
+  }
+}
+1815.1.1 = {
+  monarch = {
+    name = "‘kHYõè<h nf…bÙTaS ÙT»TjgS" 	# Binay Singh Prabhakar Bahadur
+    dynasty = "aSGYÊt»T" 	# Kachwaha
+    DIP = 1
+    MIL = 3
+    ADM = 2
+  }
+}

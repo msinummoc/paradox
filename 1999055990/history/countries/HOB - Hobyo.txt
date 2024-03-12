@@ -1,0 +1,62 @@
+government = monarchy
+add_government_reform = iqta
+technology_group = east_african
+unit_type = sub_saharan
+religion = sunni
+primary_culture = somali
+capital = 2783 	# Hobyo
+religious_school = shafii_school
+1650.1.1 = {
+  monarch = {
+    name = "O.tèy" 	# Yusuf
+    dynasty = "Øw≥uÍè" 	# Kenadid
+    dip = 1
+    mil = 1
+    adm = 1
+  }
+}
+1680.1.1 = {
+  monarch = {
+    name = "?ñÃë" 	# Ali
+    dynasty = "Øw≥uÍè" 	# Kenadid
+    dip = 1
+    mil = 1
+    adm = 1
+  }
+}
+1720.1.1 = {
+  monarch = {
+    name = "O.tèy II" 	# Yusuf II
+    dynasty = "Øw≥uÍè" 	# Kenadid
+    dip = 1
+    mil = 1
+    adm = 1
+  }
+}
+1750.1.1 = {
+  monarch = {
+    name = "FzUÿû∑V" 	# Mohammed
+    dynasty = "Øw≥uÍè" 	# Kenadid
+    dip = 1
+    mil = 1
+    adm = 1
+  }
+}
+1790.1.1 = {
+  monarch = {
+    name = "åÇ»T»è∑V" 	# Ahmed
+    dynasty = "Øw≥uÍè" 	# Kenadid
+    dip = 1
+    mil = 1
+    adm = 1
+  }
+}
+1810.1.1 = {
+  monarch = {
+    name = "?ñÃë II" 	# Ali II
+    dynasty = "Øw≥uÍè" 	# Kenadid
+    dip = 1
+    mil = 1
+    adm = 1
+  }
+}
