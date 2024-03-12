@@ -1,0 +1,163 @@
+# 生产：贸易品价格*(1+生产效率+商品生产效率)*[(100-自治度)/100]/12
+# 工厂+1商品产出收益：贸易品价格*(1+生产效率+商品生产效率)*[(100-自治度)/100]*(1+商品生产效率)/12
+# ===========================================================================================================================
+# 主要影响因素： 贸易品价格、省份自治度(贸易公司省份自治度影响减半)，也不需要除以12了，直接计算年度收益即可，通过这两个变量简单计算一下就可以了
+# 商品为丁香，0自治度，计算结果为8
+# 商品为毛皮，0自治度，计算结果为2
+# 价值阶梯 【>8】【7~8】【6~7】【5~6】【4~5】【3~4】【2~3】【1~2】【0~1】
+# 发现一个简单的办法，工厂作用是商品产出+1,1点基础生产+0.2的商品产出，也就是说一个工厂相当于5点生产带来的提升
+# 如果可以得到生产收入A及基础生产B，则工厂收益为(A/B)*5,看看能否获得，这个是最简单的办法
+# 基础生产很好获取，生产收入能不能拿到呢？目前还没有找到
+# ===========================================================================================================================
+# 全局修正
+# production_efficiency    生产效率：生产收入修正
+# global_trade_goods_size_modifier   全局商品生产加成
+# ===========================================================================================================================
+# 省份修正
+# local_production_efficiency   当地生产效率	【导出来是0】
+# local_autonomy  当地自治度
+# trade_goods_size 本地商品产出		【暂时不参与工厂收益计算】
+# trade_value  贸易价值				【导出来的值是0，没办法了】
+# ===========================================================================================================================
+# 贸易品价格
+# 煤炭	coal	10
+# 丁香	cloves	8
+# 宝石	gems	4
+# 染料	dyes	4
+# 丝绸	silk	4
+# 可可	cocoa	4
+# 象牙	ivory	4
+# 纸张	paper	3.5
+# 玻璃	glass	3
+# 烟草	tobacco	3
+# 糖	sugar	3
+# 棉花	cotton	3
+# 咖啡	coffee	3
+# 香料	spices	3
+# 瓷器	chinaware	3
+# 铁矿	iron	3
+# 铜矿	copper	3
+# 盐	salt	3
+# 布料	cloth	3
+# 熏香	incense	2.5
+# 鱼类	fish	2.5
+# 羊毛	wool	2.5
+# 酒类	wine	2.5
+# 谷物	grain	2.5
+# 牲畜	livestock	2
+# 热带木材	tropical_wood	2
+# 茶叶	tea		2
+# 奴隶	salves	2
+# 船具	naval_supplies	2
+# 毛皮	fur	2
+# 金矿	gold	0
+# 未知	unknown	0
+# ===========================================================================================================================
+# 生产效率
+# adm_tech	production_efficiency
+# 3			0.02
+# 5			0.04 
+# 9			0.06 
+# 13		0.08 
+# 16		0.10 
+# 21		0.12 
+# 25		0.14 
+# 28		0.16
+# 30		0.18 
+# 32		0.20
+# ===========================================================================================================================
+# 商品生产效率	作用域：国家
+# export_to_variable = {
+# 	value = modifier:production_efficiency
+# 	which = ProductionEfficiency
+# 	who = ROOT
+# }
+# ===========================================================================================================================
+# 自治度 作用域：省份
+# export_to_variable = {
+# 	value = local_autonomy
+# 	which = LocalAutonomy
+# 	who =  event_target:target_city
+# }
+# ===========================================================================================================================
+namespace = calc_factory_earnings_events
+
+
+
+# country_event = {
+# 	id = calc_factory_earnings_events.2
+# 	is_triggered_only = yes
+# 	hidden = yes
+# 	immediate = {
+# 		hidden_effect = {
+# 			every_owned_province = {
+# 				limit = {
+# 					province_id = 151
+# 				}
+# 				save_event_target_as = target_city
+# 				province_event = {
+# 					id = calc_factory_earnings_events.1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# province_event = {
+# 	id = calc_factory_earnings_events.1
+# 	is_triggered_only = yes
+# 	goto = 1751
+# 	immediate = {
+# 		hidden_effect = {
+# 			export_to_variable = {
+# 				value = modifier:trade_value
+# 				which = TradeValue
+# 				who = event_target:target_city
+# 			}
+# 			export_to_variable = {
+# 				value = modifier:trade_goods_size
+# 				which = TradeGoodsSize
+# 				who = event_target:target_city
+# 			}
+# 			export_to_variable = {
+# 				value = local_autonomy
+# 				which = LocalAutonomy
+# 				who =  event_target:target_city
+# 			}
+# 			export_to_variable = {
+# 				value = modifier:local_production_efficiency
+# 				which = LocalProductionEfficiency
+# 				who = event_target:target_city
+# 			}
+# 			export_to_variable = {
+# 				value = modifier:production_efficiency
+# 				which = ProductionEfficiency
+# 				who = owner
+# 			}
+# 			export_to_variable = {
+# 				value = modifier:global_trade_goods_size_modifier
+# 				which = GlobalTradeGoodsSizeModifier
+# 				who = owner
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = calc_factory_earnings_events.1.trade_value
+# 		goto = 368
+# 	}
+# 	option = {
+# 		name = calc_factory_earnings_events.1.trade_goods_size
+# 	}
+# 	option = {
+# 		name = calc_factory_earnings_events.1.local_autonomy
+# 	}
+# 	option = {
+# 		name = calc_factory_earnings_events.1.local_production_efficiency
+# 	}
+# 	option = {
+# 		name = calc_factory_earnings_events.1.production_efficiency
+# 	}
+# 	option = {
+# 		name = calc_factory_earnings_events.1.global_trade_goods_size_modifier
+# 	}
+# }

@@ -1,0 +1,34 @@
+country_decisions = {
+	#一键拆除建筑(部分拆除)
+	conditional_dismantle_building = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+		}
+		effect = {
+			country_event = {
+				id = dismantle_building_events.2
+			}
+			custom_tooltip = conditional_dismantle_building_tooltip
+		}
+		ai_will_do = {
+        	factor = 0
+        }
+	}
+	#一键拆除建筑(全部拆除)
+	unconditional_dismantle_building = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+		}
+		effect = {
+			country_event = {
+				id = dismantle_building_events.4
+			}
+			custom_tooltip = unconditional_dismantle_building_tooltip
+		}
+		ai_will_do = {
+        	factor = 0
+        }
+	}
+}

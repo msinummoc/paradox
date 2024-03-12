@@ -1,0 +1,20 @@
+country_decisions = {
+	auto_opeartion_mod_introduce = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = auto_opeartion_mod_introduce_events.2
+			}
+			custom_tooltip = auto_opeartion_mod_introduce_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

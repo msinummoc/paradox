@@ -1,0 +1,19 @@
+﻿l_english:
+ auto_change_controller_title:0 "§G0ê¨RSmod0§!b‰N-Nê¨Rûy²NwýNµc6RCg"
+ auto_change_controller_desc:0 ""
+ auto_change_controller_tooltip:0 "‚Yœg`O	gD–^SýVÿ±HN(Wb‰N-N`S†˜„vwýNïSåNê¨Rûy²Nµc6RCg"
+
+ auto_change_controller_events.1.title:0 "b‰N-Nê¨Rûy²NwýNµc6RCg"
+ auto_change_controller_events.1.desc:0 "‚Yœg`O	gD–^SýVÿ±HN(Wb‰N-N`S†˜„vwýNïSåNê¨Rûy²Nµc6RCgÿ	éb	y˜OËzsSæ‰ÑSûy²N‹NöNÿTöe–Nwb‰N„vÛLˆÿONšRöeæ‰ÑSûy²N‹NöNÿîvMRs^GWÑSuöeô•/f3*Ng0\nèlaÿ\n1.§G0SV¬T¬TYrÿ/X’W²NÙuÖN†N0§!ŒT§G0SV„v±RðyŒT8hÃV1S²NÙuÖN†N0§!/fïSåNTöe	éb„vÿTöe	éböeïSýwOúQ°sN*NwýN/f/X’WTöe/fSV8hÃVFO/ftS«ˆvQÖNSV`S†˜„vî•˜˜ÿïSåN(WTŒMR	ébN/k§G0¬T¬TYrÿhQý/fb„v0§!sSïS\n2.,g/k	ébO(WåNT„vb‰N-NýuHeÿó`‰sQí•ïSåN(WN/kb‰Nöe	éb§G0sQí•Ù*N:g6R0§!"
+ 
+ auto_change_controller_events.1.control_all_by_player:0 "¬T¬TYrÿhQý/fb„v"
+ auto_change_controller_events.1.control_fort_by_subject:0 "SV¬T¬TYrÿ/X’W²NÙuÖN†N"
+ auto_change_controller_events.1.control_core_and_claim_by_subject:0 "SV„v±RðyŒT8hÃV1S²NÙuÖN†N"
+ auto_change_controller_events.1.control_all_by_subject:0 "hQýÙuSV1SLˆ†N"
+ auto_change_controller_events.1.close_auto_change_controller:0 "sQí•Ù*N:g6RÿŒ`S—V1S/fŒ„v†N"
+ auto_change_controller_events.1.cancel:0 "¾‹šR‹Y†N"
+
+ auto_change_controller_events.1.control_all_by_player.tooltip:0 "	ébdk	y˜OËzsSŠbwýNµc6RCg²NÙu©s¶RÿTöeOšRöeŠbvQÖN°e`S†˜„vwýN²NÙu©s¶R"
+ auto_change_controller_events.1.control_fort_by_subject.tooltip:0 "	ébdk	y˜OËzsSŠb/X’WwýN²NÙuûNaSVÿTöeOšRöeŠbvQÖN°e`S†˜„v/X’WwýN²NÙuûNaSV"
+ auto_change_controller_events.1.control_core_and_claim_by_subject.tooltip:0 "	ébdk	y˜OËzsSŠbSV±RðyŒT8hÃVwýNµc6RCg²NÙuSVÿTöeOšRöeŠbvQÖN°e`S†˜„vSV±RðyŒT8hÃVwýNµc6RCg²NÙuSV"
+ auto_change_controller_events.1.control_all_by_subject.tooltip:0 "	ébdk	y˜OËzsSŠbwýNµc6RCg²NÙuûNaSVÿTöeOšRöeŠbvQÖN°e`S†˜„vwýN²NÙuûNaSV"

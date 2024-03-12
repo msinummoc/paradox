@@ -1,0 +1,1373 @@
+namespace = auto_develop_events
+
+# 通过事件设置提升发展度上限
+country_event = {
+	id = auto_develop_events.999
+	title = auto_develop_events.999.title
+    desc = auto_develop_events.999.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	is_triggered_only = yes
+	#维持原来的选择
+	option = {
+		name = auto_develop_events.999.stand
+		trigger = {
+			has_country_flag = AutoDevelop
+		}
+		ai = no
+	}
+
+	#关闭自动提升发展度
+	option = {
+		name = auto_develop_events.999.close
+		trigger = {
+			has_country_flag = AutoDevelop
+		}
+
+		hidden_effect = {
+			clr_country_flag = AutoDevelop
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop10
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+		}
+	}
+	#不设置上限
+	option = {
+		name = auto_develop_events.999.chooseNone
+		custom_tooltip = auto_develop_events.999.chooseNone.tooltip
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop1000
+		
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop10
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 1000
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+
+	#上限设置为3
+	option = {
+		name = auto_develop_events.999.choose3
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop3
+
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop10
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 3
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+	#上限设置为5
+	option = {
+		name = auto_develop_events.999.choose5
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop5
+
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop10
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 5
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+	#上限设置为8
+	option = {
+		name = auto_develop_events.999.choose8
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop8
+
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop10
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 8
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+	#上限设置为10
+	option = {
+		name = auto_develop_events.999.choose10
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop10
+
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 10
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+	#上限设置为12
+	option = {
+		name = auto_develop_events.999.choose12
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop12
+		
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop12
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 12
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+	#上限设置为15
+	option = {
+		name = auto_develop_events.999.choose15
+
+		hidden_effect = {
+			set_country_flag = AutoDevelop15
+		
+			clr_country_flag = AutoDevelop3
+			clr_country_flag = AutoDevelop5
+			clr_country_flag = AutoDevelop8
+			clr_country_flag = AutoDevelop10
+			clr_country_flag = AutoDevelop15
+			clr_country_flag = AutoDevelop1000
+	
+			set_variable = {
+				which = AOMaxDevelopment
+				value = 15
+			}
+			set_country_flag = AutoDevelop
+		}
+	}
+}
+
+country_event = {
+	id = auto_develop_events.1
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = AutoDevelop
+		OR = {
+			can_auto_develop_tax = yes
+			can_auto_develop_production = yes
+			can_auto_develop_manpower = yes
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					can_auto_develop_manpower = yes
+					OR = {
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 3
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 3 }
+								develop_manpower = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 5
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 5 }
+								develop_manpower = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 8
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 8 }
+								develop_manpower = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 10
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 10 }
+								develop_manpower = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 12
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 12 }
+								develop_manpower = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 15
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 15 }
+								develop_manpower = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 1000
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_manpower = { val = 1000 }
+								develop_manpower = yes
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 3
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 3 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 3 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 5
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 5 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 5 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 8
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 8 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 8 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 10
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 10 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 10 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 12
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 12 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 12 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 15
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 15 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 15 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 1000
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_manpower = { val = 1000 }
+							develop_manpower = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_manpower = { val = 1000 }
+							develop_manpower = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopManpower
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						
+					}
+					clr_country_flag = AutoDevelopTax
+					clr_country_flag = AutoDevelopProduction
+					clr_country_flag = AutoDevelopManpower
+				}
+			}
+			else_if = {
+				limit = {
+					can_auto_develop_production = yes
+					OR = {
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 3
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 3 }
+								develop_production = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 5
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 5 }
+								develop_production = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 8
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 8 }
+								develop_production = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 10
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 10 }
+								develop_production = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 12
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 12 }
+								develop_production = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 15
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 15 }
+								develop_production = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 1000
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_production = { val = 1000 }
+								develop_production = yes
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 3
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 3 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 3 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 5
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 5 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 5 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 8
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 8 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 8 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 10
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 10 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 10 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 12
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 12 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 12 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 15
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 15 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 15 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 1000
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_production = { val = 1000 }
+							develop_production = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_production = { val = 1000 }
+							develop_production = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopProduction
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						
+					}
+					clr_country_flag = AutoDevelopTax
+					clr_country_flag = AutoDevelopProduction
+					clr_country_flag = AutoDevelopManpower
+				}
+			}
+			else_if = {
+				limit = {
+					can_auto_develop_tax = yes
+					OR = {
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 3
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 3 }
+								develop_tax = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 5
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 5 }
+								develop_tax = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 8
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 8 }
+								develop_tax = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 10
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 10 }
+								develop_tax = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 12
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 12 }
+								develop_tax = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 15
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 15 }
+								develop_tax = yes
+							}
+						}
+						AND = {
+							variable_arithmetic_trigger = {
+								check_variable = {
+									which = AOMaxDevelopment
+									value = 1000
+								}
+							}
+							any_owned_province = {
+								province_can_auto_develop_tax = { val = 1000 }
+								develop_tax = yes
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 3
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 3 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 3 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 5
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 5 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 5 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 8
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 8 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 8 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 10
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 10 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 10 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 12
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 12 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 12 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 15
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 15 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 15 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						variable_arithmetic_trigger = {
+							check_variable = {
+								which = AOMaxDevelopment
+								value = 1000
+							}
+						}
+						any_owned_province = {
+							province_can_auto_develop_tax = { val = 1000 }
+							develop_tax = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_can_auto_develop_tax = { val = 1000 }
+							develop_tax = yes
+						}
+						save_event_target_as = target_city
+						ROOT = {
+							set_country_flag = AutoDevelopTax
+							country_event = {
+								id = auto_develop_events.2
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						
+					}
+					clr_country_flag = AutoDevelopTax
+					clr_country_flag = AutoDevelopProduction
+					clr_country_flag = AutoDevelopManpower
+				}
+			}
+		}
+	}
+	option = {
+	}
+}
+
+#计算点数花费
+country_event = {
+	id = auto_develop_events.2
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_flag = AutoDevelopTax
+			has_country_flag = AutoDevelopProduction
+			has_country_flag = AutoDevelopManpower
+		}
+		has_saved_event_target = target_city
+	}
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					adm_tech = 27
+				}
+				set_variable  = {
+					which = InitialDevelopmentCost
+					value = 35
+				}
+			}
+			else_if = {
+				limit = {
+					adm_tech = 23
+				}
+				set_variable  = {
+					which = InitialDevelopmentCost
+					value = 40
+				}
+			}
+			else_if = {
+				limit = {
+					adm_tech = 17
+				}
+				set_variable  = {
+					which = InitialDevelopmentCost
+					value = 45
+				}
+			}
+			else = {
+				set_variable  = {
+					which = InitialDevelopmentCost
+					value = 50
+				}
+			}
+			export_to_variable = {
+				which = CityDevelopmentCostModify
+				value = modifier:local_development_cost
+				who = event_target:target_city
+			}
+			export_to_variable = {
+				which = CountryDevelopmentCostModify
+				value = modifier:development_cost
+				who = ROOT
+			}
+			export_to_variable = {
+				which = ALLPowerCostModify
+				value = modifier:all_power_cost
+				who = ROOT
+			}
+			country_event = { 
+				id = auto_develop_events.3
+			}
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = auto_develop_events.3
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		OR = {
+			has_country_flag = AutoDevelopTax
+			has_country_flag = AutoDevelopProduction
+			has_country_flag = AutoDevelopManpower
+		}
+		has_saved_event_target = target_city
+	}
+	immediate = {
+		hidden_effect = {
+			change_variable = {
+				which = CityDevelopmentCostModify
+				which = CountryDevelopmentCostModify
+			}
+			change_variable = {
+				which = CityDevelopmentCostModify
+				which = ALLPowerCostModify
+			}
+			change_variable = {
+				which = CityDevelopmentCostModify
+				value = 1
+			}
+			country_event = { 
+				id = auto_develop_events.4
+			}
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = auto_develop_events.4
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_flag = AutoDevelopTax
+			has_country_flag = AutoDevelopProduction
+			has_country_flag = AutoDevelopManpower
+		}
+		has_saved_event_target = target_city
+	}
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			multiply_variable = {
+				which = InitialDevelopmentCost
+				which = CityDevelopmentCostModify
+			}
+			country_event = { 
+				id = auto_develop_events.5
+			}
+		}
+	}
+	option = {
+		
+	}
+}
+
+country_event = {
+	id = auto_develop_events.5
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		OR = {
+			has_country_flag = AutoDevelopTax
+			has_country_flag = AutoDevelopProduction
+			has_country_flag = AutoDevelopManpower
+		}
+		has_saved_event_target = target_city
+	}
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = CityDevelopmentCostModify
+				value = 0
+			}
+			set_variable = {
+				which = CountryDevelopmentCostModify
+				value = 0
+			}
+			if = {
+				limit = {
+					has_country_flag = AutoDevelopManpower
+					can_auto_develop_manpower = yes
+					event_target:target_city = {
+						develop_manpower = yes
+					}
+				}
+				while = {
+					limit = {
+						check_variable = { 
+							which = InitialDevelopmentCost
+							value = 1
+						}
+					}
+					subtract_variable = { 
+						which = InitialDevelopmentCost 
+						value = 1 
+					}
+					add_mil_power = -1
+				}
+				event_target:target_city = {
+					add_base_manpower = 1
+				}
+				clr_country_flag = AutoDevelopTax
+				clr_country_flag = AutoDevelopProduction
+				clr_country_flag = AutoDevelopManpower
+				#王冠领地增长
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = AutoDevelopProduction
+					can_auto_develop_production = yes
+					event_target:target_city = {
+						develop_production = yes
+					}
+				}
+				while = {
+					limit = {
+						check_variable = { 
+							which = InitialDevelopmentCost
+							value = 1
+						}
+					}
+					subtract_variable = { 
+						which = InitialDevelopmentCost 
+						value = 1 
+					}
+					add_dip_power = -1
+				}
+				event_target:target_city = {
+					add_base_production = 1
+				}
+				clr_country_flag = AutoDevelopTax
+				clr_country_flag = AutoDevelopProduction
+				clr_country_flag = AutoDevelopManpower
+				#王冠领地增长
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = AutoDevelopTax
+					can_auto_develop_tax = yes
+					event_target:target_city = {
+						develop_tax = yes
+					}
+				}
+				while = {
+					limit = {
+						check_variable = { 
+							which = InitialDevelopmentCost
+							value = 1
+						}
+					}
+					subtract_variable = { 
+						which = InitialDevelopmentCost 
+						value = 1 
+					}
+					add_adm_power = -1
+				}
+				event_target:target_city = {
+					add_base_tax = 1
+				}
+				clr_country_flag = AutoDevelopTax
+				clr_country_flag = AutoDevelopProduction
+				clr_country_flag = AutoDevelopManpower
+				#王冠领地增长
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
+			}
+			country_event = {
+				id = calc_max_monarch_point_events.1
+			}
+		}
+	}
+	option = {
+	}
+	# option = {
+	# 	name = calc_max_monarch_point_events.1.adm
+	# 	trigger = {
+	# 		variable_arithmetic_trigger = {
+	# 			#当前行政点数是否大于临界点数
+	# 			check_variable = {
+	# 				which = AdmPower
+	# 				which = LimitAdmPower
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# option = {
+	# 	name = calc_max_monarch_point_events.1.dip
+	# 	trigger = {
+	# 		variable_arithmetic_trigger = {
+	# 			#当前行政点数是否大于临界点数
+	# 			check_variable = {
+	# 				which = LimitAdmPower
+	# 				which = AdmPower
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# option = {
+	# 	name = calc_max_monarch_point_events.1.mil
+	# 	trigger = {
+	# 		can_auto_develop_tax = yes
+	# 	}
+	# }
+	# option = {
+	# 	name = calc_max_monarch_point_events.1.power
+	# }
+}

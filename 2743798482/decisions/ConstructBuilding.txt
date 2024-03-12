@@ -1,0 +1,64 @@
+country_decisions = {
+	construct_building = {
+		potential = {
+			ai = no
+			OR = {
+				adm_tech = 4
+				dip_tech = 6
+				mil_tech = 1
+			}
+			treasury = 1000
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = construct_building_events.2
+			}
+			custom_tooltip = construct_building_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	auto_construct_factory = {
+		potential = {
+			ai = no
+			adm_tech = 11
+			#current_income_balance = 600
+			#treasury = 1500
+			NOT = { 
+				has_country_flag = AutoConstructFactory
+			}
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = AutoConstructFactory
+			custom_tooltip = auto_construct_factory_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	stop_construct_factory = {
+		potential = {
+			has_country_flag = AutoConstructFactory
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_country_flag = AutoConstructFactory
+			custom_tooltip = stop_construct_factory_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

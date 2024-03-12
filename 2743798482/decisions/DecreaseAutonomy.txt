@@ -1,0 +1,47 @@
+country_decisions = {
+	#一键降低自治度
+	decrease_autonomy = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+			is_at_war = no
+			# any_owned_province = {
+			# 	province_can_decrease_autonomy = yes
+			# }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = decrease_autonomy_events.2
+			}
+			custom_tooltip = decrease_autonomy_tooltip
+		}
+		ai_will_do = {
+        	factor = 0
+        }
+	}
+	#一键提高自治度
+	increase_autonomy = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+			# any_owned_province = {
+			# 	province_can_increase_autonomy = yes
+			# }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = decrease_autonomy_events.4
+			}
+			custom_tooltip = increase_autonomy_tooltip
+		}
+		ai_will_do = {
+        	factor = 0
+        }
+	}
+}

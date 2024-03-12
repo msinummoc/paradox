@@ -1,0 +1,76 @@
+#判断省份能否拆除建筑
+province_can_dismantle_building = {
+	controlled_by = ROOT
+	has_siege = no
+	is_city = yes
+}
+#省份存在无用建筑
+province_has_useless_building = {
+	OR = {
+		has_construction = temple
+		has_construction = cathedral
+
+		has_construction = workshop
+		has_construction = counting_house
+
+		has_construction = coastal_defence
+		has_construction = naval_battery
+
+		has_construction = marketplace
+		has_construction = trade_depot
+		has_construction = stock_exchange
+
+		has_construction = dock
+		has_construction = drydock
+		has_construction = shipyard
+		has_construction = grand_shipyard
+
+		has_construction = ramparts
+		has_construction = impressment_offices
+
+
+		has_building = temple
+		has_building = cathedral
+
+		has_building = workshop
+		has_building = counting_house
+
+		has_building = coastal_defence
+		has_building = naval_battery
+
+		has_building = marketplace
+		has_building = trade_depot
+		has_building = stock_exchange
+
+		has_building = dock
+		has_building = drydock
+		has_building = shipyard
+		has_building = grand_shipyard
+
+		has_building = ramparts
+		has_building = impressment_offices
+	}
+}
+#判断能否修建士兵之家
+can_build_soldier_households = {
+	can_build = soldier_households
+	OR = {
+		trade_goods = grain #谷物
+		trade_goods = wine	#酒类
+		trade_goods = fish	#鱼类
+		trade_goods = livestock	#牲畜
+	}
+}
+#判断能否修建普通工厂
+can_build_manufactory = {
+	OR = {
+		can_build = farm_estate
+		can_build = wharf
+		can_build = textile
+		can_build = weapons
+		can_build = plantations
+		can_build = tradecompany
+		can_build = mills
+		can_build = furnace
+	}
+}

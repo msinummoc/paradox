@@ -1,0 +1,12 @@
+#省份是某个国家的宣称或核心
+province_is_claim_or_core_of_country = {
+	OR = {
+		is_claim = $country$
+		is_core = $country$
+	}
+}
+#省份被某个国家控制
+province_controlled_by = {
+	has_siege = no
+	controlled_by = $country$
+}

@@ -1,0 +1,52 @@
+l_english:
+ investment_trade_company_title:0 "§G【自动化mod】§!一键投资贸易公司建筑"
+ investment_trade_company_desc:0 ""
+ investment_trade_company_tooltip:0 "快速投资贸易公司建筑"
+
+ investment_trade_company_events.1.title:0 "投资贸易公司建筑"
+ investment_trade_company_events.1.desc:0 "目前我们有充足的资金，是否要进行贸易公司投资呢？"
+ investment_trade_company_events.1.investment:0 "这能增加我们的收入，当然要进行投资"
+ investment_trade_company_events.1.cancel:0 "我们的资金还有其他用途，先暂缓贸易公司的投资吧"
+
+ investment_trade_company_events.2.title:0 "选择投资资金级别"
+ investment_trade_company_events.2.desc:0 "在进行投资前，请先选择要投资的资金级别"
+ investment_trade_company_events.2.cost_200:0 "选择单位花费为§G200§!的建筑"
+ investment_trade_company_events.2.cost_400:0 "选择单位花费为§G400§!的建筑"
+ investment_trade_company_events.2.cost_1000:0 "选择单位花费为§G1000§!的建筑"
+ investment_trade_company_events.2.cancel:0 "这次还是算了..."
+
+ investment_trade_company_events.3.title:0 "一键投资贸易公司建筑"
+ investment_trade_company_events.3.desc:0 "请选择要投资的贸易公司建筑，只有在国库充足的情况下才可以进行投资，注意不要选错了哦！推荐修建以下建筑：\n§G【中介办公室】【+25%本地生产效率 +0.15本地产出货物】【200金币】\n【中介交易所】【+50%本地生产效率 +0.30本地产出货物】【400金币】\n【[Root.GetAdjective]镇】【+10%贸易价值修正 +0.03年度陆军传统】【1000金币】§!"
+
+ investment_trade_company_events.3.local_quarter:0 "一键修建【当地驻防】【+15%本地防御效率 +25%补给上限】"
+ investment_trade_company_events.3.permanent_quarters:0 "一键修建【常设驻防】【+30%本地防御效率 +50%补给上限】"
+ investment_trade_company_events.3.officers_mess:0 "一键修建【官员食堂】【+5陆军上限】"
+
+ investment_trade_company_events.3.company_warehouse:0 "一键修建【公司货栈】【+2贸易力量 +25%本地生产效率】"
+ investment_trade_company_events.3.company_depot:0 "一键修建【公司仓库】【+4贸易力量 +50%本地生产效率】"
+ investment_trade_company_events.3.admiralty:0 "一键修建【海军部】【+5海军上限】"
+
+ investment_trade_company_events.3.brokers_office:0 "一键修建【中介办公室】【+25%本地生产效率 +0.15本地产出货物】"
+ investment_trade_company_events.3.brokers_exchange:0 "一键修建【中介交易所】【+50%本地生产效率 +0.30本地产出货物】"
+ investment_trade_company_events.3.property_appraiser:0 "一键修建【财产评估师】【+50%贸易引导】§!"
+
+ investment_trade_company_events.3.settlements:0 "一键修建【[Root.GetAdjective]定居点】【+25%本地税收修正 -7.5%本地发展花费】§!"
+ investment_trade_company_events.3.district:0 "一键修建【[Root.GetAdjective]区】【+50%本地税收修正 -15%本地发展花费】§!"
+ investment_trade_company_events.3.townships:0 "一键修建【[Root.GetAdjective]镇】【+10%贸易价值修正 +0.03年度陆军传统】§!"
+
+ investment_trade_company_events.3.company_administration:0 "一键修建【公司管理】【+50%本地人力修正 +50%本地水手修正】§!"
+ investment_trade_company_events.3.military_administration:0 "一键修建【军事管理】【+100%本地人力修正 +100%本地水手修正】§!"
+ investment_trade_company_events.3.governor_general_mansion:0 "一键修建【总督官邸】【-5%本地最低自治度 +2%海军陆战队比例】§!"
+
+ investment_trade_company_events.3.cost_200:0 "选择单位花费为§G200§!的建筑"
+ investment_trade_company_events.3.cost_400:0 "选择单位花费为§G400§!的建筑"
+ investment_trade_company_events.3.cost_1000:0 "选择单位花费为§G1000§!的建筑"
+
+ investment_trade_company_events.3.cancel:0 "这次还是算了..."
+
+ investment_trade_company_events.4.title:0 "是否要继续投资贸易公司建筑"
+ investment_trade_company_events.4.desc_enough_treasury:0 "目前国库资金仍然十分充足，是否要继续投资贸易公司建筑"
+ investment_trade_company_events.4.desc_short_of_treasury:0 "目前国库资金已经短缺，无法继续投资贸易公司建筑"
+ investment_trade_company_events.4.countinue:0 "继续投资"
+ investment_trade_company_events.4.cancel:0 "停止投资"
+

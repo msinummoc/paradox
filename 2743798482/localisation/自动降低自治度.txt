@@ -1,0 +1,36 @@
+l_english:
+ decrease_autonomy_title:0 "§G【自动化mod】§!一键降低自治度"
+ decrease_autonomy_desc:0 ""
+ decrease_autonomy_tooltip:0 "所有符合条件的省份，自治度将会降低"
+
+ increase_autonomy_title:0 "§G【自动化mod】§!一键提升自治度"
+ increase_autonomy_desc:0 ""
+ increase_autonomy_tooltip:0 ""
+
+ decrease_autonomy_events.1.title:0 "降低自治度"
+ decrease_autonomy_events.1.desc:0 "检测到当前有一些省份可以降低自治度，是否需要降低自治度呢？"
+ decrease_autonomy_events.1.decrease_autonomy:0 "不受这鸟气，降了"
+ decrease_autonomy_events.1.cancel:0 "暂时先不降低了"
+
+ decrease_autonomy_events.2.title:0 "降低自治度"
+ decrease_autonomy_events.2.desc:0 "过高的自治度影响了我们的收入及人力，及时降低自治度能够有效提高我们的收入及人力"
+ decrease_autonomy_events.2.decrease_autonomy:0 "我要降低省份自治度"
+ decrease_autonomy_events.2.cancel:0 "暂时先不降低了"
+
+ decrease_autonomy_events.2.decrease_autonomy.tooltip:0 ""
+
+ decrease_autonomy_events.3.title:0 "提高自治度"
+ decrease_autonomy_events.3.desc:0 "检测到当前有一些省份仍然存在叛乱，提升自治度可以有效降低判断，是否需要提升自治度呢？\n请注意：§G提升自治度会降低你的专制度，请谨慎选择§!"
+ decrease_autonomy_events.3.increase_autonomy:0 "不受这鸟气，提了"
+ decrease_autonomy_events.3.cancel:0 "暂时先不提升了"
+
+ decrease_autonomy_events.4.title:0 "提升自治度"
+ decrease_autonomy_events.4.desc:0 "过高的省份叛乱度给我们带来了很大的麻烦，通过提高自治度减少叛乱也许是个不错的选择。\n请注意：最后一个选项§G【我要提升所有省份的自治度】§!会提高所有省份的自治度，请谨慎选择。"
+ decrease_autonomy_events.4.increase_autonomy:0 "我要提升所有省份的自治度"
+ decrease_autonomy_events.4.increase_autonomy_with_unrest:0 "我要提升存在叛乱的省份的自治度"
+ decrease_autonomy_events.4.increase_autonomy_with_no_core:0 "我要提升未拥有核心的省份的自治度"
+ decrease_autonomy_events.4.cancel:0 "暂时先不提升了"
+
+ decrease_autonomy_events.4.increase_autonomy.tooltip:0 "§G请谨慎选择，该选项会提升所有省份自治度。如果你想要在专制主义时代到来之前快速提升专制度，可以使用此功能§!"
+ decrease_autonomy_events.4.increase_autonomy_with_unrest.tooltip:0 "§G仅在叛乱度大于1的省份提升自治度§!"
+ decrease_autonomy_events.4.increase_autonomy_with_no_core.tooltip:0 "§G仅在未造核的省份提升自治度§!"

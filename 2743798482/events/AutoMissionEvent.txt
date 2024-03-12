@@ -1,0 +1,254 @@
+namespace = auto_mission_events
+#如果判断当地传教力量大于0，自动派遣传教士
+country_event = {
+	id = auto_mission_events.1
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	trigger = {
+		can_auto_mission = yes
+		has_country_flag = AutoMission
+		any_owned_province = {
+			province_can_auto_mission = yes
+			has_enough_missionary_strength = {
+				total_missionary_strength = 0.01
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	immediate = {
+		hidden_effect = {
+			#优先向贸易中心派遣传教士，方便开贸易公司 传教强度2.5%，耗时40个月
+			if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						province_has_center_of_trade_of_level = 1
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.025
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						province_has_center_of_trade_of_level = 1
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.025
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度10%，耗时10个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.1
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.1
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度7%，耗时15个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.07
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.07
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度5%，耗时20个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.05
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.05
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度4%，耗时25个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.04
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.04
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度3.3%，耗时30个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.033
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.033
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度2.5%，耗时40个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.025
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.025
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度2%，耗时50个月
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.02
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.02
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			#传教强度大于0，耗时未知，但是可以传完
+			else_if = {
+				limit = {
+					any_owned_province = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.01
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_can_auto_mission = yes
+						has_enough_missionary_strength = {
+							total_missionary_strength = 0.01
+						}
+					}
+					send_missionary = yes
+				}
+			}
+			country_event = {
+				id = auto_mission_events.2
+			}
+		}
+	}
+	option = {
+
+	}
+}
+#如果判断当地传教力量小于0，自动撤回传教士
+country_event = {
+	id = auto_mission_events.2
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	trigger = {
+		can_auto_mission = yes
+		has_country_flag = AutoMission
+		any_owned_province = {
+			has_missionary = yes		#本地有传教士
+			never_finish_the_mission = {
+				total_missionary_strength = 0
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_missionary = yes		#本地有传教士
+					never_finish_the_mission = {
+						total_missionary_strength = 0
+					}
+				}
+				#停止传教
+				cancel_construction = missionary
+			}
+		}
+	}
+	option = {
+	}	
+}

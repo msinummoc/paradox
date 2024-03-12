@@ -1,0 +1,8 @@
+l_english:
+ auto_mission_title:0 "§G【自动化mod】§!开启自动传教"
+ auto_mission_desc:0 ""
+ auto_mission_tooltip:0 "开启这项决议后，在传教力量达到一定强度后会自动派遣传教士进行传教，同时如果省份无法完成传教则会自动撤回传教士"
+
+ stop_mission_title:0 "§G【自动化mod】§!停止自动传教"
+ stop_mission_desc:0 ""
+ stop_mission_tooltip:0 "开启这项决议后，将停止自动传教，正在进行的传教活动不受影响"

@@ -1,0 +1,36 @@
+country_decisions = {
+	AO_display_decision = {
+		potential = {
+			NOT = {
+				has_country_flag = AODisplayDecision 
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = AO_display_decision_tooltip
+			set_country_flag = AODisplayDecision
+		}
+		major = yes
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	AO_hidden_decision = {
+		potential = {	
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = AO_hidden_decision_tooltip
+			clr_country_flag = AODisplayDecision
+		}
+		major = yes
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

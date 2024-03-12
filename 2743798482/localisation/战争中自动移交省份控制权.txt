@@ -1,0 +1,19 @@
+l_english:
+ auto_change_controller_title:0 "§G【自动化mod】§!战争中自动移交省份控制权"
+ auto_change_controller_desc:0 ""
+ auto_change_controller_tooltip:0 "如果你有附属国，那么在战争中占领的省份可以自动移交控制权"
+
+ auto_change_controller_events.1.title:0 "战争中自动移交省份控制权"
+ auto_change_controller_events.1.desc:0 "如果你有附属国，那么在战争中占领的省份可以自动移交控制权，选择选项会立即触发移交事件，同时随着战争的进行，会不定时触发移交事件，目前平均发生时间是3个月。\n注意：\n1.§G【小弟咬咬牙，堡垒交给他了】§!和§G【小弟的宣称和核心就交给他了】§!是可以同时选择的，同时选择时可能会出现一个省份是堡垒同时是小弟核心但是却被其他小弟占领的问题，可以在合谈前选择一次§G【咬咬牙，全都是我的】§!即可\n2.本次选择会在以后的战争中都生效，想要关闭可以在下次战争时选择§G【关闭这个机制】§!"
+ 
+ auto_change_controller_events.1.control_all_by_player:0 "咬咬牙，全都是我的"
+ auto_change_controller_events.1.control_fort_by_subject:0 "小弟咬咬牙，堡垒交给他了"
+ auto_change_controller_events.1.control_core_and_claim_by_subject:0 "小弟的宣称和核心就交给他了"
+ auto_change_controller_events.1.control_all_by_subject:0 "全都给小弟就行了"
+ auto_change_controller_events.1.close_auto_change_controller:0 "关闭这个机制，谁占得就是谁的了"
+ auto_change_controller_events.1.cancel:0 "设定好了"
+
+ auto_change_controller_events.1.control_all_by_player.tooltip:0 "选择此选项会立即把省份控制权交给玩家，同时会定时把其他新占领的省份交给玩家"
+ auto_change_controller_events.1.control_fort_by_subject.tooltip:0 "选择此选项会立即把堡垒省份交给任意小弟，同时会定时把其他新占领的堡垒省份交给任意小弟"
+ auto_change_controller_events.1.control_core_and_claim_by_subject.tooltip:0 "选择此选项会立即把小弟宣称和核心省份控制权交给小弟，同时会定时把其他新占领的小弟宣称和核心省份控制权交给小弟"
+ auto_change_controller_events.1.control_all_by_subject.tooltip:0 "选择此选项会立即把省份控制权交给任意小弟，同时会定时把其他新占领的省份交给任意小弟"

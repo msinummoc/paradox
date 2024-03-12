@@ -1,0 +1,1124 @@
+# 未接纳思潮科技惩罚：详见common/technologies目录下adm.txt、dip.txt、mil.txt
+# expects_institution = {
+#	feudalism = 0.5
+#	renaissance = 0.5
+#	new_world_i = 0.5
+#	printing_press = 0.5
+#	global_trade = 0.5
+#	manufactories = 0.5
+#	enlightenment = 0.5
+#	industrialization = 1
+# }
+#===================================================================================
+#									未接纳惩罚										
+# 封建制度 		- feudalism			【1~31级50%】										
+# 文艺复兴 		- renaissance		【1~3级0】	【4级15%】	【5级30%】	【6~31级50%】	
+# 殖民主义		- new_world_i		【1~7级0】	【8级15%】	【9级30%】	【10~31级50%】
+# 印刷机应用 	- printing_press	【1~11级0】	【12级15%】	【13级30%】	【14~31级50%】
+# 全球贸易 		- global_trade		【1~15级0】	【16级15%】	【17级30%】	【18~31级50%】	
+# 工厂生产 		- manufactories		【1~19级0】	【20级15%】	【21级30%】	【22~31级50%】	
+# 启蒙主义 		- enlightenment		【1~22级0】	【23级15%】	【24级30%】	【25~31级50%】
+# 工业化 		- industrialization	【1~26级0】	【27级25%】	【28级50%】	【29~31级100%】
+#===================================================================================
+# 28-31级时不同科技未接纳思潮惩罚
+# 行政科技	28级	29级	30级	31级
+# 启蒙主义	100%	50%		100%	100%
+
+# 外交科技	29级	30级	31级
+# 全球贸易	50%		50%		100%
+# 工厂生产	50%		100%	100%
+
+# 军事科技	29级	30级	31级
+# 工厂生产	50%		50%		100%
+# 启蒙主义	100%	50%		100%
+# 工业化 	50%		100%	100%
+#===================================================================================
+#	has_institution = feudalism 	存在思潮
+
+namespace = calc_max_monarch_point_events
+
+#计算行政点数最大值
+country_event = {
+	id = calc_max_monarch_point_events.1
+	trigger = {
+		NOT = {
+			adm_tech = 32
+		}
+		has_country_flag = AutoDevelop
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			set_variable  = {
+				which = AdmTechPunishment
+				value = 0
+			}
+			#未接纳封建主义【1~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = feudalism
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 1
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+			}
+			#未接纳文艺复兴【1~3级0】	【4级15%】	【5级30%】	【6~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = renaissance
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 6
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 5
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 4
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳殖民主义【1~7级0】	【8级15%】	【9级30%】	【10~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = new_world_i
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 10
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 9
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 8
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳印刷机应用【1~11级0】	【12级15%】	【13级30%】	【14~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = printing_press
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 14
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 13
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 12
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳全球贸易【1~15级0】	【16级15%】	【17级30%】	【18~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = global_trade
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 18
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 17
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 16
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳工厂生产【1~19级0】	【20级15%】	【21级30%】	【22~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = manufactories
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 22
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 21
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 20
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳启蒙主义【1~22级0】	【23级15%】	【24级30%】	【25~31级50%】
+			# 28-31级时不同科技未接纳思潮惩罚
+			# 行政科技	28级	29级	30级	31级
+			# 启蒙主义	100%	50%		100%	100%
+			if = {
+				limit = {
+					NOT = {
+						has_institution = enlightenment
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 30
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 29
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 28
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 25
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 24
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 23
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.15
+					}
+				}
+				
+			}
+			#未接纳工业化【1~26级0】	【27级25%】	【28级50%】	【29~31级100%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = industrialization
+					}
+				}
+				if = {
+					limit = {
+						adm_tech = 29
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 28
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						adm_tech = 27
+					}
+					change_variable = {
+						which = AdmTechPunishment
+						value = 0.25
+					}
+				}
+			}
+			set_variable = {
+				which = AdmTotalRatio
+				value = 1
+			}
+			#基础值+思潮惩罚百分比
+			change_variable = {
+				which = AdmTotalRatio
+				which = AdmTechPunishment
+			}
+			#无惩罚行政点数最大值
+			set_variable = {
+				which = MaxAdmMonarchPoint
+				value = 999
+			}
+			#计算思潮惩罚后的行政点数最大值
+			multiply_variable = {
+				which = MaxAdmMonarchPoint
+				which = AdmTotalRatio
+			}
+			country_event = {
+				id = calc_max_monarch_point_events.2
+			}
+		}
+	}
+	option = {
+	}
+}
+#计算外交点数最大值
+country_event = {
+	id = calc_max_monarch_point_events.2
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			dip_tech = 32
+		}
+		has_country_flag = AutoDevelop
+	}
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			set_variable  = {
+				which = DipTechPunishment
+				value = 0
+			}
+			#未接纳封建主义【1~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = feudalism
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 1
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+			}
+			#未接纳文艺复兴【1~3级0】	【4级15%】	【5级30%】	【6~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = renaissance
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 6
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 5
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 4
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳殖民主义【1~7级0】	【8级15%】	【9级30%】	【10~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = new_world_i
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 10
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 9
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 8
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳印刷机应用【1~11级0】	【12级15%】	【13级30%】	【14~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = printing_press
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 14
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 13
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 12
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳全球贸易【1~15级0】	【16级15%】	【17级30%】	【18~31级50%】
+			# 29-31级时不同科技未接纳思潮惩罚
+			# 外交科技	29级	30级	31级
+			# 全球贸易	50%		50%		100%
+			if = {
+				limit = {
+					NOT = {
+						has_institution = global_trade
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 31
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 18
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 17
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 16
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳工厂生产【1~19级0】	【20级15%】	【21级30%】	【22~31级50%】
+			# 29-31级时不同科技未接纳思潮惩罚
+			# 外交科技	29级	30级	31级
+			# 工厂生产	50%		100%	100%
+			if = {
+				limit = {
+					NOT = {
+						has_institution = manufactories
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 30
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 22
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 21
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 20
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳启蒙主义【1~22级0】	【23级15%】	【24级30%】	【25~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = enlightenment
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 25
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 24
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 23
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳工业化【1~26级0】	【27级25%】	【28级50%】	【29~31级100%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = industrialization
+					}
+				}
+				if = {
+					limit = {
+						dip_tech = 29
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 28
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						dip_tech = 27
+					}
+					change_variable = {
+						which = DipTechPunishment
+						value = 0.25
+					}
+				}
+			}
+			set_variable = {
+				which = DipTotalRatio
+				value = 1
+			}
+			#基础值+思潮惩罚百分比
+			change_variable = {
+				which = DipTotalRatio
+				which = DipTechPunishment
+			}
+			#无惩罚外交点数最大值
+			set_variable = {
+				which = MaxDipMonarchPoint
+				value = 999
+			}
+			#计算思潮惩罚后的外交点数最大值
+			multiply_variable = {
+				which = MaxDipMonarchPoint
+				which = DipTotalRatio
+			}
+			country_event = {
+				id = calc_max_monarch_point_events.3
+			}
+		}
+	}
+	option = {
+	}
+}
+#计算军事点数最大值
+country_event = {
+	id = calc_max_monarch_point_events.3
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			mil_tech = 32
+		}
+		has_country_flag = AutoDevelop
+	}
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			set_variable  = {
+				which = MilTechPunishment
+				value = 0
+			}
+			#未接纳封建主义【1~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = feudalism
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 1
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+			}
+			#未接纳文艺复兴【1~3级0】	【4级15%】	【5级30%】	【6~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = renaissance
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 6
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 5
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 4
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳殖民主义【1~7级0】	【8级15%】	【9级30%】	【10~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = new_world_i
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 10
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 9
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 8
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳印刷机应用【1~11级0】	【12级15%】	【13级30%】	【14~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = printing_press
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 14
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 13
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 12
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳全球贸易【1~15级0】	【16级15%】	【17级30%】	【18~31级50%】
+			if = {
+				limit = {
+					NOT = {
+						has_institution = global_trade
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 18
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 17
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 16
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳工厂生产【1~19级0】	【20级15%】	【21级30%】	【22~31级50%】
+			# 29-31级时不同科技未接纳思潮惩罚
+			# 军事科技	29级	30级	31级
+			# 工厂生产	50%		50%		100%
+			if = {
+				limit = {
+					NOT = {
+						has_institution = manufactories
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 31
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 22
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 21
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 20
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳启蒙主义【1~22级0】	【23级15%】	【24级30%】	【25~31级50%】
+			# 29-31级时不同科技未接纳思潮惩罚
+			# 军事科技	29级	30级	31级
+			# 启蒙主义	100%	50%		100%
+			if = {
+				limit = {
+					NOT = {
+						has_institution = enlightenment
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 31
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 30
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 29
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 25
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 24
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.3
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 23
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.15
+					}
+				}
+			}
+			#未接纳工业化【1~26级0】	【27级25%】	【28级50%】	【29~31级100%】
+			# 29-31级时不同科技未接纳思潮惩罚
+			# 军事科技	29级	30级	31级
+			# 工业化 	50%		100%	100%
+			if = {
+				limit = {
+					NOT = {
+						has_institution = industrialization
+					}
+				}
+				if = {
+					limit = {
+						mil_tech = 30
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 28
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						mil_tech = 27
+					}
+					change_variable = {
+						which = MilTechPunishment
+						value = 0.25
+					}
+				}
+				
+			}
+			set_variable = {
+				which = MilTotalRatio
+				value = 1
+			}
+			#基础值+思潮惩罚百分比
+			change_variable = {
+				which = MilTotalRatio
+				which = MilTechPunishment
+			}
+			#无惩罚军事点数最大值
+			set_variable = {
+				which = MaxMilMonarchPoint
+				value = 999
+			}
+			#计算思潮惩罚后的军事点数最大值
+			multiply_variable = {
+				which = MaxMilMonarchPoint
+				which = MilTotalRatio
+			}
+			country_event = {
+				id = calc_max_monarch_point_events.4
+			}
+		}
+	}
+	option = {
+	}
+}
+# 导出当前君主点数，并计算临界点数
+country_event = {
+	id = calc_max_monarch_point_events.4
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = AdmPower
+				value = trigger_value:adm_power
+				who = ROOT
+			}
+			export_to_variable = {
+				which = DipPower
+				value = trigger_value:dip_power
+				who = ROOT
+			}
+			export_to_variable = {
+				which = MilPower
+				value = trigger_value:mil_power
+				who = ROOT
+			}
+			#提升税收临界行政点数
+			set_variable = {
+				which = LimitAdmPower
+				which = MaxAdmMonarchPoint
+			}
+			#提升税收临界行政点数 = 行政点数最大值-50
+			subtract_variable = {
+				which = LimitAdmPower
+				value = 50
+			}
+
+			#提升税收临界外交点数
+			set_variable = {
+				which = LimitDipPower
+				which = MaxDipMonarchPoint
+			}
+			#提升税收临界外交点数 = 外交点数最大值-50
+			subtract_variable = {
+				which = LimitDipPower
+				value = 50
+			}
+
+			#提升税收临界军事点数
+			set_variable = {
+				which = LimitMilPower
+				which = MaxMilMonarchPoint
+			}
+			#提升税收临界军事交点数 = 军事点数最大值-50
+			subtract_variable = {
+				which = LimitMilPower
+				value = 50
+			}
+
+			country_event = {
+				id = auto_develop_events.1
+			}
+		}
+	}
+	option = {
+	}
+}

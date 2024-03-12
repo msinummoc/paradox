@@ -1,0 +1,307 @@
+namespace = auto_change_controller_events
+
+#战争中一键移交省份控制权事件
+country_event = {
+	id = auto_change_controller_events.1
+
+	title = auto_change_controller_events.1.title
+    desc = auto_change_controller_events.1.desc
+    picture = BANKRUPTCY_eventPicture
+
+	trigger = {
+		ai = no
+		is_at_war = yes
+		OR = {
+			vassal = 1
+			colony = 1
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = auto_change_controller_events.1.cancel
+	}
+	#全部自己拿着
+	option = {
+		name = auto_change_controller_events.1.control_all_by_player
+		custom_tooltip = auto_change_controller_events.1.control_all_by_player.tooltip
+
+		hidden_effect = {
+			set_country_flag = AOControlAllByPlayer
+
+			clr_country_flag = AOControlFortBySubject
+			clr_country_flag = AOControlCoreAndClaimBySubject
+			clr_country_flag = AOControlAllBySubject
+			every_subject_country = {
+				clr_country_flag = AOControlAllBySubject
+			}
+
+			country_event = {
+				id = auto_change_controller_events.2
+			}
+		}
+	}
+	#堡垒交给附属国
+	option = {
+		name = auto_change_controller_events.1.control_fort_by_subject
+		custom_tooltip = auto_change_controller_events.1.control_fort_by_subject.tooltip
+
+		hidden_effect = {
+			set_country_flag = AOControlFortBySubject
+
+			clr_country_flag = AOControlAllByPlayer
+			
+			country_event = {
+				id = auto_change_controller_events.2
+			}
+		}
+	}
+	#附属国核心和宣称交给附属国
+	option = {
+		name = auto_change_controller_events.1.control_core_and_claim_by_subject
+		custom_tooltip = auto_change_controller_events.1.control_core_and_claim_by_subject.tooltip
+
+		hidden_effect = {
+			set_country_flag = AOControlCoreAndClaimBySubject
+
+			clr_country_flag = AOControlAllByPlayer
+
+			country_event = {
+				id = auto_change_controller_events.2
+			}
+		}
+	}
+	option = {
+		name = auto_change_controller_events.1.close_auto_change_controller
+		hidden_effect = {
+			clr_country_flag = AOControlAllBySubject
+			clr_country_flag = AOControlAllByPlayer
+			clr_country_flag = AOControlCoreAndClaimBySubject
+			clr_country_flag = AOControlAllBySubject
+			every_subject_country = {
+				clr_country_flag = AOControlAllBySubject
+			}
+		}
+	}
+}
+#移交省份控制权事件
+country_event = {
+	id = auto_change_controller_events.2
+
+	hidden = yes
+
+	trigger = {
+		ROOT = {
+			OR = {
+				has_country_flag = AOControlAllByPlayer
+				has_country_flag = AOControlFortBySubject
+				has_country_flag = AOControlCoreAndClaimBySubject
+				has_country_flag = AOControlAllBySubject
+			}
+		}
+		any_province = {
+			controller = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			owner = {
+				war_with = ROOT
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	immediate = {
+		if = {
+			limit = {
+				ROOT = {
+					OR = {
+						has_country_flag = AOControlFortBySubject
+						has_country_flag = AOControlCoreAndClaimBySubject
+						has_country_flag = AOControlAllBySubject
+					}
+				}
+				any_province = {
+					controller = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					owner = {
+						war_with = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+			}
+			#附属国核心和宣称交给附属国
+			if = {
+				limit = {
+					has_country_flag = AOControlCoreAndClaimBySubject
+				}
+				ROOT = {
+					every_subject_country = {
+						every_province = {
+							limit = {
+								controller = {
+									OR = {
+										tag = ROOT
+										is_subject_of = ROOT
+									}
+								}
+								owner = {
+									war_with = ROOT
+								}
+								NOT = {
+									owned_by = ROOT
+								}
+								OR = {
+									is_core = prev
+									is_claim = prev
+								}
+							}
+							change_controller = prev
+						}
+					}
+				}
+			}
+			#堡垒交给附属国
+			if = {
+				limit = {
+					has_country_flag = AOControlFortBySubject
+				}
+				ROOT = {
+					random_subject_country = {
+						every_province = {
+							limit = {
+								controller = {
+									tag = ROOT
+								}
+								owner = {
+									war_with = ROOT
+								}
+								NOT = {
+									owned_by = ROOT
+								}
+								province_has_fort = yes
+							}
+							change_controller = prev
+						}
+					}
+				}
+			}
+			#全部交给附属国
+			else_if = {
+				limit = {
+					any_subject_country = {
+						has_country_flag = AOControlAllBySubject
+					}
+				}
+				every_subject_country = {
+					limit = {
+						has_country_flag = AOControlAllBySubject
+					}
+					save_event_target_as = target_subject_country
+				}
+				ROOT = {
+					every_subject_country = {
+						every_province = {
+							limit = {
+								controller = {
+									OR = {
+										tag = ROOT
+										is_subject_of = ROOT
+									}
+								}
+								owner = {
+									war_with = ROOT
+								}
+								NOT = {
+									owned_by = ROOT
+								}
+							}
+							change_controller = event_target:target_subject_country
+						}
+					}
+				}
+			}
+		}
+		#全部自己拿着
+		else_if = {
+			limit = {
+				ROOT = {
+					has_country_flag = AOControlAllByPlayer
+				}
+				any_province = {
+					controller = {
+						is_subject_of = ROOT
+					}
+					owner = {
+						war_with = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					controller = {
+						is_subject_of = ROOT
+					}
+					owner = {
+						war_with = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				change_controller = ROOT
+			}
+		}
+	}
+	option = {
+	}
+}
+#战争结束后清空flag
+country_event = {
+	id = auto_change_controller_events.3
+
+	hidden = yes
+
+	trigger = {
+		is_at_war = no
+		OR = {
+			has_country_flag = AOControlAllByPlayer
+			has_country_flag = AOControlFortBySubject
+			has_country_flag = AOControlCoreAndClaimBySubject
+			has_country_flag = AOControlAllBySubject
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = AOControlAllBySubject
+			clr_country_flag = AOControlAllByPlayer
+			clr_country_flag = AOControlCoreAndClaimBySubject
+			clr_country_flag = AOControlAllBySubject
+			every_subject_country = {
+				clr_country_flag = AOControlAllBySubject
+			}
+		}
+	}
+	option = {
+
+	}
+}

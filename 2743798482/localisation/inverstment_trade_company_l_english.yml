@@ -1,0 +1,52 @@
+﻿l_english:
+ investment_trade_company_title:0 "§G0ê¨RSmod0§!N.••bD8flQøSú^Qr"
+ investment_trade_company_desc:0 ""
+ investment_trade_company_tooltip:0 "ëV•bD8flQøSú^Qr"
+
+ investment_trade_company_events.1.title:0 "•bD8flQøSú^Qr"
+ investment_trade_company_events.1.desc:0 "îvMRbìN	gEQ³„vDÑ‘ÿ/f&T‰ÛLˆ8flQøS•bDbTÿ"
+ investment_trade_company_events.1.investment:0 "ÙýwžX RbìN„v6eeQÿSV6q‰ÛLˆ•bD"
+ investment_trade_company_events.1.cancel:0 "bìN„vDÑ‘Ø	gvQÖN(uÿHQ‚f8flQøS„v•bD'T"
+
+ investment_trade_company_events.2.title:0 "	éb•bDDÑ‘µu+R"
+ investment_trade_company_events.2.desc:0 "(WÛLˆ•bDMRÿ÷‹HQ	éb‰•bD„vDÑ‘µu+R"
+ investment_trade_company_events.2.cost_200:0 "	ébUSMO±‚9:N§G200§!„vú^Qr"
+ investment_trade_company_events.2.cost_400:0 "	ébUSMO±‚9:N§G400§!„vú^Qr"
+ investment_trade_company_events.2.cost_1000:0 "	ébUSMO±‚9:N§G1000§!„vú^Qr"
+ investment_trade_company_events.2.cancel:0 "Ù/kØ/f—r†N..."
+
+ investment_trade_company_events.3.title:0 "N.••bD8flQøSú^Qr"
+ investment_trade_company_events.3.desc:0 "÷‹	éb‰•bD„v8flQøSú^QrÿêS	g(WýV“^EQ³„vÅ`µQNMbïSåNÛLˆ•bDÿèlaN‰	•†NæTÿ¨cPƒîOú^åNNú^Qrÿ\n§G0-NËNžRlQ²R00+25%,g0WuµNHe‡s +0.15,g0WµNúQ'ir00200Ñ‘^0\n0-NËN²NfNb00+50%,g0WuµNHe‡s +0.30,g0WµNúQ'ir00400Ñ‘^0\n0[Root.GetAdjective]G•00+10%8f÷N<PîOck +0.03t^¦^F–›Q.Oßu001000Ñ‘^0§!"
+
+ investment_trade_company_events.3.local_quarter:0 "N.•îOú^0SV0W‰š2–00+15%,g0W2–¡VHe‡s +25%eˆÙuNP–0"
+ investment_trade_company_events.3.permanent_quarters:0 "N.•îOú^08^¾‹‰š2–00+30%,g0W2–¡VHe‡s +50%eˆÙuNP–0"
+ investment_trade_company_events.3.officers_mess:0 "N.•îOú^0˜RXTß˜X00+5F–›QNP–0"
+
+ investment_trade_company_events.3.company_warehouse:0 "N.•îOú^0lQøS'h00+28f›RÏ‘ +25%,g0WuµNHe‡s0"
+ investment_trade_company_events.3.company_depot:0 "N.•îOú^0lQøSÓN“^00+48f›RÏ‘ +50%,g0WuµNHe‡s0"
+ investment_trade_company_events.3.admiralty:0 "N.•îOú^0wm›Qè00+5wm›QNP–0"
+
+ investment_trade_company_events.3.brokers_office:0 "N.•îOú^0-NËNžRlQ²R00+25%,g0WuµNHe‡s +0.15,g0WµNúQ'ir0"
+ investment_trade_company_events.3.brokers_exchange:0 "N.•îOú^0-NËN²NfNb00+50%,g0WuµNHe‡s +0.30,g0WµNúQ'ir0"
+ investment_trade_company_events.3.property_appraiser:0 "N.•îOú^00µNÄ‹0O^00+50%8fVüR0§!"
+
+ investment_trade_company_events.3.settlements:0 "N.•îOú^0[Root.GetAdjective]šRES¹p00+25%,g0Wz6eîOck -7.5%,g0WÑSUS±‚90§!"
+ investment_trade_company_events.3.district:0 "N.•îOú^0[Root.GetAdjective]:S00+50%,g0Wz6eîOck -15%,g0WÑSUS±‚90§!"
+ investment_trade_company_events.3.townships:0 "N.•îOú^0[Root.GetAdjective]G•00+10%8f÷N<PîOck +0.03t^¦^F–›Q.Oßu0§!"
+
+ investment_trade_company_events.3.company_administration:0 "N.•îOú^0lQøS¡rt00+50%,g0WºN›RîOck +50%,g0W4lKbîOck0§!"
+ investment_trade_company_events.3.military_administration:0 "N.•îOú^0›Q‹N¡rt00+100%,g0WºN›RîOck +100%,g0W4lKbîOck0§!"
+ investment_trade_company_events.3.governor_general_mansion:0 "N.•îOú^0I`cw˜R¸00-5%,g0WgNOê»l¦^ +2%wm›QF–b–Ôk‹O0§!"
+
+ investment_trade_company_events.3.cost_200:0 "	ébUSMO±‚9:N§G200§!„vú^Qr"
+ investment_trade_company_events.3.cost_400:0 "	ébUSMO±‚9:N§G400§!„vú^Qr"
+ investment_trade_company_events.3.cost_1000:0 "	ébUSMO±‚9:N§G1000§!„vú^Qr"
+
+ investment_trade_company_events.3.cancel:0 "Ù/kØ/f—r†N..."
+
+ investment_trade_company_events.4.title:0 "/f&T‰çuíu•bD8flQøSú^Qr"
+ investment_trade_company_events.4.desc_enough_treasury:0 "îvMRýV“^DÑ‘ÍN6qASREQ³ÿ/f&T‰çuíu•bD8flQøSú^Qr"
+ investment_trade_company_events.4.desc_short_of_treasury:0 "îvMRýV“^DÑ‘òTÏuíw:ÿàeÕlçuíu•bD8flQøSú^Qr"
+ investment_trade_company_events.4.countinue:0 "çuíu•bD"
+ investment_trade_company_events.4.cancel:0 "jPbk•bD"
+

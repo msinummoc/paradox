@@ -1,0 +1,39 @@
+#省份可以降低自治度
+province_can_decrease_autonomy = {
+	is_capital = no
+	local_autonomy = 10
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			which = localMinAutonomy
+			value = modifier:min_local_autonomy
+			who = THIS
+		}
+		export_to_variable = {
+			which = localAutonomy
+			value = local_autonomy
+			who = THIS
+		}
+		check_variable = {
+			which = localAutonomy
+			which = localMinAutonomy
+		}
+		NOT = {
+			is_variable_equal = {
+				which = localAutonomy
+				which = localMinAutonomy
+			}
+		}
+	}
+	NOT = { has_province_modifier = autonomy_increased }
+	NOT = { has_province_modifier = autonomy_decreased }
+	can_decrease_autonomy = yes
+}
+
+#省份可以提高自治度
+province_can_increase_autonomy = {
+	is_capital = no
+	NOT = { local_autonomy = 90 }
+	NOT = { has_province_modifier = autonomy_increased }
+	NOT = { has_province_modifier = autonomy_decreased }
+	can_inercase_autonomy = yes
+}

@@ -1,0 +1,1302 @@
+namespace = construct_building_events
+
+#行政4级 教堂 100 
+#行政19级 大教堂 300
+
+#行政6级 工场 100
+#行政24级 会计室 400
+
+#行政8级 法院 100
+#行政22级 市政厅 200
+
+#行政8级大学 300
+
+#军事6级兵营 100
+#军事16级训练营 300
+
+#军事8级 军营200
+#军事22级 征召中心400  
+
+#外交4级 集市 100
+#外交17级 贸易仓库 300
+#外交22级 证券交易所 400
+
+#外交6级码头 100
+#外交19级干船坞 300
+
+#外交8级造船厂 100
+#外交24级大船厂	300
+
+#军事1级城堡 200
+#军事14级棱堡 400
+#军事19级星堡 600
+#军事24级要塞 800
+
+#科技和金币达到一定水平后主动触发一键修建筑事件
+country_event = {
+	id = construct_building_events.1
+	title = construct_building_events.1.title
+    desc = construct_building_events.1.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	trigger = {
+		OR = {
+			adm_tech = 15
+			dip_tech = 15
+			mil_tech = 15
+		}
+		treasury = 5000
+		ai = no
+		NOT = {
+			has_country_flag = CancelConstructBuilding
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = construct_building_events.1.cancel
+		set_country_flag = CancelConstructBuilding
+	}
+
+	option = {
+		name = construct_building_events.1.building
+		country_event = {
+			id = construct_building_events.2
+		}
+	}
+}
+
+#一键修建筑事件
+country_event = {
+	id = construct_building_events.2
+	title = construct_building_events.2.title
+    desc = construct_building_events.2.desc
+    picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+	#取消
+	option = {
+		name = construct_building_events.2.cancel
+	}
+	#一键建造教堂
+	option = {
+		name = construct_building_events.2.temple
+		custom_tooltip = construct_building_events.2.temple.tooltip
+		trigger = {
+			adm_tech = 4
+			NOT = { adm_tech = 19 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_temple = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 200
+				any_owned_province = {
+					province_can_build_temple = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_temple = yes
+				}
+				add_building_construction = {
+					building = temple
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造大教堂
+	option = {
+		name = construct_building_events.2.cathedral
+		custom_tooltip = construct_building_events.2.cathedral.tooltip
+		trigger = {
+			adm_tech = 19
+			treasury = 3000
+			any_owned_province = {
+				province_can_build_cathedral = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 400
+				any_owned_province = {
+					province_can_build_cathedral = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_cathedral = yes
+				}
+				add_building_construction = {
+					building = cathedral
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建工场
+	option = {
+		name = construct_building_events.2.workshop
+		trigger = {
+			adm_tech = 6
+			NOT = { adm_tech = 24 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_workshop = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 200
+				any_owned_province = {
+					province_can_build_workshop = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_workshop = yes
+				}
+				add_building_construction = {
+					building = workshop
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建会计室
+	option = {
+		name = construct_building_events.2.counting_house
+		trigger = {
+			ai = no
+			adm_tech = 24
+			treasury = 4000
+			any_owned_province = {
+				province_can_build_counting_house = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					province_can_build_counting_house = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_counting_house = yes
+				}
+				add_building_construction = {
+					building = counting_house
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建法院(-25%省份治理成本，只与发展度有关，跟是否是贸易公司、自治领地无关)
+	option = {
+		name = construct_building_events.2.courthouse
+		trigger = {
+			treasury = 1000
+			ai = no
+			adm_tech = 8
+			NOT = {adm_tech = 22}
+			any_owned_province = {
+				province_can_build_courthouse = yes
+			}
+		}
+		AO_construct_courthouse_effect = yes
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建市政厅(-50%省份治理成本，只与发展度有关，跟是否是贸易公司、自治领地无关)
+	option = {
+		name = construct_building_events.2.town_hall
+		trigger = {
+			treasury = 2000
+			ai = no
+			adm_tech = 22
+			any_owned_province = {
+				province_can_build_town_hall = yes
+			}
+		}
+		AO_construct_town_hall_effect = yes
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建大学
+	option = {
+		name = construct_building_events.2.university
+		trigger = {
+			ai = no
+			adm_tech = 17
+			treasury = 4000
+			any_owned_province = {
+				province_can_build_university = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					province_can_build_university = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_university = yes
+				}
+				add_building_construction = {
+					building = university
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建兵营
+	option = {
+		name = construct_building_events.2.barracks
+		custom_tooltip = construct_building_events.2.barracks.tooltip
+		trigger = {
+			ai = no
+			mil_tech = 6
+			NOT = { mil_tech = 16 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_barracks = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 200
+				any_owned_province = {
+					province_can_build_barracks = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_barracks = yes
+				}
+				add_building_construction = {
+					building = barracks
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建训练营
+	option = {
+		name = construct_building_events.2.training_fields
+		custom_tooltip = construct_building_events.2.training_fields.tooltip
+		trigger = {
+			ai = no
+			mil_tech = 16
+			treasury = 3000
+			any_owned_province = {
+				province_can_build_training_fields = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 400
+				any_owned_province = {
+					province_can_build_training_fields = yes			
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_training_fields = yes
+				}
+				add_building_construction = {
+					building = training_fields
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建军营
+	option = {
+		name = construct_building_events.2.regimental_camp
+		custom_tooltip = construct_building_events.2.regimental_camp.tooltip
+		trigger = {
+			ai = no
+			mil_tech = 8
+			NOT = { mil_tech = 22 }
+			treasury = 2000
+			any_owned_province = {
+				province_can_build_regimental_camp = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					province_can_build_regimental_camp = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_regimental_camp = yes
+				}
+				add_building_construction = {
+					building = regimental_camp
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建征召中心
+	option = {
+		name = construct_building_events.2.conscription_center
+		custom_tooltip = construct_building_events.2.conscription_center.tooltip
+		trigger = {
+			ai = no
+			mil_tech = 22
+			treasury = 4000
+			any_owned_province = {
+				province_can_build_conscription_center = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					province_can_build_conscription_center = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_conscription_center = yes
+				}
+				add_building_construction = {
+					building = conscription_center
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建集市
+	option = {
+		name = construct_building_events.2.marketplace
+		custom_tooltip = construct_building_events.2.marketplace.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 4
+			NOT = { dip_tech = 17 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_marketplace = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 200
+				any_owned_province = {
+					province_can_build_marketplace = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_marketplace = yes
+				}
+				add_building_construction = {
+					building = marketplace
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建贸易仓库
+	option = {
+		name = construct_building_events.2.trade_depot
+		custom_tooltip = construct_building_events.2.trade_depot.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 17
+			NOT = { dip_tech = 22 }
+			treasury = 3000
+			any_owned_province = {
+				province_can_build_trade_depot = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 400
+				any_owned_province = {
+					province_can_build_trade_depot = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_trade_depot = yes
+				}
+				add_building_construction = {
+					building = trade_depot
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建证券交易所
+	option = {
+		name = construct_building_events.2.stock_exchange
+		custom_tooltip = construct_building_events.2.stock_exchange.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 22
+			treasury = 4000
+			any_owned_province = {
+				province_can_build_stock_exchange = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					province_can_build_stock_exchange = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_stock_exchange = yes
+				}
+				add_building_construction = {
+					building = stock_exchange
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建码头
+	option = {
+		name = construct_building_events.2.dock
+		custom_tooltip = construct_building_events.2.dock.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 6
+			NOT = { dip_tech = 19 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_dock = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					province_can_build_dock = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_dock = yes
+				}
+				add_building_construction = {
+					building = dock
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建干船坞
+	option = {
+		name = construct_building_events.2.drydock
+		custom_tooltip = construct_building_events.2.drydock.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 19
+			treasury = 3000
+			any_owned_province = {
+				province_can_build_drydock = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 400
+				any_owned_province = {
+					province_can_build_drydock = yes		
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_drydock = yes
+				}
+				add_building_construction = {
+					building = drydock
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建造船厂
+	option = {
+		name = construct_building_events.2.shipyard
+		custom_tooltip = construct_building_events.2.shipyard.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 8
+			NOT = { dip_tech = 24 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_shipyard = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					province_can_build_shipyard = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_shipyard = yes
+				}
+				add_building_construction = {
+					building = shipyard
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键修建大船厂
+	option = {
+		name = construct_building_events.2.grand_shipyard
+		custom_tooltip = construct_building_events.2.grand_shipyard.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 24
+			treasury = 3000
+			any_owned_province = {
+				province_can_build_grand_shipyard = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 400
+				any_owned_province = {
+					province_can_build_grand_shipyard = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_grand_shipyard = yes
+				}
+				add_building_construction = {
+					building = grand_shipyard
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造士兵之家
+	#dip_tech = 15 士兵之家	soldier_households
+	option = {
+		name = construct_building_events.2.soldier_households
+		custom_tooltip = construct_building_events.2.soldier_households.tooltip
+		trigger = {
+			ai = no
+			dip_tech = 15
+			treasury = 5000
+			any_owned_province = {
+				can_build_soldier_households = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 600
+				any_owned_province = {
+					can_build_soldier_households = yes
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						can_build_soldier_households = yes
+					}
+					add_building_construction = {
+						building = soldier_households
+						speed = 1
+						cost = 1
+					}
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造州议会
+	#adm_tech = 12 州议会 state_house
+	option = {
+		name = construct_building_events.2.state_house
+		custom_tooltip = construct_building_events.2.state_house.tooltip
+		trigger = {
+			ai = no
+			adm_tech = 12
+			treasury = 5000
+			any_owned_province = {
+				can_build_state_house = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 600
+				any_owned_province = {
+					can_build_state_house = yes
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						can_build_state_house = yes
+					}
+					add_building_construction = {
+						building = state_house
+						speed = 1
+						cost = 1
+					}
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#工厂 manufactory
+	#adm_tech = 6 农场 farm_estate
+	#adm_tech = 6 壁垒 ramparts 							不修
+	#dip_tech = 7 强制征兵办公室 impressment_offices		 不修
+	#dip_tech = 11 海军装备工厂 wharf
+	#dip_tech = 11 纺织厂 textile
+	#mil_tech = 11 武器厂 weapons
+	#adm_tech = 14 种植园 plantations
+	#adm_tech = 14 贸易公司 tradecompany
+	#adm_tech = 16 磨坊	mills
+	#adm_tech = 21 熔炉	furnace			需要检测商品 并拆除原有的工厂(非熔炉)
+	#一键修工厂
+	option = {
+		name = construct_building_events.2.factory
+		custom_tooltip = construct_building_events.2.factory.tooltip
+		trigger = {
+			ai = no
+			adm_tech = 6
+			treasury = 5000
+			any_owned_province = {
+				can_build_manufactory = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 600
+				any_owned_province = {
+					can_build_manufactory_in_state = yes
+				}
+			}
+			random_owned_province = {
+				AO_constract_manufactory_in_state = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 600
+				any_owned_province = {
+					can_build_manufactory_in_company = yes
+				}
+			}
+			random_owned_province = {
+				AO_constract_manufactory_in_company = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 600
+				any_owned_province = {
+					can_build_manufactory_in_territory = yes
+				}
+			}
+			random_owned_province = {
+				AO_constract_manufactory_in_territory = yes
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造城堡
+	option = {
+		name = construct_building_events.2.fort_15th
+		custom_tooltip = construct_building_events.2.fort_15th.tooltip
+		trigger = {
+			mil_tech = 1
+			NOT = { mil_tech = 14 }
+			treasury = 1000
+			any_owned_province = {
+				province_can_build_fort_15th = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 200
+				any_owned_province = {
+					province_can_build_fort_15th = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_fort_15th = yes
+				}
+				add_building_construction = {
+					building = fort_15th
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造棱堡
+	option = {
+		name = construct_building_events.2.fort_16th
+		custom_tooltip = construct_building_events.2.fort_16th.tooltip
+		trigger = {
+			mil_tech = 14
+			NOT = { mil_tech = 19 }
+			treasury = 3000
+			any_owned_province = {
+				province_can_build_fort_16th = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 400
+				any_owned_province = {
+					province_can_build_fort_16th = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_fort_16th = yes
+				}
+				add_building_construction = {
+					building = fort_16th
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造星堡
+	option = {
+		name = construct_building_events.2.fort_17th
+		custom_tooltip = construct_building_events.2.fort_17th.tooltip
+		trigger = {
+			mil_tech = 19
+			NOT = { mil_tech = 24 }
+			treasury = 6000
+			any_owned_province = {
+				province_can_build_fort_17th = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 600
+				any_owned_province = {
+					province_can_build_fort_17th = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_fort_17th = yes
+				}
+				add_building_construction = {
+					building = fort_17th
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+	#一键建造要塞
+	option = {
+		name = construct_building_events.2.fort_18th
+		custom_tooltip = construct_building_events.2.fort_18th.tooltip
+		trigger = {
+			mil_tech = 24
+			treasury = 10000
+			any_owned_province = {
+				province_can_build_fort_18th = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 800
+				any_owned_province = {
+					province_can_build_fort_18th = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					province_can_build_fort_18th = yes
+				}
+				add_building_construction = {
+					building = fort_18th
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		country_event = {
+			id = construct_building_events.3
+		}
+	}
+}
+
+#是否继续修建筑
+country_event = {
+	id = construct_building_events.3
+	title = construct_building_events.3.title
+	desc = {
+		trigger = {
+			treasury = 1000
+		}
+		desc = "construct_building_events.3.desc_enough_treasury"
+	}
+	desc = {
+		trigger = {
+			NOT = { treasury = 1000 }
+		}
+		desc = "construct_building_events.3.desc_short_of_treasury"
+	}
+    
+    picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = construct_building_events.3.cancel
+	}
+
+	option = {
+		name = construct_building_events.3.countinue
+		trigger = {
+			treasury = 1000
+		}
+		country_event = {
+			id = construct_building_events.2
+		}
+	}
+}
+
+#存在煤炭省份没有空闲槽位修建熔炉时，通过事件进行提醒
+province_event = {
+	id = construct_building_events.4
+	title = construct_building_events.4.title
+	desc = construct_building_events.4.desc
+	goto = ROOT
+
+	trigger = {
+		owner = {
+			ai = no
+			adm_tech = 21
+		}
+		is_core = owner
+		trade_goods = coal
+		NOT = {
+			has_building = furnace
+			has_construction = furnace
+		}
+		NOT = {
+			has_building = ramparts
+			has_building = impressment_offices
+			has_building = state_house
+			has_building = soldier_households
+
+			has_construction = ramparts
+			has_construction = impressment_offices
+			has_construction = state_house
+			has_construction = soldier_households
+		}
+		NOT = {
+			num_free_building_slots = 1
+		}
+		NOT = {
+			has_province_modifier = remind_construct_furnace_timer
+		}
+	}
+
+	option = {
+		name = construct_building_events.4.cancel
+		add_province_modifier = {
+			name = remind_construct_furnace_timer
+			duration = 365
+			hidden = yes
+		}
+	}
+
+	option = {
+		name = construct_building_events.4.view
+		goto = ROOT
+		add_province_modifier = {
+			name = remind_construct_furnace_timer
+			duration = 365
+			hidden = yes
+		}
+	}
+}
+
+#煤炭省份修建熔炉事件
+#潜在贸易品为煤炭的省份，满足条件后贸易品变为煤炭，
+#此时修建熔炉的收益非常高，如果这个省份修建了普通工厂，
+#工厂会消失，此时仍可以修建熔炉，所以不需要拆除原有建筑
+#但是如果修建的是其他类型的工厂，则不会自动拆除仍会占用工厂位置
+#此时需要拆除这些建筑，包括 壁垒、强制征兵办公室、州议会、士兵之家
+province_event = {
+	id = construct_building_events.5
+	title = construct_building_events.5.title
+	desc = construct_building_events.5.desc
+	goto = ROOT
+
+	trigger = {
+		owner = {
+			ai = no
+			adm_tech = 21
+			treasury = 600
+		}
+		NOT = {
+			has_province_modifier = cancel_construct_furnace_timer
+		}
+		is_core = owner
+		OR = {
+			can_build = furnace
+			AND = {
+				trade_goods = coal
+				OR = {
+					has_building = ramparts
+					has_building = impressment_offices
+					has_building = state_house
+					has_building = soldier_households
+				}
+			}
+			AND = {
+				trade_goods = coal
+				OR = {
+					has_construction = ramparts
+					has_construction = impressment_offices
+					has_construction = state_house
+					has_construction = soldier_households
+				}
+			}
+		}
+		NOT = { 
+			has_building = furnace 
+		}
+	}
+
+	option = {
+		name = construct_building_events.5.cancel
+		add_province_modifier = {
+			name = cancel_construct_furnace_timer
+			duration = 365
+			hidden = yes
+		}
+	}
+
+	option = {
+		name = construct_building_events.5.building
+		goto = ROOT
+		if = {
+			limit = {
+				can_build = furnace
+				is_core = owner
+				NOT = { 
+					has_building = furnace 
+				}
+			}
+			add_building_construction = {
+				building = furnace
+				speed = 1
+				cost = 1
+			}
+		}
+		else_if = {
+			limit = {
+				is_core = owner
+				trade_goods = coal
+				OR = {
+					has_building = ramparts
+					has_building = impressment_offices
+					has_building = state_house
+					has_building = soldier_households
+				}
+				NOT = { 
+					has_building = furnace 
+				}
+			}
+			remove_building = ramparts
+			remove_building = impressment_offices
+			remove_building = state_house
+			remove_building = soldier_households
+
+			add_building_construction = {
+				building = furnace
+				speed = 1
+				cost = 1
+			}
+		}
+		else_if = {
+			limit = {
+				is_core = owner
+				trade_goods = coal
+				OR = {
+					has_construction = ramparts
+					has_construction = impressment_offices
+					has_construction = state_house
+					has_construction = soldier_households
+				}
+				NOT = { 
+					has_building = furnace 
+				}
+			}
+			cancel_construction = ramparts
+			cancel_construction = impressment_offices
+			cancel_construction = state_house
+			cancel_construction = soldier_households
+
+			add_building_construction = {
+				building = furnace
+				speed = 1
+				cost = 1
+			}
+		}
+		remove_province_modifier = cancel_construct_furnace_timer
+	}
+}
+
+#自动修建工厂事件(包括士兵之家 2022.02.06)
+country_event = {
+	id = construct_building_events.6
+	title = construct_building_events.6.title
+	desc = construct_building_events.6.desc
+	
+	hidden = yes
+
+	trigger = {
+		ai = no
+		adm_tech = 11
+		has_country_flag = AutoConstructFactory
+		#current_income_balance = 600
+		#金币达到1500
+		treasury = 1500
+		#月度结余为正
+		current_income_balance = 0
+		#没有贷款
+		NOT = {
+			num_of_loans = 1
+		}
+		any_owned_province = {
+			OR = {
+				#可以修建熔炉
+				can_build = furnace
+				#可以修建士兵之家
+				can_build_soldier_households = yes
+				#可以修建市政厅
+				can_build_state_house = yes
+				#可以修建工厂
+				can_build_manufactory = yes
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	immediate = {
+		random_owned_province = {
+			hidden_effect = {
+				#优先修建熔炉，然后修建士兵之家，普通工厂优先级最低
+				if = {
+					limit = {
+						can_build = furnace
+					}
+					add_building_construction = {
+						building = furnace
+						speed = 1
+						cost = 1
+					}
+				}
+				#修建士兵之家
+				else_if = {
+					limit = {
+						can_build_soldier_households = yes
+					}
+					add_building_construction = {
+						building = soldier_households
+						speed = 1
+						cost = 1
+					}
+				}
+				#修建州议会
+				else_if = {
+					limit = { 
+						can_build_state_house = yes
+					}
+					add_building_construction = {
+						building = state_house
+						speed = 1
+						cost = 1
+					}
+				}
+				#直属州修建工厂
+				else_if = {
+					limit = { 
+						can_build_manufactory_in_state = yes
+					}
+					AO_constract_manufactory_in_state = yes
+				}
+				#贸易公司修建工厂
+				else_if = {
+					limit = { 
+						can_build_manufactory_in_company = yes
+					}
+					AO_constract_manufactory_in_company = yes
+				}
+				#自治领地修建工厂
+				else_if = {
+					limit = { 
+						can_build_manufactory_in_territory = yes
+					}
+					AO_constract_manufactory_in_territory = yes
+				}
+			}
+		}
+	}
+	option = {
+		
+	}
+}
+#月结余收入达到300金币且没有贷款时，询问是否开启自动修建工厂
+country_event = {
+	id = construct_building_events.7
+	title = construct_building_events.7.title
+	desc = construct_building_events.7.desc
+
+	trigger = {
+		ai = no
+		adm_tech = 11
+		NOT = {
+			has_country_flag = AutoConstructFactory
+		}
+		current_income_balance = 300
+		NOT = {
+			num_of_loans = 1
+		}
+		NOT = {
+			has_country_modifier = event_auto_construct_factory_timer
+		}
+		any_owned_province = {
+			OR = {
+				can_build = furnace
+				can_build_manufactory = yes
+				can_build_soldier_households = yes
+				can_build_state_house = yes
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	option = {
+		name = construct_building_events.7.cancel
+		clr_country_flag = AutoConstructFactory
+		add_country_modifier = {
+			name = event_auto_construct_factory_timer
+			duration = 3650
+			hidden = yes
+		}
+	}
+
+	option = {
+		name = construct_building_events.7.building
+		set_country_flag = AutoConstructFactory
+		remove_country_modifier = event_auto_construct_factory_timer
+	}
+}

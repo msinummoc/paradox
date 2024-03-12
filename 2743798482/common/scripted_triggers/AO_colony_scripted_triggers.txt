@@ -1,0 +1,20 @@
+colony_cross_border = {
+	any_owned_province = {
+		NOT = {
+			colonial_region = capital
+		}
+	}	
+	is_base_colony_subject = yes
+}
+
+#是基础的殖民领类型
+is_base_colony_subject = {
+	ai = yes
+	is_colonial_nation = yes
+	OR = {
+		is_subject_of_type = colony
+		is_subject_of_type = crown_colony
+		is_subject_of_type = private_enterprise
+		is_subject_of_type = self_governing_colony
+	}
+}

@@ -1,0 +1,59 @@
+l_english:
+ conditional_dismantle_building_title:0 "§G【自动化mod】§!一键拆除建筑(部分拆除)"
+ conditional_dismantle_building_desc:0 ""
+ conditional_dismantle_building_tooltip:0 "快速拆除占用建筑槽位的建筑"
+
+ unconditional_dismantle_building_title:0 "§G【自动化mod】§!一键拆除建筑(全部拆除)"
+ unconditional_dismantle_building_desc:0 ""
+ unconditional_dismantle_building_tooltip:0 "快速拆除建筑"
+
+ dismantle_building_events.1.title:0 "拆除无用建筑"
+ dismantle_building_events.1.desc:0 "我们发现有一些省份已经没有建筑槽位了，是否要拆除一部分无用建筑呢？"
+ dismantle_building_events.1.dismantle:0 "当然要拆除这些占用槽位的建筑"
+ dismantle_building_events.1.cancel:0 "暂时先留着吧"
+
+ dismantle_building_events.2.title:0 "一键拆除建筑(只拆除无空闲建筑槽位省份的建筑)"
+ dismantle_building_events.2.desc:0 "根据类型拆除对应的建筑，只会拆除无建筑槽位省份的建筑，新增了一个选项用于拆除不合适的州议会、士兵之家及普通工厂，该选项不受建筑槽位限制。\n注意下拉选项！"
+ dismantle_building_events.2.dismantle_unsuitable_factory:0 "拆除不合适的州议会、士兵之家及普通工厂"
+ dismantle_building_events.2.dismantle_temple_and_cathedral:0 "拆除税收建筑，包括【教堂】【大教堂】"
+ dismantle_building_events.2.dismantle_workshop_and_counting_house:0 "拆除生产建筑，包括【工场】【会计室】"
+ dismantle_building_events.2.dismantle_fort:0 "拆除防御建筑，包括【城堡】【棱堡】【星堡】【要塞】"
+ dismantle_building_events.2.dismantle_coastal_defence_and_naval_battery:0 "拆除沿海建筑，包括【岸防工事】【海防炮台】"
+ dismantle_building_events.2.dismantle_marketplace_and_trade_depot_and_stock_exchange:0 "拆除贸易建筑，包括【集市】【贸易仓库】【证券交易所】"
+ dismantle_building_events.2.dismantle_barracks_and_training_fields:0 "拆除人力建筑，包括【兵营】【训练营】"
+ dismantle_building_events.2.dismantle_regimental_camp_and_conscription_center:0 "拆除陆军上限建筑，包括【军营】【征召中心】"
+ dismantle_building_events.2.dismantle_dock_and_drydock:0 "拆除水手建筑，包括【码头】【干船坞】"
+ dismantle_building_events.2.dismantle_shipyard_and_grand_shipyard:0 "拆除海军上限建筑，包括【造船厂】【大船厂】"
+ dismantle_building_events.2.dismantle_useless_manufactory:0 "拆除无用工厂建筑，包括【壁垒】【强制征兵办公室】"
+ dismantle_building_events.2.cancel:0 "还是不拆了..."
+
+ dismantle_building_events.2.dismantle_unsuitable_factory.tooltip:0 "拆除产物不符合的工厂：州议会（产物非纸张、宝石、玻璃的省份）、士兵之家（产物非谷物、牲畜、酒类、鱼类的省份）、普通工厂（直属州并且产物为谷物、牲畜、酒类、鱼类的省份）"
+
+ dismantle_building_events.3.title:0 "是否要继续拆除建筑"
+ dismantle_building_events.3.desc:0 "我们已经拆除了一批建筑，是否要继续？"
+ dismantle_building_events.3.countinue:0 "继续拆除建筑"
+ dismantle_building_events.3.cancel:0 "还是不拆了..."
+
+ dismantle_building_events.4.title:0 "一键拆除建筑(全部拆除)"
+ dismantle_building_events.4.desc:0 "根据类型拆除对应的建筑，会拆除该类型全部建筑，请谨慎选择。\n注意下拉选项！"
+ dismantle_building_events.4.dismantle_comprehensive:0 "综合拆除，拆除税收建筑、生产建筑、沿海建筑、贸易建筑、海军建筑、无用工厂建筑"
+ dismantle_building_events.4.dismantle_temple_and_cathedral:0 "拆除税收建筑，包括【教堂】【大教堂】"
+ dismantle_building_events.4.dismantle_workshop_and_counting_house:0 "拆除生产建筑，包括【工场】【会计室】"
+ dismantle_building_events.4.dismantle_fort:0 "拆除防御建筑，包括【城堡】【棱堡】【星堡】【要塞】"
+ dismantle_building_events.4.dismantle_coastal_defence_and_naval_battery:0 "拆除沿海建筑，包括【岸防工事】【海防炮台】"
+ dismantle_building_events.4.dismantle_marketplace_and_trade_depot_and_stock_exchange:0 "拆除贸易建筑，包括【集市】【贸易仓库】【证券交易所】"
+ dismantle_building_events.4.dismantle_barracks_and_training_fields:0 "拆除人力建筑，包括【兵营】【训练营】"
+ dismantle_building_events.4.dismantle_regimental_camp_and_conscription_center:0 "拆除陆军上限建筑，包括【军营】【征召中心】"
+ dismantle_building_events.4.dismantle_dock_and_drydock:0 "拆除水手建筑，包括【码头】【干船坞】"
+ dismantle_building_events.4.dismantle_shipyard_and_grand_shipyard:0 "拆除海军上限建筑，包括【造船厂】【大船厂】"
+ dismantle_building_events.4.dismantle_useless_manufactory:0 "拆除无用工厂建筑，包括【壁垒】【强制征兵办公室】"
+ dismantle_building_events.4.cancel:0 "还是不拆了..."
+
+ dismantle_building_events.4.dismantle_comprehensive.tooltip:0 "将拆除所有【教堂】【大教堂】\n【工厂】【会计室】\n【岸防工事】【海防炮台】\n【集市】【贸易仓库】【证券交易所】\n【码头】【干船坞】【造船厂】【大船厂】\n【壁垒】【强制征兵办公室】\n"
+
+ dismantle_building_events.5.title:0 "是否要继续拆除建筑"
+ dismantle_building_events.5.desc:0 "我们已经拆除了一批建筑，是否要继续？"
+ dismantle_building_events.5.countinue:0 "继续拆除建筑"
+ dismantle_building_events.5.cancel:0 "还是不拆了..."
+
+ 

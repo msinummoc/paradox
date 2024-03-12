@@ -1,0 +1,206 @@
+# #国家可以自动提升税收
+# can_auto_develop_tax = {
+# 	adm_power = 950
+# 	any_owned_province = {
+# 		province_can_auto_develop_tax = { val = 10 }
+# 		develop_tax = yes
+# 	}
+# }
+# #国家可以自动提升生产
+# can_auto_develop_production = {
+# 	dip_power = 950
+# 	any_owned_province = {
+# 		province_can_auto_develop_production = { val = 10 }
+# 		develop_production = yes
+# 	}
+# }
+# #国家可以自动提升人力
+# can_auto_develop_manpower = {
+# 	mil_power = 950
+# 	any_owned_province = {
+# 		province_can_auto_develop_manpower = { val = 10 }
+# 		develop_manpower = yes
+# 	}
+# }
+#国家可以自动提升税收
+can_auto_develop_tax = {
+	variable_arithmetic_trigger = {
+		#当前行政点数是否大于临界点数
+		check_variable = {
+			which = AdmPower
+			which = LimitAdmPower
+		}
+	}
+	any_owned_province = {
+		province_can_auto_develop_tax = { val = 1000 }
+		develop_tax = yes
+	}
+}
+#国家可以自动提升生产
+can_auto_develop_production = {
+	variable_arithmetic_trigger = {
+		#当前外交点数是否大于临界点数
+		check_variable = {
+			which = DipPower
+			which = LimitDipPower
+		}
+	}
+	any_owned_province = {
+		province_can_auto_develop_production = { val = 1000 }
+		develop_production = yes
+	}
+}
+#国家可以自动提升人力
+can_auto_develop_manpower = {
+	variable_arithmetic_trigger = {
+		#当前军事点数是否大于临界点数
+		check_variable = {
+			which = MilPower
+			which = LimitMilPower
+		}
+	}
+	any_owned_province = {
+		province_can_auto_develop_manpower = { val = 1000 }
+		develop_manpower = yes
+	}
+}
+#可以自动提高税收的省份
+province_can_auto_develop_tax = {
+	is_core = ROOT
+	is_city = yes
+	controlled_by = ROOT
+	is_state = yes
+	has_siege = no
+	is_capital = no
+	NOT = { 
+		base_tax = $val$
+	}
+}
+#可以自动提高生产的省份
+province_can_auto_develop_production = {
+	is_core = ROOT
+	is_city = yes
+	controlled_by = ROOT
+	is_state = yes
+	has_siege = no
+	is_capital = no
+	NOT = { 
+		base_production = $val$
+	}
+}
+#可以自动提高人力的省份
+province_can_auto_develop_manpower = {
+	is_core = ROOT
+	is_city = yes
+	controlled_by = ROOT
+	is_state = yes
+	has_siege = no
+	is_capital = no
+	NOT = { 
+		base_manpower = $val$
+	}
+}
+#能够提升发展度(type传入类型)暂时不能用，有bug
+can_develop = {
+	variable_arithmetic_trigger = {
+		#导出目标类型发展度(税收 生产 人力)
+		export_to_variable = {
+			which = targetTypeDevlopment
+			value = base_$type$
+		}
+		export_to_variable = {
+			which = totalDevelopment
+			value = development
+		}
+		subtract_variable = {
+			which = totalDevelopment
+			which = targetTypeDevlopment
+		}
+		#判断目标类型发展度是否不超过其他类型发展度之和
+		check_variable = {
+			which = otherDevelopment
+			which = targetTypeDevlopment
+		}
+	}
+}
+#能够提升基础税收
+develop_tax = {
+	variable_arithmetic_trigger = {
+		#导出基础税收
+		export_to_variable = {
+			which = targetTypeDevlopment
+			value = base_tax
+		}
+		export_to_variable = {
+			which = otherDevelopment
+			value = base_production
+		}
+		export_to_variable = {
+			which = baseManpower
+			value = base_manpower
+		}
+		change_variable = {
+			which = otherDevelopment
+			which = baseManpower
+		}
+		#税收是否小于 生产和人力的总和 
+		check_variable = {
+			which = otherDevelopment
+			which = targetTypeDevlopment
+		}
+	}
+}
+#能够提升基础生产
+develop_production = {
+	variable_arithmetic_trigger = {
+		#导出基础生产
+		export_to_variable = {
+			which = targetTypeDevlopment
+			value = base_production
+		}
+		export_to_variable = {
+			which = otherDevelopment
+			value = base_tax
+		}
+		export_to_variable = {
+			which = baseManpower
+			value = base_manpower
+		}
+		change_variable = {
+			which = otherDevelopment
+			which = baseManpower
+		}
+		#生产是否小于 税收和人力的总和 
+		check_variable = {
+			which = otherDevelopment
+			which = targetTypeDevlopment
+		}
+	}
+}
+#能够提升基础人力
+develop_manpower = {
+	variable_arithmetic_trigger = {
+		#导出基础人力
+		export_to_variable = {
+			which = targetTypeDevlopment
+			value = base_manpower
+		}
+		export_to_variable = {
+			which = otherDevelopment
+			value = base_tax
+		}
+		export_to_variable = {
+			which = baseProduction
+			value = base_production
+		}
+		change_variable = {
+			which = otherDevelopment
+			which = baseProduction
+		}
+		#人力是否小于 税收和生产的总和 
+		check_variable = {
+			which = otherDevelopment
+			which = targetTypeDevlopment
+		}
+	}
+}

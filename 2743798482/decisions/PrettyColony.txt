@@ -1,0 +1,40 @@
+country_decisions = {
+	pretty_colony = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+			NOT = {
+				has_country_flag = AOPrettyColony
+			}
+			any_subject_country = {
+				is_base_colony_subject = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = AOPrettyColony
+			custom_tooltip = pretty_colony_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	close_pretty_colony = {
+		potential = {
+			ai = no
+			has_country_flag = AODisplayDecision
+			has_country_flag = AOPrettyColony
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_country_flag = AOPrettyColony
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

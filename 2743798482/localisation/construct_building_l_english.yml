@@ -1,0 +1,98 @@
+﻿l_english:
+ construct_building_title:0 "§G0ê¨RSmod0§!N.•ú^.ú^Qr"
+ construct_building_desc:0 ""
+ construct_building_tooltip:0 "‚Yœg`OŒS&P†NN*NN*N0WîOú^ú^QrÿïSåNSÕ‹ÇÙy˜³Q®‹N.•ú^.ú^Qrÿã‰>eÌSKb"
+
+ auto_construct_factory_title:0 "§G0ê¨RSmod0§!ê¨RîOú^åT‚S"
+ auto_construct_factory_desc:0 ""
+ auto_construct_factory_tooltip:0 "V/TÙy˜³Q®‹TÿSV©s¶R¡l	g7>kNÑ‘^¾0R1500öeÿO–:g(WN*NwýNîOú^åT‚Sÿ1uŽNåT‚S6eÊvàeÕl¾|nx¡‹—rÿNbåNê¨RîOú^„våT‚S6eÊv/fàeÕl„˜Km„vÿ÷‹(ŒNa	éb"
+
+ stop_construct_factory_title:0 "§G0ê¨RSmod0§!jPbkê¨RîOú^åT‚S"
+ stop_construct_factory_desc:0 ""
+ stop_construct_factory_tooltip:0 ""
+
+ construct_building_events.1.title:0 "îOú^ú^Qr"
+ construct_building_events.1.desc:0 "îvMRbìN	gEQ³„vDÑ‘ÿ/f&T‰îOú^N›Nú^QrbTÿ"
+ construct_building_events.1.building:0 "‹Y„vÿ±1SîOú^'T"
+ construct_building_events.1.cancel:0 "bìN„vDÑ‘Ø	gvQÖN(uÿHQNîOú^†N"
+
+ construct_building_desc:0 "‚Yœg`OŒS&P†NN*NN*N0WîOú^ú^QrÿïSåNSÕ‹ÇÙy˜³Q®‹N.•ú^.ú^Qrÿã‰>eÌSKb"
+ construct_building_events.2.title:0 "N.•ú^.ú^Qr"
+ construct_building_events.2.desc:0 "÷‹	ébó`‰ú^.„vú^Qr,êS	g(WýV“^EQ³„vÅ`µQNMbïSåNîOú^ú^QrÿTöeT‰|‹WêS>f:ySVMRïSåNîOú^„vgØšIrµu„vú^Qrÿ‹O‚Y(W4~19µuLˆ?eÑyŽböeïSåNîOú^YeXÿ19µuLˆ?eÑyŽböeã‰•'YYeXÿ±HNdköe1SêSýwybÏ‘ú^.'YYeX†Nÿ	y˜TO>f:yú^Qr„vIN‰HeœgÊSUSMOÑ‘^ˆmwÿèlaN‰	•†NæT"
+ construct_building_events.2.temple:0 "N.•îOú^YeX0+40%,g0Wz6eîOck00100Ñ‘^0"
+ construct_building_events.2.cathedral:0 "N.•îOú^'YYeX0+60%,g0Wz6eîOck00300Ñ‘^0"
+ construct_building_events.2.workshop:0 "N.•îOú^åT:W0+50%,g0WuµNHe‡s00100Ñ‘^0"
+ construct_building_events.2.counting_house:0 "N.•îOú^O¡‹²R0+100%,g0WuµNHe‡s00400Ñ‘^0"
+ construct_building_events.2.courthouse:0 "N.•îOú^Õlb–0-25%wýN»ltb,g00100Ñ‘^0"
+ construct_building_events.2.town_hall:0 "N.•îOú^^?e…S0-50%wýN»ltb,g00200Ñ‘^0"
+ construct_building_events.2.university:0 "N.•îOú^'YfR0-20%,g0WÐcGSÑSUS¦^±‚9+1 ú^QrýiMO00300Ñ‘^0"
+ construct_building_events.2.barracks:0 "N.•îOú^uQ%„0+50%,g0WºN›RîOck00100Ñ‘^0"
+ construct_building_events.2.training_fields:0 "N.•îOú^­‹Ãu%„0+100%,g0WºN›RîOck00300Ñ‘^0"
+ construct_building_events.2.regimental_camp:0 "N.•îOú^›Q%„0+1F–›QÄ‰/jNP–00200Ñ‘^0"
+ construct_building_events.2.conscription_center:0 "N.•îOú^VìS-NÃV0+2F–›QÄ‰/jNP–00400Ñ‘^0"
+ construct_building_events.2.marketplace:0 "N.•îOú^Æ–^0+50%,g0W8f›RÏ‘00100Ñ‘^0"
+ construct_building_events.2.trade_depot:0 "N.•îOú^8fÓN“^0+100%,g0W8f›RÏ‘00300Ñ‘^0"
+ construct_building_events.2.stock_exchange:0 "N.•îOú^Á‹8R²NfNb0+125%,g0W8f›RÏ‘00400Ñ‘^0"
+ construct_building_events.2.dock:0 "N.•îOú^x4Y0+50%,g0W4lKb00100Ñ‘^0"
+ construct_building_events.2.drydock:0 "N.•îOú^r^9‚^W0+100%,g0W4lKb00300Ñ‘^0"
+ construct_building_events.2.shipyard:0 "N.•îOú^.9‚‚S0+2wm›QÄ‰/jNP–00100Ñ‘^0"
+ construct_building_events.2.grand_shipyard:0 "N.•îOú^'Y9‚‚S0+4wm›QÄ‰/jNP–00300Ñ‘^0"
+ construct_building_events.2.soldier_households:0 "N.•îOú^ëXuQKN¶R0+1500ºN›R00500Ñ‘^0"
+ construct_building_events.2.state_house:0 "N.•îOú^ÞT®‹O0-40%hQÞT»ltb,gÿ-10%gNOê»l¦^00500Ñ‘^0"
+ construct_building_events.2.factory:0 "N.•îOú^åT‚S0+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.fort_15th:0 "N.•îOú^ÎW/X0+2 ‰^XIrµu00200Ñ‘^0"
+ construct_building_events.2.fort_16th:0 "N.•îOú^ñh/X0+4 ‰^XIrµu00400Ñ‘^0"
+ construct_building_events.2.fort_17th:0 "N.•îOú^f/X0+6 ‰^XIrµu00600Ñ‘^0"
+ construct_building_events.2.fort_18th:0 "N.•îOú^‰^X0+8 ‰^XIrµu00800Ñ‘^0"
+ construct_building_events.2.cancel:0 "îvMR¡l	g&rTagöN„vïSåNú^.„vú^Qr"
+
+ construct_building_events.2.farm_estate:0 "N.•îOú^œQ:W0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.wharf:0 "N.•îOú^wm›QÅˆYåT‚S0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.textile:0 "N.•îOú^ºuÇu‚S0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.weapons:0 "N.•îOú^fkhV‚S0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.plantations:0 "N.•îOú^ÍyiíV0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.tradecompany:0 "N.•îOú^8flQøS0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.mills:0 "N.•îOú^èxJW0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+ construct_building_events.2.furnace:0 "N.•îOú^”q‰p0åT‚S00+1FUÁTµNúQ00500Ñ‘^0"
+
+ construct_building_events.2.temple.tooltip:0 "§G„˜0O6eÊv(W0.10åNNMbOîOú^YeX0ïSýwXR(Wï‹îT0§!"
+ construct_building_events.2.cathedral.tooltip:0 "§G„˜0O6eÊv(W0.15åNNMbOîOú^'YYeX0ïSýwXR(Wï‹îT0§!"
+ construct_building_events.2.barracks.tooltip:0 "§G„˜0OžX R500åNNTYuQXTMbOîOú^uQ%„0ïSýwXR(Wï‹îT0§!"
+ construct_building_events.2.training_fields.tooltip:0 "§G„˜0OžX R1000TYuQXTåNNMbOîOú^­‹Ãu%„0ïSýwXR(Wï‹îT0§!"
+ construct_building_events.2.regimental_camp.tooltip:0 "§Gåb	gŒRte8hÃV„vwýNMbOîOú^›Q%„§!"
+ construct_building_events.2.conscription_center.tooltip:0 "§Gåb	gŒRte8hÃV„vwýNMbOîOú^VìS-NÃV§!"
+ construct_building_events.2.marketplace.tooltip:0 "§G,g0W8f›RÏ‘¾0R15„vwýNMbOê¨RîOú^Æ–^§!"
+ construct_building_events.2.trade_depot.tooltip:0 "§G,g0W8f›RÏ‘¾0R15„vwýNMbOê¨RîOú^8fÓN“^§!"
+ construct_building_events.2.stock_exchange.tooltip:0 "§G,g0W8f›RÏ‘¾0R15„vwýNMbOê¨RîOú^Á‹8R²NfNb§!"
+ construct_building_events.2.dock.tooltip:0 "§G„˜0OžX R500åNNwmXTMbOîOú^x4Y0ïSýwXR(Wï‹îT0§!"
+ construct_building_events.2.drydock.tooltip:0 "§G„˜0OžX R1000åNNwmXTMbOîOú^r^9‚^W0ïSýwXR(Wï‹îT0§!"
+ construct_building_events.2.shipyard.tooltip:0 "§Gåb	gŒRte8hÃV„vwýNMbOîOú^.9‚‚S§!"
+ construct_building_events.2.grand_shipyard.tooltip:0 "§Gåb	gŒRte8hÃV„vwýNMbOîOú^'Y9‚‚S§!"
+ construct_building_events.2.soldier_households.tooltip:0 "§GFUÁT:N7Œir0|œ‰|0rrjuŒTR‘‰|KNNöeMbOîOú^ëXuQKN¶R§!"
+ construct_building_events.2.state_house.tooltip:0 "§G^SŽNôv^SÞTv^NFUÁT:N¸u.V0»sƒtŒTRówKNNöeMbOîOú^ÞT®‹O§!"
+ construct_building_events.2.factory.tooltip:0 "§GåT‚SOOHQ(Wôv^SÞTîOú^ÿ6qT(W8flQøSwýNîOú^ÿgTMbO(Wê»l†˜0WîOú^0îvMRØž²‹OHQîOú^ëXuQKN¶RŒTÞT®‹OÿKNTOwQ†žX R	y˜ŒteOHQµu§!"
+ construct_building_events.2.fort_15th.tooltip:0 "§GêS‰	gú^QrýiMO1SOîOú^ÿNa(u§!"
+ construct_building_events.2.fort_16th.tooltip:0 "§GêS‰	gú^QrýiMO1SOîOú^ÿNa(u§!"
+ construct_building_events.2.fort_17th.tooltip:0 "§GêS‰	gú^QrýiMO1SOîOú^ÿNa(u§!"
+ construct_building_events.2.fort_18th.tooltip:0 "§GêS‰	gú^QrýiMO1SOîOú^ÿNa(u§!"
+
+ construct_building_events.3.title:0 "/f&T‰çuíuîOú^ú^Qr"
+ construct_building_events.3.desc_enough_treasury:0 "îvMRýV“^DÑ‘ÍN6qASREQ³ÿ/f&T‰çuíuîOú^ú^Qr"
+ construct_building_events.3.desc_short_of_treasury:0 "îvMRýV“^DÑ‘òTÏuíw:ÿàeÕlçuíuîOú^ú^Qr"
+ construct_building_events.3.countinue:0 "çuíuîOú^ú^Qr"
+ construct_building_events.3.cancel:0 "jPbkîOú^ú^Qr"
+
+ construct_building_events.4.title:0 "[Root.GetName]ïSåNîOú^”q‰p"
+ construct_building_events.4.desc:0 "îvMRbìNïSåN(W[Root.GetName]îOú^”q‰pÙÍy6eÊv^—8^Øš„vú^QrÿFO/få‹wýN¡l	gýiMOeg©‹bìNîOú^”q‰p†Nÿ‰N‰Æb‰cNèRú^QrbTÿ§GÿàeÕlôv¥cÆbd–ú^Qrÿ—‰êñTegÆbd–ú^Qr	ÿ§!"
+ construct_building_events.4.view:0 "‹Y„vÿb»SÆb‰cNèRú^QregîOú^”q‰p"
+ construct_building_events.4.cancel:0 "îONîO”q‰pàeNbŒ†N"
+
+ construct_building_events.5.title:0 "(W[Root.GetName]îOú^”q‰p"
+ construct_building_events.5.desc:0 "îvMRbìNïSåN(W[Root.GetName]îOú^”q‰pÙÍy6eÊv^—8^Øš„vú^Qrÿ/f&T‰îOú^ÿ"
+ construct_building_events.5.building:0 "‹Y„vÿ±1SîOú^'T"
+ construct_building_events.5.cancel:0 "bìN„vDÑ‘Ø	gvQÖN(uÿHQNîOú^†N"
+
+ construct_building_events.7.title:0 "/f&TV/Tê¨RîOú^åT‚S"
+ construct_building_events.7.desc:0 "îvMRbìN„vg6eeQÓuYOòTÏu¾0R†N300Ñ‘^v^N¡l	g7>kÿ/f&TV/Tê¨RîOú^åT‚Sÿ"
+ construct_building_events.7.building:0 "Ù/föN‹Y‹NÿSV6q‰V/T"
+ construct_building_events.7.cancel:0 "‚föeHQN‰V/T†N"

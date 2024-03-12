@@ -1,0 +1,312 @@
+namespace = pretty_colonial_borders_events
+
+country_event = {
+	id = pretty_colonial_borders_events.1
+	title = none
+	desc = none
+	picture = none
+
+	hidden = yes
+
+	trigger = {
+		has_country_flag = AOPrettyColony
+		num_of_subjects = 2
+		any_subject_country = {
+			any_owned_province = {
+				NOT = { 
+					colonial_region = capital
+				}
+			}
+			is_colonial_nation_of = root
+			is_base_colony_subject = yes
+			any_neighbor_country = {
+				is_colonial_nation_of = root
+				is_base_colony_subject = yes
+			}
+		}
+		ai = no
+	}
+
+	mean_time_to_happen = { months = 48 }
+
+	immediate = {
+		random_subject_country = {
+			limit = {
+				any_owned_province = {
+					NOT = { 
+						colonial_region = capital
+					}
+				}
+				is_colonial_nation_of = root
+				is_base_colony_subject = yes
+				any_neighbor_country = {
+					is_colonial_nation_of = root
+					is_base_colony_subject = yes
+				}
+			}
+			country_event = { id = pretty_colonial_borders_events.2 }
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = pretty_colonial_borders_events.2
+	title = none
+	desc = none
+	picture = none
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+		FROM = {
+			
+		}
+	}
+
+	immediate = {
+		capital_scope = {
+			save_event_target_as = colonial_capital
+		}
+		overlord = {
+			save_event_target_as = overlord_country
+		}
+		save_event_target_as = colonial_country_1
+
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						colonial_region = event_target:colonial_capital
+					}
+					is_city = yes
+					any_neighbor_province = {
+						colonial_region = prev
+						NOT = {
+							owned_by = root
+						}
+						owner = {
+							is_colonial_nation_of = event_target:overlord_country
+							is_base_colony_subject = yes
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						colonial_region = event_target:colonial_capital
+					}
+					any_neighbor_province = {
+						is_city = yes
+						colonial_region = prev
+						NOT = {
+							owned_by = root
+						}
+						owner = {
+							is_colonial_nation_of = event_target:overlord_country
+							is_base_colony_subject = yes
+						}
+					}
+				}
+				save_event_target_as = pretty_colonial_province
+				random_neighbor_province = {
+					limit = {
+						is_city = yes
+						colonial_region = prev
+						NOT = {
+							owned_by = root
+						}
+						owner = {
+							is_colonial_nation_of = event_target:overlord_country
+							is_base_colony_subject = yes
+						}
+					}
+					save_event_target_as = second_colonial_province
+					owner = {
+						save_event_target_as = colonial_country_2
+					}
+					from = {
+						add_country_modifier = {
+							name = had_pretty_colonial_borders_timer
+							duration = 7300
+							hidden = yes
+						}
+						country_event = { id = pretty_colonial_borders_events.3 }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+	}
+}
+
+
+country_event = {
+	id = pretty_colonial_borders_events.3
+	title = pretty_colonial_borders_events.3.name
+	desc = pretty_colonial_borders_events.3.desc
+	picture = BORDER_TENSION_eventPicture
+	goto = pretty_colonial_province
+
+	is_triggered_only = yes
+	option = { #side with colonial_country_1
+		name = pretty_colonial_borders_events.3.side_with_colonial_country_1
+		event_target:colonial_country_1 = {
+			add_liberty_desire = -1
+		}
+		event_target:colonial_country_2 = {
+			add_liberty_desire = 1
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				event_target:colonial_country_1 = {
+					liberty_desire = 35
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:colonial_country_1 = {
+					liberty_desire = 45
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:colonial_country_2 = {
+					NOT = { liberty_desire = 15 }
+				}
+			}
+			modifier = {
+				factor = 0.75
+				event_target:colonial_country_2 = {
+					liberty_desire = 35
+				}
+			}
+			modifier = {
+				factor = 0.75
+				event_target:colonial_country_2 = {
+					liberty_desire = 45
+				}
+			}
+		}
+	}
+	option = { #side with colonial_country_2
+		name = pretty_colonial_borders_events.3.side_with_colonial_country_2
+		custom_tooltip = pretty_colonial_borders_events.3.side_with_colonial_country_2.tooltip
+
+		hidden_effect = {
+			event_target:pretty_colonial_province = {
+				add_core = event_target:colonial_country_2
+				remove_core = event_target:colonial_country_1
+				cede_province = event_target:colonial_country_2
+				if = {
+					limit = {
+						any_province = {
+							colonial_region = prev
+							owned_by = event_target:colonial_country_1
+						}
+					}
+					every_province = {
+						limit = {
+							colonial_region = prev
+							owned_by = event_target:colonial_country_1
+						}
+						add_core = event_target:colonial_country_2
+						remove_core = event_target:colonial_country_1
+						cede_province = event_target:colonial_country_2
+
+						#anti-bordergore
+						if = {
+							limit = {
+								any_province = {
+									colonial_region = prev
+									owned_by = event_target:colonial_country_1
+									NOT = { province_id = event_target:pretty_colonial_province }
+									NOT = {
+										any_province = {
+											owned_by = event_target:colonial_country_1
+											NOT = {
+												province_id = prev
+												province_id = event_target:pretty_colonial_province
+											}
+										}
+									}
+								}
+							}
+							every_province = {
+								limit = {
+									colonial_region = prev
+									owned_by = event_target:colonial_country_1
+									NOT = { province_id = event_target:pretty_colonial_province }
+									NOT = {
+										any_neighbor_province = {
+											owned_by = event_target:colonial_country_1
+											NOT = {
+												province_id = prev
+												province_id = event_target:pretty_colonial_province
+											}
+										}
+									}
+								}
+								add_core = event_target:colonial_country_2
+								remove_core = event_target:colonial_country_1
+								cede_province = event_target:colonial_country_2
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+		event_target:colonial_country_1 = {
+			add_liberty_desire = 1
+		}
+		event_target:colonial_country_2 = {
+			add_liberty_desire = -1
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				event_target:colonial_country_2 = {
+					liberty_desire = 35
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:colonial_country_2 = {
+					liberty_desire = 45
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:colonial_country_1 = {
+					NOT = { liberty_desire = 15 }
+				}
+			}
+			modifier = {
+				factor = 0.75
+				event_target:colonial_country_1 = {
+					liberty_desire = 35
+				}
+			}
+			modifier = {
+				factor = 0.75
+				event_target:colonial_country_1 = {
+					liberty_desire = 45
+				}
+			}
+		}
+	}
+}

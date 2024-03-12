@@ -1,0 +1,34 @@
+country_decisions = {
+	investment_trade_company = {
+		potential = {
+			ai = no
+			treasury = 2000
+			NOT = {
+				has_country_flag = Choose200CostInvestment
+			}
+			NOT = {
+				has_country_flag = Choose400CostInvestment
+			}
+			NOT = {
+				has_country_flag = Choose1000CostInvestment
+			}
+			# any_owned_province = {
+			# 	OR = {
+			# 		can_inverstment_trade_company_cost_200 = yes
+			# 		can_inverstment_trade_company_cost_400 = yes
+			# 		can_inverstment_trade_company_cost_1000 = yes
+			# 	}
+			# }
+			has_country_flag = AODisplayDecision
+		}
+		effect = {
+			country_event = {
+				id = investment_trade_company_events.2
+			}
+			custom_tooltip = investment_trade_company_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,309 @@
+namespace = ao_test_events
+
+country_event = {
+	id = ao_test_events.1
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			unsuitable_state_house = yes
+		}
+	}
+	option = {
+		every_owned_province = {
+			limit = {
+				unsuitable_state_house = yes
+			}
+			remove_building = state_house
+			cancel_construction = state_house
+		}
+	}
+}
+
+country_event = {
+	id = ao_test_events.2
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			unsuitable_soldier_households = yes
+		}
+	}
+	option = {
+		every_owned_province = {
+			limit = {
+				unsuitable_soldier_households = yes
+			}
+			remove_building = soldier_households
+			cancel_construction = soldier_households
+		}
+	}
+}
+
+country_event = {
+	id = ao_test_events.3
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			unsuitable_manufactory = yes
+		}
+	}
+	option = {
+		every_owned_province = {
+			limit = {
+				unsuitable_manufactory = yes
+			}
+			AO_cancel_construction_manufactory_effect = yes
+			AO_remove_building_manufactory_effect = yes
+		}
+	}
+}
+
+country_event = {
+	id = ao_test_events.4
+	is_triggered_only = yes
+	option = {
+		151 = {
+			add_culture_construction = yes
+		}
+	}
+}
+
+country_event = {
+	id = ao_test_events.5
+	is_triggered_only = yes
+	option = {
+		151 = {
+			set_variable = {
+				which = provinceTreasury
+				value = 100
+			}
+			#导出基础税收
+			export_to_variable = {
+				which = baseProduction
+				value = base_production
+				who = THIS
+			}
+			#导出自治度
+			export_to_variable = {
+				which = localAutonomy
+				value = local_autonomy
+				who = THIS
+			}
+			subtract_variable = {
+				which = provinceTreasury
+				which = localAutonomy
+			}
+			multiply_variable = {
+				which = provinceTreasury
+				which = baseProduction
+			}
+			# 自治度除以100，烧税给5年收入，折算是除以20即可
+			divide_variable = {
+				which = provinceTreasury
+				value = 100
+			}
+			multiply_variable = {
+				which = provinceTreasury
+				value = 10
+			}
+			# 本地生产效率
+			export_to_variable = {
+				which = localProductionEfficiency
+				value = modifier:local_production_efficiency
+				who = THIS
+			}
+			# 全局生产效率
+			export_to_variable = {
+				which = globalProductionEfficiency
+				value = modifier:production_efficiency
+				who = ROOT
+			}
+			set_variable = {
+				which = totalProductionEfficiency
+				which = localProductionEfficiency
+			}
+			change_variable = {
+				which = totalProductionEfficiency
+				which = globalProductionEfficiency
+			}
+			multiply_variable = {
+				which = provinceTreasury
+				which = totalProductionEfficiency
+			}
+			while = {
+				limit = {
+					check_variable = { 
+						which = provinceTreasury
+						value = 1
+					}
+				}
+				subtract_variable = { 
+					which = provinceTreasury 
+					value = 1 
+				}
+				owner = {
+					add_treasury = 1
+				}
+			}
+		}
+	}
+	option = {
+		151 = {
+			set_variable = {
+				which = provinceManpower
+				value = 100
+			}
+			#导出基础税收
+			export_to_variable = {
+				which = baseManpower
+				value = base_manpower
+				who = THIS
+			}
+			#导出自治度
+			export_to_variable = {
+				which = localAutonomy
+				value = local_autonomy
+				who = THIS
+			}
+			subtract_variable = {
+				which = provinceManpower
+				which = localAutonomy
+			}
+			multiply_variable = {
+				which = provinceManpower
+				which = baseManpower
+			}
+			# 自治度除以100，烧税给5年收入，折算是除以20即可
+			divide_variable = {
+				which = provinceManpower
+				value = 100
+			}
+			multiply_variable = {
+				which = provinceManpower
+				value = 250
+			}
+			# 本地生产效率
+			export_to_variable = {
+				which = localManpowerEfficiency
+				value = modifier:local_manpower_modifier
+				who = THIS
+			}
+			# 全局生产效率
+			export_to_variable = {
+				which = globalManpowerEfficiency
+				value = modifier:global_manpower_modifier
+				who = ROOT
+			}
+			set_variable = {
+				which = totalManpowerEfficiency
+				which = localManpowerEfficiency
+			}
+			change_variable = {
+				which = totalManpowerEfficiency
+				which = globalManpowerEfficiency
+			}
+			multiply_variable = {
+				which = provinceManpower
+				which = totalManpowerEfficiency
+			}
+			while = {
+				limit = {
+					check_variable = { 
+						which = provinceManpower
+						value = 1
+					}
+				}
+				subtract_variable = { 
+					which = provinceManpower 
+					value = 1 
+				}
+				owner = {
+					add_treasury = 1
+				}
+			}
+		}
+	}
+	option = {
+		151 = {
+			export_to_variable = {
+				which = localManpower
+				which = modifier:local_manpower
+				who = THIS
+			}
+			multiply_variable = {
+				which = localManpower
+				value = 1000
+			}
+			while = {
+				limit = {
+					check_variable = { 
+						which = localManpower
+						value = 1
+					}
+				}
+				subtract_variable = { 
+					which = localManpower 
+					value = 1 
+				}
+				owner = {
+					add_treasury = 1
+				}
+			}
+		}
+	}
+	option = {
+		151 = {
+			export_to_variable = {
+				which = taxIncome
+				which = modifier:tax_income
+				who = THIS
+			}
+			multiply_variable = {
+				which = taxIncome
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = { 
+						which = taxIncome
+						value = 1
+					}
+				}
+				subtract_variable = { 
+					which = taxIncome 
+					value = 1 
+				}
+				owner = {
+					add_treasury = 1
+				}
+			}
+		}
+	}
+	option = {
+		151 = {
+			export_to_variable = {
+				which = taxIncome
+				which = modifier:trade_goods_size
+				who = THIS
+			}
+			multiply_variable = {
+				which = taxIncome
+				value = 100
+			}
+			while = {
+				limit = {
+					check_variable = { 
+						which = taxIncome
+						value = 1
+					}
+				}
+				subtract_variable = { 
+					which = taxIncome 
+					value = 1 
+				}
+				owner = {
+					add_treasury = 1
+				}
+			}
+		}
+	}
+}

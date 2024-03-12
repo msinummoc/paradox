@@ -1,0 +1,15 @@
+remind_construct_furnace_timer = {}
+cancel_construct_furnace_timer = {}
+event_auto_construct_factory_timer = {}
+base_event_modifier = {}
+
+AO_merge_colony_modifier = {}
+AO_cross_colonial_border_modifier = {}
+
+# 降低自治度提醒定时器
+AO_remind_decrease_autonomy_timer = {}
+# 提升自治度提醒定时器
+AO_remind_increase_autonomy_timer = {}
+
+# 剥削了发展度
+AO_exploit_development_modifier = {}

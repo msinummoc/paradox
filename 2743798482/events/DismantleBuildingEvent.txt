@@ -1,0 +1,1219 @@
+namespace = dismantle_building_events
+
+#15级科技后定期触发自动拆除建筑事件
+country_event = {
+	id = dismantle_building_events.1
+	title = dismantle_building_events.1.title
+    desc = dismantle_building_events.1.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	trigger = {
+		OR = {
+			adm_tech = 15
+			dip_tech = 15
+			mil_tech = 15
+		}
+		any_owned_province = {
+			NOT = {
+				num_free_building_slots = 1
+			}
+		}
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = dismantle_building_events.1.cancel
+	}
+
+	option = {
+		name = dismantle_building_events.1.dismantle
+		country_event = {
+			id = dismantle_building_events.2
+		}
+	}
+}
+
+#一键拆除建筑(部分拆除)
+country_event = {
+	id = dismantle_building_events.2
+	title = dismantle_building_events.2.title
+    desc = dismantle_building_events.2.desc
+    picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+
+	#取消
+	option = {
+		name = dismantle_building_events.2.cancel
+	}
+	#拆除产物不符合的工厂 州议会（产物非纸张、宝石、玻璃的省份）、士兵之家（产物非谷物、牲畜、酒类、鱼类的省份）、普通工厂（直属州产物为谷物、牲畜、酒类、鱼类的省份）
+	option = {
+		name = dismantle_building_events.2.dismantle_unsuitable_factory
+		custom_tooltip = dismantle_building_events.2.dismantle_unsuitable_factory.tooltip
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					unsuitable_state_house = yes
+					unsuitable_soldier_households = yes
+					unsuitable_manufactory = yes
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						province_can_dismantle_building = yes
+						unsuitable_state_house = yes
+					}
+					cancel_construction = state_house
+				}
+				if = {
+					limit = {
+						province_can_dismantle_building = yes
+						unsuitable_soldier_households = yes
+					}
+					cancel_construction = soldier_households
+				}
+				if = {
+					limit = {
+						province_can_dismantle_building = yes
+						unsuitable_manufactory = yes
+					}
+					AO_cancel_construction_manufactory_effect = yes
+				}
+			}
+		}
+		every_owned_province = {
+			if = {
+				limit = {
+					province_can_dismantle_building = yes
+					unsuitable_state_house = yes
+				}
+				remove_building = state_house
+			}
+			if = {
+				limit = {
+					province_can_dismantle_building = yes
+					unsuitable_soldier_households = yes
+				}
+				remove_building = soldier_households
+			}
+			if = {
+				limit = {
+					province_can_dismantle_building = yes
+					unsuitable_manufactory = yes
+				}
+				AO_remove_building_manufactory_effect = yes
+			}
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除税收建筑	教堂、大教堂
+	option = {
+		name = dismantle_building_events.2.dismantle_temple_and_cathedral
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = temple
+					has_construction = cathedral
+
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = temple
+						has_construction = cathedral
+					}
+				}
+				cancel_construction = temple
+				cancel_construction = cathedral
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+            }
+			remove_building = temple
+            remove_building = cathedral
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除生产建筑	工场、会计室
+	option = {
+		name = dismantle_building_events.2.dismantle_workshop_and_counting_house
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = workshop
+					has_construction = counting_house
+
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = workshop
+						has_construction = counting_house
+					}
+				}
+				cancel_construction = workshop
+				cancel_construction = counting_house
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+            }
+			remove_building = workshop
+            remove_building = counting_house
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除防御建筑	堡垒
+	option = {
+		name = dismantle_building_events.2.dismantle_fort
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					province_has_construction_fort = yes
+					province_has_fort = yes
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					province_has_construction_fort = yes
+				}
+				cancel_construction = fort_15th
+				cancel_construction = fort_16th
+				cancel_construction = fort_17th
+				cancel_construction = fort_18th
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				province_has_fort = yes
+            }
+			remove_building = fort_15th
+            remove_building = fort_16th
+			remove_building = fort_17th
+            remove_building = fort_18th
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除沿海建筑	岸防工事、海防炮台
+	option = {
+		name = dismantle_building_events.2.dismantle_coastal_defence_and_naval_battery
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = coastal_defence
+					has_construction = naval_battery
+
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = coastal_defence
+						has_construction = naval_battery
+					}
+				}
+				cancel_construction = coastal_defence
+				cancel_construction = naval_battery
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+            }
+			remove_building = coastal_defence
+            remove_building = naval_battery
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除贸易建筑	集市、贸易仓库、证券交易所
+	#拆除条件 1、不属于贸易公司省份 2、属于贸易公司省份但贸易力量不足5
+	option = {
+		name = dismantle_building_events.2.dismantle_marketplace_and_trade_depot_and_stock_exchange
+		trigger = {
+			any_owned_province = {
+				OR = {
+					is_owned_by_trade_company = no
+					AND = {
+						is_owned_by_trade_company = yes
+						NOT = { province_trade_power = 5 }
+					}
+				}
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = marketplace
+					has_construction = trade_depot
+					has_construction = stock_exchange
+
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						is_owned_by_trade_company = no
+						AND = {
+							is_owned_by_trade_company = yes
+							NOT = { province_trade_power = 5 }
+						}
+					}
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = marketplace
+						has_construction = trade_depot
+						has_construction = stock_exchange
+					}
+				}
+				cancel_construction = marketplace
+				cancel_construction = trade_depot
+				cancel_construction = stock_exchange
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					is_owned_by_trade_company = no
+					AND = {
+						is_owned_by_trade_company = yes
+						NOT = { province_trade_power = 5 }
+					}
+				}
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+            }
+			remove_building = marketplace
+            remove_building = trade_depot
+			remove_building = stock_exchange
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除人力建筑	兵营、训练营
+	option = {
+		name = dismantle_building_events.2.dismantle_barracks_and_training_fields
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = barracks
+					has_construction = training_fields
+
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = barracks
+						has_construction = training_fields
+					}
+				}
+				cancel_construction = barracks
+				cancel_construction = training_fields
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+            }
+			remove_building = barracks
+            remove_building = training_fields
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除陆军上限建筑	军营、征召中心
+	option = {
+		name = dismantle_building_events.2.dismantle_regimental_camp_and_conscription_center
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = regimental_camp
+					has_construction = conscription_center
+
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = regimental_camp
+						has_construction = conscription_center
+					}
+				}
+				cancel_construction = regimental_camp
+				cancel_construction = conscription_center
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+            }
+			remove_building = regimental_camp
+            remove_building = conscription_center
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除水手建筑	码头、干船坞
+	option = {
+		name = dismantle_building_events.2.dismantle_dock_and_drydock
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = dock
+					has_construction = drydock
+
+					has_building = dock
+					has_building = drydock
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = dock
+						has_construction = drydock
+					}
+				}
+				cancel_construction = dock
+				cancel_construction = drydock
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+            }
+			remove_building = dock
+            remove_building = drydock
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除海军上限建筑	造船厂、大船厂
+	option = {
+		name = dismantle_building_events.2.dismantle_shipyard_and_grand_shipyard
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = shipyard
+					has_construction = grand_shipyard
+
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = shipyard
+						has_construction = grand_shipyard
+					}
+				}
+				cancel_construction = shipyard
+				cancel_construction = grand_shipyard
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+            }
+			remove_building = shipyard
+            remove_building = grand_shipyard
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+	#拆除无用工厂建筑	壁垒、强制征兵办公室
+	option = {
+		name = dismantle_building_events.2.dismantle_useless_manufactory
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_construction = ramparts
+					has_construction = impressment_offices
+
+					has_building = ramparts
+					has_building = impressment_offices
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					NOT = {
+						num_free_building_slots = 1
+					}
+					OR = {
+						has_construction = ramparts
+						has_construction = impressment_offices
+					}
+				}
+				cancel_construction = ramparts
+				cancel_construction = impressment_offices
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+                NOT = {
+                    num_free_building_slots = 1
+                }
+				OR = {
+					has_building = ramparts
+					has_building = impressment_offices
+				}
+            }
+			remove_building = ramparts
+            remove_building = impressment_offices
+		}
+		country_event = {
+			id = dismantle_building_events.3
+		}
+	}
+}
+
+#是否继续拆除建筑(只拆除无空闲建筑槽位省份的建筑)
+country_event = {
+	id = dismantle_building_events.3
+	title = dismantle_building_events.3.title
+	desc = dismantle_building_events.3.desc
+	picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = dismantle_building_events.3.cancel
+	}
+
+	option = {
+		name = dismantle_building_events.3.countinue
+		country_event = {
+			id = dismantle_building_events.2
+		}
+	}
+}
+
+#一键拆除建筑(全部拆除)
+country_event = {
+	id = dismantle_building_events.4
+	title = dismantle_building_events.4.title
+    desc = dismantle_building_events.4.desc
+    picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+
+	#取消
+	option = {
+		name = dismantle_building_events.4.cancel
+	}
+
+	#综合拆除，拆除税收建筑、生产建筑、沿海建筑、贸易建筑、海军建筑、无用工厂建筑
+	option = {
+		name = dismantle_building_events.4.dismantle_comprehensive
+		custom_tooltip = dismantle_building_events.4.dismantle_comprehensive.tooltip
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				province_has_useless_building = yes
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					province_has_useless_building = yes
+				}
+				cancel_construction = temple
+				cancel_construction = cathedral
+	
+				cancel_construction = workshop
+				cancel_construction = counting_house
+	
+				cancel_construction = coastal_defence
+				cancel_construction = naval_battery
+	
+				cancel_construction = marketplace
+				cancel_construction = trade_depot
+				cancel_construction = stock_exchange
+	
+				cancel_construction = dock
+				cancel_construction = drydock
+				cancel_construction = shipyard
+				cancel_construction = grand_shipyard
+	
+				cancel_construction = ramparts
+				cancel_construction = impressment_offices
+
+				remove_building = temple
+				remove_building = cathedral
+
+				remove_building = workshop
+				remove_building = counting_house
+
+				remove_building = coastal_defence
+				remove_building = naval_battery
+
+				remove_building = marketplace
+				remove_building = trade_depot
+				remove_building = stock_exchange
+
+				remove_building = dock
+				remove_building = drydock
+				remove_building = shipyard
+				remove_building = grand_shipyard
+
+				remove_building = ramparts
+				remove_building = impressment_offices
+			}
+		}
+		every_owned_province = {
+			limit = {
+            }
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+
+	#拆除税收建筑	教堂、大教堂
+	option = {
+		name = dismantle_building_events.4.dismantle_temple_and_cathedral
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = temple
+					has_construction = cathedral
+
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = temple
+						has_construction = cathedral
+					}
+				}
+				cancel_construction = temple
+				cancel_construction = cathedral
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+            }
+			remove_building = temple
+            remove_building = cathedral
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除生产建筑	工场、会计室
+	option = {
+		name = dismantle_building_events.4.dismantle_workshop_and_counting_house
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = workshop
+					has_construction = counting_house
+
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = workshop
+						has_construction = counting_house
+					}
+				}
+				cancel_construction = workshop
+				cancel_construction = counting_house
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+            }
+			remove_building = workshop
+            remove_building = counting_house
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除防御建筑	堡垒
+	option = {
+		name = dismantle_building_events.4.dismantle_fort
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					province_has_construction_fort = yes
+					province_has_fort = yes
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					province_has_construction_fort = yes
+				}
+				cancel_construction = fort_15th
+				cancel_construction = fort_16th
+				cancel_construction = fort_17th
+				cancel_construction = fort_18th
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				province_has_fort = yes
+            }
+			remove_building = fort_15th
+            remove_building = fort_16th
+			remove_building = fort_17th
+            remove_building = fort_18th
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除沿海建筑	岸防工事、海防炮台
+	option = {
+		name = dismantle_building_events.4.dismantle_coastal_defence_and_naval_battery
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = coastal_defence
+					has_construction = naval_battery
+
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = coastal_defence
+						has_construction = naval_battery
+					}
+				}
+				cancel_construction = coastal_defence
+				cancel_construction = naval_battery
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+            }
+			remove_building = coastal_defence
+            remove_building = naval_battery
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除贸易建筑	集市、贸易仓库、证券交易所
+	option = {
+		name = dismantle_building_events.4.dismantle_marketplace_and_trade_depot_and_stock_exchange
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = marketplace
+					has_construction = trade_depot
+					has_construction = stock_exchange
+
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = marketplace
+						has_construction = trade_depot
+						has_construction = stock_exchange
+					}
+				}
+				cancel_construction = marketplace
+				cancel_construction = trade_depot
+				cancel_construction = stock_exchange
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+            }
+			remove_building = marketplace
+            remove_building = trade_depot
+			remove_building = stock_exchange
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除人力建筑	兵营、训练营
+	option = {
+		name = dismantle_building_events.4.dismantle_barracks_and_training_fields
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = barracks
+					has_construction = training_fields
+
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = barracks
+						has_construction = training_fields
+					}
+				}
+				cancel_construction = barracks
+				cancel_construction = training_fields
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+            }
+			remove_building = barracks
+            remove_building = training_fields
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除陆军上限建筑	军营、征召中心
+	option = {
+		name = dismantle_building_events.4.dismantle_regimental_camp_and_conscription_center
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = regimental_camp
+					has_construction = conscription_center
+
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = regimental_camp
+						has_construction = conscription_center
+					}
+				}
+				cancel_construction = regimental_camp
+				cancel_construction = conscription_center
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+            }
+			remove_building = regimental_camp
+            remove_building = conscription_center
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除水手建筑	码头、干船坞
+	option = {
+		name = dismantle_building_events.4.dismantle_dock_and_drydock
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = dock
+					has_construction = drydock
+
+					has_building = dock
+					has_building = drydock
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = dock
+						has_construction = drydock
+					}
+				}
+				cancel_construction = dock
+				cancel_construction = drydock
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+            }
+			remove_building = dock
+            remove_building = drydock
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除海军上限建筑	造船厂、大船厂
+	option = {
+		name = dismantle_building_events.4.dismantle_shipyard_and_grand_shipyard
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = shipyard
+					has_construction = grand_shipyard
+
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = shipyard
+						has_construction = grand_shipyard
+					}
+				}
+				cancel_construction = shipyard
+				cancel_construction = grand_shipyard
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+            }
+			remove_building = shipyard
+            remove_building = grand_shipyard
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+	#拆除无用工厂建筑	壁垒、强制征兵办公室
+	option = {
+		name = dismantle_building_events.4.dismantle_useless_manufactory
+		trigger = {
+			any_owned_province = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_construction = ramparts
+					has_construction = impressment_offices
+
+					has_building = ramparts
+					has_building = impressment_offices
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_can_dismantle_building = yes
+					OR = {
+						has_construction = ramparts
+						has_construction = impressment_offices
+					}
+				}
+				cancel_construction = ramparts
+				cancel_construction = impressment_offices
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_dismantle_building = yes
+				OR = {
+					has_building = ramparts
+					has_building = impressment_offices
+				}
+            }
+			remove_building = ramparts
+            remove_building = impressment_offices
+		}
+		country_event = {
+			id = dismantle_building_events.5
+		}
+	}
+}
+
+#是否继续拆除建筑(全部拆除)
+country_event = {
+	id = dismantle_building_events.5
+	title = dismantle_building_events.5.title
+	desc = dismantle_building_events.5.desc
+	picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = dismantle_building_events.5.cancel
+	}
+
+	option = {
+		name = dismantle_building_events.5.countinue
+		country_event = {
+			id = dismantle_building_events.4
+		}
+	}
+}

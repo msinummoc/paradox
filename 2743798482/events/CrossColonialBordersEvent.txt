@@ -1,0 +1,135 @@
+namespace = cross_colonial_borders_events
+
+country_event = {
+	id = cross_colonial_borders_events.1
+	title = none
+	desc = none
+	picture = none
+
+	hidden = yes
+
+	trigger = {
+		has_country_flag = AOPrettyColony
+		num_of_subjects = 1
+		any_subject_country = {
+			any_owned_province = {
+				NOT = { 
+					colonial_region = capital
+				}
+			}
+			colony_cross_border = yes
+		}
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = {
+				any_owned_province = {
+					NOT = { 
+						colonial_region = capital
+					}
+				}
+				colony_cross_border = yes
+			}
+			country_event = {
+				id = cross_colonial_borders_events.2
+			}
+		}
+	}
+
+	option = {}
+}
+
+country_event = {
+	id = cross_colonial_borders_events.2
+	title = none
+	desc = none
+	picture = none
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+
+		}
+	}
+
+	immediate = {
+		capital_scope = {
+			save_event_target_as = colonial_capital
+		}
+		overlord = {
+			save_event_target_as = overlord_country
+		}
+		save_event_target_as = colonial_country_1
+
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						colonial_region = event_target:colonial_capital
+					}
+					is_city = yes
+				}
+			}
+			from = {
+				country_event = {
+					id = cross_colonial_borders_events.3
+				}
+			}
+		}
+	}
+	option = {}
+}
+
+country_event = {
+	id = cross_colonial_borders_events.3
+	title = cross_colonial_borders_events.3.name
+	desc = cross_colonial_borders_events.3.desc
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = cross_colonial_borders_events.3.tack_back
+		event_target:colonial_country_1 = {
+			every_owned_province = {
+				limit = {
+					NOT = {
+						colonial_region = event_target:colonial_capital
+					}
+					owned_by = event_target:colonial_country_1
+					is_city = yes
+				}
+				#add_core = event_target:overlord_country
+				remove_core = event_target:colonial_country_1
+				cede_province = event_target:overlord_country
+			}
+
+			event_target:colonial_country_1 = {
+				add_treasury = 20
+			}
+
+			event_target:overlord_country = {
+				add_treasury = -20
+			}
+		}
+	}
+
+	option = {
+	    name = cross_colonial_borders_events.3.cancel
+		hidden_effect = {
+			event_target:colonial_country_1 = {
+				add_country_modifier = {
+					name = AO_cross_colonial_border_modifier
+					duration = 1825 #5 years
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+#取消修建工厂
+AO_cancel_construction_manufactory_effect = {
+	cancel_construction = farm_estate
+	cancel_construction = wharf
+	cancel_construction = textile
+	cancel_construction = weapons
+	cancel_construction = plantations
+	cancel_construction = tradecompany
+	cancel_construction = mills
+}
+#拆除工厂	
+AO_remove_building_manufactory_effect = {
+	remove_building = farm_estate
+	remove_building = wharf
+	remove_building = textile
+	remove_building = weapons
+	remove_building = plantations
+	remove_building = tradecompany
+	remove_building = mills
+}

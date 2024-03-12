@@ -1,0 +1,30 @@
+﻿l_english:
+ calc_max_monarch_point_events.1.adm:0 "[Root.AdmTotalRatio.GetValue],[Root.AdmTechPunishment.GetValue],Lˆ?e¹ppeNP–[Root.MaxAdmMonarchPoint.GetValue]"
+ calc_max_monarch_point_events.1.adm.tooltip:0 "[Root.AdmTotalRatio.GetValue],[Root.AdmTechPunishment.GetValue],Lˆ?e¹ppeNP–[Root.MaxAdmMonarchPoint.GetValue]"
+
+ calc_max_monarch_point_events.1.dip:0 "[Root.DipTotalRatio.GetValue],[Root.DipTechPunishment.GetValue],Y²N¹ppeNP–[Root.MaxDipMonarchPoint.GetValue]"
+ calc_max_monarch_point_events.1.dip.tooltip:0 "[Root.DipTotalRatio.GetValue],[Root.DipTechPunishment.GetValue],Y²N¹ppeNP–[Root.MaxDipMonarchPoint.GetValue]"
+
+ calc_max_monarch_point_events.1.mil:0 "[Root.MilTotalRatio.GetValue],[Root.MilTechPunishment.GetValue],›Q‹N¹ppeNP–[Root.MaxMilMonarchPoint.GetValue]"
+ calc_max_monarch_point_events.1.mil.tooltip:0 "[Root.MilTotalRatio.GetValue],[Root.MilTechPunishment.GetValue],›Q‹N¹ppeNP–[Root.MaxMilMonarchPoint.GetValue]"
+
+ calc_max_monarch_point_events.1.power:0 "Lˆ?e¹ppe[Root.AdmPower.GetValue],Y²N¹ppe[Root.DipPower.GetValue],›Q‹N¹ppe[Root.MilPower.GetValue][Root.LimitAdmPower.GetValue]"
+
+
+ calc_max_monarch_point_events.2.has_feudalism:0 "has_feudalism"
+ calc_max_monarch_point_events.2.feudalism:0 "feudalism"
+ calc_max_monarch_point_events.2.is_lacking_institutions:0 "is_lacking_institutions"
+ calc_max_monarch_point_events.2.renaissance:0 "renaissance"
+ calc_max_monarch_point_events.2.new_world_i:0 "new_world_i"
+ calc_max_monarch_point_events.2.printing_press:0 "printing_press"
+ calc_max_monarch_point_events.2.global_trade:0 "global_trade"
+ calc_max_monarch_point_events.2.manufactories:0 "manufactories"
+ calc_max_monarch_point_events.2.enlightenment:0 "enlightenment"
+ calc_max_monarch_point_events.2.industrialization:0 "industrialization"
+
+ calc_factory_earnings_events.1.trade_value:0 "8f÷N<P:[Root.TradeValue.GetValue][target_city.trade_value.GetValue][target_city.trade_value]"
+ calc_factory_earnings_events.1.trade_goods_size:0 ",g0WFUÁTµNúQ:[Root.TradeGoodsSize.GetValue]"
+ calc_factory_earnings_events.1.local_autonomy:0 ",g0Wê»l¦^:[Root.LocalAutonomy.GetValue]"
+ calc_factory_earnings_events.1.local_production_efficiency:0 ",g0WuµNHe‡s:[Root.LocalProductionEfficiency.GetValue]"
+ calc_factory_earnings_events.1.production_efficiency:0 "hQNSuµNHe‡s:[Root.ProductionEfficiency.GetValue]"
+ calc_factory_earnings_events.1.global_trade_goods_size_modifier:0 "hQNSFUÁTuµN Rb:[Root.GlobalTradeGoodsSizeModifier.GetValue]"

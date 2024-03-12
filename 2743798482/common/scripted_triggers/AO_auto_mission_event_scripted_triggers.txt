@@ -1,0 +1,95 @@
+#国家可以进行自动传教
+can_auto_mission = {
+	custom_trigger_tooltip = {
+		tooltip = CAN_AUTO_MISSION
+		OR = {
+			ai = no
+			AND = {
+				is_subject = yes
+				overlord = { ai = no }
+			}
+		}
+		NOT = { 
+			#不是儒教
+			religion = confucianism		
+		}
+	}
+}
+#省份可以进行自动传教
+province_can_auto_mission = {
+	custom_trigger_tooltip = {
+		tooltip = PROVINCE_CAN_AUTO_MISSION
+		is_core = ROOT
+		is_city = yes
+		controlled_by = ROOT
+		has_siege = no
+		NOT = { 
+			religion = ROOT
+		}
+		NOT = { 
+			has_construction = missionary 
+		}
+	}
+}
+#拥有足够的传教力量
+has_enough_missionary_strength = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ENOUGH_MISSIONARY_STRENGTH
+		variable_arithmetic_trigger = {
+			#变量算术触发器
+			export_to_variable = {
+				#导出当地的传教士力量
+				value = modifier:local_missionary_strength		
+				which = LocalMissionaryStrength
+			}
+			export_to_variable = {
+				#导出基础传教力量
+				value = modifier:global_missionary_strength		
+				which = GlobalMissionaryStrength
+				who = ROOT
+			}
+			change_variable = {
+				#计算本地整体传教力量
+				which = LocalMissionaryStrength	
+				which = GlobalMissionaryStrength
+			}
+			check_variable = {
+				#本地整体传教力量是否大于指定值
+				which = LocalMissionaryStrength
+				value = $total_missionary_strength$
+			}
+		}
+	}
+}
+#永远无法完成传教
+never_finish_the_mission = {
+	custom_trigger_tooltip = {
+		tooltip = NEVER_FINISH_THE_MISSION
+		variable_arithmetic_trigger = {
+			#变量算术触发器
+			export_to_variable = {
+				#导出当地的传教士力量
+				value = modifier:local_missionary_strength		
+				which = LocalMissionaryStrength
+			}
+			export_to_variable = {
+				#导出基础传教力量
+				value = modifier:global_missionary_strength		
+				which = GlobalMissionaryStrength
+				who = ROOT
+			}
+			change_variable = {
+				#计算本地整体传教力量
+				which = LocalMissionaryStrength	
+				which = GlobalMissionaryStrength
+			}
+			NOT = {
+				check_variable = {
+					#本地整体传教力量是否小于指定值
+					which = LocalMissionaryStrength
+					value = $total_missionary_strength$
+				}
+			}
+		}
+	}
+}

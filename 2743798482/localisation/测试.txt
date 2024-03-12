@@ -1,0 +1,29 @@
+l_english:
+ calc_max_monarch_point_events.1.adm:0 "[Root.AdmTotalRatio.GetValue],[Root.AdmTechPunishment.GetValue],行政点数上限[Root.MaxAdmMonarchPoint.GetValue]"
+ calc_max_monarch_point_events.1.confirm.tooltip:0 "[Root.AdmTotalRatio.GetValue],[Root.AdmTechPunishment.GetValue],行政点数上限[Root.MaxAdmMonarchPoint.GetValue]"
+ 
+ calc_max_monarch_point_events.1.dip:0 "[Root.DipTotalRatio.GetValue],[Root.DipTechPunishment.GetValue],外交点数上限[Root.MaxDipMonarchPoint.GetValue]"
+ calc_max_monarch_point_events.1.confirm.tooltip:0 "[Root.DipTotalRatio.GetValue],[Root.DipTechPunishment.GetValue],外交点数上限[Root.MaxDipMonarchPoint.GetValue]"
+ 
+ calc_max_monarch_point_events.1.mil:0 "[Root.MilTotalRatio.GetValue],[Root.MilTechPunishment.GetValue],军事点数上限[Root.MaxMilMonarchPoint.GetValue]"
+ calc_max_monarch_point_events.1.confirm.tooltip:0 "[Root.MilTotalRatio.GetValue],[Root.MilTechPunishment.GetValue],军事点数上限[Root.MaxMilMonarchPoint.GetValue]"
+ 
+ calc_max_monarch_point_events.1.power:0 "行政点数[Root.AdmPower.GetValue],外交点数[Root.DipPower.GetValue],军事点数[Root.MilPower.GetValue]"
+ 
+ calc_max_monarch_point_events.2.has_feudalism:0 "has_feudalism"
+ calc_max_monarch_point_events.2.feudalism:0 "feudalism"
+ calc_max_monarch_point_events.2.is_lacking_institutions:0 "is_lacking_institutions"
+ calc_max_monarch_point_events.2.renaissance:0 "renaissance"
+ calc_max_monarch_point_events.2.new_world_i:0 "new_world_i"
+ calc_max_monarch_point_events.2.printing_press:0 "printing_press"
+ calc_max_monarch_point_events.2.global_trade:0 "global_trade"
+ calc_max_monarch_point_events.2.manufactories:0 "manufactories"
+ calc_max_monarch_point_events.2.enlightenment:0 "enlightenment"
+ calc_max_monarch_point_events.2.industrialization:0 "industrialization"
+ 
+ calc_factory_earnings_events.1.trade_value:0 "贸易价值:[Root.TradeValue.GetValue]"
+ calc_factory_earnings_events.1.trade_goods_size:0 "本地商品产出:[Root.TradeGoodsSize.GetValue]"
+ calc_factory_earnings_events.1.local_autonomy:0 "本地自治度:[Root.LocalAutonomy.GetValue]"
+ calc_factory_earnings_events.1.local_production_efficiency:0 "本地生产效率:[Root.LocalProductionEfficiency.GetValue]"
+ calc_factory_earnings_events.1.production_efficiency:0 "全局生产效率:[Root.ProductionEfficiency.GetValue]"
+ calc_factory_earnings_events.1.global_trade_goods_size_modifier:0 "全局商品生产加成:[Root.GlobalTradeGoodsSizeModifier.GetValue]"

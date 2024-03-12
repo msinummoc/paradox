@@ -1,0 +1,24 @@
+﻿l_english:
+ pretty_colony_title:0 "§G0ê¨RSmod0§!/T(uê¨RŒte–kl†˜¹Lu‹NöN"
+ pretty_colony_desc:0 ""
+ pretty_colony_tooltip:0 "V/Tdky˜³Q®‹TÿSO/T(uùR”^„v‹NöNÄueg.^©R`OŒte–kl†˜„v¹Luÿ/föePJT+RNÄ‰R„v–kl†˜¹Lu†N"
+
+ close_pretty_colony_title:0 "§G0ê¨RSmod0§!sQí•ê¨RŒte–kl†˜¹Lu‹NöN"
+ close_pretty_colony_desc:0 ""
+
+ pretty_colonial_borders_events.3.name:0 "§G0ê¨RSmod0§!–kl0WKNô•„v u·u"
+ pretty_colonial_borders_events.3.desc:0 "[colonial_country_1.GetName]N[colonial_country_2.GetName](W[pretty_colonial_province.GetName]„vî•˜˜NrÑS†NÀoÈp²Qz0[colonial_country_1.GetName]îvMRžRµcÙNwýNÿ[colonial_country_2.GetName]tS,dúQ–klyr¸‹¶rÙ<ONNnx²‹†NÖNìN0tÖSÙ›N†˜W„vckSVCg)R0‚YÊNur‰m0RSV0WT¹ƒXÆ–Óu„vfkÅˆ›RÏ‘KNô•„vpe/kidædäNNS¿Rw–eQ†NðVƒX0:N†NMQ²QzGSµuÿ2N¹eI`cwýòTT[Root.GetName]ÑSúQ3uÉ‹ÿåNgÙN‰N®‹—V0RòNÁˆ0\negêbÂSNVÑS„væSN*Nmod0Colonial Expanded –klÓbUS0"
+ pretty_colonial_borders_events.3.side_with_colonial_country_1:0 "Ùz(W[colonial_country_1.GetName]N¹e0"
+ pretty_colonial_borders_events.3.side_with_colonial_country_2:0 "Ùz(W[colonial_country_2.GetName]N¹e0"
+ pretty_colonial_borders_events.3.side_with_colonial_country_2.tooltip:0 "§Y[pretty_colonial_province.GetName]§!åNÊS§Y[colonial_country_1.GetName]§!åb	g„vNb	gMOŽN§Y[colonial_country_2.GetName]§!„v§Y–kl0W:S§!0NNKNøv»„vwýNS«ˆrR©‹Ùu§Y[colonial_country_2.GetName]§!0"
+
+ cross_colonial_borders_events.3.name:0 "§G0ê¨RSmod0§![From.GetName]ŠLu"
+ cross_colonial_borders_events.3.desc:0 "[From.GetName]ŠÇ†N–kl:SßWTvQÖN–kl:SßWÛLˆ–klÿbìN—‰6eÞVÖNìN„v^—Õl†˜Wÿ‹†6qÙÍyLˆ:NN<P—VŸ±RÿFO/fbìNmN‰>f:ybìN„v'Y¦^ÿùR[From.GetName]ÛLˆN›NeˆP\negêbÂSNVÑS„væSN*Nmod0Colonial Expanded –klÓbUS0"
+ cross_colonial_borders_events.3.tack_back:0 "6eÞVÙ›N^—Õl†˜Wÿv^eˆP[From.GetName]"
+ cross_colonial_borders_events.3.cancel:0 "°s(WØN/föeP"
+ 
+ merge_colony_in_same_colonial_events.3.name:0 "§G0ê¨RSmod0§!TN–kl:SßWN„v2N*N–kl†˜"
+ merge_colony_in_same_colonial_events.3.desc:0 "–NwVg„vÛLˆÿbìNÑS°s(WTN–kl:SßWNTöeXR(W2N*NNT„v–kl†˜ÿå‹`HN»SYtÙöN‹NbTÿ\negêbÂSNVÑS„væSN*Nmod0Colonial Expanded –klÓbUS0"
+ merge_colony_in_same_colonial_events.3.first_colony_inherit_second_colony:0 "b^gÝOYu[colonial_country_1.GetName]"
+ merge_colony_in_same_colonial_events.3.second_colony_inherit_first_colony:0 "b^gÝOYu[colonial_country_2.GetName]"
+ merge_colony_in_same_colonial_events.3.cancel:0 "ôuc°s¶r"

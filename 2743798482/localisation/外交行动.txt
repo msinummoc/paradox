@@ -1,0 +1,6 @@
+l_english:
+ AO_change_controller_to_subject:0 "移交省份控制权"
+ AO_change_controller_to_subject_title:0 "移交省份控制权"
+ AO_change_controller_to_subject_desc:0 "通过这项外交行动可以自动把省份控制权移交给附属国(注意，省份控制权移交给附属国后，附属国会把自动将盟友标红的省份移交给盟友)"
+ AO_change_controller_to_subject_tooltip:0 "战争中自动移交省份控制权"
+ AO_change_controller_to_subject_alert_tooltip:0 "我国目前未处于战争中"

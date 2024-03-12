@@ -1,0 +1,36 @@
+﻿l_english:
+ decrease_autonomy_title:0 "§G0ê¨RSmod0§!N.•M–NOê»l¦^"
+ decrease_autonomy_desc:0 ""
+ decrease_autonomy_tooltip:0 "Nb	g&rTagöN„vwýNÿê»l¦^SOM–NO"
+
+ increase_autonomy_title:0 "§G0ê¨RSmod0§!N.•ÐcGSê»l¦^"
+ increase_autonomy_desc:0 ""
+ increase_autonomy_tooltip:0 ""
+
+ decrease_autonomy_events.1.title:0 "M–NOê»l¦^"
+ decrease_autonomy_events.1.desc:0 "ÀhKm0RSVMR	gN›NwýNïSåNM–NOê»l¦^ÿ/f&T—‰M–NOê»l¦^bTÿ"
+ decrease_autonomy_events.1.decrease_autonomy:0 "N×SÙžlÿM–†N"
+ decrease_autonomy_events.1.cancel:0 "‚föeHQNM–NO†N"
+
+ decrease_autonomy_events.2.title:0 "M–NOê»l¦^"
+ decrease_autonomy_events.2.desc:0 "ÇØš„vê»l¦^qVÍT†NbìN„v6eeQÊSºN›RÿÊSöeM–NOê»l¦^ýwY	gHeÐcØšbìN„v6eeQÊSºN›R"
+ decrease_autonomy_events.2.decrease_autonomy:0 "b‰M–NOwýNê»l¦^"
+ decrease_autonomy_events.2.cancel:0 "‚föeHQNM–NO†N"
+
+ decrease_autonomy_events.2.decrease_autonomy.tooltip:0 ""
+
+ decrease_autonomy_events.3.title:0 "ÐcØšê»l¦^"
+ decrease_autonomy_events.3.desc:0 "ÀhKm0RSVMR	gN›NwýNÍN6qXR(WÛSqNÿÐcGSê»l¦^ïSåN	gHeM–NO2R­eÿ/f&T—‰ÐcGSê»l¦^bTÿ\n÷‹èlaÿ§GÐcGSê»l¦^OM–NO`O„vN6R¦^ÿ÷‹(ŒNa	éb§!"
+ decrease_autonomy_events.3.increase_autonomy:0 "N×SÙžlÿÐc†N"
+ decrease_autonomy_events.3.cancel:0 "‚föeHQNÐcGS†N"
+
+ decrease_autonomy_events.4.title:0 "ÐcGSê»l¦^"
+ decrease_autonomy_events.4.desc:0 "ÇØš„vwýNÛSqN¦^ÙubìN&^eg†NˆV'Y„v»žæpÿÇÐcØšê»l¦^ÏQSÛSqNmN¸‹/f*NN•„v	éb0\n÷‹èlaÿgTN*N	y˜§G0b‰ÐcGSNb	gwýN„vê»l¦^0§!OÐcØšNb	gwýN„vê»l¦^ÿ÷‹(ŒNa	éb0"
+ decrease_autonomy_events.4.increase_autonomy:0 "b‰ÐcGSNb	gwýN„vê»l¦^"
+ decrease_autonomy_events.4.increase_autonomy_with_unrest:0 "b‰ÐcGSXR(WÛSqN„vwýN„vê»l¦^"
+ decrease_autonomy_events.4.increase_autonomy_with_no_core:0 "b‰ÐcGS*gåb	g8hÃV„vwýN„vê»l¦^"
+ decrease_autonomy_events.4.cancel:0 "‚föeHQNÐcGS†N"
+
+ decrease_autonomy_events.4.increase_autonomy.tooltip:0 "§G÷‹(ŒNa	ébÿå‹	y˜OÐcGSNb	gwýNê»l¦^0‚Yœg`Oó`‰(WN6RININöeãN0RegKNMRëVÐcGSN6R¦^ÿïSåNO(udkŸRýw§!"
+ decrease_autonomy_events.4.increase_autonomy_with_unrest.tooltip:0 "§GÅN(WÛSqN¦^'YŽN1„vwýNÐcGSê»l¦^§!"
+ decrease_autonomy_events.4.increase_autonomy_with_no_core.tooltip:0 "§GÅN(W*g.8h„vwýNÐcGSê»l¦^§!"

@@ -1,0 +1,152 @@
+namespace = merge_colony_in_same_colonial_events
+
+country_event = {
+	id = merge_colony_in_same_colonial_events.1
+	title = none
+	desc = none
+	picture = none
+
+	hidden = yes
+
+	trigger = {
+		has_country_flag = AOPrettyColony
+		num_of_subjects = 2
+		any_subject_country = {
+			is_base_colony_subject = yes
+			NOT = {
+				has_country_modifier = AO_merge_colony_modifier
+			}
+		}
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		random_subject_country = {
+			limit = {
+				is_colonial_nation = yes
+				ai = yes
+				is_base_colony_subject = yes
+				any_neighbor_country = {
+					is_colonial_nation_of = root
+					is_base_colony_subject = yes
+				}
+				NOT = {
+					has_country_modifier = AO_merge_colony_modifier
+				}
+			}
+			country_event = {
+				id = merge_colony_in_same_colonial_events.2
+			}
+		}
+	}
+
+	option = {
+		
+	}
+}
+
+country_event = {
+	id = merge_colony_in_same_colonial_events.2
+	title = none
+	desc = none
+	picture = none
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+
+		}
+	}
+
+	immediate = {
+		capital_scope = {
+			save_event_target_as = colonial_capital_1
+		}
+		overlord = {
+			save_event_target_as = overlord_country
+		}
+		save_event_target_as = colonial_country_1
+		if = {
+			limit = {
+				any_neighbor_country = {
+					capital_scope = {
+						colonial_region = event_target:colonial_capital_1
+					}
+					is_colonial_nation_of = event_target:overlord_country
+					is_base_colony_subject = yes
+				}
+			}
+		}
+		random_neighbor_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = event_target:colonial_capital_1
+				}
+				is_colonial_nation_of = event_target:overlord_country
+				is_base_colony_subject = yes
+			}
+			save_event_target_as = colonial_country_2
+			capital_scope = {
+				save_event_target_as = colonial_capital_2
+			}
+			event_target:overlord_country = {
+				country_event = {
+					id = merge_colony_in_same_colonial_events.3
+				}
+			}
+		}
+	}
+
+	option = {
+		
+	}
+}
+
+country_event = {
+	id = merge_colony_in_same_colonial_events.3
+	title = merge_colony_in_same_colonial_events.3.name
+	desc = merge_colony_in_same_colonial_events.3.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	#保持原状
+	option = {
+		name = merge_colony_in_same_colonial_events.3.cancel
+		event_target:colonial_country_1 = {
+			add_country_modifier = {
+				name = AO_merge_colony_modifier
+				duration = 3650
+				hidden = yes
+			}
+		}
+		event_target:colonial_country_2 = {
+			add_country_modifier = {
+				name = AO_merge_colony_modifier
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+	#保留第一个殖民领
+	option = {
+		name = merge_colony_in_same_colonial_events.3.first_colony_inherit_second_colony
+		goto = colonial_capital_1
+		event_target:colonial_country_1 = {
+			inherit = event_target:colonial_country_2
+		}
+	}
+	#保留第二个殖民领
+	option = {
+		name = merge_colony_in_same_colonial_events.3.second_colony_inherit_first_colony
+		goto = colonial_capital_2
+		event_target:colonial_country_2 = {
+			inherit = event_target:colonial_country_1
+		}
+	}
+}

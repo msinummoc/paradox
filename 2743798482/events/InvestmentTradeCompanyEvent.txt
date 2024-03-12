@@ -1,0 +1,1184 @@
+namespace = investment_trade_company_events
+
+#金币较多时主动触发一键贸易公司投资事件
+country_event = {
+	id = investment_trade_company_events.1
+	title = investment_trade_company_events.1.title
+    desc = investment_trade_company_events.1.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	trigger = {
+		treasury = 5000
+		OR = {
+			adm_tech = 15
+			dip_tech = 15
+			mil_tech = 15
+		}
+		any_owned_province = {
+			OR = {
+				can_inverstment_trade_company_cost_200 = yes
+				can_inverstment_trade_company_cost_400 = yes
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = investment_trade_company_events.1.cancel
+	}
+
+	option = {
+		name = investment_trade_company_events.1.investment
+		country_event = {
+			id = investment_trade_company_events.2
+		}
+	}
+}
+
+#选择投资单位级别 200 400 1000
+country_event = {
+	id = investment_trade_company_events.2
+	title = investment_trade_company_events.2.title
+    desc = investment_trade_company_events.2.desc
+	picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			any_owned_province = {
+				can_inverstment_trade_company_cost_200 = yes
+			}
+		}
+		name = investment_trade_company_events.2.cost_200
+		set_country_flag = Choose200CostInvestment
+		country_event = {
+			id = investment_trade_company_events.3
+		}
+	}
+	option = {
+		trigger = {
+			any_owned_province = {
+				can_inverstment_trade_company_cost_400 = yes
+			}
+		}
+		name = investment_trade_company_events.2.cost_400
+		set_country_flag = Choose400CostInvestment
+		country_event = {
+			id = investment_trade_company_events.3
+		}
+	}
+	option = {
+		trigger = {
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		name = investment_trade_company_events.2.cost_1000
+		set_country_flag = Choose1000CostInvestment
+		country_event = {
+			id = investment_trade_company_events.3
+		}
+	}
+	option = {
+		name = investment_trade_company_events.2.cancel
+		clr_country_flag = Choose200CostInvestment
+		clr_country_flag = Choose400CostInvestment
+		clr_country_flag = Choose1000CostInvestment
+	}
+}
+
+#选择投资建筑
+country_event = {
+	id = investment_trade_company_events.3
+	title = investment_trade_company_events.3.title
+    desc = investment_trade_company_events.3.desc
+    picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+	#											价格		本地收益						地区收益				贸易公司收益				全国收益	
+	#公司驻军Company Garrison		
+	#	当地驻防	local_quarter				200 		+15%本地防御效率 +25%补给上限  
+	#	常设驻防	permanent_quarters			400 		+30%本地防御效率 +50%补给上限
+	#	官员食堂	officers_mess				1000 																						+5陆军上限	
+	#港口Harbor
+	#	公司货栈	company_warehouse			200 		+2贸易力量 						+25%本地生产效率
+	#	公司仓库	company_depot				400 		+4贸易力量 						+50%本地生产效率
+	#	海军部		admiralty					1000 																						+5海军上限
+	#本土创业Local Venture
+	#	中介办公室	brokers_office				200 		+25%本地生产效率				+0.15本地产出货物
+	#	中介交易所	brokers_exchange			400 		+50%本地生产效率				+0.30本地产出货物
+	#	财产评估师	property_appraiser			1000																+50%贸易引导
+	#外国的影响Foreign Influence
+	#	某定居点	settlements					200 		+25%本地税收修正				-7.5%本地发展花费	
+	#	某某某区	district					400 		+50%本地税收修正				-15%本地发展花费	
+	#	某某某镇	townships					1000																+10%贸易价值修正		+0.03年度陆军传统
+	#行政Governance
+	#	公司管理	company_administration		200 		+50%本地人力修正 +50%本地水手修正
+	#	军事管理	military_administration		400 		+100%本地人力修正 +100%本地水手修正
+	#	总督官邸	governor_general_mansion	1000																-5%本地最低自治度		+2%海军陆战队比例
+
+	#当地驻防
+	option = {
+		name = investment_trade_company_events.3.local_quarter
+		trigger = {
+			has_country_flag = Choose200CostInvestment
+			treasury = 2000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = local_quarter
+						investor = ROOT
+					}
+				}
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = permanent_quarters
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = local_quarter
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = permanent_quarters
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = local_quarter
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = permanent_quarters
+							investor = ROOT
+						}
+					}
+				}
+				add_trade_company_investment = {
+					investment = local_quarter
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -200
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#公司货栈
+	option = {
+		name = investment_trade_company_events.3.company_warehouse
+		trigger = {
+			has_country_flag = Choose200CostInvestment
+			treasury = 2000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = company_warehouse
+						investor = ROOT
+					}
+				}
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = company_depot
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_warehouse
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_depot
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_warehouse
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_depot
+							investor = ROOT
+						}
+					}
+				}
+				add_trade_company_investment = {
+					investment = company_warehouse
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -200
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#中介办公室
+	option = {
+		name = investment_trade_company_events.3.brokers_office
+		highlight = yes
+		trigger = {
+			has_country_flag = Choose200CostInvestment
+			treasury = 2000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = brokers_office
+						investor = ROOT
+					}
+				}
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = brokers_exchange
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = brokers_office
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = brokers_exchange
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = brokers_office
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = brokers_exchange
+							investor = ROOT
+						}
+					}
+				}
+				add_trade_company_investment = {
+					investment = brokers_office
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -200
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#定居点
+	option = {
+		name = investment_trade_company_events.3.settlements
+		trigger = {
+			has_country_flag = Choose200CostInvestment
+			treasury = 2000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = settlements
+						investor = ROOT
+					}
+				}
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = district
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = settlements
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = district
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = settlements
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = district
+							investor = ROOT
+						}
+					}
+				}
+				add_trade_company_investment = {
+					investment = settlements
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -200
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#公司管理
+	option = {
+		name = investment_trade_company_events.3.company_administration
+		trigger = {
+			has_country_flag = Choose200CostInvestment
+			treasury = 2000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = company_administration
+						investor = ROOT
+					}
+				}
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = military_administration
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 300
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_administration
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = military_administration
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_administration
+							investor = ROOT
+						}
+					}
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = military_administration
+							investor = ROOT
+						}
+					}
+				}
+				add_trade_company_investment = {
+					investment = company_administration
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -200
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+
+	#常设驻防
+	option = {
+		name = investment_trade_company_events.3.permanent_quarters
+		trigger = {
+			has_country_flag = Choose400CostInvestment
+			treasury = 4000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = permanent_quarters
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = permanent_quarters
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果已经修建了200的建筑，相当于升级建筑只需要花费200
+						has_trade_company_investment_in_area = {
+							investment = local_quarter
+							investor = ROOT
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = permanent_quarters
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = permanent_quarters
+						investor = ROOT
+					}
+					owner = {
+						add_treasury = -200
+					}
+				}
+				else_if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果没有修建了200的建筑，则需要花费400
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = local_quarter
+								investor = ROOT
+							}
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = permanent_quarters
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = permanent_quarters
+						investor = ROOT
+					}
+					#没有200的建筑，则花费原价400
+					owner = {
+						add_treasury = -400
+					}
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#公司仓库
+	option = {
+		name = investment_trade_company_events.3.company_depot
+		trigger = {
+			has_country_flag = Choose400CostInvestment
+			treasury = 4000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = company_depot
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = company_depot
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果已经修建了200的建筑，相当于升级建筑只需要花费200
+						has_trade_company_investment_in_area = {
+							investment = company_warehouse
+							investor = ROOT
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = company_depot
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = company_depot
+						investor = ROOT
+					}
+					owner = {
+						add_treasury = -200
+					}
+				}
+				else_if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果没有修建了200的建筑，则需要花费400
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = company_warehouse
+								investor = ROOT
+							}
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = company_depot
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = company_depot
+						investor = ROOT
+					}
+					#没有200的建筑，则花费原价400
+					owner = {
+						add_treasury = -400
+					}
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#中介交易所
+	option = {
+		name = investment_trade_company_events.3.brokers_exchange
+		highlight = yes
+		trigger = {
+			has_country_flag = Choose400CostInvestment
+			treasury = 4000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = brokers_exchange
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = brokers_exchange
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果已经修建了200的建筑，相当于升级建筑只需要花费200
+						has_trade_company_investment_in_area = {
+							investment = brokers_office
+							investor = ROOT
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = brokers_exchange
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = brokers_exchange
+						investor = ROOT
+					}
+					owner = {
+						add_treasury = -200
+					}
+				}
+				else_if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果没有修建了200的建筑，则需要花费400
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = brokers_office
+								investor = ROOT
+							}
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = brokers_exchange
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = brokers_exchange
+						investor = ROOT
+					}
+					#没有200的建筑，则花费原价400
+					owner = {
+						add_treasury = -400
+					}
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#小区
+	option = {
+		name = investment_trade_company_events.3.district
+		trigger = {
+			has_country_flag = Choose400CostInvestment
+			treasury = 4000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = district
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = district
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果已经修建了200的建筑，相当于升级建筑只需要花费200
+						has_trade_company_investment_in_area = {
+							investment = settlements
+							investor = ROOT
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = district
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = district
+						investor = ROOT
+					}
+					owner = {
+						add_treasury = -200
+					}
+				}
+				else_if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果没有修建了200的建筑，则需要花费400
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = settlements
+								investor = ROOT
+							}
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = district
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = district
+						investor = ROOT
+					}
+					#没有200的建筑，则花费原价400
+					owner = {
+						add_treasury = -400
+					}
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#军事管理
+	option = {
+		name = investment_trade_company_events.3.military_administration
+		trigger = {
+			has_country_flag = Choose400CostInvestment
+			treasury = 4000
+			any_owned_province = {
+				is_owned_by_trade_company = yes
+				NOT = {
+					has_trade_company_investment_in_area = {
+						investment = military_administration
+						investor = ROOT
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					NOT = {
+						has_trade_company_investment_in_area = {
+							investment = military_administration
+							investor = ROOT
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果已经修建了200的建筑，相当于升级建筑只需要花费200
+						has_trade_company_investment_in_area = {
+							investment = company_administration
+							investor = ROOT
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = military_administration
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = military_administration
+						investor = ROOT
+					}
+					owner = {
+						add_treasury = -200
+					}
+				}
+				else_if = {
+					limit = {
+						is_owned_by_trade_company = yes
+						#如果没有修建了200的建筑，则需要花费400
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = company_administration
+								investor = ROOT
+							}
+						}
+						NOT = {
+							has_trade_company_investment_in_area = {
+								investment = military_administration
+								investor = ROOT
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investment = military_administration
+						investor = ROOT
+					}
+					#没有200的建筑，则花费原价400
+					owner = {
+						add_treasury = -400
+					}
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+
+	#官员食堂
+	option = {
+		name = investment_trade_company_events.3.officers_mess
+		trigger = {
+			has_country_flag = Choose1000CostInvestment
+			treasury = 5000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+				add_trade_company_investment = {
+					investment = officers_mess
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -1000
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#海军部
+	option = {
+		name = investment_trade_company_events.3.admiralty
+		trigger = {
+			has_country_flag = Choose1000CostInvestment
+			treasury = 5000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+				add_trade_company_investment = {
+					investment = admiralty
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -1000
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#财产评估师
+	option = {
+		name = investment_trade_company_events.3.property_appraiser
+		trigger = {
+			has_country_flag = Choose1000CostInvestment
+			treasury = 5000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+				add_trade_company_investment = {
+					investment = property_appraiser
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -1000
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#小镇
+	option = {
+		name = investment_trade_company_events.3.townships
+		highlight = yes
+		trigger = {
+			has_country_flag = Choose1000CostInvestment
+			treasury = 5000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+				add_trade_company_investment = {
+					investment = townships
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -1000
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#总督官邸
+	option = {
+		name = investment_trade_company_events.3.governor_general_mansion
+		trigger = {
+			has_country_flag = Choose1000CostInvestment
+			treasury = 5000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		while = {
+			limit = {
+				treasury = 500
+				any_owned_province = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+			}
+			random_owned_province = {
+				limit = {
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+				add_trade_company_investment = {
+					investment = governor_general_mansion
+					investor = ROOT
+				}
+				owner = {
+					add_treasury = -1000
+				}
+			}
+		}
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	#重新选择投资级别
+	option = {
+		name = investment_trade_company_events.3.cost_200
+		trigger = {
+			NOT = {
+				has_country_flag = Choose200CostInvestment
+			}
+			treasury = 2000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_200 = yes
+			}
+		}
+		clr_country_flag = Choose400CostInvestment
+		clr_country_flag = Choose1000CostInvestment
+
+		set_country_flag = Choose200CostInvestment
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	option = {
+		name = investment_trade_company_events.3.cost_400
+		trigger = {
+			NOT = {
+				has_country_flag = Choose400CostInvestment
+			}
+			treasury = 4000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_400 = yes
+			}
+		}
+		clr_country_flag = Choose200CostInvestment
+		clr_country_flag = Choose1000CostInvestment
+
+		set_country_flag = Choose400CostInvestment
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+	option = {
+		name = investment_trade_company_events.3.cost_1000
+		trigger = {
+			NOT = {
+				has_country_flag = Choose1000CostInvestment
+			}
+			treasury = 5000
+			any_owned_province = {
+				can_inverstment_trade_company_cost_1000 = yes
+			}
+		}
+		clr_country_flag = Choose200CostInvestment
+		clr_country_flag = Choose400CostInvestment
+
+		set_country_flag = Choose1000CostInvestment
+		country_event = {
+			id = investment_trade_company_events.4
+		}
+	}
+
+	#取消
+	option = {
+		name = investment_trade_company_events.3.cancel
+		clr_country_flag = Choose200CostInvestment
+		clr_country_flag = Choose400CostInvestment
+		clr_country_flag = Choose1000CostInvestment
+	}
+}
+
+#继续投资/停止投资
+country_event = {
+	id = investment_trade_company_events.4
+	title = investment_trade_company_events.4.title
+	desc = {
+		trigger = {
+			any_owned_province = {
+				OR = {
+					can_inverstment_trade_company_cost_200 = yes
+					can_inverstment_trade_company_cost_400 = yes
+					can_inverstment_trade_company_cost_1000 = yes
+				}
+			}
+			treasury = 1000
+		}
+		desc = "investment_trade_company_events.4.desc_enough_treasury"
+	}
+	desc = {
+		trigger = {
+			NOT = { treasury = 1000 }
+		}
+		desc = "investment_trade_company_events.4.desc_short_of_treasury"
+	}
+    picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = investment_trade_company_events.4.cancel
+		clr_country_flag = Choose200CostInvestment
+		clr_country_flag = Choose400CostInvestment
+		clr_country_flag = Choose1000CostInvestment
+	}
+
+	option = {
+		name = investment_trade_company_events.4.countinue
+		country_event = {
+			id = investment_trade_company_events.3
+		}
+	}
+}

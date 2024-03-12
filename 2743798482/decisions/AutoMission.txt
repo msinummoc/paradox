@@ -1,0 +1,38 @@
+country_decisions = {
+	auto_mission = {
+		potential = {
+			can_auto_mission = yes
+			NOT = { 
+				has_country_flag = AutoMission 
+			}
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = AutoMission
+			custom_tooltip = auto_mission_tooltip
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	stop_mission = {
+		potential = {	
+			has_country_flag = AutoMission
+			has_country_flag = AODisplayDecision
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_country_flag = AutoMission
+			custom_tooltip = auto_mission_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

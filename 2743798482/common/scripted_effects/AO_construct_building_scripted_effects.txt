@@ -1,0 +1,578 @@
+# 修建法院
+AO_construct_courthouse_effect = {
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 24发展度 至少减6行政容量
+				development = 24
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 24
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 20发展度 至少减5行政容量
+				development = 20
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 20
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 16发展度 至少减4行政容量
+				development = 16
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 16
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 12发展度 至少减3行政容量
+				development = 12
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 12
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 8发展度 至少减2行政容量
+				development = 8
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 8
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 4发展度 至少减1行政容量
+				development = 4
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 4
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 200
+			any_owned_province = {
+				# 不限制发展度
+				province_can_build_courthouse = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_can_build_courthouse = yes
+			}
+			add_building_construction = {
+				building = courthouse
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+}
+# 修建市政厅
+AO_construct_town_hall_effect = {
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 30发展度 至少减15行政容量
+				development = 30
+				province_can_build_town_hall = yes					
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 30
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 20发展度 至少减10行政容量
+				development = 20
+				province_can_build_town_hall = yes					
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 20
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 16发展度 至少减8行政容量
+				development = 16
+				province_can_build_town_hall = yes					
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 16
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 16发展度 至少减8行政容量
+				development = 12
+				province_can_build_town_hall = yes					
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 12
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 8发展度 至少减4行政容量
+				development = 8
+				province_can_build_town_hall = yes					
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 8
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 4发展度 至少减2行政容量
+				development = 4
+				province_can_build_town_hall = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				development = 4
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	while = {
+		limit = {
+			treasury = 300
+			any_owned_province = {
+				# 不限制发展度
+				province_can_build_town_hall = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_can_build_town_hall = yes
+			}
+			add_building_construction = {
+				building = town_hall
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+}
+#在直属州修建工厂
+AO_constract_manufactory_in_state = {
+	if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = farm_estate
+		}
+		add_building_construction = {
+			building = farm_estate
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = wharf
+		}
+		add_building_construction = {
+			building = wharf
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = textile
+		}
+		add_building_construction = {
+			building = textile
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = weapons
+		}
+		add_building_construction = {
+			building = weapons
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = plantations
+		}
+		add_building_construction = {
+			building = plantations
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = tradecompany
+		}
+		add_building_construction = {
+			building = tradecompany
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = mills
+		}
+		add_building_construction = {
+			building = mills
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_state = yes
+			can_build = furnace
+		}
+		add_building_construction = {
+			building = furnace
+			speed = 1
+			cost = 1
+		}
+	}
+	else = {
+		
+	}
+}
+#在贸易公司修建工厂
+AO_constract_manufactory_in_company = {
+	if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = farm_estate
+		}
+		add_building_construction = {
+			building = farm_estate
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = wharf
+		}
+		add_building_construction = {
+			building = wharf
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = textile
+		}
+		add_building_construction = {
+			building = textile
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = weapons
+		}
+		add_building_construction = {
+			building = weapons
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = plantations
+		}
+		add_building_construction = {
+			building = plantations
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = tradecompany
+		}
+		add_building_construction = {
+			building = tradecompany
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = mills
+		}
+		add_building_construction = {
+			building = mills
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_company = yes
+			can_build = furnace
+		}
+		add_building_construction = {
+			building = furnace
+			speed = 1
+			cost = 1
+		}
+	}
+	else = {
+		
+	}
+}
+#在自治领地修建工厂
+AO_constract_manufactory_in_territory = {
+	if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = farm_estate
+		}
+		add_building_construction = {
+			building = farm_estate
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = wharf
+		}
+		add_building_construction = {
+			building = wharf
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = textile
+		}
+		add_building_construction = {
+			building = textile
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = weapons
+		}
+		add_building_construction = {
+			building = weapons
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = plantations
+		}
+		add_building_construction = {
+			building = plantations
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = tradecompany
+		}
+		add_building_construction = {
+			building = tradecompany
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = mills
+		}
+		add_building_construction = {
+			building = mills
+			speed = 1
+			cost = 1
+		}
+	}
+	else_if = {
+		limit = {
+			can_build_manufactory_in_territory = yes
+			can_build = furnace
+		}
+		add_building_construction = {
+			building = furnace
+			speed = 1
+			cost = 1
+		}
+	}
+	else = {
+		
+	}
+}

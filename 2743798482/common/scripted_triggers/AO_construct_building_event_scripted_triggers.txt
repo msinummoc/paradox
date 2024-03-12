@@ -1,0 +1,333 @@
+#判定省份能否修建教堂
+province_can_build_temple = {
+	can_build = temple
+	#是完整核心   基础税收3及以上
+	is_state = yes
+	base_tax = 3
+	is_core = owner
+}
+#判定省份能否修建大教堂
+province_can_build_cathedral = {
+	can_build = cathedral
+	#是完整核心   基础税收3及以上
+	is_state = yes
+	base_tax = 3
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建工场
+province_can_build_workshop = {
+	can_build = workshop
+	is_core = owner
+}
+#判定省份能否修建会计室
+province_can_build_counting_house = {
+	can_build = counting_house
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建法院
+province_can_build_courthouse = {
+	can_build = courthouse
+	OR = {
+		AND = {
+			all_province_in_state = {
+				is_capital = no
+			}
+			is_state = yes
+		}
+		is_territory = yes
+	}
+	is_core = owner
+}
+#判定省份能否修建市政厅
+province_can_build_town_hall = {
+	can_build = town_hall
+	OR = {
+		AND = {
+			all_province_in_state = {
+				is_capital = no
+			}
+			is_state = yes
+		}
+		is_territory = yes
+	}
+	is_core = owner
+}
+#判定省份能否修建大学
+province_can_build_university = {
+	can_build = university
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建兵营
+province_can_build_barracks = {
+	can_build = barracks
+	#是完整核心   基础人力4点以上
+	is_state = yes
+	base_manpower = 4
+	is_core = owner
+}
+#判定省份能否修建训练营
+province_can_build_training_fields = {
+	can_build = training_fields
+	#是完整核心   基础人力4点以上
+	is_state = yes
+	base_manpower = 4
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建军营
+province_can_build_regimental_camp = {
+	can_build = regimental_camp
+	is_state = yes
+	is_core = owner
+}
+#判定省份能否修建征召中心
+province_can_build_conscription_center = {
+	can_build = conscription_center
+	is_state = yes
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建集市
+province_can_build_marketplace = {
+	can_build = marketplace
+	province_trade_power = 15
+	is_core = owner
+}
+#判定省份能否修建贸易仓库
+province_can_build_trade_depot = {
+	can_build = trade_depot
+	province_trade_power = 15
+	is_core = owner
+}
+#判定省份能否修建证券交易所
+province_can_build_stock_exchange = {
+	can_build = stock_exchange
+	province_trade_power = 15
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建码头
+province_can_build_dock = {
+	can_build = dock
+	#是完整核心   基础生产7点以上
+	is_state = yes
+	base_production = 7
+	is_core = owner
+}
+#判定省份能否修建干船坞
+province_can_build_drydock = {
+	can_build = dock
+	#是完整核心   基础生产7点以上
+	is_state = yes
+	base_production = 7
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建造船厂
+province_can_build_shipyard = {
+	can_build = shipyard
+	is_state = yes
+	is_core = owner
+}
+#判定省份能否修建大船厂
+province_can_build_grand_shipyard = {
+	can_build = grand_shipyard
+	is_state = yes
+	is_core = owner
+}
+#==========================================
+#判定省份能否修建城堡
+province_can_build_fort_15th = {
+	can_build = fort_15th
+	is_core = owner
+}
+#判定省份能否修建棱堡
+province_can_build_fort_16th = {
+	can_build = fort_16th
+	is_core = owner
+}
+#判定省份能否修建星堡
+province_can_build_fort_17th = {
+	can_build = fort_17th
+	is_core = owner
+}
+#判定省份能否修建要塞
+province_can_build_fort_18th = {
+	can_build = fort_18th
+	is_core = owner
+}
+#==========================================
+#判断是否存在堡垒
+province_has_fort = {
+	OR = {
+		has_building = fort_15th
+		has_building = fort_16th
+		has_building = fort_17th
+		has_building = fort_18th
+	}
+}
+#省份正在修建堡垒
+province_has_construction_fort = {
+	OR = {
+		has_construction = fort_15th
+		has_construction = fort_16th
+		has_construction = fort_17th
+		has_construction = fort_18th
+	}
+}
+#判断能否修建士兵之家
+can_build_soldier_households = {
+	can_build = soldier_households
+	is_state = yes
+	OR = {
+		trade_goods = grain #谷物
+		trade_goods = wine	#酒类
+		trade_goods = fish	#鱼类
+		trade_goods = livestock	#牲畜
+	}
+	is_core = owner
+}
+#能否修建州议会
+can_build_state_house = {
+	can_build = state_house
+	is_state = yes
+	all_province_in_state = {
+		is_capital = no
+	}
+	OR = {
+		trade_goods = paper #纸张
+		trade_goods = glass	#玻璃
+		trade_goods = gems	#宝石
+	}
+	is_core = owner
+}
+#不合适的州议会
+unsuitable_state_house = {
+	OR = {
+		has_building = state_house
+		has_construction = state_house
+	}
+	OR = {
+		#不生产 纸张玻璃宝石
+		NOT = {
+			trade_goods = paper #纸张
+			trade_goods = glass	#玻璃
+			trade_goods = gems	#宝石
+		}
+		#是首都直属州
+		any_province_in_state = {
+			is_capital = yes
+		}
+		#不是直属州
+		is_state = no
+	}
+}
+#不合适的士兵之家
+unsuitable_soldier_households = {
+	OR = {
+		has_building = soldier_households
+		has_construction = soldier_households
+	}
+	NOT = {
+		trade_goods = grain #谷物
+		trade_goods = wine	#酒类
+		trade_goods = fish	#鱼类
+		trade_goods = livestock	#牲畜
+	}
+}
+#不合适的工厂
+unsuitable_manufactory = {
+	is_state = yes
+	AND = {
+		NOT = {
+			trade_goods = paper #纸张
+			trade_goods = glass	#玻璃
+			trade_goods = gems	#宝石
+		}
+		all_province_in_state = {
+			is_capital = no
+		}
+	}
+	OR = {
+		has_building = farm_estate
+		has_building = wharf
+		has_building = textile
+		has_building = weapons
+		has_building = plantations
+		has_building = tradecompany
+		has_building = mills
+
+		has_construction = farm_estate
+		has_construction = wharf
+		has_construction = textile
+		has_construction = weapons
+		has_construction = plantations
+		has_construction = tradecompany
+		has_construction = mills
+	}
+	OR = {
+		trade_goods = grain #谷物
+		trade_goods = wine	#酒类
+		trade_goods = fish	#鱼类
+		trade_goods = livestock	#牲畜
+	}
+}
+#判断能否修建普通工厂
+can_build_manufactory = {
+	OR = {
+		can_build_manufactory_in_state = yes
+		can_build_manufactory_in_company = yes
+		can_build_manufactory_in_territory = yes
+	}
+	is_core = owner
+}
+#可以在直属州修工厂
+can_build_manufactory_in_state = {
+	is_state = yes
+	OR = {
+		can_build = farm_estate
+		can_build = wharf
+		can_build = textile
+		can_build = weapons
+		can_build = plantations
+		can_build = tradecompany
+		can_build = mills
+		can_build = furnace
+	}
+	can_build_state_house = no
+	can_build_soldier_households = no
+	is_core = owner
+}
+#可以在贸易公司修工厂
+can_build_manufactory_in_company = {
+	is_owned_by_trade_company = yes
+	OR = {
+		can_build = farm_estate
+		can_build = wharf
+		can_build = textile
+		can_build = weapons
+		can_build = plantations
+		can_build = tradecompany
+		can_build = mills
+		can_build = furnace
+	}
+	is_core = owner
+}
+#可以在自治领地修工厂
+can_build_manufactory_in_territory = {
+	is_territory = yes
+	OR = {
+		can_build = farm_estate
+		can_build = wharf
+		can_build = textile
+		can_build = weapons
+		can_build = plantations
+		can_build = tradecompany
+		can_build = mills
+		can_build = furnace
+	}
+	is_core = owner
+}

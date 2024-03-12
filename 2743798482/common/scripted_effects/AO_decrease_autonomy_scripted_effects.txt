@@ -1,0 +1,70 @@
+# 降低省份自治度
+AO_province_decrease_autonomy_effect = {
+	add_local_autonomy = -25
+	add_province_modifier = {
+		name = autonomy_decreased
+		duration = 10950 # 30 years
+	}
+
+	# 提高专制度
+	export_to_variable = {
+		which = absolutismVal
+		value = development
+		who = THIS
+	}
+	# 提高的专制度=发展度/20
+	divide_variable = {
+		which = absolutismVal
+		value = 20
+	}
+	while = {
+		limit = {
+			check_variable = { 
+				which = absolutismVal
+				value = 0.05
+			}
+		}
+		subtract_variable = { 
+			which = absolutismVal 
+			value = 0.05
+		}
+		owner = {
+			add_absolutism = 0.05
+		}
+	}
+}
+
+# 增加省份自治度
+AO_province_increase_autonomy_effect = {
+	add_local_autonomy = 25
+	add_province_modifier = {
+		name = autonomy_increased
+		duration = 10950 # 30 years
+	}
+	# 降低专制度
+	export_to_variable = {
+		which = absolutismVal
+		value = development
+		who = THIS
+	}
+	# 降低的专制度=发展度/10
+	divide_variable = {
+		which = absolutismVal
+		value = 10
+	}
+	while = {
+		limit = {
+			check_variable = { 
+				which = absolutismVal
+				value = 0.1
+			}
+		}
+		subtract_variable = { 
+			which = absolutismVal 
+			value = 0.1
+		}
+		owner = {
+			add_absolutism = -0.1
+		}
+	}
+}

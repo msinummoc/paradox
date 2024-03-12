@@ -1,0 +1,15 @@
+# country_decisions = {
+# 	test1 = {
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			country_event = {
+# 				id = calc_factory_earnings_events.2
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# }

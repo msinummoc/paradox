@@ -1,0 +1,39 @@
+AO_change_controller_to_subject = {
+    category = influence
+	require_acceptance = no
+
+	alert_index = 6
+	alert_tooltip = AO_change_controller_to_subject_alert_tooltip
+
+	# 决定何时该行动是可见的
+    is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_at_war = yes
+		}
+		is_at_war = yes
+    }
+
+	 # 接受时执行哪个效果
+	 on_accept = {
+		set_country_flag = AOControlAllBySubject
+
+		clr_country_flag = AOControlAllByPlayer
+		clr_country_flag = AOControlFortBySubject
+		clr_country_flag = AOControlCoreAndClaimBySubject
+
+		every_subject_country = {
+			clr_country_flag = AOControlAllBySubject
+		}
+
+		FROM = {
+			set_country_flag = AOControlAllBySubject
+		}
+		country_event = {
+			id = auto_change_controller_events.2
+		}
+    }
+
+	 # 控制AI对该行动的使用
+	 ai_will_do = 0
+}

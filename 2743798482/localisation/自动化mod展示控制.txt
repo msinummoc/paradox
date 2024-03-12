@@ -1,0 +1,8 @@
+l_english:
+ AO_display_decision_title:0 "§G【自动化mod】§!§M展示§!自动化mod相关决议"
+ AO_display_decision_desc:0 " "
+ AO_display_decision_tooltip:0 "目前【自动化mod】提供的决议较多，全部展示的话会比较占用空间，在不需要时可以隐藏这些决议"
+
+ AO_hidden_decision_title:0 "§G【自动化mod】§!§M隐藏§!自动化mod相关决议"
+ AO_hidden_decision_desc:0 " "
+ AO_hidden_decision_tooltip:0 "相关决议已被隐藏，点击展示相关决议"

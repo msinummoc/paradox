@@ -1,0 +1,57 @@
+﻿l_english:
+ conditional_dismantle_building_title:0 "§G0ê¨RSmod0§!N.•Æbd–ú^Qr(èRÆbd–)"
+ conditional_dismantle_building_desc:0 ""
+ conditional_dismantle_building_tooltip:0 "ëVÆbd–`S(uú^QrýiMO„vú^Qr"
+
+ unconditional_dismantle_building_title:0 "§G0ê¨RSmod0§!N.•Æbd–ú^Qr(hQèÆbd–)"
+ unconditional_dismantle_building_desc:0 ""
+ unconditional_dismantle_building_tooltip:0 "ëVÆbd–ú^Qr"
+
+ dismantle_building_events.1.title:0 "Æbd–àe(uú^Qr"
+ dismantle_building_events.1.desc:0 "bìNÑS°s	gN›NwýNòTÏu¡l	gú^QrýiMO†Nÿ/f&T‰Æbd–NèRàe(uú^QrbTÿ"
+ dismantle_building_events.1.dismantle:0 "SV6q‰Æbd–Ù›N`S(uýiMO„vú^Qr"
+ dismantle_building_events.1.cancel:0 "‚föeHQYuNw'T"
+
+ dismantle_building_events.2.title:0 "N.•Æbd–ú^Qr(êSÆbd–àezzò•ú^QrýiMOwýN„vú^Qr)"
+ dismantle_building_events.2.desc:0 "9hnc‰|‹WÆbd–ùR”^„vú^QrÿêSOÆbd–àeú^QrýiMOwýN„vú^Qrÿ°ežX†NN*N	y˜(uŽNÆbd–NT„vÞT®‹O0ëXuQKN¶RÊSnfåT‚Sÿå‹	y˜N×Sú^QrýiMOP–6R0\nèlaNÉb	y˜ÿ"
+ dismantle_building_events.2.dismantle_unsuitable_factory:0 "Æbd–NT„vÞT®‹O0ëXuQKN¶RÊSnfåT‚S"
+ dismantle_building_events.2.dismantle_temple_and_cathedral:0 "Æbd–z6eú^QrÿSìb0YeX00'YYeX0"
+ dismantle_building_events.2.dismantle_workshop_and_counting_house:0 "Æbd–uµNú^QrÿSìb0åT:W00O¡‹²R0"
+ dismantle_building_events.2.dismantle_fort:0 "Æbd–2–¡Vú^QrÿSìb0ÎW/X00ñh/X00f/X00‰^X0"
+ dismantle_building_events.2.dismantle_coastal_defence_and_naval_battery:0 "Æbd–¿lwmú^QrÿSìb0¸S2–åT‹N00wm2–®pðS0"
+ dismantle_building_events.2.dismantle_marketplace_and_trade_depot_and_stock_exchange:0 "Æbd–8fú^QrÿSìb0Æ–^008fÓN“^00Á‹8R²NfNb0"
+ dismantle_building_events.2.dismantle_barracks_and_training_fields:0 "Æbd–ºN›Rú^QrÿSìb0uQ%„00­‹Ãu%„0"
+ dismantle_building_events.2.dismantle_regimental_camp_and_conscription_center:0 "Æbd–F–›QNP–ú^QrÿSìb0›Q%„00VìS-NÃV0"
+ dismantle_building_events.2.dismantle_dock_and_drydock:0 "Æbd–4lKbú^QrÿSìb0x4Y00r^9‚^W0"
+ dismantle_building_events.2.dismantle_shipyard_and_grand_shipyard:0 "Æbd–wm›QNP–ú^QrÿSìb0.9‚‚S00'Y9‚‚S0"
+ dismantle_building_events.2.dismantle_useless_manufactory:0 "Æbd–àe(uåT‚Sú^QrÿSìb0ÁX’W00:V6RVuQžRlQ²R0"
+ dismantle_building_events.2.cancel:0 "Ø/fNÆb†N..."
+
+ dismantle_building_events.2.dismantle_unsuitable_factory.tooltip:0 "Æbd–µNirN&rT„våT‚SÿÞT®‹OÿµNir^—¸u.V0Rów0»sƒt„vwýN	ÿ0ëXuQKN¶RÿµNir^—7Œir0rrju0R‘‰|0|œ‰|„vwýN	ÿ0nfåT‚Sÿôv^SÞTv^NµNir:N7Œir0rrju0R‘‰|0|œ‰|„vwýN	ÿ"
+
+ dismantle_building_events.3.title:0 "/f&T‰çuíuÆbd–ú^Qr"
+ dismantle_building_events.3.desc:0 "bìNòTÏuÆbd–†NNybú^Qrÿ/f&T‰çuíuÿ"
+ dismantle_building_events.3.countinue:0 "çuíuÆbd–ú^Qr"
+ dismantle_building_events.3.cancel:0 "Ø/fNÆb†N..."
+ dismantle_building_events.4.title:0 "N.•Æbd–ú^Qr(hQèÆbd–)"
+ dismantle_building_events.4.desc:0 "9hnc‰|‹WÆbd–ùR”^„vú^QrÿOÆbd–å‹‰|‹WhQèú^Qrÿ÷‹(ŒNa	éb0\nèlaNÉb	y˜ÿ"
+
+ dismantle_building_events.4.dismantle_comprehensive:0 "üuTÆbd–ÿÆbd–z6eú^Qr0uµNú^Qr0¿lwmú^Qr08fú^Qr0wm›Qú^Qr0àe(uåT‚Sú^Qr"
+ dismantle_building_events.4.dismantle_temple_and_cathedral:0 "Æbd–z6eú^QrÿSìb0YeX00'YYeX0"
+ dismantle_building_events.4.dismantle_workshop_and_counting_house:0 "Æbd–uµNú^QrÿSìb0åT:W00O¡‹²R0"
+ dismantle_building_events.4.dismantle_fort:0 "Æbd–2–¡Vú^QrÿSìb0ÎW/X00ñh/X00f/X00‰^X0"
+ dismantle_building_events.4.dismantle_coastal_defence_and_naval_battery:0 "Æbd–¿lwmú^QrÿSìb0¸S2–åT‹N00wm2–®pðS0"
+ dismantle_building_events.4.dismantle_marketplace_and_trade_depot_and_stock_exchange:0 "Æbd–8fú^QrÿSìb0Æ–^008fÓN“^00Á‹8R²NfNb0"
+ dismantle_building_events.4.dismantle_barracks_and_training_fields:0 "Æbd–ºN›Rú^QrÿSìb0uQ%„00­‹Ãu%„0"
+ dismantle_building_events.4.dismantle_regimental_camp_and_conscription_center:0 "Æbd–F–›QNP–ú^QrÿSìb0›Q%„00VìS-NÃV0"
+ dismantle_building_events.4.dismantle_dock_and_drydock:0 "Æbd–4lKbú^QrÿSìb0x4Y00r^9‚^W0"
+ dismantle_building_events.4.dismantle_shipyard_and_grand_shipyard:0 "Æbd–wm›QNP–ú^QrÿSìb0.9‚‚S00'Y9‚‚S0"
+ dismantle_building_events.4.dismantle_useless_manufactory:0 "Æbd–àe(uåT‚Sú^QrÿSìb0ÁX’W00:V6RVuQžRlQ²R0"
+ dismantle_building_events.4.cancel:0 "Ø/fNÆb†N..."
+
+ dismantle_building_events.4.dismantle_comprehensive.tooltip:0 "SÆbd–Nb	g0YeX00'YYeX0\n0åT‚S00O¡‹²R0\n0¸S2–åT‹N00wm2–®pðS0\n0Æ–^008fÓN“^00Á‹8R²NfNb0\n0x4Y00r^9‚^W00.9‚‚S00'Y9‚‚S0\n0ÁX’W00:V6RVuQžRlQ²R0\n"
+
+ dismantle_building_events.5.title:0 "/f&T‰çuíuÆbd–ú^Qr"
+ dismantle_building_events.5.desc:0 "bìNòTÏuÆbd–†NNybú^Qrÿ/f&T‰çuíuÿ"
+ dismantle_building_events.5.countinue:0 "çuíuÆbd–ú^Qr"
+ dismantle_building_events.5.cancel:0 "Ø/fNÆb†N..."

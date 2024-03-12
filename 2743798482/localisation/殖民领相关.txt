@@ -1,0 +1,24 @@
+l_english:
+ pretty_colony_title:0 "§G【自动化mod】§!启用自动调整殖民领边界事件"
+ pretty_colony_desc:0 ""
+ pretty_colony_tooltip:0 "开启此项决议后，将会启用对应的事件组来帮助你调整殖民领的边界，是时候告别不规则的殖民领边界了"
+
+ close_pretty_colony_title:0 "§G【自动化mod】§!关闭自动调整殖民领边界事件"
+ close_pretty_colony_desc:0 ""
+
+ pretty_colonial_borders_events.3.name:0 "§G【自动化mod】§!殖民地之间的纠纷"
+ pretty_colonial_borders_events.3.desc:0 "[colonial_country_1.GetName]与[colonial_country_2.GetName]在[pretty_colonial_province.GetName]的问题上爆发了激烈冲突。[colonial_country_1.GetName]目前实控这一省份，[colonial_country_2.GetName]却搬出殖民特许状——这似乎确认了他们索取这些领土的正当权利。如今牵涉到当地向边境集结的武装力量之间的数次摩擦令局势陷入了困境。为了避免冲突升级，两方总督都已向[Root.GetName]发出申诉，以期这一争议得到仲裁。\n来自我参与开发的另一个mod【Colonial Expanded 殖民拓展】"
+ pretty_colonial_borders_events.3.side_with_colonial_country_1:0 "站在[colonial_country_1.GetName]一方。"
+ pretty_colonial_borders_events.3.side_with_colonial_country_2:0 "站在[colonial_country_2.GetName]一方。"
+ pretty_colonial_borders_events.3.side_with_colonial_country_2.tooltip:0 "§Y[pretty_colonial_province.GetName]§!以及§Y[colonial_country_1.GetName]§!拥有的所有位于§Y[colonial_country_2.GetName]§!的§Y殖民地区§!、且与之相邻的省份将被割让给§Y[colonial_country_2.GetName]§!。"
+
+ cross_colonial_borders_events.3.name:0 "§G【自动化mod】§![From.GetName]越界"
+ cross_colonial_borders_events.3.desc:0 "[From.GetName]越过了殖民区域向其他殖民区域进行殖民，我们需要收回他们的非法领土，虽然这种行为不值得鼓励，但是我们也要显示我们的大度，对[From.GetName]进行一些补偿\n来自我参与开发的另一个mod【Colonial Expanded 殖民拓展】"
+ cross_colonial_borders_events.3.tack_back:0 "收回这些非法领土，并补偿[From.GetName]"
+ cross_colonial_borders_events.3.cancel:0 "现在还不是时候"
+ 
+ merge_colony_in_same_colonial_events.3.name:0 "§G【自动化mod】§!同一殖民区域下的两个殖民领"
+ merge_colony_in_same_colonial_events.3.desc:0 "随着征服的进行，我们发现在同一殖民区域下同时存在两个不同的殖民领，该怎么去处理这件事呢？\n来自我参与开发的另一个mod【Colonial Expanded 殖民拓展】"
+ merge_colony_in_same_colonial_events.3.first_colony_inherit_second_colony:0 "我希望保留[colonial_country_1.GetName]"
+ merge_colony_in_same_colonial_events.3.second_colony_inherit_first_colony:0 "我希望保留[colonial_country_2.GetName]"
+ merge_colony_in_same_colonial_events.3.cancel:0 "维持现状"

@@ -1,0 +1,203 @@
+namespace = decrease_autonomy_events
+
+# 存在符合条件的可以降低自治度的省份时，主动触发事件询问
+country_event = {
+	id = decrease_autonomy_events.1
+	title = decrease_autonomy_events.1.title
+    desc = decrease_autonomy_events.1.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	mean_time_to_happen = {
+		years = 30
+	}
+
+	trigger = {
+		is_at_war = no
+		any_owned_province = {
+			province_can_decrease_autonomy = yes
+		}
+		NOT = {
+			has_country_modifier = AO_remind_decrease_autonomy_timer
+		}
+		ai = no
+	}
+
+	option = {
+		name = decrease_autonomy_events.1.cancel
+		add_country_modifier = {
+			name = AO_remind_decrease_autonomy_timer
+			duration = 10950
+			hidden = yes
+		}
+	}
+
+	option = {
+		name = decrease_autonomy_events.1.decrease_autonomy
+
+		add_country_modifier = {
+			name = AO_remind_decrease_autonomy_timer
+			duration = 10950
+			hidden = yes
+		}
+		country_event = {
+			id = decrease_autonomy_events.2
+		}
+	}
+}
+
+country_event = {
+	id = decrease_autonomy_events.2
+	title = decrease_autonomy_events.2.title
+    desc = decrease_autonomy_events.2.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	is_triggered_only = yes
+	trigger = {
+		is_at_war = no
+		any_owned_province = {
+			province_can_decrease_autonomy = yes
+		}
+	}
+	option = {
+		name = decrease_autonomy_events.2.cancel
+	}
+	option = {
+		name = decrease_autonomy_events.2.decrease_autonomy
+		custom_tooltip = decrease_autonomy_events.2.decrease_autonomy.tooltip
+
+		trigger = {
+			is_at_war = no
+			any_owned_province = {
+				province_can_decrease_autonomy = yes
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_decrease_autonomy = yes
+			}
+			AO_province_decrease_autonomy_effect = yes
+		}
+	}
+}
+
+# 存在符合条件的可以提升自治度的省份时，主动触发事件询问
+country_event = {
+	id = decrease_autonomy_events.3
+	title = decrease_autonomy_events.3.title
+    desc = decrease_autonomy_events.3.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	mean_time_to_happen = {
+		years = 30
+	}
+
+	trigger = {
+		any_owned_province = {
+			OR = {
+				NOT = {
+					is_core = ROOT
+				}
+				unrest = 1
+			}
+			province_can_increase_autonomy = yes
+		}
+		NOT = {
+			has_country_modifier = AO_remind_increase_autonomy_timer
+		}
+	}
+
+	option = {
+		name = decrease_autonomy_events.3.cancel
+		add_country_modifier = {
+			name = AO_remind_increase_autonomy_timer
+			duration = 10950
+			hidden = yes
+		}
+	}
+
+	option = {
+		name = decrease_autonomy_events.3.increase_autonomy
+
+		add_country_modifier = {
+			name = AO_remind_increase_autonomy_timer
+			duration = 10950
+			hidden = yes
+		}
+		country_event = {
+			id = decrease_autonomy_events.4
+		}
+	}
+}
+
+# 新获得的领土增加自治度，降低叛乱
+country_event = {
+	id = decrease_autonomy_events.4
+	title = decrease_autonomy_events.4.title
+    desc = decrease_autonomy_events.4.desc
+    picture = BANKRUPTCY_eventPicture 
+
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			province_can_increase_autonomy = yes
+		}
+	}
+	option = {
+		name = decrease_autonomy_events.4.cancel
+	}
+	option = {
+		#无核心省份提高自治度
+		name = decrease_autonomy_events.4.increase_autonomy_with_no_core
+		custom_tooltip = decrease_autonomy_events.4.increase_autonomy_with_no_core.tooltip
+
+		trigger = {
+			any_owned_province = {
+				NOT = { is_core = ROOT }
+				province_can_increase_autonomy = yes
+			}
+		}
+		every_owned_province = {
+			limit = {
+				NOT = { is_core = ROOT }
+				province_can_increase_autonomy = yes
+			}
+			AO_province_increase_autonomy_effect = yes
+		}
+	}
+	option = {
+		#有叛乱省份提高自治度
+		name = decrease_autonomy_events.4.increase_autonomy_with_unrest
+		custom_tooltip = decrease_autonomy_events.4.increase_autonomy_with_unrest.tooltip
+
+		trigger = {
+			any_owned_province = {
+				unrest = 1
+				province_can_increase_autonomy = yes
+			}
+		}
+		every_owned_province = {
+			limit = {
+				unrest = 1
+				province_can_increase_autonomy = yes
+			}
+			AO_province_increase_autonomy_effect = yes
+		}
+	}
+	option = {
+		#全部省份提高自治度
+		name = decrease_autonomy_events.4.increase_autonomy
+		custom_tooltip = decrease_autonomy_events.4.increase_autonomy.tooltip
+
+		trigger = {
+			any_owned_province = {
+				province_can_increase_autonomy = yes
+			}
+		}
+		every_owned_province = {
+			limit = {
+				province_can_increase_autonomy = yes
+			}
+			AO_province_increase_autonomy_effect = yes
+		}
+	}
+}

@@ -1,0 +1,22 @@
+l_english:
+ exploit_development_title:0 "§G【自动化mod】§!一键剥削发展度"
+ exploit_development_desc:0 ""
+ exploit_development_tooltip:0 "所有符合条件的省份，将被剥削发展度"
+
+ AO_exploit_development_modifier:0 "剥削了发展度"
+
+ exploit_development_events.1.title:0 "一键烧税"
+ exploit_development_events.1.desc:0 "检测到当前有一些省份可以烧税，是否需要一键烧税呢？"
+ exploit_development_events.1.exploit_development:0 "不受这鸟气，烧了"
+ exploit_development_events.1.cancel:0 "暂时先不烧了"
+
+ exploit_development_events.2.title:0 "一键烧税"
+ exploit_development_events.2.desc:0 "随着我们国家的发展，行政容量越发捉襟见肘，适时地剥削一些税收，既能降低行政容量占用，也可以获取一笔收入，是否需要一键烧税呢？§G\n注意：\n由于系统没有提供烧税相关的指令及修正，本事件的烧税与手动烧税冷却时间不共享，即通过本事件烧税后，仍可以手动烧税，反之亦然。额外引入的bug因素，还请大家谨慎使用，联机玩家使用时请多注意！§!"
+ exploit_development_events.2.exploit_development:0 "不受这鸟气，全都烧了"
+ exploit_development_events.2.exploit_development_wont_lose_building:0 "不受这鸟气，烧点不会减少建筑的省份吧"
+ exploit_development_events.2.exploit_development_wont_lose_slot:0 "不受这鸟气，烧点不会减少建筑槽位的省份吧"
+ exploit_development_events.2.cancel:0 "暂时先不烧了"
+
+ exploit_development_events.2.exploit_development.tooltip:0 "§G与系统手动烧税冷却时间不共享，请合理使用§!"
+ exploit_development_events.2.exploit_development_wont_lose_building.tooltip:0 "§G1.省份剩余建筑槽位大于等于1的省份会被烧税，烧税后建筑槽位可能会减少，但已有建筑不会消失\n2.与系统手动烧税冷却时间不共享，请合理使用§!"
+ exploit_development_events.2.exploit_development_wont_lose_slot.tooltip:0 "§G1.省份发展度为整十的省份，不会被剥削发展度，这些省份烧税会减少建筑槽位\n2.与系统手动烧税冷却时间不共享，请合理使用§!"

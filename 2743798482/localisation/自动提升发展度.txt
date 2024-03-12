@@ -1,0 +1,19 @@
+l_english:
+ auto_develop_title:0 "§G【自动化mod】§!自动提升发展度"
+ auto_develop_desc:0 ""
+ auto_develop_tooltip:0 "开启自动提升发展度后，在点数将要溢出时会随机选择一个省份提升发展度"
+
+ auto_develop_events.999.title:0 "自动提升发展度"
+ auto_develop_events.999.desc:0 "在进行自动提升发展度前，请先设定提升上限，\n注意下拉选项"
+
+ auto_develop_events.999.choose3:0 "税收、生产、人力全都种到§G【3点】§!就行了"
+ auto_develop_events.999.choose5:0 "税收、生产、人力全都种到§G【5点】§!就行了"
+ auto_develop_events.999.choose8:0 "税收、生产、人力全都种到§G【8点】§!就行了"
+ auto_develop_events.999.choose10:0 "税收、生产、人力全都种到§G【10点】§!点就行了"
+ auto_develop_events.999.choose12:0 "税收、生产、人力全都种到§G【12点】§!点就行了"
+ auto_develop_events.999.choose15:0 "税收、生产、人力全都种到§G【15点】§!点就行了"
+ auto_develop_events.999.chooseNone:0 "种爆"
+ auto_develop_events.999.close:0 "停止自动提升发展度"
+ auto_develop_events.999.stand:0 "维持原来的选择"
+
+ auto_develop_events.999.chooseNone.tooltip:0 "§G不设置上限，有点数就一直种§!"
