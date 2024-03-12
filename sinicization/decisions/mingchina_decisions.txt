@@ -1,0 +1,3265 @@
+country_decisions = {
+	assimilate_culture_kasakh = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = khazak
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = khazak
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = khazak
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = hasake
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_khalkha = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = khalkha
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = khalkha
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = khalkha
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = waimenggu
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_korchin = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = chahar
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = chahar
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = chahar
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = dongmenggu
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_kyrgyz = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = kirgiz
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = kirgiz
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = kirgiz
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = keerkezi
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_mongol = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = mongol
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = mongol
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = mongol
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = menggu
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_oirat = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = oirats
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = oirats
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = oirats
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = wala
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_uyghur = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = uyghur
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = uyghur
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = uyghur
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = weiwuer
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_uzbek = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = uzbehk
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = uzbehk
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = uzbehk
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = wuzibieke
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_arakanese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = arakanese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = arakanese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = arakanese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = ruokai 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_burmese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = burmese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = burmese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = burmese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = mian 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_chin = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = chin
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = chin
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = chin
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = qin 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_kachin = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = kachin
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = kachin
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = kachin
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = jingpo 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_karen = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = karen
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = karen
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = karen
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = kelun 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_assamese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = assamese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = assamese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = assamese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = asamu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_buryat = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = buryat
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = buryat
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = buryat
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = buliyate 
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_evenk = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = evenk
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = evenk
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = evenk
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = ewenke 
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_kashmir = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = kashmiri
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = kashmiri
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = { 
+					culture = kashmiri 
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes } 
+				}
+				change_culture = ladake
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_kyushuan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = kyushuan
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = kyushuan
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = kyushuan
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = liuqiu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_togoku = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = togoku
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = togoku
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = togoku
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = donghe 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_jap = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = japanese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = japanese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = japanese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = xihe 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_ainu = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = ainu
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = ainu
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = ainu
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = xiayi 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_korean = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = korean
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = korean
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = korean
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = korean_new 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_acehnese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = acehnese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = acehnese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = acehnese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = yaqi 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_bornean = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = bornean
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = bornean
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = bornean
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = poluo 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_cham = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = cham
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = cham
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = cham
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = zhan 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_filipino = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = filipino
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = filipino
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = filipino
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = lusong 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_javanese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = javanese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = javanese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = javanese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = zhaowa 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_malayan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = malayan
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = malayan
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = malayan
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = malai 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_moluccan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = moluccan
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = moluccan
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = moluccan
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = malugu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_nusa_tenggara = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = nusa_tenggara
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = nusa_tenggara
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = nusa_tenggara
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = bali 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_sulawesi = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = sulawesi
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = sulawesi
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = sulawesi
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = wangjiaxi 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_sumatran = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = sumatran
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = sumatran
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = sumatran
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = jiugang 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_sundanese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = sundanese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = sundanese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = sundanese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = xunta 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_polynesian = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = polynesian
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = polynesian
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = polynesian
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = gaoshan 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_khmer = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = khmer
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = khmer
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = khmer
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = gaomian 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_mon = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = mon
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = mon
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = mon
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = meng 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_central_thai = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = central_thai
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = central_thai
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = central_thai
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = dai 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_northern_thai = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = northern_thai
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = northern_thai
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = northern_thai
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = dairuan 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_lao = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = lao
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = lao
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = lao
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = laowo 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_shan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = shan
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = shan
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = shan
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = shanzhu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_zhuang = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = zhuang
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = zhuang
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = zhuang
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = zhuangzhu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_bai = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = bai
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = bai
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = bai
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = baizhu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_miao = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = miao
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = miao
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = miao
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = miaozhu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_yi = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = yi
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = yi
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = yi
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = yizhu 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_tibetan = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = tibetan
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = tibetan
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = tibetan
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = zang 
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_jurchen = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = manchu
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = manchu
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = manchu
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = manchu_new 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_afghani = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = afghani
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = afghani
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = { 
+					culture = afghani 
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes } 
+				}
+				change_culture = pushitu
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_turkmeni = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = turkmeni
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = turkmeni
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = { 
+					culture = turkmeni 
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes } 
+				}
+				change_culture = wugusi
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_nivkh = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = nivkh
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = nivkh
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = nivkh
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = feiyage 
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_vietnamese = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = vietnamese
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = vietnamese
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = vietnamese
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = jiaozhi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	assimilate_culture_khorasani = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = khorasani
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = khorasani
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = khorasani
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = bosi
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	assimilate_culture_nepali = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			any_owned_province = {
+				AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				culture = nepali
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				owned_by = ROOT
+				culture = nepali
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			dip_power = 50
+			has_any_disaster = no
+			religious_unity = 0.90
+			religion = confucianism
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+				
+				overextension_percentage = 0.01
+			}
+		}
+		effect = {
+			
+			add_dip_power = -50
+			random_province = {
+				limit = {
+					culture = nepali
+					AND = { NOT = { unrest = 0 } is_state_core = ROOT is_state = yes }
+				}
+				change_culture = niboer
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	integrated_subjects_china = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			government_rank = 3
+			NOT = { has_country_modifier = china_integrated_subjects }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			has_any_disaster = no
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+			}
+		}
+		effect = {
+			
+			add_country_modifier = {
+				name = "china_integrated_subjects"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	confucian_schools = {
+		potential = {
+			always = no
+			religion = confucianism
+			NOT = { has_country_modifier = confucian_education }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			has_any_disaster = no
+			}
+		effect = {
+			
+			add_country_modifier = {
+				name = "confucian_education"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	adopt_chinese_customs = {
+		potential = {
+			always = no
+			OR = { 
+				culture_group = east_asian
+				religion = confucianism
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+				}
+			NOT = { 
+				OR = {
+					primary_culture = jianghuai 
+					primary_culture = zhongyuan
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			
+			has_any_disaster = no
+			OR = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+			}
+		}
+		effect = {
+			
+			add_accepted_culture = ROOT
+			change_primary_culture = jianghuai
+			change_religion = confucianism
+			add_stability = -2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	elite_army_of_china = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			NOT = { has_country_modifier = elite_chinese_army }
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "elite_chinese_army"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	colonisation_china = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+			}
+			NOT = { has_country_modifier = relocate_population_china }
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "relocate_population_china"
+				duration = -1
+			}
+			add_dip_power = -50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	reintegrating_hetao_area = {
+		potential = {
+			culture_group = east_asian
+			religion = confucianism
+			OR = {
+				owns = 698
+				owns = 701
+				owns = 702
+				owns = 4223
+			}
+			OR = {
+				698 = { NOT = { culture_group = east_asian } }
+				701 = { NOT = { culture_group = east_asian } }
+				702 = { NOT = { culture_group = east_asian } }
+				4223 = { NOT = { culture_group = east_asian } }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 698
+				province_id = 701
+				province_id = 702
+				province_id = 4223
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				#owns_all_provinces = { region = south_china_region }
+				#owns_all_provinces = { region = xinan_region }
+			}
+			owns_core_province = 698
+			owns_core_province = 701
+			owns_core_province = 702
+			owns_core_province = 4223
+			adm_power = 100
+		}
+		effect = {
+			add_adm_power = -100
+			698 = {
+				change_religion = ROOT
+				change_culture = xibei 
+			}
+			701 = {
+				change_religion = ROOT
+				change_culture = jin 
+			}
+			702 = {
+				change_religion = ROOT
+				change_culture = jin 
+			}
+			4223 = {
+				change_religion = ROOT
+				change_culture = jin 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	reintegrating_yumen_area = {
+		potential = {
+			culture_group = east_asian
+			religion = confucianism
+			owns = 707
+			707 = { NOT = { culture_group = east_asian } }
+		}
+		provinces_to_highlight = {
+			province_id = 707
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				#owns_all_provinces = { region = south_china_region }
+				#owns_all_provinces = { region = xinan_region }
+			}
+			owns_core_province = 707
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			707 = {
+				change_religion = ROOT
+				change_culture = xibei 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	integrating_chengde_area = {
+		potential = {
+			culture_group = east_asian
+			religion = confucianism
+			owns = 703
+			703 = { NOT = { culture_group = east_asian } }
+		}
+		provinces_to_highlight = {
+			province_id = 703
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				#owns_all_provinces = { region = south_china_region }
+				#owns_all_provinces = { region = xinan_region }
+			}
+			owns_core_province = 703
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			703 = {
+				change_religion = ROOT
+				change_culture = chihan
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	integrating_songqu_area = {
+		potential = {
+			culture_group = east_asian
+			religion = confucianism
+			OR = {
+				owns = 2170
+				owns = 2183
+			}
+			OR = {
+				2170 = { NOT = { culture_group = east_asian } } 
+				2183 = { NOT = { culture_group = east_asian } }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2170
+				province_id = 2183
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				#owns_all_provinces = { region = north_china_region }
+				#owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+			owns_core_province = 2170
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			2170 = {
+				change_religion = ROOT
+				change_culture = sichuanese
+			}
+			2183 = {
+				change_religion = ROOT
+				change_culture = xibei
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	integrating_outer_liao_area = {
+		potential = {
+			culture_group = east_asian
+			religion = confucianism
+			OR = {
+				owns = 726
+				owns = 2112
+			}
+			OR = {
+				726 = { NOT = { culture_group = east_asian } }
+				2112 = { NOT = { culture_group = east_asian } }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 726
+				province_id = 2112
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+			owns_core_province = 726
+			owns_core_province = 2112
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			726 = {
+				change_religion = ROOT
+				change_culture = shandong_culture 
+			}
+			2112 = {
+					change_religion = ROOT
+					change_culture = shandong_culture 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_xianbei = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				AND = { 
+					region = west_siberia_region 
+					NOT = {
+						province_id = 1060
+					}
+				}
+			}
+			NOT = {
+				exists = MP1
+			}
+		}
+		provinces_to_highlight = {
+			region = west_siberia_region
+			owned_by = ROOT
+			NOT = {
+				province_id = 1060
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+				owns_all_provinces = { region = mongolia_region }
+			}
+			adm_power = 100
+			any_owned_province = {
+				AND = { 
+					region = west_siberia_region 
+					NOT = {
+						province_id = 1060
+					}
+				}
+			}
+			NOT = {
+				exists = MP1
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					region = west_siberia_region
+					NOT = {
+						province_id = 1060
+					}
+				}
+				add_core = MP1
+				remove_core = ROOT
+			}
+			release = MP1
+			ROOT = { create_march = MP1 }
+			MP1 = {
+				change_religion = ROOT
+				add_accepted_culture = ROOT
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_lingbei = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				AND = { 
+					region = east_siberia_region 
+					NOT = {
+						area = buryatia_area
+						province_id = 1047
+						province_id = 1052
+					}
+				}
+			}
+			NOT = {
+				exists = MP2
+			}
+		}
+		provinces_to_highlight = {
+			region = east_siberia_region
+			owned_by = ROOT
+			NOT = {
+				area = buryatia_area
+				province_id = 1047
+				province_id = 1052
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+				owns_all_provinces = { region = manchuria_region }
+			}
+			adm_power = 100
+			any_owned_province = {
+				AND = { 
+					region = east_siberia_region 
+					NOT = {
+						area = buryatia_area
+						province_id = 1047
+						province_id = 1052
+					}
+				}
+			}
+			NOT = {
+				exists = MP2
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					region = east_siberia_region
+					NOT = {
+						area = buryatia_area
+						province_id = 1047
+						province_id = 1052
+					}
+				}
+				add_core = MP2
+				remove_core = ROOT
+			}
+			release = MP2
+			ROOT = { create_march = MP2 }
+			MP2 = {
+				change_religion = ROOT
+				add_accepted_culture = ROOT
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_hezhong = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				AND = { 
+					region = central_asia_region
+					NOT = {
+						area = shanshan_area
+						area = kashgaria_area
+						area = jetysuu_area
+						area = tarim_basin_area
+						province_id = 460
+						province_id = 2364
+					}
+				}
+			}
+			NOT = {
+				exists = MP3
+			}
+		}
+		provinces_to_highlight = {
+			region = central_asia_region
+			owned_by = ROOT
+			NOT = {
+				area = shanshan_area
+				area = kashgaria_area
+				area = jetysuu_area
+				area = tarim_basin_area
+				area = lower_yik_area
+				province_id = 460
+				province_id = 2364
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+				owns_all_provinces = { region = mongolia_region }
+				owns_all_provinces = { area = shanshan_area }
+				owns_all_provinces = { area = kashgaria_area }
+				owns_all_provinces = { area = tarim_basin_area }
+			}
+			adm_power = 100
+			any_owned_province = {
+				AND = { 
+					region = central_asia_region 
+					NOT = {
+						area = shanshan_area
+						area = kashgaria_area
+						area = jetysuu_area
+						area = tarim_basin_area
+						area = lower_yik_area
+						province_id = 460
+						province_id = 2364
+					}
+				}
+			}
+			NOT = {
+				exists = MP3
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					region = central_asia_region
+					NOT = {
+						area = shanshan_area
+						area = kashgaria_area
+						area = jetysuu_area
+						area = tarim_basin_area
+						area = lower_yik_area
+						province_id = 460
+						province_id = 2364
+					}
+				}
+				add_core = MP3
+				remove_core = ROOT
+			}
+			release = MP3
+			ROOT = { create_march = MP3 }
+			MP3 = {
+				change_religion = ROOT
+				add_accepted_culture = ROOT
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_bosi = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				area = mashhad_area
+			}
+			exists = MP3
+			NOT = {
+				exists = MP4
+			}
+		}
+		provinces_to_highlight = {
+			area = mashhad_area
+			owned_by = ROOT
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+			adm_power = 100
+			any_owned_province = {
+				area = mashhad_area
+			}
+			exists = MP3
+			NOT = {
+				exists = MP4
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					area = mashhad_area
+				}
+				add_core = MP4
+				remove_core = ROOT
+			}
+			release = MP4
+			ROOT = { create_march = MP4 }
+			MP4 = {
+				change_religion = ROOT
+				add_accepted_culture = bosi
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+establish_tuhuoluo = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				AND = { 
+					region = khorasan_region
+					NOT = {
+						area = merv_area
+						area = sistan_area
+						area = makran_area
+						area = kalat_area
+						area = birjand_area
+						area = herat_area
+						area = mashhad_area
+						province_id = 578
+					}
+				}
+			}
+			exists = MP4
+			NOT = {
+				exists = MP5
+			}
+		}
+		provinces_to_highlight = {
+			region = khorasan_region
+			owned_by = ROOT
+			NOT = {
+				area = merv_area
+				area = sistan_area
+				area = makran_area
+				area = kalat_area
+				area = birjand_area
+				area = herat_area
+				area = mashhad_area
+				province_id = 578
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+			adm_power = 100
+			any_owned_province = {
+				AND = { 
+					region = khorasan_region 
+					NOT = {
+						area = merv_area
+						area = sistan_area
+						area = makran_area
+						area = kalat_area
+						area = birjand_area
+						area = herat_area
+						area = mashhad_area
+						province_id = 578
+					}
+				}
+			}
+			exists = MP4
+			NOT = {
+				exists = MP5
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					region = khorasan_region
+					NOT = {
+						area = merv_area
+						area = sistan_area
+						area = makran_area
+						area = kalat_area
+						area = birjand_area
+						area = herat_area
+						area = mashhad_area
+						province_id = 578
+					}
+				}
+				add_core = MP5
+				remove_core = ROOT
+			}
+			release = MP5
+			ROOT = { create_march = MP5 }
+			MP5 = {
+				change_religion = ROOT
+				add_accepted_culture = pushitu
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_waicongling = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				AND = { 
+					area = kashmir_area
+					NOT = {
+						province_id = 2074
+						province_id = 4521
+					}
+				}
+			}
+			NOT = {
+				exists = MP6
+			}
+		}
+		provinces_to_highlight = {
+			area = kashmir_area
+			owned_by = ROOT
+			NOT = {
+				province_id = 2074
+				province_id = 4521
+			}
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+				owns_all_provinces = { region = tibet_region }
+			}
+			adm_power = 100
+			any_owned_province = {
+				AND = { 
+					area = kashmir_area 
+					NOT = {
+						province_id = 2074
+						province_id = 4521
+					}
+				}
+			}
+			NOT = {
+				exists = MP6
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					area = kashmir_area
+					NOT = {
+						province_id = 2074
+						province_id = 4521
+					}
+				}
+				add_core = MP6
+				remove_core = ROOT
+			}
+			release = MP6
+			ROOT = { create_march = MP6 }
+			MP6 = {
+				change_religion = ROOT
+				add_accepted_culture = ladake
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_changcheng = {
+		potential = {
+			always = no
+			culture_group = east_asian
+			religion = confucianism
+			any_owned_province = {
+				area = ural_area
+			}
+			exists = MP1
+			NOT = {
+				exists = MP7
+			}
+		}
+		provinces_to_highlight = {
+			area = ural_area
+			owned_by = ROOT
+		}
+		allow = {
+			is_subject = no
+			has_any_disaster = no
+			AND = {
+				owns_all_provinces = { region = north_china_region }
+				owns_all_provinces = { region = south_china_region }
+				owns_all_provinces = { region = xinan_region }
+			}
+			adm_power = 100
+			any_owned_province = {
+				area = ural_area
+			}
+			exists = MP1
+			NOT = {
+				exists = MP7
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			random_province = {
+				limit = {
+					controlled_by = ROOT
+					area = ural_area
+				}
+				add_core = MP7
+				remove_core = ROOT
+			}
+			release = MP7
+			ROOT = { create_march = MP7 }
+			MP7 = {
+				change_religion = ROOT
+				add_accepted_culture = ROOT
+				define_ruler = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
