@@ -1,4 +1,4 @@
 name="selfmade"
-path="mod/selfmade_mod"
+path="mod/selfmade"
 
 supported_version="1.36.*"

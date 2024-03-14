@@ -101,6 +101,8 @@ NDefines.NAI.FIRE_ADVISOR_LOAN_REQUIREMENT = 50   --5
 
 NDefines.NDiplomacy.SUPPORT_REBELS_DURATION = 0 --5
 
+NDefines.NMilitary.CONTROL_DEVASTATION_IMPACT = -2  -- -1
+
 NDefines.NCountry.PS_ADVANCE_TECH = 800 --600
 --NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.075 --0.1
 NDefines.NCountry.TECH_TIME_COST = 1  --0.3
