@@ -1246,7 +1246,7 @@ corruption = {
 	
 	trade_efficiency = -1.5
 	
-	province_warscore_cost = 5
+	province_warscore_cost = 6
 }
 
 root_out_corruption = {
@@ -1722,7 +1722,7 @@ subject_nation = {
 }
 
 vassal_nation = {
-	development_cost = 0.5
+	development_cost = 0.15
 }
 
 primitive_nation = {
@@ -2583,7 +2583,7 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 average_global_autonomy = { #100% autonomy => 100% modifier
 	monthly_ottoman_decadence = 0.25
 	yearly_corruption = 0.8
-	province_warscore_cost = 2
+	#province_warscore_cost = 1
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
