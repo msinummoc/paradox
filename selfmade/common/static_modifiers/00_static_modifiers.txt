@@ -2472,7 +2472,7 @@ tolerance_heathen = {
 }
 
 num_accepted_cultures = {
-	promote_culture_cost = 0.15
+	tolerance_own = -0.1
 }
 
 # hf
