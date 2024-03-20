@@ -45,11 +45,17 @@ DVEL_add_development = {
 
 DVEL_remove_development = {
 	random_list = {
-		1 = { add_base_tax = -1 add_devastation = -2 trigger = { base_tax = 2 } }
-		1 = { add_base_production = -1 add_devastation = -2 trigger = { base_production = 2 } }
-		1 = { add_base_manpower = -1 add_devastation = -2 trigger = { base_manpower = 2 } }
-		1 = {
-			add_devastation = -1
+		1 = { add_base_tax = -3 add_devastation = -1 trigger = { base_tax = 20 } }
+		1 = { add_base_production = -3 add_devastation = -1 trigger = { base_production = 20 } }
+		1 = { add_base_manpower = -3 add_devastation = -1 trigger = { base_manpower = 20 } }
+		1 = { add_base_tax = -2 add_devastation = -1 trigger = { base_tax = 10 } }
+		1 = { add_base_production = -2 add_devastation = -1 trigger = { base_production = 10 } }
+		1 = { add_base_manpower = -2 add_devastation = -1 trigger = { base_manpower = 10 } }
+		1 = { add_base_tax = -1 add_devastation = -1 trigger = { base_tax = 2 } }
+		1 = { add_base_production = -1 add_devastation = -1 trigger = { base_production = 2 } }
+		1 = { add_base_manpower = -1 add_devastation = -1 trigger = { base_manpower = 2 } }
+		4 = {
+			#add_devastation = -0.25
 			if = {
 				limit = { has_global_flag = DVEL_debug_mode_flag }
 				REB = {
@@ -524,7 +530,7 @@ DVEL_devastation_effect = {
 			}
 			if = {
 				limit = {
-					devastation = 4
+					devastation = 8
 				}
 				if = {
 					limit = { development = 50 }

@@ -195,8 +195,7 @@ is_possible_hre_province = {
 		potential = {
 		}
 		allow = {
-			always = yes
-			#continent = europe
+			continent = europe
 		}
 	}
 }

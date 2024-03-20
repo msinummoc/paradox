@@ -350,7 +350,7 @@ ai_inst_fra = {
 		
 		trigger = {
 			OR = {
-				total_development = 1000
+				total_development = 1500
 				france_region = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT

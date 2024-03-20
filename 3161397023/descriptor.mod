@@ -9,5 +9,5 @@ dependencies={
 	"Chinese Language Mod for 1.36"
 }
 name="New World Colony Names Fan Fork CN Ver."
-supported_version="1.35.3"
+supported_version="1.36.*"
 remote_file_id="3161397023"
