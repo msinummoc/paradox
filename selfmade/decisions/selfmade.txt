@@ -2,6 +2,7 @@ country_decisions = {
 	restore_chinese_empire = {
         major = yes
 		potential = {
+			is_subject = no
 			#government = monarchy
 			num_of_owned_provinces_with = {
 				superregion = china_superregion
