@@ -14,7 +14,8 @@ NDefines.NDiplomacy.AE_INFIDEL_CONQUEST = 0.75  --0.25
 NDefines.NDiplomacy.WAR_REPARATIONS_FACTOR = 0.16  --0.1
 NDefines.NDiplomacy.WAR_REPARATIONS_YEARS = 6   --10
 NDefines.NDiplomacy.AE_PROVINCE_CAP = 60  --30
-
+--NDefines.NDiplomacy.PEACE_COST_JOIN_HRE = 1000 --90
+NDefines.NDiplomacy.MAX_PEACE_TREATY_AE = 200  --50
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.45   --0.8
 NDefines.NDiplomacy.PEACE_COST_CONVERSION = 0.3  --0.8
 NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 0.45   --0.8

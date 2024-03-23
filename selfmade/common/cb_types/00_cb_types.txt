@@ -1530,9 +1530,15 @@ cb_force_join_hre = {
 	}
 
 	prerequisites = {
-		can_use_peace_treaty = {
-			who = FROM
-			treaty = po_join_empire
+		OR = {
+			FROM = {
+				NOT = { num_of_cities = 16 }
+				#is_subject = no
+			}
+			can_use_peace_treaty = {
+				who = FROM
+				treaty = po_join_empire
+			}	
 		}
 		FROM = {
 			religion_group = ROOT
