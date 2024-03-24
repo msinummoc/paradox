@@ -384,6 +384,7 @@ country_event = { # The Big One
 								modifier = { factor = 2.5 NOT= { num_of_times_improved = -9 } }
 								modifier = { factor = 2.5 NOT= { num_of_times_improved = -6 } }
 								modifier = { factor = 2.5 NOT= { num_of_times_improved = -3 } }
+								modifier = { factor = 1.5 NOT= { num_of_times_improved = 0 } }
 								modifier = { factor = 1.5 owner = { has_country_modifier = new_mandate_holder } } 
 								modifier = { factor = 0.8 NOT = { OR = { has_owner_accepted_culture = yes has_owner_culture = yes } } }
 								modifier = { factor = 0.8 NOT = { is_state = yes } }
