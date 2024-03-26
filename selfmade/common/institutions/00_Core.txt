@@ -2006,7 +2006,7 @@ enlightenment = {
 	bonus = {
 		culture_conversion_cost = -0.25
 		technology_cost = -0.15
-		global_unrest = 5
+		global_unrest = 3
 	}
 
 	trade_company_efficiency = 1.5
@@ -2395,7 +2395,7 @@ industrialization = {
 		global_allowed_num_of_buildings = 1
 		global_allowed_num_of_manufactories = 1
 		technology_cost = -0.25
-		global_unrest = 5
+		global_unrest = 2
 	}
 
 	historical_start_date = 1750.1.1

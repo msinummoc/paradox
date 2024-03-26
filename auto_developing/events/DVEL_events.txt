@@ -381,17 +381,17 @@ country_event = { # The Big One
 							29 = { }
 							1 = {
 								DVEL_add_development = yes
-								modifier = { factor = 2.5 NOT= { num_of_times_improved = -9 } }
-								modifier = { factor = 2.5 NOT= { num_of_times_improved = -6 } }
-								modifier = { factor = 2.5 NOT= { num_of_times_improved = -3 } }
-								modifier = { factor = 1.5 NOT= { num_of_times_improved = 0 } }
+								modifier = { factor = 2.5 NOT = { num_of_times_improved = -9 } }
+								modifier = { factor = 2.5 NOT = { num_of_times_improved = -6 } }
+								modifier = { factor = 2.5 NOT = { num_of_times_improved = -3 } }
+								modifier = { factor = 1.5 NOT = { num_of_times_improved = 0 } }
 								modifier = { factor = 1.5 owner = { has_country_modifier = new_mandate_holder } } 
 								modifier = { factor = 0.8 NOT = { OR = { has_owner_accepted_culture = yes has_owner_culture = yes } } }
 								modifier = { factor = 0.8 NOT = { is_state = yes } }
 								modifier = { factor = 0.9 owner = { is_at_war = yes } }
 								modifier = { factor = 1.2 province_has_center_of_trade_of_level = 1 }
-								modifier = { factor = 1.3 province_has_center_of_trade_of_level = 2 }
-								modifier = { factor = 1.3 province_has_center_of_trade_of_level = 3 }
+								modifier = { factor = 1.2 province_has_center_of_trade_of_level = 2 }
+								modifier = { factor = 1.2 province_has_center_of_trade_of_level = 3 }
 								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.5 } } }
 								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.45 } } }
 								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.4 } } }
@@ -403,28 +403,33 @@ country_event = { # The Big One
 								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.1 } } }
 								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0.05 } } }
 								modifier = { factor = 1.1 NOT = { check_variable = { which = netDevCost value = 0 } } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.55 } }
 								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.6 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.65 } }
 								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.7 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.75 } }
 								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.8 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.85 } }
 								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.9 } }
-								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 1.0 } }
-								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.1 } }
-								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.2 } }
-								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.3 } }
-								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.4 } }
-								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.6 } }
-								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.8 } }
-								modifier = { factor = 0.8 check_variable = { which = netDevCost value = 2 } }
-								modifier = { factor = 0.7 check_variable = { which = netDevCost value = 2.2 } }
+								modifier = { factor = 0.95 check_variable = { which = netDevCost value = 0.95 } }
+								modifier = { factor = 0.9 check_variable = { which = netDevCost value = 1.0 } }
+								modifier = { factor = 0.8 check_variable = { which = netDevCost value = 1.1 } }
+								modifier = { factor = 0.8 check_variable = { which = netDevCost value = 1.2 } }
+								modifier = { factor = 0.8 check_variable = { which = netDevCost value = 1.3 } }
+								modifier = { factor = 0.8 check_variable = { which = netDevCost value = 1.4 } }
+								modifier = { factor = 0.7 check_variable = { which = netDevCost value = 1.6 } }
+								modifier = { factor = 0.6 check_variable = { which = netDevCost value = 1.8 } }
+								modifier = { factor = 0.5 check_variable = { which = netDevCost value = 2 } }
+								modifier = { factor = 0.4 check_variable = { which = netDevCost value = 2.2 } }
 								modifier = { factor = 1.5 NOT = { development = 5 } }
 								modifier = { factor = 1.5 NOT = { development = 10 } }
-								modifier = { factor = 1.2 development = 10 }
+								#modifier = { factor = 1.2 development = 10 }
 								modifier = { factor = 1.4 development = 20 }
-								modifier = { factor = 1.4 development = 30 }
+								modifier = { factor = 1.35 development = 30 }
 								modifier = { factor = 1.3 AND = { development = 40 is_year = 1600 } }
-								modifier = { factor = 1.3 AND = { development = 50 is_year = 1650 } }
+								modifier = { factor = 1.25 AND = { development = 50 is_year = 1650 } }
 								modifier = { factor = 1.2 AND = { development = 60 is_year = 1700 } }
-								modifier = { factor = 1.1 AND = { development = 70 is_year = 1750 } }
+								modifier = { factor = 1.15 AND = { development = 70 is_year = 1750 } }
 								modifier = { factor = 1.1 owner = { stability = 3 } }
 								modifier = { factor = 1.1 owner = { stability = 2 } }
 								modifier = { factor = 0.9 NOT = { owner = { stability = 1 } } }

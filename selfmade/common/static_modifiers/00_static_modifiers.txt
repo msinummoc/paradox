@@ -471,7 +471,7 @@ gbr_emperor_of_india_subject_bonus = {
 
 gbr_emperor_of_india_overlord_bonus = {
 	trade_efficiency = 0.1
-	reduced_trade_penalty_on_non_main_tradenode = 0.25
+	reduced_trade_penalty_on_non_main_tradenode = 0.75
 }
 
 same_culture_group = {
@@ -1118,7 +1118,7 @@ country_development = {
 	development_cost_modifier = -0.3
 	num_accepted_cultures = 4
 	global_autonomy = 0.1
-	imperial_mandate = 0.2
+	imperial_mandate = 0.1
 }
 
 # Multiplied by current Legitimacy - 50
