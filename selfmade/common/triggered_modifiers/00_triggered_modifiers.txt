@@ -15,7 +15,7 @@ in_debt_level_1 = {
 		is_at_war = no
 		num_of_loans = 1
 		NOT = { num_of_loans = 10 }
-		is_subject = yes
+		is_subject = no
 	}
 	
 	land_forcelimit_modifier = -0.1
@@ -30,7 +30,7 @@ in_debt_level_2 = {
 		is_at_war = no
 		num_of_loans = 10
 		NOT = { num_of_loans = 20 }
-		is_subject = yes
+		is_subject = no
 	}
 	
 	land_forcelimit_modifier = -0.2
@@ -45,7 +45,7 @@ in_debt_level_3 = {
 		is_at_war = no
 		num_of_loans = 20
 		NOT = { num_of_loans = 30 }
-		is_subject = yes
+		is_subject = no
 	}
 	
 	land_forcelimit_modifier = -0.3
@@ -60,7 +60,7 @@ in_debt_level_4 = {
 		is_at_war = no
 		num_of_loans = 30
 		NOT = { num_of_loans = 40 }
-		is_subject = yes
+		is_subject = no
 	}
 	
 	land_forcelimit_modifier = -0.4
@@ -74,8 +74,7 @@ in_debt_level_5 = {
 	trigger = {
 		is_at_war = no
 		num_of_loans = 40
-		NOT = { num_of_loans = 50 }
-		is_subject = yes
+		is_subject = no
 	}
 	
 	land_forcelimit_modifier = -0.5
