@@ -70,7 +70,8 @@ country_event = {
 	desc = selfmade.2.d
 	picture = INVENTION_eventPicture
 	fire_only_once = yes
-	trigger = { 
+	trigger = {
+		always = no
 		ai = no
 	}
 	mean_time_to_happen = {

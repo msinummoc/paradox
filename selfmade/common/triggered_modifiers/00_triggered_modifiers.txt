@@ -3,6 +3,90 @@
 #
 # Effects are fully scriptable here.
 
+
+# reduce ai land forcelimit if in debt
+
+in_debt_level_1 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 1
+		NOT = { num_of_loans = 10 }
+		is_subject = yes
+	}
+	
+	land_forcelimit_modifier = -0.1
+}
+
+in_debt_level_2 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 10
+		NOT = { num_of_loans = 20 }
+		is_subject = yes
+	}
+	
+	land_forcelimit_modifier = -0.2
+}
+
+in_debt_level_3 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 20
+		NOT = { num_of_loans = 30 }
+		is_subject = yes
+	}
+	
+	land_forcelimit_modifier = -0.3
+}
+
+in_debt_level_4 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 30
+		NOT = { num_of_loans = 40 }
+		is_subject = yes
+	}
+	
+	land_forcelimit_modifier = -0.4
+}
+
+in_debt_level_5 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 40
+		NOT = { num_of_loans = 50 }
+		is_subject = yes
+	}
+	
+	land_forcelimit_modifier = -0.5
+}
+
+
+
+
+
+
+
 ###########################################
 # Discovery of the East Indian trade route.
 ###########################################
