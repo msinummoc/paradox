@@ -23,7 +23,7 @@ if = {
   }
   change_estate_land_share = {
     estate = estate_nobles
-    share = -20
+    share = 20
   }
 }
 add_prestige = 45
@@ -207,7 +207,7 @@ if = {
 1444.11.10 = {
   change_estate_land_share = {
     estate = all
-    share = 25
+    share = 10
   }
   change_estate_land_share = {
     estate = estate_eunuchs
@@ -216,10 +216,6 @@ if = {
   change_estate_land_share = {
     estate = estate_eunuchs
     share = -10
-  }
-  change_estate_land_share = {
-    estate = all
-    share = 5
   }
 }
 1449.11.23 = {

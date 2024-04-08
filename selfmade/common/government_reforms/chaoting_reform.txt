@@ -43,7 +43,7 @@ celestial_empire = {
 	}
 
 	fixed_rank = 3
-	start_territory_to_estates = 0.9
+	start_territory_to_estates = 0.7
 
 	modifiers = {
 		prestige = 0.5

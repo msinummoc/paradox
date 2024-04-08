@@ -2185,7 +2185,7 @@ estate_burghers_orthodox_tolerance = {
 		church_loyalty_modifier = -0.1
 	}
 	benefits = {
-		tolerance_heretic = 2
+		tolerance_heretic = 1
 	}
 	ai_will_do = {
 		factor = 1000

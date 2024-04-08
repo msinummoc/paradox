@@ -118,7 +118,7 @@ country_event = {
 	trigger = {
 		NOT = { exists = CSH }
 		num_of_owned_provinces_with = {
-			value = 10
+			value = 15
 			region = north_china_region
 			controlled_by = REB
 		}
@@ -130,7 +130,13 @@ country_event = {
 				area = shanxi_area
 				area = hebei_area
 				area = south_hebei_area
+				area = east_hebei_area
+				area = south_shanxi_area
+				area = north_shanxi_area
 				area = liaoning_area
+				area = beijing_area
+				area = north_shanxi_area
+				area = south_shanxi_area
 			}
 		}
 	}
@@ -150,7 +156,13 @@ country_event = {
 						area = shanxi_area
 						area = hebei_area
 						area = south_hebei_area
+						area = east_hebei_area
+						area = south_shanxi_area
+						area = north_shanxi_area
 						area = liaoning_area
+						area = beijing_area
+						area = north_shanxi_area
+						area = south_shanxi_area
 					}
 					OR = {
 						controlled_by = REB
@@ -163,9 +175,20 @@ country_event = {
 			every_owned_province = { #get rid of bordergore from random Mongolian provinces
 				limit = {
 					region = mongolia_region
-					any_neighbor_province = {
-						is_core = CSH
+					OR = {
+						any_neighbor_province = {
+							is_core = CSH
+						}
+						AND = {
+							any_neighbor_province = {
+								province_id = 702
+							}
+							702 = {
+								is_core = CSH
+							}
+						}
 					}
+					
 					OR = {
 						controlled_by = REB
 						controlled_by = ROOT
@@ -176,11 +199,15 @@ country_event = {
 			}
 			release = CSH
 			CSH = {
+				if = {
+					limit = {owns = 700}
+					set_capital = 700
+				}
 				capital_scope = {
 					build_to_forcelimit = {
-						infantry = 0.6
-						cavalry = 0.3
-						artillery = 0.1
+						infantry = 0.5
+						cavalry = 0.2
+						artillery = 0.3
 					}
 				}
 				change_government = monarchy
@@ -332,7 +359,7 @@ country_event = {
 	trigger = {
 		NOT = { exists = CDL }
 		num_of_owned_provinces_with = {
-			value = 10
+			value = 20
 			region = xinan_region
 			controlled_by = REB
 		}
@@ -450,7 +477,7 @@ country_event = {
 			NOT = { exists = YUE }
 		}
 		num_of_owned_provinces_with = {
-			value = 10
+			value = 20
 			region = south_china_region
 			controlled_by = REB
 		}
@@ -957,7 +984,11 @@ country_event = {
 		name = ming_crisis.10.b
 		custom_tooltip = ming_crisis.10.tt
 		ai_chance = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { is_neighbor_of = ROOT }
+			}
 		}
 	}
 }

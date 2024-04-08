@@ -964,19 +964,19 @@ DVEL_province_dev_math = {
 DVEL_terrain_doubler = {
 	if = { limit = { has_terrain = farmlands } change_variable = { which = localDevCost value = -0.05 }
 	} else_if = { limit = { has_terrain = grasslands } change_variable = { which = localDevCost value = 0 }
-	} else_if = { limit = { has_terrain = drylands } change_variable = { which = localDevCost value = 0.05 }
-	} else_if = { limit = { has_terrain = woods } change_variable = { which = localDevCost value = 0.15 }
-	} else_if = { limit = { has_terrain = coastline } change_variable = { which = localDevCost value = 0.15 }
-	} else_if = { limit = { has_terrain = savannah } change_variable = { which = localDevCost value = 0.15 }
-	} else_if = { limit = { has_terrain = forest } change_variable = { which = localDevCost value = 0.2 }
-	} else_if = { limit = { has_terrain = steppe } change_variable = { which = localDevCost value = 0.2 }
-	} else_if = { limit = { has_terrain = highlands } change_variable = { which = localDevCost value = 0.2 }
-	} else_if = { limit = { has_terrain = hills } change_variable = { which = localDevCost value = 0.25 }
-	} else_if = { limit = { has_terrain = marsh } change_variable = { which = localDevCost value = 0.25 }
-	} else_if = { limit = { has_terrain = mountain } change_variable = { which = localDevCost value = 0.35 }
-	} else_if = { limit = { has_terrain = jungle } change_variable = { which = localDevCost value = 0.35 }
-	} else_if = { limit = { has_terrain = coastal_desert } change_variable = { which = localDevCost value = 0.35 }
-	} else_if = { limit = { has_terrain = desert } change_variable = { which = localDevCost value = 0.5 }
+	} else_if = { limit = { has_terrain = drylands } change_variable = { which = localDevCost value = 0.025 }
+	} else_if = { limit = { has_terrain = woods } change_variable = { which = localDevCost value = 0.05 }
+	} else_if = { limit = { has_terrain = coastline } change_variable = { which = localDevCost value = 0.1 }
+	} else_if = { limit = { has_terrain = savannah } change_variable = { which = localDevCost value = 0.1 }
+	} else_if = { limit = { has_terrain = forest } change_variable = { which = localDevCost value = 0.1 }
+	} else_if = { limit = { has_terrain = steppe } change_variable = { which = localDevCost value = 0.15 }
+	} else_if = { limit = { has_terrain = highlands } change_variable = { which = localDevCost value = 0.1 }
+	} else_if = { limit = { has_terrain = hills } change_variable = { which = localDevCost value = 0.1 }
+	} else_if = { limit = { has_terrain = marsh } change_variable = { which = localDevCost value = 0.15 }
+	} else_if = { limit = { has_terrain = mountain } change_variable = { which = localDevCost value = 0.2 }
+	} else_if = { limit = { has_terrain = jungle } change_variable = { which = localDevCost value = 0.2 }
+	} else_if = { limit = { has_terrain = coastal_desert } change_variable = { which = localDevCost value = 0.2 }
+	} else_if = { limit = { has_terrain = desert } change_variable = { which = localDevCost value = 0.3 }
 	} else_if = { limit = { has_terrain = glacier } change_variable = { which = localDevCost value = 0.5 }
 	} else_if = { limit = { has_terrain = impassable_mountains } change_variable = { which = localDevCost value = 10 }
 	} else_if = { limit = { has_terrain = city_terrain } change_variable = { which = localDevCost value = -0.1 }

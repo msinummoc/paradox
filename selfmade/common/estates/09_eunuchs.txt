@@ -34,7 +34,7 @@ estate_eunuchs = {
 		reduced_liberty_desire = 10	
 	}	
 	country_modifier_angry = {
-		reduced_liberty_desire = -20
+		reduced_liberty_desire = -10
 		yearly_corruption = 0.25
 		global_unrest = 4
 	}

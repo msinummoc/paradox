@@ -377,8 +377,8 @@ country_event = { # The Big One
 							NOT = { check_variable = { which = netDevCost value = 2.5 } }
 							check_variable = { which = netDevCost value = -2 }
 						}
-						random_list = { #once every 30 years
-							29 = { }
+						random_list = { #once every 50 years
+							49 = { }
 							1 = {
 								DVEL_add_development = yes
 								modifier = { factor = 2.5 NOT = { num_of_times_improved = -9 } }
@@ -422,8 +422,11 @@ country_event = { # The Big One
 								modifier = { factor = 0.5 check_variable = { which = netDevCost value = 2 } }
 								modifier = { factor = 0.4 check_variable = { which = netDevCost value = 2.2 } }
 								modifier = { factor = 1.5 NOT = { development = 5 } }
-								modifier = { factor = 1.5 NOT = { development = 10 } }
-								#modifier = { factor = 1.2 development = 10 }
+								modifier = { factor = 1.35 NOT = { development = 20 } }
+								modifier = { factor = 1.35 AND = { is_year = 1500 NOT = { development = 30 } } }
+								modifier = { factor = 1.35 AND = { is_year = 1600 NOT = { development = 40 } } }
+								modifier = { factor = 1.35 AND = { is_year = 1700 NOT = { development = 50 } } }
+								modifier = { factor = 1.35 AND = { is_year = 1800 NOT = { development = 60 } } }
 								modifier = { factor = 1.4 development = 20 }
 								modifier = { factor = 1.35 development = 30 }
 								modifier = { factor = 1.3 AND = { development = 40 is_year = 1600 } }
@@ -439,6 +442,9 @@ country_event = { # The Big One
 								modifier = { factor = 0.25 owner = { OR = { primitives = yes is_primitive = yes } } }
 								#modifier = { factor = 1.25 owner = { ai = yes NOT = { is_subject = yes } } }
 								modifier = { factor = 1.25 is_prosperous = yes }
+								
+								modifier = { factor = 1.5 culture_group = east_asian }
+								modifier = { factor = 1.5 superregion = india_superregion }
 						
 							}
 						}

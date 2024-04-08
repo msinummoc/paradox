@@ -90,4 +90,41 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	
+	turn_on_force_historical_mode = {
+		major = yes
+		potential = {
+			NOT = {has_global_flag = force_historical_mode_flag}
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_global_flag = force_historical_mode_flag
+			
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
+	
+	turn_off_force_historical_mode = {
+		major = yes
+		potential = {
+			has_global_flag = force_historical_mode_flag
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_global_flag = force_historical_mode_flag
+			
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
 }
+
