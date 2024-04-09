@@ -490,7 +490,7 @@ non_accepted_culture = {
 	local_sailors_modifier = -0.5
 	local_unrest = 5					#1% revolt risk!
 	local_governing_cost = 0.15
-	#local_warscore_cost_modifier = -0.35
+	local_warscore_cost_modifier = 0.2
 }
 
 accepted_culture_demoted = {
