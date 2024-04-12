@@ -6,6 +6,30 @@
 
 # reduce ai land forcelimit if in debt
 
+
+unify_china_attempt = {
+	potential = {
+		ai = yes
+		has_global_flag = force_historical_mode_flag
+	}
+	trigger = {
+		OR = {
+			has_reform = celestial_empire
+			has_reform = chinese_warlord
+		}
+		NOT = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				superregion = china_superregion
+				value = 175
+			}
+		}
+	}
+	diplomatic_upkeep = -10
+	diplomatic_reputation = -100
+	manpower_recovery_speed = 1
+	yearly_corruption = -1
+}
+
 in_debt_level_1 = {
 	potential = {
 		ai = yes

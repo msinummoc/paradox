@@ -58,6 +58,11 @@ NDefines.NMilitary.ASSAULT_WIDTH_LIMIT = 10 --5
 NDefines.NMilitary.MORALE_RECOVERY_SPEED = 0.12  --0.15
 NDefines.NMilitary.MORALE_RECOVERY_SPEED_OWN_TERRITORY = 0.1 --0.05
 NDefines.NMilitary.HOSTILE_TERRITORY_SPEED_MODIFIER = -0.15  -- 0
+NDefines.NMilitary.LOOTED_SCALE = 2  --1
+NDefines.NMilitary.LOOTED_MAX = 20 --5
+NDefines.NMilitary.INF_LOOT = 0.3  --0.1
+NDefines.NMilitary.CAV_LOOT = 0.8  --0.3
+NDefines.NMilitary.ART_LOOT = 0.1  --0.05
 
 NDefines.NCountry.HORDE_RAZE_TECH_BASE_LEVEL = 10   --3
 
