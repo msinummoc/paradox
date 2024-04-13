@@ -44,7 +44,7 @@ country_event = {
 		ai = yes
 		is_emperor_of_china = yes
 		NOT = { imperial_mandate = 1 }
-		corruption = 25
+		corruption = 100  ##
 	}
 mean_time_to_happen = {
 		months = 480

@@ -542,7 +542,6 @@ new_world_i = {
 
 	bonus = {
 		global_prov_trade_power_modifier = 0.10
-		global_manpower_modifier = 0.10
 		production_efficiency = 0.10
 		inflation_reduction = -0.02
 		trade_steering = 0.1		  
