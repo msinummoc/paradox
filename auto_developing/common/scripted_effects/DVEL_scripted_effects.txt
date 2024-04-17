@@ -961,6 +961,10 @@ DVEL_province_dev_math = {
 	# log = "netDevCost: [This.netDevCost.GetValue]"
 }
 
+#DVEL_selfmade_regional_accelerator = {
+#	
+#}
+
 DVEL_terrain_doubler = {
 	if = { limit = { has_terrain = farmlands } change_variable = { which = localDevCost value = -0.05 }
 	} else_if = { limit = { has_terrain = grasslands } change_variable = { which = localDevCost value = 0 }

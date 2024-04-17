@@ -476,7 +476,8 @@ underhanded_diplomacy_act = {
 	}
 	
 	spy_offence = 0.33
-	diplomatic_reputation = 1
+	#diplomatic_reputation = 1
+	ae_impact = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -527,8 +528,10 @@ the_tenures_abolition_act = {
 		full_idea_group = aristocracy_ideas
 	}
 
-	army_tradition = 0.5
-	diplomats = 1
+	#army_tradition = 0.5
+	#diplomats = 1
+	governing_capacity = 100 ##
+	leader_cost = -0.2
 	
 	effect = {}
 	removed_effect = {}
@@ -713,7 +716,9 @@ inspirational_leaders = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	leader_land_shock = 1
+	#leader_land_shock = 1
+	morale_damage = 0.1  #
+	morale_damage_received = -0.05  #
 	
 	effect = {}
 	removed_effect = {}
@@ -739,8 +744,9 @@ the_naval_inspection_act = {
 		full_idea_group = naval_ideas
 	}	
 	
-	ship_durability = 0.05
-	recover_navy_morale_speed = 0.1
+	ship_durability = 0.1 #0.05
+	trade_efficiency = 0.1  ##
+	#recover_navy_morale_speed = 0.1
 	
 	effect = {}
 	removed_effect = {}
@@ -767,7 +773,7 @@ the_preparation_act = {
 	}	
 	
 	land_attrition = -0.25
-	war_exhaustion = -0.05
+	leader_cost = -0.25 ##
 	
 	effect = {}
 	removed_effect = {}
