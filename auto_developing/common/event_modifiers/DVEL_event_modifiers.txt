@@ -30,10 +30,10 @@ DVEL_no_manual_dev_3 = {
 }
 
 DVEL_subject_growth_limiter = {
-	development_cost = 0.1
+	#development_cost = 0.1
 }
 DVEL_colonial_growth_limiter = {
-	development_cost = 0.3
+	#development_cost = 0.3
 }
 
 DVEL_raided = {
@@ -47,7 +47,7 @@ DVEL_scorched = {
 }
 
 DVEL_recently_converted = {
-	local_culture_conversion_cost = 3
+	#local_culture_conversion_cost = 3
 }
 
 # et_plague_tribal = {
