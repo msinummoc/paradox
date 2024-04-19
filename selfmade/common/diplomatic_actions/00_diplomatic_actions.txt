@@ -283,6 +283,34 @@ declarewar = {
 			}
 		}
 	}
+	condition = {   ## russia dont conquer central asian early
+		tooltip = FORCE_HISTORICAL_MODE
+		potential = {
+			ai = yes
+			OR = { tag = MOS tag = RUS }]
+			has_global_flag = force_historical_mode_flag
+		}
+		allow = {
+			OR = {
+				FROM = { ai = no }
+				AND = {
+					NOT = {
+						FROM = { capital_scope = { region = manchuria_region } }
+					}
+					NOT = {
+						FROM = { capital_scope = { region = mongolia_region } }
+					}						
+				}
+				
+				FROM = {
+					any_owned_province = {
+						superregion = eastern_europe_superregion
+					}
+				}
+				is_year = 1700
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 		if = {

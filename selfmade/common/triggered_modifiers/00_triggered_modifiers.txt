@@ -119,7 +119,7 @@ ai_rus_state_maintenance = {
 		has_global_flag = force_historical_mode_flag
 	}
 	trigger = {
-		num_of_loans = 10
+		num_of_loans = 5
 	}
 	
 	state_maintenance_modifier = -2
