@@ -18,9 +18,12 @@ unify_china_attempt = {
 			has_reform = chinese_warlord
 		}
 		NOT = { 
-			num_of_provinces_owned_or_owned_by_subjects_with = {
-				superregion = china_superregion
-				value = 175
+			AND = {
+				#is_year = 1800
+				num_of_provinces_owned_or_owned_by_subjects_with = {
+					superregion = china_superregion
+					value = 175
+				}
 			}
 		}
 	}

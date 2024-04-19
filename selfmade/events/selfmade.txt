@@ -64,13 +64,14 @@ mean_time_to_happen = {
 	}
 }
 
+
+
 country_event = {
 	id = selfmade.2
 	title = selfmade.2.t
 	desc = selfmade.2.d
 	picture = INVENTION_eventPicture
 	fire_only_once = yes
-	is_triggered_only = yes
 	trigger = {
 		ai = no
 	}
@@ -87,6 +88,147 @@ country_event = {
 	
 }
 
-
+country_event = {
+	id = selfmade.3
+	title = selfmade.3.t
+	desc = selfmade.3.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes 
+	trigger = {
+		OR = {
+			tag = CRI
+			tag = GOL
+			tag = KAZ
+			tag = NOG
+			tag = SHY
+		}
+		
+			
+		
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		CRI = {
+			every_owned_province = {
+				if = {
+					limit = {
+						base_tax = 2
+					}
+					add_base_tax = -1
+				}
+				if = {
+					limit = {
+						base_production = 2
+					}
+					add_base_production = -1
+				}
+				if = {
+					limit = {
+						base_manpower = 3
+					}
+					add_base_manpower = -1
+				}
+			}
+		}
+		GOL = {
+			every_owned_province = {
+				if = {
+					limit = {
+						base_tax = 2
+					}
+					add_base_tax = -1
+				}
+				if = {
+					limit = {
+						base_production = 2
+					}
+					add_base_production = -1
+				}
+				if = {
+					limit = {
+						base_manpower = 3
+					}
+					add_base_manpower = -1
+				}
+			}
+		}
+		KAZ = {
+			every_owned_province = {
+				if = {
+					limit = {
+						base_tax = 2
+					}
+					add_base_tax = -1
+				}
+				if = {
+					limit = {
+						base_production = 2
+					}
+					add_base_production = -1
+				}
+				if = {
+					limit = {
+						base_manpower = 3
+					}
+					add_base_manpower = -1
+				}
+			}
+		}
+		NOG = {
+			every_owned_province = {
+				if = {
+					limit = {
+						base_tax = 2
+					}
+					add_base_tax = -1
+				}
+				if = {
+					limit = {
+						base_production = 2
+					}
+					add_base_production = -1
+				}
+				if = {
+					limit = {
+						base_manpower = 3
+					}
+					add_base_manpower = -1
+				}
+			}
+		}
+		SHY = {
+			every_owned_province = {
+				if = {
+					limit = {
+						base_tax = 2
+					}
+					add_base_tax = -1
+				}
+				if = {
+					limit = {
+						base_production = 2
+					}
+					add_base_production = -1
+				}
+				if = {
+					limit = {
+						base_manpower = 3
+					}
+					add_base_manpower = -1
+				}
+			}
+		}
+		
+    }
+	
+	option = {
+		#add_stability = -3
+	}
+	
+}
 
 
