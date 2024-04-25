@@ -7,8 +7,12 @@ ming_crisis = {
 	
 	can_start = {
 		has_any_disaster = no
-		NOT = { current_age = age_of_discovery }
-		is_year = 1600
+		#NOT = { current_age = age_of_discovery }
+		OR = { 
+			is_year = 1600
+			has_country_modifier = the_mandate_of_heaven_lost
+			has_country_modifier = lost_mandate_of_heaven
+		}
 		if = {
 			limit = {	
 				has_dlc = "Mandate of Heaven"

@@ -713,6 +713,7 @@ base_values = {
 	num_of_parliament_issues = 10
 	has_marines = yes
 	yearly_corruption = 0.5
+	embracement_cost = -0.4
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -1179,7 +1180,7 @@ meritocracy = {
 	state_maintenance_modifier = -0.5
 	global_spy_defence = 0.5
 	advisor_cost = -0.4
-	reform_progress_growth = 0.2
+	reform_progress_growth = 0.5
 	yearly_corruption = -0.3
 	meritocracy = -4
 	global_autonomy = -0.2
@@ -1538,8 +1539,7 @@ absolutism = {
 	years_of_nationalism = -10
 
 	monthly_ottoman_decadence = -0.5
-	embracement_cost = 0.25
-	global_unrest = 3
+	embracement_cost = 0.2
 	advisor_cost = 0.15
 	yearly_corruption = -0.2
 	global_autonomy = -0.1
@@ -1981,10 +1981,11 @@ native_policy_hostile = {
 high_harmony = {
 	global_unrest = -1
 	stability_cost_modifier = -0.2
-	embracement_cost = 0.25
+	embracement_cost = 0.2
 	meritocracy = 1
 	imperial_mandate = 0.05
 	development_cost_modifier = -0.05
+	development_cost = -0.1
 	legitimacy = 0.5
 	devotion = 1
 	tolerance_own = 2		
@@ -1994,7 +1995,7 @@ high_harmony = {
 low_harmony = {
 	global_unrest = 3
 	tolerance_own = 2
-	harmonization_speed = 0.2
+	harmonization_speed = 0.5
 	stability_cost_modifier = 0.5
 	imperial_mandate = -0.1
 	land_morale = 0.1
@@ -2430,7 +2431,7 @@ at_peace_revolutionary = { # Applied if at peace while reactionaries are borderi
 }
 
 expanded_infrastructure = {
-	allowed_num_of_buildings = 1
+	#allowed_num_of_buildings = 1
 	allowed_num_of_manufactories = 1
 	local_development_cost = -0.2
 	local_development_cost_modifier = -0.12

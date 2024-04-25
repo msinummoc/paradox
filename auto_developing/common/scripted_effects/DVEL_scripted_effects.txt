@@ -20,18 +20,41 @@ DVEL_add_development = {
 				modifier = { factor = 1.1 owner = { national_focus = mil } }
 			}
 		}
-		add_next_institution_embracement = 4
+		if = {
+			limit = {
+				NOT = { is_year = 1500 }
+			}
+			add_next_institution_embracement = 1
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1600 }
+			}
+			add_next_institution_embracement = 1
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1700 }
+			}
+			add_next_institution_embracement = 1
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1800 }
+			}
+			add_next_institution_embracement = 1
+		}
 		if = {
 			limit = {development = 10}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {development = 20}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {development = 30}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {development = 40}

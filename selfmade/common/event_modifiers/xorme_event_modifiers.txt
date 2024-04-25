@@ -3,7 +3,7 @@
 expand_infrastructure_1 = {
 	picture = "expand_administration_cost"
 
-	allowed_num_of_buildings = 1
+	#allowed_num_of_buildings = 1
 	allowed_num_of_manufactories = 1
 	local_development_cost = -0.2
 	local_development_cost_modifier = -0.12
@@ -22,7 +22,7 @@ expand_infrastructure_1 = {
 expand_infrastructure_2 = {
 	picture = "expand_administration_cost"
 
-	allowed_num_of_buildings = 2
+	#allowed_num_of_buildings = 2
 	allowed_num_of_manufactories = 2
 	local_development_cost = -0.4
 	local_development_cost_modifier = -0.24
@@ -41,7 +41,7 @@ expand_infrastructure_2 = {
 expand_infrastructure_3 = {
 	picture = "expand_administration_cost"
 	
-	allowed_num_of_buildings = 3
+	#allowed_num_of_buildings = 3
 	allowed_num_of_manufactories = 3
 	local_development_cost = -0.6
 	local_development_cost_modifier = -0.36

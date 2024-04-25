@@ -126,5 +126,35 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	
+	check_infrastructure = {
+		potential = {
+			ai = no
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				AND = { NOT = { num_of_times_expanded_infrastructure = 1 } development = 15 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 2 } development = 30 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 3 } development = 45 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 4 } development = 60 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 5 } development = 75 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 6 } development = 90 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 7 } development = 105 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 8 } development = 120 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 9 } development = 135 }
+				AND = { NOT = { num_of_times_expanded_infrastructure = 10 } development = 150 }
+			}
+		}
+		allow = {
+			
+		}
+		effect = {
+			
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
 }
 

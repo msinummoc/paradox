@@ -2066,7 +2066,7 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	assimilate_culture_afghani = {
@@ -2549,7 +2549,7 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	reintegrating_yumen_area = {
