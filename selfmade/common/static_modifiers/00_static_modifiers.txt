@@ -1077,6 +1077,7 @@ num_of_marriages = {
 }
 
 num_of_provinces = {
+	tolerance_own = 0.002
 	num_accepted_cultures = 0.02
 	diplomatic_upkeep = 0.025
 }
