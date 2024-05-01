@@ -156,5 +156,143 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	
+	get_revolutionary_troop = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			is_revolution_target = yes
+			treasury = 1200
+			#manpower = 40
+		}
+		effect = {
+			add_treasury = -1200
+			add_manpower = -40
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+				revolutionary_guard_artillery = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+			capital_scope = {
+			   revolutionary_guard_infantry = ROOT
+			}
+		}
+		
+				
+		ai_weight = {factor = 0}
+	}
 }
 

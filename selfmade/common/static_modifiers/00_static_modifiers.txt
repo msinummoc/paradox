@@ -1557,7 +1557,8 @@ high_army_professionalism = {
 	drill_decay_modifier = -0.5
 	allowed_samurai_fraction = 0.1
 	artillery_levels_available_vs_fort = 3
-	siege_ability = 0.1
+	siege_ability = 0.2
+	land_attrition = -0.2
 }
 
 streltsy_modifier = {
@@ -2247,6 +2248,7 @@ regiment_drill_modifier = { # Used by individual regiments
 	fire_damage = 0.1
 	fire_damage_received = -0.25
 	shock_damage_received = -0.25
+	assault_fort_ability = 0.5
 }
 
 army_drill_modifier = { # Used by an entire army, is the average of all subunits drill

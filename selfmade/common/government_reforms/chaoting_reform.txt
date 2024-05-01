@@ -182,7 +182,7 @@ chinese_warlord = {
 		manpower_recovery_speed = 0.5
 		governing_capacity = 500
 		liberty_desire = 50
-		diplomatic_upkeep = -4  ###for quick uniting
+		##diplomatic_upkeep = -4  ###for quick uniting
 	}
 	
 	ai = {

@@ -183,7 +183,7 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 1
 			scale = yes
 			potential = {
 				owner = {
@@ -473,7 +473,7 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				continent = europe
@@ -546,8 +546,7 @@ renaissance = {
 		
 		####added
 		modifier = {
-			factor = 0.1
-			scale = yes
+			factor = 0.3
 			potential = {
 				num_of_times_improved_by_owner = 5
 			}
@@ -560,8 +559,7 @@ renaissance = {
 		}
 		
 		modifier = {
-			factor = 0.1
-			scale = yes
+			factor = 0.6
 			potential = {
 				num_of_times_improved_by_owner = 10
 			}
@@ -787,7 +785,7 @@ new_world_i = {
 	embracement_speed = {
 	
 		modifier = {
-			factor = 1
+			factor = 0.5
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_colonialism
@@ -1172,7 +1170,7 @@ printing_press = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			scale = yes
 			potential = {
 				continent = europe
@@ -1305,8 +1303,8 @@ printing_press = {
 			}
 		}
 		
-		modifier = {
-			factor = 0.5
+		modifier = {  ###
+			factor = 0.2
 			scale = yes
 			potential = {
 				trade_goods = paper
@@ -1725,7 +1723,7 @@ global_trade = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
@@ -1767,7 +1765,7 @@ global_trade = {
 		}
 		
 		modifier = {
-			factor = 0.5
+			factor = 0.3
 			scale = yes
 			potential = {
 				has_port = yes
@@ -2034,7 +2032,7 @@ manufactories = {
 	
 	embracement_speed = {
 		modifier = {
-			factor = 0.3
+			factor = 0.2
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_manufactories
@@ -2082,7 +2080,7 @@ manufactories = {
 		
 		
 		modifier = {
-			factor = 0.2
+			factor = 0.15
 			scale = yes
 			potential = {
 				OR = {
@@ -2101,7 +2099,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.25
 			scale = yes
 			potential = {
 				OR = {
@@ -2118,7 +2116,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.6
+			factor = 0.4
 			scale = yes
 			potential = {
 				OR = {
@@ -2137,7 +2135,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			scale = yes
 			potential = {
 				OR = {
@@ -2158,7 +2156,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			scale = yes
 			potential = {
 				OR = {
@@ -2179,7 +2177,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.15
+			factor = 0.08
 			scale = yes
 			potential = {
 				OR = {
@@ -2197,7 +2195,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.15
 			scale = yes
 			potential = {
 				OR = {
@@ -2217,7 +2215,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.15
+			factor = 0.1
 			scale = yes
 			potential = {
 				OR = {
@@ -2235,7 +2233,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.2
 			scale = yes
 			potential = {
 				OR = {
@@ -2252,7 +2250,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.3
 			scale = yes
 			potential = {
 				OR = {
@@ -2271,7 +2269,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				OR = {
@@ -2292,7 +2290,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				OR = {
@@ -2313,7 +2311,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.08
+			factor = 0.04
 			scale = yes
 			potential = {
 				OR = {
@@ -2331,7 +2329,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.08
 			scale = yes
 			potential = {
 				OR = {
@@ -2389,7 +2387,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			scale = yes
 			potential = {
 				owner = {
@@ -2570,7 +2568,7 @@ enlightenment = {
 	
 	embracement_speed = {
 		modifier = {
-			factor = 0.3
+			factor = 0.2
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_enlightenment
@@ -2888,7 +2886,7 @@ enlightenment = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 3  #30
 		
 		modifier = {
 			factor = 0.25
@@ -3044,6 +3042,7 @@ industrialization = {
 	
 	
 	can_embrace = {
+		manufactories = 100
 		AND = {
 			owner = { has_institution = global_trade }
 			owner = { has_institution = manufactories }
@@ -3195,7 +3194,7 @@ industrialization = {
 		
 		
 		modifier = {
-			factor = 0.8
+			factor = 0.4
 			scale = yes
 			force_potential = yes
 			potential = {
@@ -3214,7 +3213,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.2
 			scale = yes
 			force_potential = yes
 			potential = {
@@ -3236,8 +3235,7 @@ industrialization = {
 
 		#General Manufactories
 		modifier = {
-			factor = 0.1
-			scale = yes
+			factor = 0.4
 			potential = {
 				OR = {
 					trade_goods = naval_supplies
@@ -3254,8 +3252,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.2
-			scale = yes
+			factor = 0.6
 			potential = {
 				OR = {
 					trade_goods = copper
@@ -3271,8 +3268,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.2
-			scale = yes
+			factor = 0.6
 			potential = {
 				OR = {
 					trade_goods = wool
@@ -3290,8 +3286,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.05
-			scale = yes
+			factor = 0.2
 			potential = {
 				OR = {
 					trade_goods = coffee
@@ -3311,8 +3306,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			scale = yes
+			factor = 0.2
 			potential = {
 				OR = {
 					trade_goods = ivory
@@ -3332,8 +3326,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			scale = yes
+			factor = 0.15
 			potential = {
 				OR = {
 					trade_goods = grain
@@ -3350,8 +3343,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			scale = yes
+			factor = 0.2
 			potential = {
 				OR = {
 					trade_goods = paper
@@ -3370,8 +3362,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.08
-			scale = yes
+			factor = 0.2
 			potential = {
 				OR = {
 					trade_goods = naval_supplies
@@ -3388,8 +3379,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.2
-			scale = yes
+			factor = 0.3
 			potential = {
 				OR = {
 					trade_goods = copper
@@ -3405,8 +3395,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.2
-			scale = yes
+			factor = 0.3
 			potential = {
 				OR = {
 					trade_goods = wool
@@ -3424,8 +3413,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.04
-			scale = yes
+			factor = 0.1
 			potential = {
 				OR = {
 					trade_goods = coffee
@@ -3445,8 +3433,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.08
-			scale = yes
+			factor = 0.1
 			potential = {
 				OR = {
 					trade_goods = ivory
@@ -3467,7 +3454,6 @@ industrialization = {
 		}
 		modifier = {
 			factor = 0.08
-			scale = yes
 			potential = {
 				OR = {
 					trade_goods = grain
@@ -3484,8 +3470,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.08
-			scale = yes
+			factor = 0.1
 			potential = {
 				OR = {
 					trade_goods = paper
@@ -3506,7 +3491,7 @@ industrialization = {
 
 		#Trade variables
 		modifier = {
-			factor = 0.3
+			factor = 0.1
 			scale = yes
 			potential = {
 				any_trade_node_member_province = {
@@ -3552,7 +3537,7 @@ industrialization = {
 
 		#Stuff once someone has embraced it
 		modifier = {
-			factor = 0.75
+			factor = 0.4
 			scale = yes
 			potential = {
 				owner = {
@@ -3572,7 +3557,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 1
+			factor = 0.5
 			scale = yes
 			potential = {
 				owner = {
@@ -3590,7 +3575,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				owner = {
@@ -3610,7 +3595,7 @@ industrialization = {
 		
 		###
 		modifier = {
-			factor = 0.6
+			factor = 0.2
 			scale = yes
 			potential = {
 				OR = {
@@ -3637,7 +3622,34 @@ industrialization = {
 		}
 		
 		modifier = {
-			factor = 0.6
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_weapons_industrialization
+				has_building = weapons
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = copper
+							trade_goods = iron
+						}
+						has_building = weapons
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.2
 			scale = yes
 			potential = {
 				OR = {
@@ -3667,10 +3679,363 @@ industrialization = {
 			}
 		}
 		
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = wool
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = dyes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = wool
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+						}	
+						has_building = textile
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = naval_supplies
+					trade_goods = fish
+					trade_goods = salt
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 15
+						OR = {
+							trade_goods = naval_supplies
+							trade_goods = fish
+							trade_goods = salt
+						}
+						has_building = wharf
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = naval_supplies
+					trade_goods = fish
+					trade_goods = salt
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = naval_supplies
+							trade_goods = fish
+							trade_goods = salt
+						}
+						has_building = wharf
+					}
+				}
+				
+			}
+		}
+		
+		
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = sugar
+					trade_goods = tobacco
+					trade_goods = tea
+					trade_goods = cocoa
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 15
+						OR = {
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = sugar
+							trade_goods = tobacco
+							trade_goods = tea
+							trade_goods = cocoa
+						}
+						has_building = plantations
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = sugar
+					trade_goods = tobacco
+					trade_goods = tea
+					trade_goods = cocoa
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = sugar
+							trade_goods = tobacco
+							trade_goods = tea
+							trade_goods = cocoa
+						}
+						has_building = plantations
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = ivory
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = cloves
+					trade_goods = fur
+					trade_goods = incense
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 15
+						OR = {
+							trade_goods = ivory
+							trade_goods = slaves
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+							trade_goods = incense
+						}
+						has_building = tradecompany
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = ivory
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = cloves
+					trade_goods = fur
+					trade_goods = incense
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = ivory
+							trade_goods = slaves
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+							trade_goods = incense
+						}
+						has_building = tradecompany
+					}
+				}
+				
+			}
+		}
+		
+		
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 15
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+						}
+						has_building = farm_estate
+					}
+				}
+				
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+						}
+						has_building = farm_estate
+					}
+				}
+				
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = paper
+					trade_goods = gems
+					trade_goods = tropical_wood
+					trade_goods = glass
+					trade_goods = chinaware
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 15
+						OR = {
+							trade_goods = paper
+							trade_goods = gems
+							trade_goods = tropical_wood
+							trade_goods = glass
+							trade_goods = chinaware
+						}
+						has_building = farm_estate
+					}
+				}
+				
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = paper
+					trade_goods = gems
+					trade_goods = tropical_wood
+					trade_goods = glass
+					trade_goods = chinaware
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_industrialization
+				has_building = textile
+				owner = {
+					num_of_owned_provinces_with = {
+						value = 5
+						base_production = 20
+						OR = {
+							trade_goods = paper
+							trade_goods = gems
+							trade_goods = tropical_wood
+							trade_goods = glass
+							trade_goods = chinaware
+						}
+						has_building = farm_estate
+					}
+				}
+				
+			}
+		}
+		
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 1 #30
 		
 		modifier = {
 			factor = 0.25

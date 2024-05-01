@@ -3,6 +3,283 @@
 #
 # Effects are fully scriptable here.
 
+## forbid ai from embracing enlightenment and industrialization while paying too much
+
+limit_embrace_enlightenment = {
+	potential = {
+		ai = yes
+		is_institution_enabled = enlightenment
+		NOT = {has_institution = enlightenment}
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 200
+						enlightenment = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						enlightenment = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						enlightenment = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						enlightenment = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						enlightenment = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						enlightenment = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						enlightenment = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						enlightenment = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						enlightenment = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						enlightenment = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						enlightenment = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						enlightenment = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						enlightenment = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						enlightenment = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 11236
+						enlightenment = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 100
+}
+
+limit_embrace_enlightenment = {
+	potential = {
+		ai = yes
+		is_institution_enabled = industrialization
+		NOT = {has_institution = industrialization}
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 200
+						industrialization = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						industrialization = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						industrialization = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						industrialization = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						industrialization = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						industrialization = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						industrialization = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						industrialization = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						industrialization = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						industrialization = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						industrialization = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						industrialization = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						industrialization = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						industrialization = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 11236
+						industrialization = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 100
+}
+
+
+
+
 
 # reduce ai land forcelimit if in debt
 
@@ -27,7 +304,7 @@ unify_china_attempt = {
 			}
 		}
 	}
-	diplomatic_upkeep = -10
+	#diplomatic_upkeep = -10
 	diplomatic_reputation = -100
 	manpower_recovery_speed = 1
 	yearly_corruption = -1

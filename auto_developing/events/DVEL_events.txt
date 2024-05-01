@@ -423,10 +423,10 @@ country_event = { # The Big One
 								modifier = { factor = 0.4 check_variable = { which = netDevCost value = 2.2 } }
 								modifier = { factor = 1.5 NOT = { development = 5 } }
 								modifier = { factor = 1.35 NOT = { development = 20 } }
-								modifier = { factor = 1.35 AND = { is_year = 1500 NOT = { development = 30 } } }
-								modifier = { factor = 1.35 AND = { is_year = 1600 NOT = { development = 40 } } }
-								modifier = { factor = 1.35 AND = { is_year = 1700 NOT = { development = 50 } } }
-								modifier = { factor = 1.35 AND = { is_year = 1800 NOT = { development = 60 } } }
+								modifier = { factor = 1.35 AND = { owner = {has_institution = new_world_i} NOT = { development = 30 } } }
+								modifier = { factor = 1.35 AND = { owner = {has_institution = global_trade} NOT = { development = 40 } } }
+								modifier = { factor = 1.35 AND = { owner = {has_institution = enlightenment} NOT = { development = 45 } } }
+								modifier = { factor = 1.35 AND = { owner = {has_institution = industrialization} NOT = { development = 50 } } }
 								modifier = { factor = 1.4 development = 20 }
 								modifier = { factor = 1.35 development = 30 }
 								modifier = { factor = 1.3 AND = { development = 40 is_year = 1600 } }
@@ -441,7 +441,7 @@ country_event = { # The Big One
 								modifier = { factor = 0.9 NOT = { owner = { stability = -2 } } }
 								modifier = { factor = 0.25 owner = { OR = { primitives = yes is_primitive = yes } } }
 								#modifier = { factor = 1.25 owner = { ai = yes NOT = { is_subject = yes } } }
-								modifier = { factor = 1.25 is_prosperous = yes }
+								modifier = { factor = 1.1 is_prosperous = yes }
 								
 								#special modifier
 								modifier = { factor = 1.5 culture_group = east_asian }
