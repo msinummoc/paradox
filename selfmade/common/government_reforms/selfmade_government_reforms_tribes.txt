@@ -1,0 +1,128 @@
+steppe_horde = {
+	icon = "horde_riding"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = steppe_horde
+			culture_group = altaic
+			culture_group = tartar
+			primary_culture = altaic_new 
+		}
+		has_reform = steppe_horde
+		NOT = { has_reform = great_mongol_state_reform }
+	}
+	legacy_equivalent = steppe_horde_legacy
+	nomad = yes
+	raze_province = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		technology_group = nomad_group
+	}
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		loot_amount = 0.50
+		global_institution_spread = -0.25
+		cav_to_inf_ratio = 0.25
+		movement_speed = 0.3
+		global_manpower_modifier = 0.25
+		land_forcelimit_modifier = 0.25
+		years_of_nationalism = -5
+		reinforce_cost_modifier = -0.5
+		reinforce_speed = 2
+		hostile_attrition = 2
+		#governing_capacity_modifier = -0.4
+		global_trade_goods_size_modifier = -0.35
+		war_exhaustion = -0.1
+		own_territory_dice_roll_bonus = 1
+	}
+	custom_attributes = {
+		enables_horde_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+great_mongol_state_reform = {
+	icon = "horde_riding"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = great_mongol_state_reform
+			have_had_reform = great_mongol_state_reform
+			tag = MGE
+		}
+	}
+	legacy_equivalent = great_mongol_state_legacy
+	fixed_rank = 3
+	valid_for_nation_designer = no
+	nomad = yes
+	raze_province = yes
+	modifiers = {
+		horde_unity = 1
+		global_manpower_modifier = 0.25
+		land_forcelimit_modifier = 0.25
+		loot_amount = 0.50
+		reinforce_cost_modifier = -0.5
+		reinforce_speed = 2
+		cav_to_inf_ratio = 0.5
+		movement_speed = 0.2
+		years_of_nationalism = -5
+		may_establish_frontier = yes
+		hostile_attrition = 2
+		war_exhaustion = -0.1
+		own_territory_dice_roll_bonus = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+		custom_attributes = {
+			can_recruit_banners_from_primary_culture_provinces = yes
+		}
+	}
+	custom_attributes = {
+		enables_horde_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				capital_scope = {
+					add_province_modifier = {
+						name = allow_banners_capital_modifier
+						duration = -1
+						hidden = yes
+					}
+				}
+				every_owned_province = {
+					limit = { culture = root }
+					add_province_modifier = {
+						name = mongol_banners_location
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			capital_scope = { remove_province_modifier = allow_banners_capital_modifier }
+			every_owned_province = {
+				limit = { has_province_modifier = mongol_banners_location }
+				remove_province_modifier = mongol_banners_location
+			}
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}

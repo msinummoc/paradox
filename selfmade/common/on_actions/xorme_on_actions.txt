@@ -1,3 +1,18 @@
+# country
+on_startup = {
+	events = {
+		selfmade.3
+	}
+	country_event = {
+		id = selfmade.2
+		days = 3
+	}
+}
+
+
+
+
+
 on_province_owner_change = {
 	if = {
 		limit = {
@@ -136,6 +151,142 @@ on_province_owner_change = {
 		add_province_modifier = {
 			name = ottoman_siyasah_tax_reform_manpower
 			duration = -1
+		}
+	}
+}
+
+# province
+on_adm_development = {
+	on_development_effect = { type = adm }
+	if = {
+		limit = {NOT = {owner = {has_institution = Renaissance}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = printing_press}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = manufactories}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = enlightenment}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = industrialization}}}
+		add_local_autonomy = 2
+	}
+}
+
+# province
+on_dip_development = {
+	on_development_effect = { type = dip }
+	 if = {
+		limit = {NOT = {owner = {has_institution = Renaissance}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = printing_press}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = manufactories}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = enlightenment}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = industrialization}}}
+		add_local_autonomy = 2
+	}
+}
+
+# province
+on_mil_development = {
+	on_development_effect = { type = mil }
+	 if = {
+		limit = {NOT = {owner = {has_institution = Renaissance}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = printing_press}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = manufactories}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = enlightenment}}}
+		add_local_autonomy = 2
+	}
+	if = {
+		limit = {NOT = {owner = {has_institution = industrialization}}}
+		add_local_autonomy = 2
+	}
+}
+
+# province
+# root = location, from = losing country
+on_siege_won_province = {
+	events = {
+		synthetic_dawn.4
+	}
+	if = {
+		limit = {
+			from = {
+				tag = REB
+				is_rebel_type = revolutionary_rebels
+			}
+			owner = {
+				any_owned_province = {
+					region = root
+					has_revolution_in_province = yes
+				}
+				NOT = { has_disaster = french_revolution }
+				NOT = { has_disaster = revolution }
+				NOT = { has_spawned_rebels = revolutionary_rebels }
+			}
+		}
+		owner = { country_event = { id = center_of_revolution.1600 } }
+	}
+	if = {
+		limit = {
+			#superregion = china_superregion
+			culture_group = east_asian
+			controller = {
+				has_government_attribute = has_unify_china_cb
+				OR = {
+					is_in_war = {
+						attacker_leader = this
+						casus_belli = cb_chinese_unification
+					}
+					is_in_war = {
+						defender_leader = this
+						casus_belli = cb_chinese_unification
+					}
+					is_in_war = {
+						attacker_leader = this
+						casus_belli = cb_take_mandate
+					}
+					is_in_war = {
+						defender_leader = this
+						casus_belli = cb_take_mandate
+					}
+				}
+				NOT = { is_core = ROOT }
+			}
+		}
+		controller = { 
+			add_territorial_core = ROOT
+			if = {
+				limit = { is_claim = ROOT}
+				remove_claim = ROOT
+			}
 		}
 	}
 }

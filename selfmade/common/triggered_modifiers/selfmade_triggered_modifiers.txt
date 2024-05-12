@@ -1,0 +1,1202 @@
+
+lost_control_of_chengdu = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 679 }
+			NOT = { controls = 679 }
+		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
+	imperial_mandate = -0.03
+}
+
+lost_control_of_kaifeng = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 688 }
+			NOT = { controls = 688 }
+		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
+	imperial_mandate = -0.03
+}
+
+lost_control_of_xian = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 700 }
+			NOT = { controls = 700 }
+		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
+	imperial_mandate = -0.05
+}
+
+
+## forbid ai from embracing institution while paying too much
+
+limit_KOR = {
+	potential = {
+		ai = yes
+		has_global_flag = force_historical_mode_flag
+		tag = KOR
+	}
+	trigger = {
+		total_development = 200
+	}
+	advisor_cost = 0.25
+	all_power_cost = 0.1
+	development_cost = 0.1
+}
+
+limit_embrace_renaissance = {
+	potential = {
+		is_institution_enabled = renaissance
+		NOT = {has_institution = renaissance}
+		has_institution = feudalism
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 150
+						renaissance = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 200
+						renaissance = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						renaissance = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						renaissance = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						renaissance = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						renaissance = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						renaissance = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						renaissance = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						renaissance = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						renaissance = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						renaissance = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						renaissance = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						renaissance = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						renaissance = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						renaissance = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 5
+}
+
+limit_embrace_new_world_i = {
+	potential = {
+		is_institution_enabled = new_world_i
+		NOT = {has_institution = new_world_i}
+		has_institution = renaissance
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 150
+						new_world_i = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 200
+						new_world_i = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						new_world_i = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						new_world_i = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						new_world_i = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						new_world_i = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						new_world_i = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						new_world_i = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						new_world_i = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						new_world_i = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						new_world_i = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						new_world_i = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						new_world_i = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						new_world_i = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						new_world_i = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 5
+}
+
+limit_embrace_printing_press = {
+	potential = {
+		is_institution_enabled = printing_press
+		NOT = {has_institution = printing_press}
+		has_institution = new_world_i
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 150
+						printing_press = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 200
+						printing_press = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						printing_press = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						printing_press = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						printing_press = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						printing_press = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						printing_press = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						printing_press = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						printing_press = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						printing_press = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						printing_press = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						printing_press = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						printing_press = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						printing_press = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						printing_press = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 10
+}
+
+limit_embrace_global_trade = {
+	potential = {
+		is_institution_enabled = global_trade
+		NOT = {has_institution = global_trade}
+		has_institution = printing_press
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 150
+						global_trade = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 200
+						global_trade = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						global_trade = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						global_trade = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						global_trade = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						global_trade = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						global_trade = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						global_trade = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						global_trade = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						global_trade = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						global_trade = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						global_trade = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						global_trade = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						global_trade = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						global_trade = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 10
+}
+
+limit_embrace_manufactories = {
+	potential = {
+		is_institution_enabled = manufactories
+		NOT = {has_institution = manufactories}
+		has_institution = global_trade
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 150
+						manufactories = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 200
+						manufactories = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						manufactories = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						manufactories = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						manufactories = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						manufactories = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						manufactories = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						manufactories = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						manufactories = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						manufactories = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						manufactories = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						manufactories = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						manufactories = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						manufactories = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						manufactories = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 15
+}
+
+
+limit_embrace_enlightenment = {
+	potential = {
+		is_institution_enabled = enlightenment
+		NOT = {has_institution = enlightenment}
+		has_institution = manufactories
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 200
+						enlightenment = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						enlightenment = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						enlightenment = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						enlightenment = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						enlightenment = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						enlightenment = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						enlightenment = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						enlightenment = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						enlightenment = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						enlightenment = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						enlightenment = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						enlightenment = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						enlightenment = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						enlightenment = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 11236
+						enlightenment = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 20
+}
+
+limit_embrace_industrialization = {
+	potential = {
+		is_institution_enabled = industrialization
+		NOT = {has_institution = industrialization}
+		has_institution = enlightenment
+	}
+	trigger = {
+		NOT = {
+			OR = {
+				NOT = { total_development = 300 }
+				AND = {
+					development_in_provinces = {
+						value = 200
+						industrialization = 100
+					}
+					total_development = 300
+					NOT = { total_development = 400}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 267
+						industrialization = 100
+					}
+					total_development = 400
+					NOT = { total_development = 533}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 356
+						industrialization = 100
+					}
+					total_development = 533
+					NOT = { total_development = 711}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 474
+						industrialization = 100
+					}
+					total_development = 711
+					NOT = { total_development = 948}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 632
+						industrialization = 100
+					}
+					total_development = 948
+					NOT = { total_development = 1264}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 843
+						industrialization = 100
+					}
+					total_development = 1264
+					NOT = { total_development = 1685}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1124
+						industrialization = 100
+					}
+					total_development = 1685
+					NOT = { total_development = 2247}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 1500
+						industrialization = 100
+					}
+					total_development = 2247
+					NOT = { total_development = 3000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2000
+						industrialization = 100
+					}
+					total_development = 3000
+					NOT = { total_development = 4000}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 2667
+						industrialization = 100
+					}
+					total_development = 4000
+					NOT = { total_development = 5333}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 3555
+						industrialization = 100
+					}
+					total_development = 5333
+					NOT = { total_development = 7110}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 4740
+						industrialization = 100
+					}
+					total_development = 7110
+					NOT = { total_development = 9480}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 6321
+						industrialization = 100
+					}
+					total_development = 9480
+					NOT = { total_development = 12641}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 8427
+						industrialization = 100
+					}
+					total_development = 12641
+					NOT = { total_development = 16854}
+				}
+				AND = {
+					development_in_provinces = {
+						value = 11236
+						industrialization = 100
+					}
+					total_development = 16854
+				}
+			}
+		}
+		
+	}	
+	embracement_cost = 30
+}
+
+
+#limit centralization
+
+No_state_centralization = {
+	potential = {
+		ai = yes
+		has_global_flag = force_historical_mode_flag
+	}
+	trigger = {
+		NOT = {adm = 2450}
+	}
+	centralize_state_cost = 100
+}
+
+
+# reduce ai land forcelimit if in debt
+
+
+unify_china_attempt = {
+	potential = {
+		ai = yes
+		has_global_flag = force_historical_mode_flag
+	}
+	trigger = {
+		OR = {
+			has_reform = celestial_empire
+			has_reform = chinese_warlord
+		}
+		NOT = { 
+			AND = {
+				#is_year = 1800
+				num_of_provinces_owned_or_owned_by_subjects_with = {
+					superregion = china_superregion
+					value = 200
+				}
+			}
+		}
+	}
+	#diplomatic_upkeep = -10
+	diplomatic_reputation = -100
+	manpower_recovery_speed = 1
+	yearly_corruption = -1
+	global_monthly_devastation = -0.25
+	global_autonomy = -0.25
+	prestige_from_land = 2
+	army_tradition_from_battle = 2
+}
+
+in_debt_level_1 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 1
+		NOT = { num_of_loans = 10 }
+		is_subject = no
+	}
+	
+	land_forcelimit_modifier = -0.1
+	land_maintenance_modifier = -0.1
+}
+
+in_debt_level_2 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 10
+		NOT = { num_of_loans = 20 }
+		is_subject = no
+	}
+	
+	land_forcelimit_modifier = -0.2
+	land_maintenance_modifier = -0.2
+}
+
+in_debt_level_3 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 20
+		NOT = { num_of_loans = 30 }
+		is_subject = no
+	}
+	
+	land_forcelimit_modifier = -0.3
+	land_maintenance_modifier = -0.3
+}
+
+in_debt_level_4 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 30
+		NOT = { num_of_loans = 40 }
+		is_subject = no
+	}
+	
+	land_forcelimit_modifier = -0.4
+	land_maintenance_modifier = -0.4
+}
+
+in_debt_level_5 = {
+	potential = {
+		ai = yes
+		num_of_loans = 1
+	}
+	trigger = {
+		is_at_war = no
+		num_of_loans = 40
+		is_subject = no
+	}
+	
+	land_forcelimit_modifier = -0.5
+	land_maintenance_modifier = -0.5
+}
+
+ai_rus_state_maintenance = {
+	potential = {
+		ai = yes
+		OR = { tag = MOS tag = RUS }
+		has_global_flag = force_historical_mode_flag
+	}
+	trigger = {
+		num_of_loans = 5
+	}
+	
+	state_maintenance_modifier = -2
+	embracement_cost = -0.4
+}
+
+ai_lit_weakened = {
+	potential = {
+		ai = yes
+		has_global_flag = force_historical_mode_flag
+		OR = { tag = PLC tag = POL tag = LIT }
+	}
+	trigger = {
+		num_of_owned_provinces_with  = {
+			value = 15
+			religion = orthodox
+		}
+	}
+	
+	tolerance_heretic = -5
+	global_autonomy = 0.1
+}
+
+ai_tur_no_decadence = {
+	potential = {
+		ai = yes
+		tag = TUR
+		has_global_flag = force_historical_mode_flag
+	}
+	trigger = {
+		always = yes
+	}
+	monthly_ottoman_decadence = -1
+}
+
+

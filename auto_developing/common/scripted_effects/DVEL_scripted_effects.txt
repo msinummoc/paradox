@@ -24,25 +24,25 @@ DVEL_add_development = {
 			limit = {
 				NOT = { is_year = 1500 }
 			}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {
 				NOT = { is_year = 1600 }
 			}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {
 				NOT = { is_year = 1700 }
 			}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {
 				NOT = { is_year = 1800 }
 			}
-			add_next_institution_embracement = 1
+			add_next_institution_embracement = 0.5
 		}
 		if = {
 			limit = {development = 10}
@@ -63,6 +63,26 @@ DVEL_add_development = {
 		if = {
 			limit = {development = 50}
 			add_next_institution_embracement = 0.5
+		}
+		if = {
+			limit = {NOT = {owner = {has_institution = Renaissance}}}
+			add_local_autonomy = 3
+		}
+		if = {
+			limit = {NOT = {owner = {has_institution = printing_press}}}
+			add_local_autonomy = 3
+		}
+		if = {
+			limit = {NOT = {owner = {has_institution = manufactories}}}
+			add_local_autonomy = 3
+		}
+		if = {
+			limit = {NOT = {owner = {has_institution = enlightenment}}}
+			add_local_autonomy = 3
+		}
+		if = {
+			limit = {NOT = {owner = {has_institution = industrialization}}}
+			add_local_autonomy = 3
 		}
 		if = {
 			limit = { has_global_flag = DVEL_debug_mode_flag }

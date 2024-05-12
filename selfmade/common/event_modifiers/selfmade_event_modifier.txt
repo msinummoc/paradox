@@ -1,0 +1,73 @@
+
+estate_burghers_hydraulic_rights_desert = {
+	local_development_cost = -0.2
+}
+
+estate_burghers_hydraulic_rights_coastal_desert = {
+	local_development_cost = -0.1
+}
+
+estate_burghers_hydraulic_rights_steppes = {
+	local_development_cost = -0.1
+}
+
+estate_burghers_hydraulic_rights_savanna = {
+	local_development_cost = -0.05
+}
+
+estate_burghers_forest_expansion_forest = {
+	local_development_cost = -0.05
+}
+
+estate_burghers_forest_expansion_woods = {
+	local_development_cost = -0.05
+}
+
+estate_burghers_mountain_expansion_mountains = {
+	local_development_cost = -0.1
+}
+
+estate_burghers_mountain_expansion_highlands = {
+	local_development_cost = -0.05
+}
+
+estate_burghers_mountain_expansion_hills = {
+	local_development_cost = -0.075
+}
+
+swe_arctic_expansion = {
+	local_development_cost = -0.3
+	allowed_num_of_buildings = 1
+}
+
+new_mandate_holder = {
+	imperial_mandate = 0.1 ##0.05
+	land_maintenance_modifier = -0.1
+	land_forcelimit = 20
+	manpower_recovery_speed = 0.15
+	global_tax_income = 60
+	global_monthly_devastation = -0.25 ##-0.1
+	yearly_corruption = -1
+	global_autonomy = -0.25
+	inflation_reduction = 0.1
+}
+
+geo_privilege_mountains = {
+	local_development_cost = -0.2
+}
+
+ARB_estate_burghers_desert = {
+	local_development_cost = -0.1
+}
+
+estate_burghers_mountain_expansion_upgrade_mountains = {
+	local_development_cost = -0.2
+}
+
+estate_burghers_mountain_expansion_upgrade_highlands = {
+	local_development_cost = -0.1
+}
+
+estate_burghers_mountain_expansion_upgrade_hills = {
+	local_development_cost = -0.15
+}

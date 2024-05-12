@@ -13,19 +13,32 @@ country_event = {
 	trigger = { 
 		
 		ai = yes
-		corruption = 100
+		OR = {
+			corruption = 100
+			AND = {
+				is_bankrupt = yes
+				average_autonomy = 60
+				NOT = {stability = 0}
+			}
+		}
+		
+		
 	}
 	immediate = {
+		if = {
+			limit = {is_emperor_of_china}
+			dismantle_empire_of_china = yes
+		}
 		release_all_possible_countries = yes
 		every_subject_country = {
 			ROOT = {
 				free_vassal = PREV
 			}
 		}
-		add_corruption = -100
+		
     }
 mean_time_to_happen = {
-		months = 12
+		months = 36
 	}
 	
 	option = {

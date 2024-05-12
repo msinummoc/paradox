@@ -257,7 +257,7 @@ feudalism = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 24
 		
 		modifier = {
 			factor = 0.25
@@ -265,30 +265,30 @@ feudalism = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
@@ -306,6 +306,7 @@ renaissance = {
 		development_cost = -0.05
 		build_cost = -0.05
 		embracement_cost = 0.05
+		technology_cost = -0.05
 	}
 
 	trade_company_efficiency = 0.4
@@ -575,7 +576,7 @@ renaissance = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 24
 		
 		modifier = {
 			factor = 0.25
@@ -583,30 +584,30 @@ renaissance = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
@@ -625,6 +626,7 @@ new_world_i = {
 		inflation_reduction = -0.02
 		trade_steering = 0.1		  
 		embracement_cost = 0.05
+		technology_cost = -0.05
 	}
 
 	trade_company_efficiency = 0.6
@@ -929,7 +931,7 @@ new_world_i = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 24
 		
 		modifier = {
 			factor = 0.25
@@ -937,30 +939,30 @@ new_world_i = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	
@@ -1135,7 +1137,7 @@ printing_press = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
@@ -1304,7 +1306,7 @@ printing_press = {
 		}
 		
 		modifier = {  ###
-			factor = 0.2
+			factor = 0.1
 			scale = yes
 			potential = {
 				trade_goods = paper
@@ -1317,7 +1319,7 @@ printing_press = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 24
 		
 		modifier = {
 			factor = 0.25
@@ -1325,30 +1327,30 @@ printing_press = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
@@ -1367,6 +1369,7 @@ global_trade = {
 		merchants = 1
 		trade_efficiency = 0.15				 
 		embracement_cost = 0.05
+		technology_cost = -0.05
 	}
 
 	trade_company_efficiency = 1.0
@@ -1844,7 +1847,7 @@ global_trade = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 24
 		
 		modifier = {
 			factor = 0.25
@@ -1852,30 +1855,30 @@ global_trade = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
@@ -1889,7 +1892,7 @@ manufactories = {
 
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
-		technology_cost = -0.05		
+		technology_cost = -0.1		
 		embracement_cost = 0.1
 	}
 
@@ -2407,7 +2410,7 @@ manufactories = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 30
+		factor = 24
 		
 		modifier = {
 			factor = 0.25
@@ -2415,30 +2418,30 @@ manufactories = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
@@ -2748,7 +2751,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 30
 			potential = {
 				enlightenment_origin = {
 					same_continent = PREV
@@ -2886,7 +2889,7 @@ enlightenment = {
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-		factor = 3  #30
+		factor = 24  #30
 		
 		modifier = {
 			factor = 0.25
@@ -2894,30 +2897,30 @@ enlightenment = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
@@ -4043,30 +4046,30 @@ industrialization = {
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.15
+			neighbors_tech_discount = 0.2
 		}
 		modifier = {
 			factor = 1.25
-			neighbors_tech_discount = 0.3
-		}
-		modifier = {
-			factor = 1.25
-			neighbors_tech_discount = 0.45
+			neighbors_tech_discount = 0.4
 		}
 		modifier = {
 			factor = 1.25
 			neighbors_tech_discount = 0.6
 		}
 		modifier = {
+			factor = 1.25
+			neighbors_tech_discount = 0.8
+		}
+		modifier = {
 			factor = 0.9
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.9
 			num_of_loans = 20
 		}
 	}
