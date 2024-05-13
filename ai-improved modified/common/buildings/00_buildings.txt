@@ -1029,7 +1029,7 @@ courthouse = {
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.25
-		local_autonomy = -0.05
+		local_autonomy = -0.025
 		local_governing_cost = -0.25
 		allowed_num_of_buildings = 1
 	}
@@ -1079,9 +1079,21 @@ courthouse = {
 				is_capital_of = FROM
 			}
 		}
+		#modifier = {
+		#	factor = 0.25
+		#	num_free_building_slots = 2
+		#}
 		modifier = {
-			factor = 0.25
-			num_free_building_slots = 2
+			factor = 1.5
+			development = 15
+		}
+		modifier = {
+			factor = 1.5
+			development = 25
+		}
+		modifier = {
+			factor = 1.5
+			development = 35
 		}
 		#FROM AUTONOMY
 		modifier = {
@@ -2750,7 +2762,7 @@ town_hall = {
 
 	modifier = {
 		local_state_maintenance_modifier = -0.5
-		local_autonomy = -0.1
+		local_autonomy = -0.05
 		local_governing_cost = -0.5
 		allowed_num_of_buildings = 1
 	}
@@ -2805,9 +2817,29 @@ town_hall = {
 				is_capital_of = FROM
 			}
 		}
+		#modifier = {
+		#	factor = 0.25
+		#	num_free_building_slots = 2
+		#}
 		modifier = {
-			factor = 0.25
-			num_free_building_slots = 2
+			factor = 1.5
+			development = 15
+		}
+		modifier = {
+			factor = 1.5
+			development = 25
+		}
+		modifier = {
+			factor = 5
+			development = 35
+		}
+		modifier = {
+			factor = 5
+			development = 35
+		}
+		modifier = {
+			factor = 5
+			development = 35
 		}
 		#FROM AUTONOMY
 		modifier = {

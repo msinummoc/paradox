@@ -350,6 +350,32 @@ declarewar = {
 			}
 		}
 	}
+	condition = {   ## hungary left wallachia and serbia for ottoman
+		tooltip = FORCE_HISTORICAL_MODE
+		potential = {
+			ai = yes
+			tag = HUN
+			has_global_flag = force_historical_mode_flag
+		}
+		allow = {
+			OR = {
+				FROM = { ai = no }
+				AND = {
+					NOT = {
+						FROM = {
+							tag = WAL
+						}
+					}
+					NOT = {
+						FROM = {
+							tag = SER
+						}
+					}
+				}
+				is_year = 1460
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 		if = {

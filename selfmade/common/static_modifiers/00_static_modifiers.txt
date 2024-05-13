@@ -168,7 +168,7 @@ in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -0.5
-	local_autonomy = -0.15
+	local_autonomy = -0.1
 	local_has_qizilbash = yes
 }
 
@@ -541,14 +541,14 @@ devastation = {
 	local_sailors_modifier = -2
 	local_hostile_movement_speed = -0.25
 	local_friendly_movement_speed = -0.25
-	local_autonomy = 0.1
+	local_autonomy = 0.5
 	local_state_maintenance_modifier = 0.75
 }
 
 prosperity = {
 	local_development_cost = -0.1
 	trade_goods_size_modifier = 0.25
-	local_autonomy = -0.05
+	local_autonomy = -0.025
 }
 
 slaves_raided = {
@@ -621,7 +621,7 @@ local_autonomy_trade_company_multiplicative = {
 }
 
 local_autonomy_trade_company = {
-	local_autonomy = -0.5
+	local_autonomy = -0.4
 	local_governing_cost = -0.5
 	trade_goods_size_modifier = -0.25
 }
@@ -783,7 +783,7 @@ positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
     reduced_liberty_desire = 10
 	imperial_mandate = -0.2
 	yearly_corruption = -0.1
-	global_autonomy = -0.1
+	global_autonomy = -0.05
 }
 
 negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
@@ -793,7 +793,6 @@ negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mand
 	global_unrest = 2
 	global_autonomy = 0.05
 	stability_cost_modifier = 0.2
-	yearly_corruption = 0.2
 	imperial_mandate = 0.2
 	yearly_corruption = 0.1
 	eunuchs_loyalty_modifier = 0.3
@@ -1183,9 +1182,9 @@ meritocracy = {
 	global_spy_defence = 0.5
 	advisor_cost = -0.4
 	reform_progress_growth = 0.5
-	yearly_corruption = -0.5
+	yearly_corruption = -0.4
 	meritocracy = -4
-	global_autonomy = -0.2
+	global_autonomy = -0.1
 }
 
 # Multiplied by 50 - meritocracy
@@ -1266,9 +1265,10 @@ recovery_motivation = {
 	navy_tradition = 2
 	global_unrest = -10
 	interest = -3
-	horde_unity = 15
+	horde_unity = 10
 	global_monthly_devastation = -0.6
-	yearly_corruption = -1.5
+	yearly_corruption = -0.8
+	global_autonomy = -0.4
 }
 
 luck = {
@@ -1295,9 +1295,10 @@ luck = {
 
 	#government
 	global_unrest = -1
+	global_autonomy = -0.1
 	republican_tradition = 0.5
 	legitimacy = 1
-	ae_impact = -0.25
+	ae_impact = -0.1
 	governing_capacity_modifier = 0.25
 
 }
@@ -1562,7 +1563,7 @@ absolutism = {
 	embracement_cost = 0.2
 	advisor_cost = 0.15
 	yearly_corruption = -0.1
-	global_autonomy = -0.1
+	global_autonomy = -0.05
 }
 
 low_army_professionalism = {
@@ -2447,7 +2448,7 @@ over_governing_capacity_modifier = {
 	global_autonomy = 0.5
 	
 	horde_unity = -8
-	province_warscore_cost = 10
+	province_warscore_cost = 5
 	
 	stability_cost_to_declare_war = 10
 }
@@ -2483,7 +2484,7 @@ expanded_infrastructure = {
 	merchants = 0.03
 	local_great_project_upgrade_cost = -0.05
 	min_local_autonomy = -5
-	local_autonomy = -0.1
+	local_autonomy = -0.08
 	local_culture_conversion_time = -0.1
 }
 
@@ -2491,7 +2492,7 @@ centralize_state = {
 	statewide_governing_cost = -0.2
 	local_prosperity_growth = 0.25
 	local_state_maintenance_modifier = -0.2
-	local_autonomy = -0.1
+	local_autonomy = -0.05
 	picture = "centralize_state"
 }
 

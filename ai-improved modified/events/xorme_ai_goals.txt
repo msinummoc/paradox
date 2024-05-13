@@ -531,6 +531,7 @@ country_event = {
 		tag = TUR
 		ai = yes
 		owns = 151
+		owns_core_province = 151
 		NOT = { owns = 328 }
 		328 = {
 			owner = {
@@ -645,6 +646,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = MJZ
 		ai = yes
 		is_at_war = no
@@ -723,6 +725,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = MJZ
 		ai = yes
 		is_at_war = no
@@ -777,6 +780,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = MJZ
 		ai = yes
 		is_at_war = no
@@ -832,6 +836,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = MJZ
 		ai = yes
 		is_at_war = no
@@ -936,6 +941,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		always = no
 		tag = MAM
 		ai = yes
 		is_at_war = no

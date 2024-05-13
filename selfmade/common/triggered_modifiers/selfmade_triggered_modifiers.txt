@@ -72,8 +72,8 @@ limit_KOR = {
 		total_development = 200
 	}
 	advisor_cost = 0.25
-	all_power_cost = 0.1
-	development_cost = 0.1
+	all_power_cost = 0.2
+	development_cost = 0.2
 }
 
 limit_embrace_renaissance = {

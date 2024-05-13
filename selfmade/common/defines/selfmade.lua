@@ -65,7 +65,7 @@ NDefines.NMilitary.LOOTED_SCALE = 2  --1
 NDefines.NMilitary.LOOTED_MAX = 20 --5
 NDefines.NMilitary.INF_LOOT = 0.3  --0.1
 NDefines.NMilitary.CAV_LOOT = 0.8  --0.3
-NDefines.NMilitary.ART_LOOT = 0.1  --0.05
+NDefines.NMilitary.ART_LOOT = 0.15  --0.05
 
 NDefines.NCountry.HORDE_RAZE_TECH_BASE_LEVEL = 10   --3
 
@@ -121,7 +121,7 @@ NDefines.NMilitary.CONTROL_DEVASTATION_IMPACT = -2  -- -1
 
 NDefines.NCountry.PS_ADVANCE_TECH = 1000 --600
 NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.05 --0.1
-NDefines.NCountry.TECH_TIME_COST = 1.5   --0.3
+NDefines.NCountry.TECH_TIME_COST = 2   --0.3
 NDefines.NCountry.NEIGHBOURBONUS = -0.2  --  -0.05
 NDefines.NCountry.NEIGHBOURBONUS_CAP = -1  --   -0.75
 
@@ -174,7 +174,7 @@ NDefines.NMilitary.EXTRA_LAND_REINFORCE_COST = 0.75  --2
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.04 --0.02
 NDefines.NEconomy.NAVAL_TECH_MAINTENANCE_IMPACT = 0.03 -- 0.02
 NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.12 --0.08
-NDefines.NEconomy.CAPITAL_MAX_AUTONOMY = 50  --0
+NDefines.NEconomy.CAPITAL_MAX_AUTONOMY = 20  --0
 	
 NDefines.NCountry.EXPAND_INFRASTRUCTURE_DEV_LIMIT = 15  --15
 

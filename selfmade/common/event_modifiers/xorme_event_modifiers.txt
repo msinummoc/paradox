@@ -17,7 +17,7 @@ expand_infrastructure_1 = {
 	merchants = 0.03
 	local_great_project_upgrade_cost = -0.05
 	min_local_autonomy = -5
-	local_autonomy = -0.1
+	local_autonomy = -0.08
 	local_culture_conversion_time = -0.1
 }
 expand_infrastructure_2 = {
@@ -37,7 +37,7 @@ expand_infrastructure_2 = {
 	merchants = 0.06
 	local_great_project_upgrade_cost = -0.1
 	min_local_autonomy = -10
-	local_autonomy = -0.2
+	local_autonomy = -0.16
 	local_culture_conversion_time = -0.2
 }
 expand_infrastructure_3 = {
@@ -57,6 +57,6 @@ expand_infrastructure_3 = {
 	merchants = 0.09
 	local_great_project_upgrade_cost = -0.15
 	min_local_autonomy = -15
-	local_autonomy = -0.3
+	local_autonomy = -0.24
 	local_culture_conversion_time = -0.3
 }
