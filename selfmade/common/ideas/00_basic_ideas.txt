@@ -542,9 +542,10 @@ diplomatic_ideas = {
 	benign_diplomats = {
 		improve_relation_modifier = 0.25
 		#diplomats = 1
-		relation_with_other_culture = 10 #
 		relation_with_heathens = 10
 		relation_with_heretics = 10
+		reverse_relation_with_heathen_religion = 10
+		reverse_relation_with_heretic_religion = 10
 	}
 	experienced_diplomats  = {
 		diplomatic_reputation = 3  ## 2

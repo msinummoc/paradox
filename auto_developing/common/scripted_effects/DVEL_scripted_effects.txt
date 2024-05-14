@@ -66,24 +66,25 @@ DVEL_add_development = {
 		}
 		if = {
 			limit = {NOT = {owner = {has_institution = Renaissance}}}
-			add_local_autonomy = 3
+			add_local_autonomy = 1
 		}
 		if = {
 			limit = {NOT = {owner = {has_institution = printing_press}}}
-			add_local_autonomy = 3
+			add_local_autonomy = 1
 		}
 		if = {
 			limit = {NOT = {owner = {has_institution = manufactories}}}
-			add_local_autonomy = 3
+			add_local_autonomy = 1
 		}
 		if = {
 			limit = {NOT = {owner = {has_institution = enlightenment}}}
-			add_local_autonomy = 3
+			add_local_autonomy = 1
 		}
 		if = {
 			limit = {NOT = {owner = {has_institution = industrialization}}}
-			add_local_autonomy = 3
+			add_local_autonomy = 1
 		}
+		add_local_autonomy = 10
 		if = {
 			limit = { has_global_flag = DVEL_debug_mode_flag }
 			REB = {

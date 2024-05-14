@@ -77,11 +77,16 @@ country_event = {
 						uses_horde_unity = yes
 					}
 					ai = yes
-					ruler_age = 40
-					total_development = 75
-					num_of_owned_areas = 5
+					ruler_age = 30
+					#total_development = 75
+					#num_of_owned_areas = 5
 					is_subject = no
 					is_native_tribe = no
+					OR = {
+						mil = 4
+						dip = 4
+						adm = 4
+					}
 					OR = {
 						AND = {
 							mil = 3
