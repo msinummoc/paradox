@@ -192,10 +192,10 @@ feudalism = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = PORT_OR_CAPITAL_IN_COLONY_FEUDAL
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = feudalism }
@@ -515,10 +515,10 @@ renaissance = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_renaissance
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = renaissance }
@@ -864,10 +864,10 @@ new_world_i = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_new_world_i
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = new_world_i }
@@ -1259,10 +1259,10 @@ printing_press = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_printing_press
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = printing_press }
@@ -1793,10 +1793,10 @@ global_trade = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_global_trade
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = global_trade }
@@ -2361,10 +2361,10 @@ manufactories = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_manufactories
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = manufactories }
@@ -2790,10 +2790,10 @@ enlightenment = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_enlightenment
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = enlightenment }
@@ -3549,10 +3549,10 @@ industrialization = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_colonial_overlord_industrialization
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
+				#OR = {
+				#	has_port = yes
+				#	is_capital = yes
+				#}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = industrialization }

@@ -2443,9 +2443,9 @@ over_governing_capacity_modifier = {
 	stability_cost_modifier = 1.0
 	ae_impact = 0.5
 	administrative_efficiency = -0.5
-	yearly_corruption = 1
+	yearly_corruption = 2.5
 	reduced_liberty_desire = -30
-	global_autonomy = 0.5
+	global_autonomy = 1
 	
 	horde_unity = -8
 	province_warscore_cost = 5

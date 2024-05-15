@@ -46,23 +46,23 @@ DVEL_add_development = {
 		}
 		if = {
 			limit = {development = 10}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {development = 20}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {development = 30}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {development = 40}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {development = 50}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {NOT = {owner = {has_institution = Renaissance}}}

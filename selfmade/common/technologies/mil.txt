@@ -163,7 +163,7 @@ technology = {
 	year = 1479
 	expects_institution = {
 		feudalism = 0.3
-		renaissance = 0.3
+		renaissance = 0.1
 	}
 	
 	#Arquebus
@@ -214,7 +214,7 @@ technology = {
 	year = 1505
 	expects_institution = {
 		feudalism = 0.3
-		renaissance = 0.3
+		renaissance = 0.2
 	}
 
 	
@@ -348,8 +348,8 @@ technology = {
 	expects_institution = {
 		feudalism = 0.3
 		renaissance = 0.3
-		new_world_i = 0.3
-		printing_press = 0.15
+		new_world_i = 0.25
+		printing_press = 0.05
 	}
 	
 	#Trunnions
@@ -550,7 +550,7 @@ technology = {
 		renaissance = 0.3
 		new_world_i = 0.3
 		printing_press = 0.3
-		global_trade = 0.3
+		global_trade = 0.2
 	}
 	
 	#Killing Grounds
@@ -591,7 +591,7 @@ technology = {
 		new_world_i = 0.3
 		printing_press = 0.3
 		global_trade = 0.3
-		manufactories = 0.3
+		manufactories = 0.1
 	}
 	
 	#Cartridge	(1620)?)
