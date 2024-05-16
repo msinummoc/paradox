@@ -3681,10 +3681,12 @@ industrialization = {
 			factor = 0.2
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = copper
-					trade_goods = iron
-				}
+				base_production = 15
+					OR = {
+						trade_goods = copper
+						trade_goods = iron
+					}
+				has_building = weapons
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_weapons_industrialization
@@ -3708,10 +3710,12 @@ industrialization = {
 			factor = 0.2
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = copper
-					trade_goods = iron
-				}
+				base_production = 20
+					OR = {
+						trade_goods = copper
+						trade_goods = iron
+					}
+				has_building = weapons
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_weapons_industrialization
@@ -3735,12 +3739,14 @@ industrialization = {
 			factor = 0.2
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
-				}
+				base_production = 15
+						OR = {
+							trade_goods = wool
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+						}	
+						has_building = textile
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3766,12 +3772,14 @@ industrialization = {
 			factor = 0.2
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
-				}
+				base_production = 20
+						OR = {
+							trade_goods = wool
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+						}	
+						has_building = textile
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3797,11 +3805,13 @@ industrialization = {
 			factor = 0.1
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
-				}
+				base_production = 15
+						OR = {
+							trade_goods = naval_supplies
+							trade_goods = fish
+							trade_goods = salt
+						}
+						has_building = wharf
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3826,11 +3836,13 @@ industrialization = {
 			factor = 0.1
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
-				}
+				base_production = 20
+						OR = {
+							trade_goods = naval_supplies
+							trade_goods = fish
+							trade_goods = salt
+						}
+						has_building = wharf
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3856,14 +3868,16 @@ industrialization = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
-				}
+				base_production = 15
+						OR = {
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = sugar
+							trade_goods = tobacco
+							trade_goods = tea
+							trade_goods = cocoa
+						}
+						has_building = plantations
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3891,14 +3905,16 @@ industrialization = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
-				}
+				base_production = 20
+						OR = {
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = sugar
+							trade_goods = tobacco
+							trade_goods = tea
+							trade_goods = cocoa
+						}
+						has_building = plantations
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3926,14 +3942,16 @@ industrialization = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = cloves
-					trade_goods = fur
-					trade_goods = incense
-				}
+				base_production = 15
+						OR = {
+							trade_goods = ivory
+							trade_goods = slaves
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+							trade_goods = incense
+						}
+						has_building = tradecompany
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3961,14 +3979,16 @@ industrialization = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = cloves
-					trade_goods = fur
-					trade_goods = incense
-				}
+				base_production = 20
+						OR = {
+							trade_goods = ivory
+							trade_goods = slaves
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+							trade_goods = incense
+						}
+						has_building = tradecompany
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -3997,11 +4017,13 @@ industrialization = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
-				}
+				base_production = 15
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+						}
+						has_building = farm_estate
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -4025,11 +4047,13 @@ industrialization = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
-				}
+				base_production = 20
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+						}
+						has_building = farm_estate
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -4053,13 +4077,15 @@ industrialization = {
 			factor = 0.1
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
-				}
+				base_production = 15
+						OR = {
+							trade_goods = paper
+							trade_goods = gems
+							trade_goods = tropical_wood
+							trade_goods = glass
+							trade_goods = chinaware
+						}
+						has_building = farm_estate
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
@@ -4086,13 +4112,15 @@ industrialization = {
 			factor = 0.1
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
-				}
+				base_production = 20
+						OR = {
+							trade_goods = paper
+							trade_goods = gems
+							trade_goods = tropical_wood
+							trade_goods = glass
+							trade_goods = chinaware
+						}
+						has_building = farm_estate
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_industrialization
