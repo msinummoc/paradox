@@ -799,7 +799,7 @@ new_world_i = {
 		}
 		
 		modifier = {
-			factor = 0.1
+			factor = 0.25
 			scale = yes
 			potential = {
 				has_port = yes
@@ -893,7 +893,7 @@ new_world_i = {
 		}
 		
 		modifier = {
-			factor = 0.05
+			factor = 0.03
 			scale = yes
 			potential = {
 				owner = {
@@ -1119,7 +1119,7 @@ printing_press = {
 		}
 		
 		modifier = {
-			factor = 0.1
+			factor = 0.15
 			scale = yes
 			potential = {
 				NOT = {
@@ -1306,7 +1306,7 @@ printing_press = {
 		}
 		
 		modifier = {  ###
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				trade_goods = paper
@@ -1449,7 +1449,6 @@ global_trade = {
 		is_year = 1600
 		is_institution_enabled = printing_press
 		is_island = no
-		highest_value_trade_node = yes
 		OR = {
 			province_has_center_of_trade_of_level = 3
 			AND = {
@@ -1464,6 +1463,14 @@ global_trade = {
 		}
 		owner = {
 			has_institution = new_world_i
+			OR = {
+				trade_income_percentage = 0.70
+				AND = {
+					trade_income_percentage = 0.5
+					is_year = 1601
+				}
+				is_year = 1610
+			}
 			any_active_trade_node = {
 				is_strongest_trade_power = PREV
 				OR = {
@@ -1474,6 +1481,13 @@ global_trade = {
 				}
 			}
 			
+		}
+		is_strongest_trade_power = PREV
+		OR = {
+			highest_value_trade_node = yes
+			trade_node_value = 150
+			AND = {is_year = 1605 trade_node_value = 100}
+			AND = {is_year = 1610 trade_node_value = 50}
 		}
 
 	}
@@ -1511,144 +1525,193 @@ global_trade = {
 		modifier = {
 			factor = 0.1 #Not scaled
 			potential = {
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_30_percent_trade_income
 				province_trade_power = 15
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_30_percent_trade_income
 				province_trade_power = 25
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.3 #Not scaled
 			potential = {
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_30_percent_trade_income
 				province_trade_power = 35
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.4 #Not scaled
 			potential = {
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_30_percent_trade_income
 				province_trade_power = 45
-				trade_income_percentage = 0.30
+				owner = {
+					trade_income_percentage = 0.30
+				}
 			}
 		}
 		
 		modifier = {
 			factor = 0.1 #Not scaled
 			potential = {
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_50_percent_trade_income
 				province_trade_power = 15
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_50_percent_trade_income
 				province_trade_power = 25
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.3 #Not scaled
 			potential = {
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_50_percent_trade_income
 				province_trade_power = 35
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.4 #Not scaled
 			potential = {
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_50_percent_trade_income
 				province_trade_power = 45
-				trade_income_percentage = 0.50
+				owner = {
+					trade_income_percentage = 0.50
+				}
 			}
 		}
 		
 		modifier = {
 			factor = 0.1 #Not scaled
 			potential = {
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_70_percent_trade_income
 				province_trade_power = 15
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_70_percent_trade_income
 				province_trade_power = 25
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 			
 		}
 		modifier = {
 			factor = 0.3 #Not scaled
 			potential = {
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_70_percent_trade_income
 				province_trade_power = 35
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
+				
 			}
 			
 		}
 		modifier = {
 			factor = 0.4 #Not scaled
 			potential = {
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_70_percent_trade_income
 				province_trade_power = 45
-				trade_income_percentage = 0.70
+				owner = {
+					trade_income_percentage = 0.70
+				}
 			}
 		}
 		
@@ -1657,54 +1720,71 @@ global_trade = {
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				num_of_trading_bonuses = 1
+				owner = {
+					num_of_trading_bonuses = 1
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_1_trading_bonuses
 				province_trade_power = 15
-				num_of_trading_bonuses = 1
+				owner = {
+					num_of_trading_bonuses = 1
+				}
 			}
 		}
 		
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				num_of_trading_bonuses = 2
+				owner = {
+					num_of_trading_bonuses = 2
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_1_trading_bonuses
 				province_trade_power = 25
-				num_of_trading_bonuses = 2
+				owner = {
+					num_of_trading_bonuses = 2
+				}
+				
 			}
 		}
 		
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				num_of_trading_bonuses = 3
+				owner = {
+					num_of_trading_bonuses = 3
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_1_trading_bonuses
 				province_trade_power = 35
-				num_of_trading_bonuses = 3
+				owner = {
+					num_of_trading_bonuses = 3
+				}
 			}
 		}
 		
 		modifier = {
 			factor = 0.2 #Not scaled
 			potential = {
-				num_of_trading_bonuses = 4
+				owner = {
+					num_of_trading_bonuses = 4
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_1_trading_bonuses
 				province_trade_power = 45
-				num_of_trading_bonuses = 4
+				owner = {
+					num_of_trading_bonuses = 4
+				}
 			}
 		}
 
 		
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				province_has_center_of_trade_of_level = 1
@@ -1715,7 +1795,7 @@ global_trade = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				province_has_center_of_trade_of_level = 1
@@ -1768,7 +1848,7 @@ global_trade = {
 		}
 		
 		modifier = {
-			factor = 0.3
+			factor = 0.2
 			scale = yes
 			potential = {
 				has_port = yes
@@ -2035,7 +2115,7 @@ manufactories = {
 	
 	embracement_speed = {
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_manufactories
@@ -2045,7 +2125,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			scale = yes
 			potential = {
 				NOT = {
@@ -3038,7 +3118,7 @@ industrialization = {
 			}
 		}
 	}
-	start_chance = 50		#in 100 for when a province can_start
+	start_chance = 25		#in 100 for when a province can_start
 	
 	
 	on_start = institution_events.80
@@ -3057,7 +3137,7 @@ industrialization = {
 	embracement_speed = {
 		#Split between RB and non-RB for these four as RB gives more possibilities for spread (so higher for non-RB to compensate
 		modifier = {
-			factor = 0.15
+			factor = 0.08
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -3085,7 +3165,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.05
+			factor = 0.04
 			scale = yes
 			force_potential = yes
 			potential = {

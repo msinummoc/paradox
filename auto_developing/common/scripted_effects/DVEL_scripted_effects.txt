@@ -24,25 +24,25 @@ DVEL_add_development = {
 			limit = {
 				NOT = { is_year = 1500 }
 			}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {
 				NOT = { is_year = 1600 }
 			}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {
 				NOT = { is_year = 1700 }
 			}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {
 				NOT = { is_year = 1800 }
 			}
-			add_next_institution_embracement = 0.5
+			add_next_institution_embracement = 0.3
 		}
 		if = {
 			limit = {development = 10}

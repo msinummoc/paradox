@@ -7,6 +7,7 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_rum_flag }
 			tag = MAM
+			always = no ##
 		}
 
 		allow = {

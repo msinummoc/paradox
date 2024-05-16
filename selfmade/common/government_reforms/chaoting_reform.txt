@@ -51,8 +51,9 @@ celestial_empire = {
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
 		enuchs_influence = -0.1
-		governing_capacity = 600 #modified
+		governing_capacity = 500
 		yearly_corruption = -0.2
+		global_autonomy = 0.05
 	}
 	
 	ai = {

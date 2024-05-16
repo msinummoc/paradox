@@ -1522,7 +1522,7 @@ administrative_ideas = {
 		stability_cost_modifier = -0.25 
 	}
 	centralization = {
-		global_autonomy = -0.05
+		global_autonomy = -0.025
 	}
 	civil_servants = {
 		adm_tech_cost_modifier = -0.1
