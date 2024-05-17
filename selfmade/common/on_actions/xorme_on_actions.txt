@@ -10,11 +10,80 @@ on_startup = {
 }
 
 
-#on_monthly_pulse = {
-#	country_event = {
-#		selfmade.4
-#	}
-#}
+on_country_released = {
+	if = {
+		limit = {
+			ai = no
+			tag = BOH
+			has_dlc = "Winds of Change"
+			not_in_mission_preview_mode = { key = BOH_RELIGION }
+			NOT = { mission_completed = boh_hussite_regency }
+		}
+		enable_branching_mission_review_without_ai  = {
+			key = BOH_RELIGION
+		}
+	}
+    if = {
+        limit = {
+			ai = no
+            tag = HSN
+            has_dlc = "Winds of Change"
+			not_in_mission_preview_mode = { key = HSN }
+			NOT = { mission_completed = hsn_fate_of_anatolia }
+        }
+        enable_branching_mission_review_without_ai  = {
+            key = HSN
+        }
+    }
+    if = {
+        limit = {
+			ai = no
+            tag = HSN
+            has_dlc = "Winds of Change"
+			not_in_mission_preview_mode = { key = HSN2 }
+			NOT = { mission_completed = hsn_sultan_shah }
+        }
+        enable_branching_mission_review_without_ai  = {
+            key = HSN2
+        }
+    }
+	if = {
+		limit = {
+			tag = PAP
+		}
+		change_government = theocracy
+		change_religion = catholic
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+	if = {
+		limit = {
+			FROM = { has_reform = religious_permanent_revolution_reform }
+			NOT = { tag = PAP }
+		}
+		change_religion = FROM
+		adopt_reform_progress = FROM
+		add_country_modifier = {
+			name = global_holy_war_released_modifier
+			duration = 3650
+			hidden = yes
+		}
+		capital_scope = {
+			change_religion = FROM
+		}
+	}
+	if = {
+		limit = { NOT = { is_year = 1445 } }
+		set_country_flag = released_in_1444
+	}
+	if = {
+		limit = {corruption = 0}
+		add_corruption = -100
+	}
+	every_owned_province = {
+		add_local_autonomy = -100
+	}
+}
 
 
 on_province_owner_change = {

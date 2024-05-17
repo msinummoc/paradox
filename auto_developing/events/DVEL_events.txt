@@ -43,17 +43,15 @@ country_event = { # initialization
 		name = DVEL_events.0.a
 		highlight = yes
 		
-		clr_global_flag = DVEL_debug_mode_flag
-		clr_country_flag = DVEL_debug_target_flag
-		#set_global_flag = DVEL_no_manual_development_flag
-		
+		set_global_flag = DVEL_debug_mode_flag
+		set_country_flag = DVEL_debug_target_flag
+		set_global_flag = DVEL_anti_trigger_flag
+		clr_global_flag = DVEL_no_manual_development_flag
 		set_global_flag = DVEL_no_culture_spread_flag
 		clr_global_flag = DVEL_spread_to_same_group_flag
 		clr_global_flag = DVEL_spread_to_accepted_flag
-		# clr_global_flag = DVEL_test_culture_spread_flag
-		
-		set_global_flag = DVEL_anti_trigger_flag
 		clr_country_flag = DVEL_auto_drain_flag
+		clr_global_flag = DVEL_draining
 		
 		clr_global_flag = DVEL_draining
 		# hidden_effect = {
@@ -447,7 +445,7 @@ country_event = { # The Big One
 								#modifier = { factor = 1.25 culture_group = east_asian }
 								#modifier = { factor = 1.25 culture_group = east_slavic }
 								#modifier = { factor = 1.25 superregion = india_superregion }
-								modifier = { factor = 0.7 AND = { owner = {tag = TUR} NOT = { province_id = 151 } has_global_flag = force_historical_mode_flag} }
+								#modifier = { factor = 0.7 AND = { owner = {tag = TUR} NOT = { province_id = 151 } has_global_flag = force_historical_mode_flag} }
 						
 							}
 						}

@@ -3,63 +3,20 @@ namespace = selfmade
 
 
 
-
-country_event = {
-	id = selfmade.0
-	title = selfmade.0.t
-	desc = selfmade.1.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	trigger = { 
-		
-		ai = yes
-		OR = {
-			corruption = 100
-			AND = {
-				is_bankrupt = yes
-				average_autonomy = 60
-				NOT = {stability = 0}
-			}
-		}
-		
-		
-	}
-	immediate = {
-		if = {
-			limit = {is_emperor_of_china}
-			dismantle_empire_of_china = yes
-		}
-		release_all_possible_countries = yes
-		every_subject_country = {
-			ROOT = {
-				free_vassal = PREV
-			}
-		}
-		
-    }
-mean_time_to_happen = {
-		months = 36
-	}
-	
-	option = {
-		
-	}
-}
-
 country_event = {
 	id = selfmade.1
 	title = selfmade.1.t
-	desc = selfmade.2.d
+	desc = selfmade.1.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-	trigger = { 
+	trigger = {
 		
 		ai = yes
 		is_emperor_of_china = yes
 		NOT = { imperial_mandate = 1 }
 		corruption = 100  ##
 	}
-mean_time_to_happen = {
+	mean_time_to_happen = {
 		months = 480
 	}
 	immediate = {
@@ -76,6 +33,9 @@ mean_time_to_happen = {
 		
 	}
 }
+
+
+
 
 
 
@@ -358,3 +318,76 @@ country_event = {
 }
 
 
+
+
+
+country_event = {
+	id = selfmade.10
+	title = selfmade.0.t
+	desc = selfmade.0.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	trigger = { 
+		is_at_war = no
+		ai = yes
+		OR = {
+			corruption = 100
+			AND = {
+				is_bankrupt = yes
+				average_autonomy = 60
+				NOT = {stability = 0}
+			}
+		}
+		
+		
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		if = {
+			limit = {is_emperor_of_china = yes}
+			dismantle_empire_of_china = yes
+		}
+		release_all_possible_countries = yes
+		every_subject_country = {
+			ROOT = {
+				free_vassal = PREV
+			}
+		}
+		
+    }
+	
+	
+	option = {
+		
+	}
+}
+
+country_event = {
+	id = selfmade.11
+	title = selfmade.11.t
+	desc = selfmade.11.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	trigger = { 
+		is_at_war = no
+		ai = yes
+		overlord = { ai = yes  is_at_war = no }
+		liberty_desire = 100
+		is_subject = yes
+		
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+	immediate = {
+		grant_independence = yes
+		
+    }
+	
+	
+	option = {
+		
+	}
+}

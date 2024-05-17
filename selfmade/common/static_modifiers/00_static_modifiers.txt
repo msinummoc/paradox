@@ -74,8 +74,9 @@ difficulty_normal_ai = {
 	all_power_cost = -0.025
 	merc_maintenance_modifier = -0.2
 	general_cost = -0.25
-	advisor_cost = -0.15
+	advisor_cost = -0.1
 	fort_maintenance_modifier = -0.3
+	state_governing_cost = -0.025
 	yearly_corruption = -0.1
 	all_estate_loyalty_equilibrium = 0.05
 }
@@ -102,9 +103,9 @@ difficulty_hard_ai = {
 	all_power_cost = -0.05  ##
 	merc_maintenance_modifier = -0.35  ##
 	general_cost = -0.4  ##
-	advisor_cost = -0.25  ##
+	advisor_cost = -0.2  ##
 	fort_maintenance_modifier = -0.5 ##
-	state_governing_cost = -0.025
+	state_governing_cost = -0.05
 	yearly_corruption = -0.15
 	all_estate_loyalty_equilibrium = 0.1
 }
@@ -131,7 +132,7 @@ difficulty_very_hard_ai = {
 	all_power_cost = -0.1  ##
 	merc_maintenance_modifier = -0.5  ##
 	general_cost = -0.6  ##
-	advisor_cost = -0.35  ##
+	advisor_cost = -0.3  ##
 	fort_maintenance_modifier = -0.75 ##
 	state_governing_cost = -0.075
 	yearly_corruption = -0.2
@@ -167,7 +168,7 @@ in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -0.5
-	local_autonomy = -0.1
+	local_autonomy = -0.15
 	local_has_qizilbash = yes
 }
 
@@ -540,7 +541,6 @@ devastation = {
 	local_sailors_modifier = -2
 	local_hostile_movement_speed = -0.25
 	local_friendly_movement_speed = -0.25
-	local_autonomy = 0.5
 	local_state_maintenance_modifier = 0.75
 }
 
@@ -596,7 +596,7 @@ local_autonomy_multiplicative = {
 	local_sailors_modifier = -1.0
 	local_tax_modifier = -1.0
 	local_production_efficiency = -1.0
-	trade_goods_size_modifier
+	trade_goods_size_modifier = -1.0
 	province_trade_power_modifier = -0.5
 	land_forcelimit_modifier = -1.0 # Misleading, only used to avoid errors when applying effect of Estates in code.
 	naval_forcelimit_modifier = -1.0 # Misleading, only used to avoid errors when applying effect of Estates in code.
@@ -607,7 +607,7 @@ local_autonomy = {
 	local_autonomy = -0.4
 	local_governing_cost = -0.5
 	local_state_maintenance_modifier = -1
-	trade_goods_size_modifier = -0.5
+	local_state_maintenance_modifier = -2
 }
 
 local_autonomy_trade_company_multiplicative = {
@@ -1226,7 +1226,6 @@ corruption = {
 	defensiveness = -0.75
 	inflation_reduction = -0.2
 	monthly_arabic_trade_influence_power = -0.5
-	global_autonomy = 0.75
 	#governing_capacity_modifier = -1
 	#governing_capacity = -200
 	land_maintenance_modifier = -0.5
@@ -2444,7 +2443,7 @@ over_governing_capacity_modifier = {
 	administrative_efficiency = -0.5
 	yearly_corruption = 2.5
 	reduced_liberty_desire = -30
-	global_autonomy = 1
+	global_autonomy = 0.5
 	
 	horde_unity = -8
 	province_warscore_cost = 5

@@ -157,6 +157,26 @@ country_decisions = {
 		}
 	}
 	
+	find_conquerer = {
+		potential = {
+			ai = no
+		}
+		provinces_to_highlight = {
+			owner = {
+				has_ruler_flag = xorme_ai_the_ai_is_conqueror
+			}
+		}
+		allow = {
+			
+		}
+		effect = {
+			
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
+	
 	get_revolutionary_troop = {
 		potential = {
 			ai = no
