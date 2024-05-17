@@ -253,7 +253,7 @@ country_event = {
 	#is_triggered_only = yes 
 	hidden = yes
 	trigger = {
-		ai = no
+		always = yes
 	}
 	mean_time_to_happen = {
 		days = 20
