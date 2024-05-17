@@ -1,0 +1,545 @@
+selfmade_institution_renaissance_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { renaissance = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}
+
+selfmade_institution_new_world_i_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { new_world_i = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}
+
+selfmade_institution_printing_press_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { printing_press = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}
+
+selfmade_institution_global_trade_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { global_trade = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}
+
+selfmade_institution_manufactories_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { manufactories = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}
+
+selfmade_institution_enlightenment_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { enlightenment = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}
+
+selfmade_institution_industrialization_calculation = {
+	set_variable = {
+		which = devWithAutonomy
+		value = 0
+	}
+	set_variable = {
+		which = devWithInstituion
+		value = 0
+	}
+	set_variable = {
+		which = totalDevWithAutonomy
+		value = 0
+	}
+	every_owned_province = {
+		set_variable = {
+			which = devWithInstituion
+			value = 0
+		}
+		set_variable = {
+			which = totalDevWithAutonomy
+			value = 0
+		}
+		set_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = local_autonomy_var
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable  = {
+			which = localDevWithAutonomy
+			which = local_autonomy_var
+		}
+		divide_variable = {
+			which = localDevWithAutonomy
+			value = 100
+		}
+		export_to_variable = {
+			which = development_var
+			value = trigger_value:development
+		}
+		multiply_variable = {
+			which = localDevWithAutonomy
+			which = development_var
+		}
+		if = {
+			limit = { industrialization = 100 }
+			change_variable = {
+				which = devWithInstituion
+				which = localDevWithAutonomy
+			}
+		}
+		change_variable = {
+			which = totalDevWithAutonomy
+			which = localDevWithAutonomy
+		}
+		owner = {
+			change_variable = {
+				which = totalDevWithAutonomy
+				which = PREV
+			}
+			change_variable = {
+				which = devWithInstituion
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = institutionProportion
+		which = devWithInstituion
+	}
+	divide_variable = {
+		which = institutionProportion
+		which = totalDevWithAutonomy
+	}
+}

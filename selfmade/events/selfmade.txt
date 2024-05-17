@@ -85,6 +85,7 @@ country_event = {
 	desc = selfmade.2.d
 	picture = INVENTION_eventPicture
 	fire_only_once = yes
+	hidden = yes
 	trigger = {
 		ai = no
 	}
@@ -240,6 +241,118 @@ country_event = {
 	
 	option = {
 		#add_stability = -3
+	}
+	
+}
+
+country_event = {
+	id = selfmade.4
+	title = selfmade.4.t
+	desc = selfmade.4.d
+	picture = INVENTION_eventPicture
+	#is_triggered_only = yes 
+	hidden = yes
+	trigger = {
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	immediate = {
+		clr_country_flag = renaissance_30_flag
+		clr_country_flag = new_world_i_30_flag
+		clr_country_flag = printing_press_30_flag
+		clr_country_flag = global_trade_30_flag
+		clr_country_flag = manufactories_30_flag
+		clr_country_flag = enlightenment_30_flag
+		clr_country_flag = industrialization_30_flag
+		if = {
+			limit = {
+				is_institution_enabled = renaissance
+				NOT = {has_institution = renaissance}
+				has_institution = feudalism
+			}
+			selfmade_institution_renaissance_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = renaissance_30_flag
+			}
+		}else_if = {
+			limit = {
+				is_institution_enabled = new_world_i
+				NOT = {has_institution = new_world_i}
+				has_institution = renaissance
+			}
+			selfmade_institution_new_world_i_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = new_world_i_30_flag
+			}else = {
+				
+			}
+		}else_if = {
+			limit = {
+				is_institution_enabled = printing_press
+				NOT = {has_institution = printing_press}
+				has_institution = new_world_i
+			}
+			selfmade_institution_printing_press_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = printing_press_30_flag
+			}
+		}else_if = {
+			limit = {
+				is_institution_enabled = global_trade
+				NOT = {has_institution = global_trade}
+				has_institution = printing_press
+			}
+			selfmade_institution_global_trade_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = global_trade_30_flag
+			}
+		}else_if = {
+			limit = {
+				is_institution_enabled = manufactories
+				NOT = {has_institution = manufactories}
+				has_institution = global_trade
+			}
+			selfmade_institution_manufactories_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = manufactories_30_flag
+			}
+		}else_if = {
+			limit = {
+				is_institution_enabled = enlightenment
+				NOT = {has_institution = enlightenment}
+				has_institution = manufactories
+			}
+			selfmade_institution_enlightenment_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = enlightenment_30_flag
+			}
+		}else_if = {
+			limit = {
+				is_institution_enabled = industrialization
+				NOT = {has_institution = industrialization}
+				has_institution = enlightenment
+			}
+			selfmade_institution_industrialization_calculation = yes
+			if = {
+				limit = {check_variable = { which = institutionProportion value = 0.3 }}
+				set_country_flag = industrialization_30_flag
+			}
+		}
+    }
+	
+	option = {
+		#country_event = { 
+		#	id = selfmade.4
+		#	days = 30
+		#}
 	}
 	
 }
