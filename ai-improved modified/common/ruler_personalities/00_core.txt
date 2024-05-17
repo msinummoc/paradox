@@ -129,8 +129,8 @@ xorme_ai_personality_conqueror = {
 	
 	other_ai_peace_term_bonus = 5
 	building_budget_multiplier = 5.0
-	war_chance_multiplier = 1000.0
-	easy_war_chance_multiplier = 1000.0
+	war_chance_multiplier = 10
+	easy_war_chance_multiplier = 10
 	enemy_strength_multiplier = 0.5
 	wants_disclose_attack = yes
 	razing = yes
