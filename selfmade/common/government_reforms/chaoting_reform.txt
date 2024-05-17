@@ -52,7 +52,7 @@ celestial_empire = {
 		burghers_influence_modifier = -0.1
 		enuchs_influence = -0.1
 		governing_capacity = 500
-		yearly_corruption = -0.2
+		yearly_corruption = -0.1
 		global_autonomy = 0.05
 	}
 	
