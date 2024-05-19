@@ -79,7 +79,7 @@ country_event = {
 					#ai = yes
 					ruler_age = 30
 					NOT = {
-						total_development = 100
+						total_development = 300
 					}
 					is_subject = no
 					is_native_tribe = no

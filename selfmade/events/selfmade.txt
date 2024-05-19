@@ -333,16 +333,23 @@ country_event = {
 		OR = {
 			corruption = 100
 			AND = {
-				is_bankrupt = yes
+				OR = {
+					AND = {
+						NOT = {stability = 0}
+						is_bankrupt = yes
+					}
+					has_reform = steppe_horde
+				}
+				
 				average_autonomy = 60
-				NOT = {stability = 0}
+				
 			}
 		}
 		
 		
 	}
 	mean_time_to_happen = {
-		months = 12
+		months = 1
 	}
 	immediate = {
 		if = {
@@ -355,7 +362,10 @@ country_event = {
 				free_vassal = PREV
 			}
 		}
-		
+		add_horde_unity = 100
+		every_owned_province = {
+			add_local_autonomy = -100
+		}
     }
 	
 	

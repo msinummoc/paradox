@@ -1,19 +1,19 @@
 
-conceive_mng_ai = {
-	potential = {
-		ai = yes
-		has_global_flag = force_historical_mode_flag
-		tag = MNG
-		NOT = {
-			is_year = 1445
-		}
-		
-	}
-	trigger = {
-		is_year = 1444
-	}
-	governing_capacity = 200
-}
+#conceive_mng_ai = {
+#	potential = {
+#		ai = yes
+#		has_global_flag = force_historical_mode_flag
+#		tag = MNG
+#	#	NOT = {
+##			is_year = 1445
+#		}
+#		
+#	}
+#	trigger = {
+#		is_year = 1445
+#	}
+#	governing_capacity = 100
+#}
 
 
 

@@ -8,7 +8,7 @@ steppe_horde = {
 			culture_group = tartar
 			primary_culture = altaic_new 
 		}
-		has_reform = steppe_horde
+		#has_reform = steppe_horde
 		NOT = { has_reform = great_mongol_state_reform }
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -35,10 +35,11 @@ steppe_horde = {
 		reinforce_cost_modifier = -0.5
 		reinforce_speed = 2
 		hostile_attrition = 2
-		#governing_capacity_modifier = -0.4
+		governing_capacity_modifier = -0.25
 		global_trade_goods_size_modifier = -0.35
 		war_exhaustion = -0.1
 		own_territory_dice_roll_bonus = 1
+		global_autonomy = 0.1
 	}
 	custom_attributes = {
 		enables_horde_idea_group = yes
