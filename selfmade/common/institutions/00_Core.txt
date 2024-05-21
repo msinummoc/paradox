@@ -307,6 +307,7 @@ renaissance = {
 		build_cost = -0.05
 		embracement_cost = 0.05
 		technology_cost = -0.05
+		global_autonomy = -0.03
 	}
 
 	trade_company_efficiency = 0.4
@@ -627,6 +628,7 @@ new_world_i = {
 		trade_steering = 0.1		  
 		embracement_cost = 0.05
 		technology_cost = -0.05
+		
 	}
 
 	trade_company_efficiency = 0.6
@@ -981,6 +983,7 @@ printing_press = {
 		stability_cost_modifier = -0.05
 		technology_cost = -0.15
 		embracement_cost = 0.05
+		global_autonomy = -0.03
 	}
 
 	trade_company_efficiency = 0.8
@@ -1974,6 +1977,7 @@ manufactories = {
 		global_trade_goods_size_modifier = 0.1
 		technology_cost = -0.1		
 		embracement_cost = 0.1
+		global_autonomy = -0.03
 	}
 
 	trade_company_efficiency = 1.25
@@ -2629,6 +2633,7 @@ enlightenment = {
 					DIP = 5
 				}
 			}
+			
 			owner = {
 				absolutism = 100
 			}
@@ -3021,6 +3026,7 @@ industrialization = {
 		global_allowed_num_of_manufactories = 1
 		technology_cost = -0.25
 		global_unrest = 2
+		global_autonomy = -0.03
 	}
 
 	historical_start_date = 1750.1.1

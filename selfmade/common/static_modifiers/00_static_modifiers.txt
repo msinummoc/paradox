@@ -150,7 +150,7 @@ city = {
 	local_sailors_modifier = 0.25
 	garrison_growth = 0.05
 	allowed_num_of_manufactories = 1
-	local_autonomy = 0.2
+	local_autonomy = 0.25
 	local_development_cost = -0.5
 }
 
@@ -1195,10 +1195,10 @@ low_meritocracy = {
 corruption = {
 	global_spy_defence = -1
 	spy_offence = -0.50
-	all_power_cost = 0.5
+	all_power_cost = 1
 	#min_autonomy = 50
 	#global_unrest = 10
-	imperial_mandate = -0.6
+	imperial_mandate = -1
 	meritocracy = -5
 	devotion = -4
 	republican_tradition = -1.5
