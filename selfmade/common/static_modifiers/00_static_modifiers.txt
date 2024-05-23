@@ -339,7 +339,7 @@ development = {
 	local_manpower_modifier = 0.01
 	local_tax_modifier = 0.01
 	local_development_cost_modifier = 0.007
-	local_autonomy = 0.005
+	local_autonomy = 0.006
 	#local_governing_cost = -0.001
 }
 
