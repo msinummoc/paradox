@@ -7,7 +7,7 @@ NDefines.NDiplomacy.SPY_NETWORK_TECH_EFFECT = -0.1 --0.05
 NDefines.NDiplomacy.SPY_NETWORK_TECH_EFFECT_MAX = -1 --0.3
 NDefines.NDiplomacy.FABRICATE_CLAIM_COST_MODIFIER_PER_CLAIM = 0.1    --0.25
 NDefines.NDiplomacy.PO_FORM_PU_AE = 0.16   --0.20
-NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.8  --0.6
+NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.75  --0.6
 NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.5   --0.5
 NDefines.NDiplomacy.PO_TRANSFER_VASSAL_AE = 0.3   --0.3
 NDefines.NDiplomacy.AE_HRE_INTERNAL = 1  --0.5
@@ -126,7 +126,7 @@ NDefines.NCountry.NEIGHBOURBONUS = -0.2  --  -0.05
 NDefines.NCountry.NEIGHBOURBONUS_CAP = -1  --   -0.75
 
 
-NDefines.NCountry.CORRUPTION_COST = 0.25 --0.05
+NDefines.NCountry.CORRUPTION_COST = 0.4 --0.05
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 50  --40
 NDefines.NAI.EDICT_VALUE_THRESHOLD = 5
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT = 3

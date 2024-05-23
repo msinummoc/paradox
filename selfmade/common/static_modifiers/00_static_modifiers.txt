@@ -150,7 +150,7 @@ city = {
 	local_sailors_modifier = 0.25
 	garrison_growth = 0.05
 	allowed_num_of_manufactories = 1
-	local_autonomy = 0.25
+	local_autonomy = 0.3
 	local_development_cost = -0.5
 }
 
@@ -682,7 +682,7 @@ base_values = {
 	merchants = 2							#Start with 2 merchants
 	diplomats = 2							#Start with 2 diplomats..
 	missionaries = 1						#1 missionary
-	army_tradition_decay = 0.05				#lose 5% yearly
+	army_tradition_decay = 0.06				#lose 5% yearly
 	navy_tradition_decay = 0.05				#lose 5% yearly
 	prestige_decay = 0.05					#lose 5% prestige each year
 	tolerance_own = 3
@@ -1244,15 +1244,15 @@ corruption = {
 	max_absolutism = -50
 	yearly_corruption = -1
 	
-	trade_efficiency = -2
-	global_tax_modifier = -1.5
-	production_efficiency = -1.5
+	trade_efficiency = -1
+	global_tax_modifier = -1
+	production_efficiency = -1
 	
-	province_warscore_cost = 6
+	province_warscore_cost = 5
 }
 
 root_out_corruption = {
-	yearly_corruption = -7.5
+	yearly_corruption = -10
 }
 
 recovery_motivation = {
@@ -2520,22 +2520,20 @@ num_accepted_cultures = {
 	tolerance_own = -0.2
 }
 
-# hf
 
 ruler_adm = {
 	monthly_council_consensus = 0.1
-	yearly_absolutism = 0.1
 	max_absolutism = 2.5
-	monthly_reform_progress_modifier = 0.025
 	monthly_egyptian_westernization = 0.05
 	yearly_corruption = -0.04
+	global_autonomy = -0.02
 	monthly_divine_authority = 0.01
 }
 
 ruler_dip = {
 	monthly_council_consensus = 0.1
 	diplomatic_reputation = 0.25
-	ae_impact = -0.04
+	improve_relation_modifier = 0.05
 	monthly_egyptian_westernization = 0.05
 	monthly_arabic_trade_influence_power = 0.05
 	monthly_divine_authority = 0.01
@@ -2545,6 +2543,7 @@ ruler_mil = {
 	monthly_council_consensus = 0.1
 	land_forcelimit_modifier = 0.04
 	horde_unity = 0.5
+	army_tradition_decay = -0.004
 	monthly_egyptian_westernization = 0.05
 	monthly_divine_authority = 0.01
 }
