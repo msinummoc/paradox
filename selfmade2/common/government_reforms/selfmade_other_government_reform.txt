@@ -1,0 +1,207 @@
+prussian_theocratic_reform = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = PRU
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = GER
+				NOT = { map_setup = map_setup_random }
+				OR = {
+					has_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+					is_hegemon_of_type = military_hegemon
+					development_in_provinces = {
+						value = 500
+						culture = prussian
+					}
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					has_reform = prussian_theocratic_reform
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+				}
+			}
+			has_unlocked_government_reform = { government_reform = prussian_theocratic_reform }
+		}
+	}
+	trigger = {
+		OR = {
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					hidden_trigger = {
+						has_reform = prussian_theocratic_reform
+					}
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+				}
+			}
+			has_unlocked_government_reform = { government_reform = prussian_theocratic_reform }
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	
+	modifiers = {
+		war_exhaustion = -0.02
+		monthly_militarized_society = 0.05
+		global_autonomy = -0.05
+		devotion = -0.5
+		max_absolutism = 10
+		manpower_in_true_faith_provinces = 0.15
+		governing_capacity_modifier = -0.5
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+}
+
+namestnik_reform = {
+	icon = "provincial_government"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+		has_unlocked_government_reform = { government_reform = namestnik_reform }
+	}
+	modifiers = {
+		global_autonomy = -0.015
+		autonomy_change_time = -0.25
+		min_autonomy_in_territories = -0.05
+		trade_company_investment_cost = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+
+#Persian
+qollar_aghasi_regiments_reform = {
+	icon = "feudal_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+		culture_group = iranian
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = qollar_aghasi_regiments_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		reinforce_cost_modifier = -0.25
+		leader_land_shock = 2
+		mil_tech_cost_modifier = -0.1
+		global_autonomy = -0.015
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+
+
+laesio_enormis_reform = {
+	icon = "laesio_enormis_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "King of Kings"
+		is_or_was_tag = { tag = BYZ }
+	}
+	modifiers = {
+		global_prosperity_growth = 0.5
+		nobles_loyalty_modifier = -0.05
+		nobles_influence_modifier = -0.1
+		production_efficiency = 0.15
+		global_autonomy = -0.025
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+integrated_ottoman_officials = {
+	icon = "integrated_ottoman_officials"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "King of Kings"
+		OR = {
+			have_had_reform = integrated_ottoman_officials
+			has_unlocked_government_reform = { government_reform = integrated_ottoman_officials }
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		tolerance_of_heathens_capacity = 1
+	}
+
+	conditional = {
+		allow = { 
+			has_dlc = "Cradle of Civilization"
+		}
+		has_pashas = yes
+		custom_attributes = { reveal_ruler_skills_for_mamluks = yes }
+	}
+
+	ai = {
+		factor = 10
+	}
+}
+
+
+integrated_ottoman_officials = {
+	icon = "integrated_ottoman_officials"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "King of Kings"
+		OR = {
+			have_had_reform = integrated_ottoman_officials
+			has_unlocked_government_reform = { government_reform = integrated_ottoman_officials }
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		tolerance_of_heathens_capacity = 1
+	}
+
+	conditional = {
+		allow = { 
+			has_dlc = "Cradle of Civilization"
+		}
+		has_pashas = yes
+		custom_attributes = { reveal_ruler_skills_for_mamluks = yes }
+	}
+
+	ai = {
+		factor = 10
+	}
+}

@@ -1,0 +1,572 @@
+
+protectorate_parliament_reform = {
+	icon = "protectorate_parliament_reform"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = protectorate_parliament_reform
+	}
+	lock_level_when_selected = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 15
+	legacy_equivalent = protectorate_parliament_legacy
+	modifiers = {
+		global_autonomy = -0.025
+		land_morale = 0.1
+		max_absolutism = 20
+		republican_tradition = -0.5
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+			NOT = { has_dlc = "Domination" }
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Domination"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			english_parliament = yes
+		}
+	}
+	has_term_election = no
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		cannot_become_dictatorship = yes
+	}
+}
+
+parliamentary_republic_reform = {
+	icon = "protectorate_parliament_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = parliamentary_republic_reform
+			have_had_reform = parliamentary_republic_reform
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_new_country = no
+	nation_designer_cost = 30
+	valid_for_nation_designer = yes
+	modifiers = {
+		global_autonomy = -0.025
+		land_morale = 0.1
+		can_revoke_parliament_seats = yes 
+		parliament_backing_chance = 0.25
+		num_of_parliament_issues = 1
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+			NOT = { has_dlc = "Domination" }
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Domination"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			english_parliament = yes
+		}
+	}
+	duration = 5
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		cannot_become_dictatorship = yes
+	}
+}
+
+prussian_republic_reform = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = PRU
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = GER
+				NOT = { map_setup = map_setup_random }
+				OR = {
+					has_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+					is_hegemon_of_type = military_hegemon
+					development_in_provinces = {
+						value = 500
+						culture = prussian
+					}
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					has_reform = prussian_republic_reform
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+				}
+			}
+			has_unlocked_government_reform = { government_reform = prussian_republic_reform }
+		}
+	}
+	trigger = {
+		OR = {
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					hidden_trigger = {
+						has_reform = prussian_republic_reform
+					}
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+				}
+			}
+			has_unlocked_government_reform = { government_reform = prussian_republic_reform }
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	legacy_equivalent = prussian_republic
+	
+	modifiers = {
+		war_exhaustion = -0.02
+		monthly_militarized_society = 0.05
+		global_autonomy = -0.05
+		republican_tradition = -0.5
+		max_absolutism = 30
+		governing_capacity_modifier = -0.5
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		generals_become_rulers = yes
+	}
+	
+	has_term_election = no
+}
+
+
+presidential_despot_reform = {
+	allow_normal_conversion = no
+	dictatorship = yes
+	is_eligible_for_hre_emperor = no
+	lock_level_when_selected = yes
+	icon = "parliament_hall"
+	potential = {
+		has_reform = presidential_despot_reform
+	}
+	valid_for_nation_designer = no
+	legacy_equivalent = republican_dictatorship
+
+	modifiers = {
+		global_autonomy = -0.035
+		land_morale = 0.1
+		max_absolutism = 40
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	has_term_election = no
+}
+
+military_dictatorship_reform = {
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "parliament_hall"
+	potential = {
+		has_reform = military_dictatorship_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	legacy_equivalent = military_dictatorship
+	has_term_election = no
+	modifiers = {
+		global_autonomy = -0.035
+		land_morale = 0.1
+		max_absolutism = 30
+	}
+	custom_attributes = {
+		generals_become_rulers = yes
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+}
+
+revolutionary_republic_reform = {
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "revolutionary_republic"
+	potential = {
+		has_reform = revolutionary_republic_reform
+	}
+	legacy_equivalent = revolutionary_republic
+	valid_for_new_country = no
+	duration = 4
+	valid_for_nation_designer = no
+	republican_name = yes
+	royal_marriage = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+
+	modifiers = {
+		tolerance_heretic = 2
+		land_morale = 0.1
+		global_autonomy = -0.075
+		max_revolutionary_zeal = 50
+		max_absolutism = 40
+		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2	
+	}
+	fixed_rank = 3
+	effect = {
+		custom_tooltip = break_every_non_rev_republic_alliance_tt
+		hidden_effect = {
+			every_ally = {
+				limit = {
+					NOT = { government = republic }
+					is_revolutionary = no
+				}
+				ROOT = { break_alliance = PREV }
+			}
+		}
+	}
+
+	custom_attributes = {
+		cannot_ally_non_republics_or_non_rev = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		locked_government_type = yes
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		factions = {
+			rr_jacobins
+			rr_royalists
+			rr_girondists
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_iran_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_iran_flag
+				restore_country_name = yes
+				override_country_name = IRAN_STRING
+				set_country_flag = is_iran_flag
+			}
+		}
+	}
+}
+
+junior_revolutionary_republic_reform = {
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "revolutionary_republic"
+	potential = {
+		has_reform = junior_revolutionary_republic_reform
+	}
+	legacy_equivalent = revolutionary_republic
+	valid_for_new_country = no
+	duration = 4
+	valid_for_nation_designer = no
+	republican_name = yes
+	royal_marriage = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+	revolutionary_client_state = yes # Used By Revolutionary Client State
+
+	modifiers = {
+		tolerance_heretic = 2
+		land_morale = 0.1
+		global_autonomy = -0.075
+		max_revolutionary_zeal = 25
+		max_absolutism = 40
+		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2
+	}
+	fixed_rank = 2
+	effect = {
+		custom_tooltip = break_every_non_rev_republic_alliance_tt
+		hidden_effect = {
+			every_ally = {
+				limit = {
+					NOT = { government = republic }
+					is_revolutionary = no
+				}
+				ROOT = { break_alliance = PREV }
+			}
+		}
+	}
+
+	custom_attributes = {
+		cannot_ally_non_republics_or_non_rev = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		locked_government_type = yes
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_iran_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_iran_flag
+				restore_country_name = yes
+				override_country_name = IRAN_STRING
+				set_country_flag = is_iran_flag
+			}
+		}
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		factions = {
+			rr_jacobins
+			rr_royalists
+			rr_girondists
+		}
+	}
+}
+
+
+great_russian_republic_reform = {
+	icon = "organized_military_staff"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = great_russian_republic_reform
+			have_had_reform = great_russian_republic_reform
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = great_russian_republic_reform
+			}
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		global_manpower_modifier = 0.2
+		merchants = 2
+		governing_capacity = 350
+		yearly_absolutism = 0.5
+		global_autonomy = -0.025
+		embracement_cost = -0.5
+		max_absolutism = 50
+	}
+
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			russian_rule_mechanic
+		}
+	}
+	duration = 6
+}
+
+
+colonial_government = {
+	icon = "peasants"
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	allow_normal_conversion = no
+	fixed_rank = 1
+	potential = {
+		is_colonial_nation = yes
+		NOT = { has_reform = crown_colony_government }
+		NOT = { has_reform = private_enterprise_colony_government }
+		NOT = { has_reform = self_governing_colony_government }
+		NOT = { is_subject_of_type = crown_colony }
+		NOT = { is_subject_of_type = private_enterprise }
+		NOT = { is_subject_of_type = self_governing_colony }
+	}
+	legacy_equivalent = colonial_government_legacy
+	modifiers = {
+		global_autonomy = -0.025
+		recover_army_morale_speed = 0.02
+		embracement_cost = -0.1
+		governing_capacity = 100
+		max_absolutism = 40
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { is_subject_of_type = crown_colony }
+				add_government_reform = crown_colony_government
+			}
+			if = {
+				limit = { is_subject_of_type = private_enterprise }
+				add_government_reform = private_enterprise_colony_government
+			}
+			if = {
+				limit = { is_subject_of_type = self_governing_colony }
+				add_government_reform = self_governing_colony_government
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = { is_subject_of_type = crown_colony }
+				add_government_reform = crown_colony_government
+			}
+			if = {
+				limit = { is_subject_of_type = private_enterprise }
+				add_government_reform = private_enterprise_colony_government
+			}
+			if = {
+				limit = { is_subject_of_type = self_governing_colony }
+				add_government_reform = self_governing_colony_government
+			}
+		}
+	}
+	duration = 4
+}
+
+
+devolution_of_powers_reform = {
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_pool = 2
+		global_autonomy = -0.025
+	}
+	ai = {
+		factor = 1.5
+	}
+}

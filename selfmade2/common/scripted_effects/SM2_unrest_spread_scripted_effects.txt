@@ -1,0 +1,381 @@
+
+##定义初始参数 通过加法叠加计算
+SM2_unrest_spread_province_init_effect = {
+	set_variable = {
+		which = SM2_unrest_spread_rate_base
+		value = 0.2
+	}
+	set_variable = {
+		which = SM2_unrest_spread_rate_same_religion
+		value = 0.1
+	}
+	set_variable = {
+		which = SM2_unrest_spread_rate_same_religion_group
+		value = 0.15
+	}
+	set_variable = {
+		which = SM2_unrest_spread_rate_same_culture
+		value = 0.2
+	}
+	set_variable = {
+		which = SM2_unrest_spread_rate_same_culture_group
+		value = 0.1
+	}
+	#若跨越国家则衰减
+	set_variable = {
+		which = SM2_unrest_spread_rate_different_country
+		value = -0.1
+	}
+	#海上相邻效果更弱 但是不知道怎么实现 先不管
+	set_variable = {
+		which = SM2_unrest_spread_rate_sea
+		value = -0.1
+	}
+	#省份的前拥有者，如果并不能触发分离主义叛军，应该不那么受到影响
+	set_variable = {
+		which = SM2_unrest_spread_rate_prev_owner_same_culture
+		value = -0.4
+	}
+	# 缓存上一次的值
+	set_variable = {
+		which = SM2_unrest_spread
+		value = 0
+	}
+	
+	# 为省份随机分配4个组，用于分批计算
+	random_list = {
+		1 = { set_province_flag = SM2_unrest_group_a }
+		1 = { set_province_flag = SM2_unrest_group_b }
+		1 = { set_province_flag = SM2_unrest_group_c }
+		1 = { set_province_flag = SM2_unrest_group_d }
+	}
+}
+
+
+##计算相邻省份的叛乱度，在一定的传播率修正下传播叛乱度
+##计算公式为，叛乱度=本地叛乱度+（相邻省份叛乱度-本地叛乱度）*传播率（若第二项大于0），取最大值
+SM2_unrest_spread_province_effect = {
+	#本地叛乱度
+	export_to_variable = {
+		which = var1
+		value = unrest
+	}
+	subtract_variable = {
+		which = var1
+		which = SM2_unrest_spread #需要减去已有的数值，否则会无限累加
+	}
+	#计算出新叛乱度的最高值
+	set_variable = {
+		which = var2
+		which = var1
+	}
+	every_neighbor_province = {
+		export_to_variable = {
+			which = var2
+			value = unrest
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var2
+					which = PREV
+				}
+				check_variable = {
+					which = var2
+					value = 0
+				}
+			}
+			#计算传播率
+			set_variable = {
+				which = var3
+				which = SM2_unrest_spread_rate_base
+			}
+			if = {
+				limit = {
+					culture = PREV
+				}
+				change_variable = {
+					which = var3
+					which = SM2_unrest_spread_rate_same_culture
+				}
+			}
+			if = {
+				limit = {
+					culture_group = PREV
+				}
+				change_variable = {
+					which = var3
+					which = SM2_unrest_spread_rate_same_culture_group
+				}
+			}
+			if = {
+				limit = {
+					religion = PREV
+				}
+				change_variable = {
+					which = var3
+					which = SM2_unrest_spread_rate_same_religion
+				}
+			}
+			if = {
+				limit = {
+					religion_group = PREV
+				}
+				change_variable = {
+					which = var3
+					which = SM2_unrest_spread_rate_same_religion_group
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						owner = {
+							tag = ROOT
+						}
+					}
+				}
+				change_variable = {
+					which = var3
+					which = SM2_unrest_spread_rate_different_country
+				}
+			}
+			if = {
+				limit = {
+					likely_rebels = nationalist_rebels
+					NOT = {
+						owned_by = ROOT
+					}
+					previous_owner = ROOT
+					PREV = {
+						NOT = {
+							likely_rebels = nationalist_rebels
+						}
+					}
+				}
+				change_variable = {
+					which = var3
+					which = SM2_unrest_spread_rate_prev_owner_same_culture
+				}
+			}
+			set_variable = {
+				which = var1
+				which = PREV
+			}
+			subtract_variable = {
+				which = var2
+				which = var1
+			}
+			multiply_variable = {
+				which = var2
+				which = var3
+			}
+			change_variable = {
+				which = var2
+				which = var1
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var2
+						which = PREV
+					}
+				}
+				PREV = {
+					set_variable = {
+						which = var2
+						which = PREV
+					}
+				}
+			}
+		}
+	}
+	set_variable = { #用来存储上次的叛乱度
+		which = var3
+		which = SM2_unrest_spread
+	}
+	round_variable = {
+		which = var2
+		value = 0
+	}
+	set_variable = {
+		which = SM2_unrest_spread
+		which = var2
+	}
+	#为了防止在最近出现叛乱导致-100时增加31点叛乱，-100时限到时叛乱爆炸（虽然会逐渐恢复正常），规定如果加上传递的叛乱后之后仍小于0，就不添加修正
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = SM2_unrest_spread
+					value = 0
+				}
+			}
+		}
+		set_variable = {
+			which = SM2_unrest_spread
+			value = 0
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = SM2_unrest_spread
+			which = var1
+		}	
+	}
+
+	subtract_variable = {
+		which = var3
+		which = SM2_unrest_spread
+	}
+
+	if = {
+		limit = {
+			OR = {
+				check_variable = {
+					which = var3
+					value = 1
+				}
+				NOT = {
+					check_variable = {
+						which = var3
+						value = -0.9
+					}
+				}
+			}
+		}
+		remove_province_modifier = SM2_unrest_modifier_1
+		remove_province_modifier = SM2_unrest_modifier_2
+		remove_province_modifier = SM2_unrest_modifier_3
+		remove_province_modifier = SM2_unrest_modifier_4
+		remove_province_modifier = SM2_unrest_modifier_5
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_unrest_spread
+					value = 1
+				}
+			}	
+			SM2_unrest_spread_add_modifier_effect = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = SM2_unrest_spread
+					value = 0.1
+				}
+			}
+		}
+		remove_province_modifier = SM2_unrest_modifier_1
+		remove_province_modifier = SM2_unrest_modifier_2
+		remove_province_modifier = SM2_unrest_modifier_3
+		remove_province_modifier = SM2_unrest_modifier_4
+		remove_province_modifier = SM2_unrest_modifier_5
+	}
+}
+
+#加叛乱修正 分别是1-31
+SM2_unrest_spread_add_modifier_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SM2_unrest_spread
+				value = 32
+			}
+		}
+		set_variable = {
+			which = SM2_unrest_spread
+			value = 31
+		}
+	}
+	set_variable = {
+		which = var1
+		which = SM2_unrest_spread
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = var1
+				value = 16
+			}
+		}
+		subtract_variable = {
+			which = var1
+			value = 16
+		}
+		add_province_modifier = {
+			name = SM2_unrest_modifier_5
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = var1
+				value = 8
+			}
+		}
+		subtract_variable = {
+			which = var1
+			value = 8
+		}
+		add_province_modifier = {
+			name = SM2_unrest_modifier_4
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = var1
+				value = 4
+			}
+		}
+		subtract_variable = {
+			which = var1
+			value = 4
+		}
+		add_province_modifier = {
+			name = SM2_unrest_modifier_3
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = var1
+				value = 2
+			}
+		}
+		subtract_variable = {
+			which = var1
+			value = 2
+		}
+		add_province_modifier = {
+			name = SM2_unrest_modifier_2
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = var1
+				value = 1
+			}
+		}
+		subtract_variable = {
+			which = var1
+			value = 1
+		}
+		add_province_modifier = {
+			name = SM2_unrest_modifier_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}

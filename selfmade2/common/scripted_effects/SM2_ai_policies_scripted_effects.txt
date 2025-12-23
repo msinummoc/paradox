@@ -1,0 +1,8 @@
+
+SM_ai_policies_yearly_effect = {
+	export_to_variable = {
+		which = var1
+		value = num_of_loans
+	}
+	
+}

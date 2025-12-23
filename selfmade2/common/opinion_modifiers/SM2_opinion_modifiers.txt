@@ -1,0 +1,21 @@
+SM2_declare_war_prepared = {
+	opinion = -10
+	months = 4
+}
+
+SM2_declare_war_active = {
+	opinion = -10
+	months = 9
+}
+
+SM2_fight_against_enemy = {
+	opinion = 1
+	max = 150
+	yearly_decay = 50
+}
+
+
+SM2_declare_war_chosen_in_three_years = {
+	opinion = -1
+	months = 36
+}

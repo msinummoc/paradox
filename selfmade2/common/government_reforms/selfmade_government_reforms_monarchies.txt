@@ -1,0 +1,714 @@
+
+reformed_byzantine_monarchy_reform = {
+	icon = "byzantine_rule"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = reformed_byzantine_monarchy_reform
+			have_had_reform = reformed_byzantine_monarchy_reform
+		}
+	}
+	nation_designer_cost = 30
+	valid_for_nation_designer = yes
+	modifiers = {
+		global_autonomy = -0.025
+		culture_conversion_cost = -0.2
+		years_of_nationalism = -5
+		yearly_absolutism = 1
+	}
+	
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+			NOT = { has_dlc = "King of Kings" }
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
+}
+
+serbian_despotate_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = serbian_despotate_reform
+			have_had_reform = serbian_despotate_reform
+		}
+	}
+	trigger = {
+		if = {
+			limit = { has_updated_culture = { culture = slavic } }
+			primary_culture = serbian_new
+		}
+		else = {
+			primary_culture = serbian
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = serbian
+	}
+	conditional = {
+		allow = { 
+			has_dlc = "Winds of Change" 
+			has_dlc = "Golden Century"
+		}
+		custom_attributes = {
+			order_of_the_dragon_unlocked = yes
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+
+	modifiers = {
+		global_autonomy = -0.025
+		warscore_cost_vs_other_religion = -0.1
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+prussian_monarchy = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+		NOT = { has_reform = prussian_monarchy_base }
+		OR = {
+			AND = {
+				tag = PRU
+				OR = {
+					has_mission = emp_brapru_army_reforms_2
+					has_mission = emp_brapru_army_reforms_3
+				}
+				NOT = { map_setup = map_setup_random }
+			}
+			has_unlocked_government_reform = { government_reform = prussian_monarchy }
+			has_reform = prussian_monarchy
+			have_had_reform = prussian_monarchy
+		}
+	}
+	trigger = {
+		OR = {
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			has_unlocked_government_reform = { government_reform = prussian_monarchy }
+		}
+	}
+	legacy_equivalent = prussian_monarchy_legacy
+
+	modifiers = {
+		war_exhaustion = -0.02
+		global_unrest = -2
+		global_autonomy = -0.05
+		max_absolutism = 10
+		monarch_military_power = 3
+		nobles_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.5
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_1
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_2
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_3
+		}
+	}
+}
+
+prussian_monarchy_base = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_reform = prussian_monarchy }
+		NOT = { have_had_reform = prussian_monarchy }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			NOT = { has_mission = emp_brapru_army_reforms_2 }
+			NOT = { has_mission = emp_brapru_army_reforms_3 }
+		}
+		OR = {
+			AND = {
+				tag = PRU
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = GER
+				NOT = { map_setup = map_setup_random }
+				OR = {
+					has_reform = prussian_monarchy_base
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+					is_hegemon_of_type = military_hegemon
+					development_in_provinces = {
+						value = 500
+						culture = prussian
+					}
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					has_reform = prussian_monarchy_base
+					have_had_reform = prussian_monarchy
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+				}
+			}
+			has_unlocked_government_reform = { government_reform = prussian_monarchy_base }
+		}
+	}
+	trigger = {
+		OR = {
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					hidden_trigger = {
+						has_reform = prussian_monarchy_base
+					}
+					have_had_reform = prussian_monarchy_base
+					have_had_reform = prussian_republic_reform
+					have_had_reform = prussian_theocratic_reform
+				}
+			}
+			has_unlocked_government_reform = { government_reform = prussian_monarchy_base }
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	legacy_equivalent = prussian_monarchy_legacy
+
+	modifiers = {
+		war_exhaustion = -0.02
+		global_unrest = -2
+		global_autonomy = -0.05
+		max_absolutism = 10
+		monarch_military_power = 3
+		nobles_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.5
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+}
+
+
+tsardom = {
+	icon = "tsardom"
+	allow_normal_conversion = yes
+	potential = {
+		religion = orthodox
+		OR = {
+			culture_group = east_slavic
+			culture_group = slavic
+		}
+		NOT = { primary_culture = ruthenian }
+		NOT = { primary_culture = byelorussian }
+		OR = {
+			AND = {
+				tag = RUS
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = UKR
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = tsardom
+			}
+		}
+	}
+	fixed_rank = 3
+	legacy_equivalent = tsardom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	nation_designer_trigger = {
+		OR = {
+			culture_group = east_slavic
+			culture_group = slavic
+		}
+		NOT = { primary_culture = ruthenian }
+		NOT = { primary_culture = byelorussian }
+		religion = orthodox
+	}
+
+	modifiers = {
+		global_manpower_modifier = 0.20
+		yearly_absolutism = 0.5
+		global_autonomy = -0.025
+		governing_capacity = 350
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.2
+	}
+
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+	conditional = {
+		allow = { 
+			has_dlc = "Third Rome" 
+			NOT = { has_dlc = "Domination" }
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			russian_mechanic
+			russian_modernization_mechanic
+		}
+	}
+}
+
+
+russian_empire_reform = {
+	icon = "russian_queen"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = russian_empire_reform
+			have_had_reform = russian_empire_reform
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = russian_empire_reform
+			}
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		max_absolutism = 10
+		yearly_absolutism = 0.5
+		global_autonomy = -0.025
+		global_manpower_modifier = 0.20
+		embracement_cost = -0.5
+		governing_capacity = 350
+	}
+
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			russian_rule_mechanic
+		}
+	}
+}
+
+mamluk_government = {
+	icon = "mamluk_government"
+	allow_normal_conversion = yes
+	potential = {
+		religion_group = muslim
+		OR = {
+			AND = {
+				tag = MAM
+				NOT = { map_setup = map_setup_random }
+			}
+			have_had_reform = mamluk_government
+		}
+	}
+	legacy_equivalent = mamluk_government_legacy
+	queen = no
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+
+	modifiers = {
+		num_accepted_cultures = 3
+		global_autonomy = -0.015
+		monarch_admin_power = 2
+		same_culture_advisor_cost = -0.25
+		promote_culture_cost = -0.5
+		governing_capacity = 50
+		nobles_influence_modifier = 0.1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+		heir = no
+		foreign_slave_rulers = yes
+	}
+}
+
+
+revolutionary_empire_reform = {
+	lock_level_when_selected = yes
+	icon = "rioting_burning_2"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = revolutionary_empire_reform
+	}
+	legacy_equivalent = revolutionary_empire
+	valid_for_new_country = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+	is_eligible_for_hre_emperor = no
+	fixed_rank = 3
+	modifiers = {
+		global_manpower_modifier = 0.25
+		land_morale = 0.10
+		global_autonomy = -0.075
+		governing_capacity = 150
+		max_revolutionary_zeal = 50
+		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		factions = {
+			rr_jacobins
+			rr_royalists
+			rr_girondists
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_iran_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_iran_flag
+				restore_country_name = yes
+				override_country_name = IRAN_STRING
+				set_country_flag = is_iran_flag
+			}
+		}
+	}
+}
+
+
+lithuanian_grand_kingdom = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = lithuanian_grand_kingdom
+			}
+			has_reform = lithuanian_grand_kingdom
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	fixed_rank = 2
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	modifiers = {
+		no_religion_penalty = yes
+		global_autonomy = -0.025
+		governing_capacity = 250 
+	}
+}
+
+
+centralize_empire_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		if = {
+			limit = { current_age = age_of_discovery }
+			custom_trigger_tooltip = {
+				tooltip = at_least_15_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 15
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_reformation }
+			custom_trigger_tooltip = {
+				tooltip = at_least_25_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 25
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_absolutism }
+			custom_trigger_tooltip = {
+				tooltip = at_least_35_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 35
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_revolutions }
+			custom_trigger_tooltip = {
+				tooltip = at_least_50_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 50
+				}
+			}
+		}
+	}
+	trigger = {
+		if = {
+			limit = { current_age = age_of_discovery }
+			custom_trigger_tooltip = {
+				tooltip = at_least_15_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 15
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_reformation }
+			custom_trigger_tooltip = {
+				tooltip = at_least_25_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 25
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_absolutism }
+			custom_trigger_tooltip = {
+				tooltip = at_least_35_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 35
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_revolutions }
+			custom_trigger_tooltip = {
+				tooltip = at_least_50_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 50
+				}
+			}
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		autonomy_change_time = -0.25
+		culture_conversion_cost = -0.1
+		all_estate_loyalty_equilibrium = -0.05
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Leviathan"
+		}
+		custom_attributes = {
+			centralize_state_half_refund = yes
+			#centralize_state_no_reform_cost = yes
+			#centralize_state_development = yes
+		}
+	}
+}
+
+legacy_of_timur_reform = {
+	icon = "legacy_of_timur_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = { government_reform = legacy_of_timur_reform }
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		years_of_nationalism = -10
+		core_creation = -0.05
+	}
+	custom_attributes = {
+		legacy_of_timur_decision = yes
+	}
+	effect = {
+	}
+	ai = {
+		factor = 10
+	}
+}
+ottoman_siyasah_tax_reform = {
+	icon = "government_for_people_reform"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		OR = {
+			has_unlocked_government_reform = { government_reform = ottoman_siyasah_tax_reform }
+			have_had_reform = ottoman_siyasah_tax_reform
+		}
+	}
+	trigger = {
+		religion_group = muslim
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = ROOT
+				}
+				add_province_modifier = {
+					name = ottoman_siyasah_tax_reform_tax
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					NOT = { religion_group = ROOT }
+				}
+				add_province_modifier = {
+					name = ottoman_siyasah_tax_reform_manpower
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = ottoman_siyasah_tax_reform_tax
+						has_province_modifier = ottoman_siyasah_tax_reform_manpower
+					}
+				}
+				remove_province_modifier = ottoman_siyasah_tax_reform_tax
+				remove_province_modifier = ottoman_siyasah_tax_reform_manpower
+			}
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		autonomy_change_time = -0.25
+		num_accepted_cultures = 2
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	custom_attributes = {
+		more_25_tax_in_true_faith_provinces = yes
+		more_15_manpower_in_heathen_provinces = yes
+		no_crownland_money_loss_to_age = yes
+	}
+}
+
+consulate_reform = {
+	icon = "revolutionary_republic"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = yes
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		governing_capacity = 150
+	}
+	ai = {
+		factor = 2.5
+	}
+}
+catalan_cortes_reform = {
+	icon = "catalan_cortes"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+		primary_culture = catalan
+	}
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.1
+		global_autonomy = -0.015
+		production_efficiency = 0.1
+	}
+}

@@ -1,0 +1,141 @@
+SM2_active_declare_war = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		always = yes
+	}
+	is_allowed = {
+		NOT = {
+			any_country = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_active
+				}
+			}
+		}
+		
+		has_casus_belli_against = FROM
+	}
+	on_accept = {
+		FROM = {
+			save_event_target_as = SM2_declare_war_target
+		}
+		event_target:SM2_declare_war_target = {
+			add_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_prepared
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_prepared
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_chosen_in_three_years
+			}
+			if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.3
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_1
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_2
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.8
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_3
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 3
+					}
+				}
+			}else = {
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 0
+					}
+				}
+			}
+			
+		}
+		every_enemy_country = {
+			SM2_diplomatic_helper_scripted_effects = yes
+		}
+		every_country = {
+			limit = {
+				OR = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_hostile
+					}
+				}
+			}
+			SM2_diplomatic_helper_scripted_effects = yes
+			
+		}
+		
+		country_event = {
+			id = SM2_diplomatic_events.1
+			days = 90
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

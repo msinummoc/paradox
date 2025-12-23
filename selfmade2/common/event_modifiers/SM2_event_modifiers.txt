@@ -1,0 +1,103 @@
+SM2_unrest_modifier_1 = {
+	local_unrest = 1
+}
+
+SM2_unrest_modifier_2 = {
+	local_unrest = 2
+}
+
+SM2_unrest_modifier_3 = {
+	local_unrest = 4
+}
+
+SM2_unrest_modifier_4 = {
+	local_unrest = 8
+}
+
+SM2_unrest_modifier_5 = {
+	local_unrest = 16
+}
+
+SM2_autonomy_modifier_1 = {
+	local_autonomy = -0.01
+}
+
+SM2_autonomy_modifier_2 = {
+	local_autonomy = -0.02
+}
+
+SM2_autonomy_modifier_3 = {
+	local_autonomy = -0.04
+}
+
+SM2_autonomy_modifier_4 = {
+	local_autonomy = -0.08
+}
+
+SM2_autonomy_modifier_5 = {
+	local_autonomy = -0.16
+}
+
+SM2_autonomy_modifier_6 = {
+	local_autonomy = -0.32
+}
+
+SM2_autonomy_modifier_7 = {
+	local_autonomy = -0.64
+}
+
+
+SM2_autonomy_positive_modifier_1 = {
+	local_autonomy = 0.01
+}
+
+SM2_autonomy_positive_modifier_2 = {
+	local_autonomy = 0.02
+}
+
+SM2_autonomy_positive_modifier_3 = {
+	local_autonomy = 0.04
+}
+
+SM2_autonomy_positive_modifier_4 = {
+	local_autonomy = 0.08
+}
+
+SM2_autonomy_positive_modifier_5 = {
+	local_autonomy = 0.16
+}
+
+SM2_autonomy_positive_modifier_6 = {
+	local_autonomy = 0.32
+}
+
+SM2_autonomy_positive_modifier_7 = {
+	local_autonomy = 0.64
+}
+
+SM2_governing_capacity = {
+	governing_capacity = -9000
+}
+
+SM2_test1_modifier = {
+	local_unrest = 5
+}
+
+SM2_test2_modifier = {
+	local_unrest = 5
+}
+
+SM2_prepared_declare_war_modifier_1 = {
+	diplomatic_reputation = 3
+	diplomats = 3
+}
+
+SM2_prepared_declare_war_modifier_2 = {
+	diplomatic_reputation = 2
+	diplomats = 2
+}
+
+SM2_prepared_declare_war_modifier_3 = {
+	diplomatic_reputation = 1
+	diplomats = 1
+}

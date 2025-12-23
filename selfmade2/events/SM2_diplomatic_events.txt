@@ -1,0 +1,700 @@
+namespace = SM2_diplomatic_events
+
+
+
+## 90天之后允许宣战
+country_event = {
+	id = SM2_diplomatic_events.1
+	title = SM2_diplomatic_events.1.t
+	desc = SM2_diplomatic_events.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		always = yes
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+			}
+			remove_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_prepared
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_active
+			}
+		}
+	}
+	
+	option = {
+		
+	}
+}
+
+# AI每年选择一个目标
+country_event = {
+	id = SM2_diplomatic_events.2
+	title = SM2_diplomatic_events.2.t
+	desc = SM2_diplomatic_events.2.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	#is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOT = {
+			any_country = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+			}
+		}
+	}
+	immediate = {
+		every_known_country = {
+			limit = {
+				# 预筛：优先考虑邻国和近距离国家
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = {
+						border_distance = {
+							who = ROOT
+							distance = 300
+						}
+					}
+					ROOT = { personality = ai_colonialist }
+				}
+				ROOT = {
+					has_casus_belli_against = PREV
+					NOT = {
+						has_saved_event_target = SM2_declare_war_target
+					}
+				}
+				NOT = {
+					truce_with = ROOT
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_active
+					}
+				}
+			}
+			random_list = {
+				10 = {
+					save_event_target_as = SM2_declare_war_target
+					modifier = {
+						factor = 3
+						ROOT = {
+							core_claim = PREV
+						}
+					}
+					
+					modifier = {
+						factor = 1.25
+						any_owned_province = {
+							development = 10
+							is_claim = ROOT
+						}
+					}
+					
+					modifier = {
+						factor = 1.25
+						any_owned_province = {
+							development = 20
+							is_claim = ROOT
+						}
+					}
+					
+					modifier = {
+						factor = 1.25
+						any_owned_province = {
+							development = 30
+							is_claim = ROOT
+						}
+					}
+
+					modifier = {
+						factor = 1.3
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							is_claim = ROOT
+							value = 5
+						}
+						factor = 1.3
+					}
+					modifier = {
+						factor = 1.3
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							is_claim = ROOT
+							value = 10
+						}
+						factor = 1.3
+					}
+
+
+					modifier = {
+						factor = 10
+						151 = {
+							owned_by = PREV
+							OR = {
+								is_claim = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+					modifier = {
+						factor = 1.25
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = -100
+							}
+						}
+					}
+					modifier = {
+						factor = 1.25
+						NOT = {
+							reverse_has_opinion = {
+								who = ROOT
+								value = -100
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						ROOT = {
+							OR = {
+								has_opinion_modifier = {
+									who = PREV
+									modifier = SM2_declare_war_prepared
+								}
+								has_opinion_modifier = {
+									who = PREV
+									modifier = SM2_declare_war_active
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						is_rival = ROOT
+					}
+					modifier = {
+						factor = 20
+						ROOT = {
+							has_casus_belli = {
+								type = cb_restore_personal_union
+								target = PREV
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						ROOT = {
+							has_casus_belli = {
+								type = cb_super_badboy
+								target = PREV
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						ROOT = {
+							has_casus_belli = {
+								type = cb_nationalist
+								target = PREV
+							}
+						}
+					}
+
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.3
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.75
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 1.5
+						}
+						
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 5
+						}
+					}
+					# 合并友好态度检查（极低侵略性）
+					modifier = {
+						factor = 0.01
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_allied
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_loyal
+								}
+							}
+						}
+					}
+					# 友好/保护态度（低侵略性）
+					modifier = {
+						factor = 0.15
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_friendly
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_protective
+								}
+							}
+						}
+					}
+					# 中立态度
+					modifier = {
+						factor = 0.5
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_neutral
+							}
+						}
+					}
+					# 支配态度
+					modifier = {
+						factor = 1.25
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_domineering
+							}
+						}
+					}
+					# 合并高侵略性态度（敌对/愤怒/宿敌）
+					modifier = {
+						factor = 1.5
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_hostile
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_outraged
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_rivalry
+								}
+							}
+						}
+					}
+					# 叛逆态度（附庸）
+					modifier = {
+						factor = 2
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_rebellious
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						ROOT = {
+							culture_group_claim = PREV
+						}
+					}
+
+					modifier = {
+						factor = 0.75
+						border_distance = {
+							who = ROOT
+							distance = 75
+						}
+					}
+					modifier = {
+						factor = 0.7
+						border_distance = {
+							who = ROOT
+							distance = 150
+						}
+					}
+					modifier = {
+						factor = 0.5
+						border_distance = {
+							who = ROOT
+							distance = 300
+						}
+					}
+					modifier = {
+						factor = 0.05
+						border_distance = {
+							who = ROOT
+							distance = 500
+						}
+					}
+					modifier = {
+						factor = 0.05
+						border_distance = {
+							who = ROOT
+							distance = 1000
+						}
+					}
+					modifier = {
+						factor = 30
+						border_distance = {
+							who = ROOT
+							distance = 500
+						}
+						ROOT = {
+							personality = ai_colonialist
+						}
+					}
+					modifier = {
+						factor = 30
+						border_distance = {
+							who = ROOT
+							distance = 1000
+						}
+						ROOT = {
+							personality = ai_colonialist
+						}
+					}
+
+					modifier = {
+						factor = 0.1
+						NOT = {
+							OR = {
+								any_owned_province = {
+									has_port = yes
+								}
+								is_neighbor_of = ROOT
+							}
+						}
+					}
+
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 10
+						}
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 15
+						}
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 20
+						}
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 25
+						}
+					}
+
+					modifier = {
+						factor = 0.01
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = SM2_declare_war_chosen_in_three_years
+						}
+					}
+
+					##special ones
+					modifier = {
+						factor = 10
+						tag = BYZ
+						ROOT = {
+							tag = TUR
+						}
+					}
+
+					modifier = {
+						factor = 0.01
+						ROOT = {
+							OR = {
+								has_reform = celestial_empire
+								has_reform = chinese_warlord
+							}
+							NOT = { 
+								AND = {
+									#is_year = 1800
+									num_of_provinces_owned_or_owned_by_subjects_with = {
+										superregion = china_superregion
+										value = 200
+									}
+								}
+							}
+						}
+						NOT = {
+							any_owned_province = {
+								superregion = china_superregion
+							}
+						}
+					}
+				}
+				70 = {
+
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_saved_event_target = SM2_declare_war_target
+			}
+			event_target:SM2_declare_war_target = {
+				add_opinion = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = SM2_declare_war_chosen_in_three_years
+				}
+				if = {
+					limit = {
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.3
+							}
+						}
+					}
+					add_country_modifier = {
+						name = SM2_prepared_declare_war_modifier_1
+						duration = 360
+					}
+					ROOT = {
+						set_variable = {
+							which = var1
+							value = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+					add_country_modifier = {
+						name = SM2_prepared_declare_war_modifier_2
+						duration = 360
+					}
+					ROOT = {
+						set_variable = {
+							which = var1
+							value = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.8
+							}
+						}
+					}
+					add_country_modifier = {
+						name = SM2_prepared_declare_war_modifier_3
+						duration = 360
+					}
+					ROOT = {
+						set_variable = {
+							which = var1
+							value = 3
+						}
+					}
+				}else = {
+					ROOT = {
+						set_variable = {
+							which = var1
+							value = 0
+						}
+					}
+				}
+				
+			}
+			every_enemy_country = {
+				SM2_diplomatic_helper_scripted_effects = yes
+			}
+			every_country = {
+				limit = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_outraged
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_hostile
+						}
+					}
+				}
+				SM2_diplomatic_helper_scripted_effects = yes
+				
+			}
+			country_event = {
+				id = SM2_diplomatic_events.1
+				days = 90
+			}
+			set_variable = {
+				which = SM2_ai_declared_war_fail_counter
+				value = 1
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = SM2_ai_declared_war_fail_counter
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = SM2_ai_declared_war_fail_counter
+					value = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 3
+			is_emperor_of_china = yes
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				superregion = china_superregion
+				value = 200
+			}
+		}
+		modifier = {
+			factor = 0.75
+			years_of_income = 1
+		}
+		modifier = {
+			factor = 0.75
+			years_of_income = 2
+		}
+		modifier = {
+			factor = 0.75
+			years_of_income = 3
+		}
+		modifier = {
+			factor = 0.5
+			calc_true_if = {
+				all_neighbor_country = {
+					ROOT = {
+						claim = PREV
+					}
+				}
+				amount = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			calc_true_if = {
+				all_neighbor_country = {
+					ROOT = {
+						claim = PREV
+					}
+				}
+				amount = 10
+			}
+		}
+	}
+}

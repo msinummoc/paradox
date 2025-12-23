@@ -1,0 +1,111 @@
+on_startup = {
+	country_event = {
+		id = SM2_unrest_spread.1
+	}
+	country_event = {
+		id = SM2_autonomy.1
+	}
+}
+
+on_monthly_pulse = {
+	country_event = {
+		id = SM2_unrest_spread.2
+	}
+	country_event = {
+		id = SM2_autonomy.2
+	}
+	country_event = {
+		id = SM2_autonomy.5
+	}
+	
+}
+
+
+
+on_yearly_pulse = {
+	country_event = {
+		id = SM2_unrest_spread.4
+	}
+	country_event = {
+		id = SM2_autonomy.4
+	}
+	country_event = {
+		id = SM2_ai_policies.1
+	}
+	# country_event = {
+	# 	id = SM2_diplomatic_events.2
+	# }
+}
+
+on_siege_won_province = {
+	events = {
+		synthetic_dawn.4
+	}
+	if = {
+		limit = {
+			#superregion = china_superregion
+			culture_group = east_asian
+			controller = {
+				has_government_attribute = has_unify_china_cb
+				OR = {
+					is_in_war = {
+						attacker_leader = this
+						casus_belli = cb_chinese_unification
+					}
+					is_in_war = {
+						defender_leader = this
+						casus_belli = cb_chinese_unification
+					}
+					is_in_war = {
+						attacker_leader = this
+						casus_belli = cb_take_mandate
+					}
+					is_in_war = {
+						defender_leader = this
+						casus_belli = cb_take_mandate
+					}
+				}
+				NOT = { is_core = ROOT }
+			}
+		}
+		controller = { 
+			add_territorial_core = ROOT
+			if = {
+				limit = { is_claim = ROOT}
+				remove_claim = ROOT
+				
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				owned_by = controller
+			}
+		}
+		if = {
+			limit = {
+				has_building = fort_18th
+			}
+			remove_building = fort_18th
+			add_building = fort_17th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_17th
+			}
+			remove_building = fort_17th
+			add_building = fort_16th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_16th
+			}
+			remove_building = fort_16th
+			add_building = fort_15th
+		}
+
+	}
+	
+	
+}

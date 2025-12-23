@@ -1,0 +1,23 @@
+# 每年一度的事件，让ai计算一下自己该点什么决议
+
+namespace = SM2_ai_policies
+
+
+country_event = {
+	id = SM2_ai_policies.1
+	title = SM2_ai_policies.1.t
+	desc = SM2_ai_policies.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+	}
+	immediate = {
+		SM_ai_policies_yearly_effect = yes
+	}
+	
+	option = {
+		
+	}
+}
