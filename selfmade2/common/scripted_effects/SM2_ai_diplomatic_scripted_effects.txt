@@ -1,3 +1,7 @@
+
+
+
+
 SM2_diplomatic_helper_scripted_effects = {
 
 	if = {
@@ -26,7 +30,7 @@ SM2_diplomatic_helper_scripted_effects = {
 			multiplier = 75
 		}
 	}
-	else_if = {
+	if = {
 		limit = {
 			ROOT = {
 				check_variable = {
@@ -52,7 +56,7 @@ SM2_diplomatic_helper_scripted_effects = {
 			multiplier = 50
 		}
 	}
-	else_if = {
+	if = {
 		limit = { 
 			ROOT = {
 				check_variable = {
@@ -100,7 +104,7 @@ SM2_diplomatic_helper_scripted_effects = {
 			value = -1
 		}
 		random_list = {
-			10 = {
+			20 = {
 				# guarantee independence
 				create_guarantee = event_target:SM2_declare_war_target
 				modifier = {
@@ -117,8 +121,16 @@ SM2_diplomatic_helper_scripted_effects = {
 					}
 				}
 			}
-			10 = {
+			15 = {
 				create_alliance = event_target:SM2_declare_war_target
+				add_opinion = {
+					who = event_target:SM2_declare_war_target
+					modifier = SM2_event_alliance_rights
+				}
+				reverse_add_opinion = {
+					who = event_target:SM2_declare_war_target
+					modifier = SM2_event_alliance_rights
+				}
 				modifier = {
 					factor = 1.25
 					has_opinion = {
@@ -167,19 +179,28 @@ SM2_diplomatic_helper_scripted_effects = {
 					}
 				}
 			}
-			50 = {
+			60 = {
 				# do nothing
 				modifier = {
-					factor = 0.5
+					factor = 0.66
 					religion_group = event_target:SM2_declare_war_target
 				}
 				modifier = {
 					factor = 0.66
-					religion_group = event_target:SM2_declare_war_target
+					NOT = {
+						religion_group = ROOT
+					}
 				}
 				modifier = {
 					factor = 0.66
 					religion = event_target:SM2_declare_war_target
+				}
+				
+				modifier = {
+					factor = 0.66
+					NOT = {
+						religion = ROOT
+					}
 				}
 
 
@@ -311,8 +332,15 @@ SM2_diplomatic_helper_scripted_effects = {
 					NOT = {
 						border_distance = {
 							who = event_target:SM2_declare_war_target
-							distance = 100
+							distance = 50
 						}
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 100
 					}
 				}
 				modifier = {
@@ -377,6 +405,46 @@ SM2_diplomatic_helper_scripted_effects = {
 						}
 					}
 				}
+				modifier = {
+					factor = 1.25
+					war_exhaustion = 3
+				}
+				modifier = {
+					factor = 1.25
+					war_exhaustion = 6
+				}
+				modifier = {
+					factor = 2
+					war_exhaustion = 10
+				}
+
+			}
+		}
+	}
+}
+
+# 记录目标（含盟友检查）：盟友则互减信任，不计入选择；非盟友正常记录
+
+
+SM2_record_war_target_with_ally_check = {
+	if = {
+		limit = { alliance_with = ROOT }
+		add_trust = {
+			who = ROOT
+			value = -10
+			mutual = yes
+		}
+	}
+	if = {
+		limit = { NOT = { alliance_with = ROOT } }
+		add_opinion = {
+			who = ROOT
+			modifier = SM2_declare_war_selected
+		}
+		ROOT = {
+			change_variable = {
+				which = SM2_selected_targets_count
+				value = -1
 			}
 		}
 	}

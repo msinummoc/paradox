@@ -157,6 +157,7 @@ city = {
 
 	# SM2
 	local_hostile_movement_speed = -0.2
+	local_warscore_cost_modifier = 1
 }
 
 port = {
@@ -306,7 +307,7 @@ provincial_tax_income = {
 	local_institution_spread = 0.02
 
 	#SM2
-	local_autonomy = -0.015
+	local_autonomy = -0.01
 }
 
 provincial_production_size = {
@@ -328,6 +329,8 @@ cardinals_spread_institution = {
 
 manpower = {
 	garrison_growth = 0.01					#1% increase from manpower.
+
+	#SM2
 	local_autonomy = -0.005
 }
 
@@ -530,6 +533,7 @@ occupied = {
 	#SM2
 	local_unrest = 2
 	local_autonomy = 0.1
+	local_warscore_cost_modifier = -1
 }
 
 under_siege = {
@@ -563,7 +567,7 @@ devastation = {
 prosperity = {
 	local_development_cost = -0.1
 	trade_goods_size_modifier = 0.25
-	local_autonomy = -0.05
+	local_autonomy = -0.025
 }
 
 slaves_raided = {
@@ -714,13 +718,13 @@ scorched_earth = {
 base_values = {
 	max_absolutism = 65
 	merchants = 2							#Start with 2 merchants
-	diplomats = 2							#Start with 2 diplomats..
+	#diplomats = 2							#Start with 2 diplomats..
 	missionaries = 1						#1 missionary
 	army_tradition_decay = 0.05				#lose 5% yearly
 	navy_tradition_decay = 0.05				#lose 5% yearly
 	prestige_decay = 0.05					#lose 5% prestige each year
 	tolerance_own = 3
-	diplomatic_upkeep = 4
+	#diplomatic_upkeep = 4
 	tolerance_heathen = -3
 	tolerance_heretic = -2
 	global_missionary_strength = 0.02
@@ -760,6 +764,10 @@ base_values = {
 	state_maintenance_modifier = 1
 	global_manpower = 4
 	land_forcelimit_modifier = -0.5
+	diplomatic_upkeep = 2
+	diplomats = 1
+
+	monthly_ottoman_decadence = -10
 
 }
 
@@ -1117,26 +1125,29 @@ emperor = {
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
-	land_forcelimit	= 0.5					#each state increases forcelimit by 0.5
-	global_manpower = 0.5					#each gives 0.5 MP to the emperor.
+	land_forcelimit	= 0.25 #0.5					#each state increases forcelimit by 0.5
+	global_manpower = 0.25 #0.5					#each gives 0.5 MP to the emperor.
 }
 
 free_cities_in_hre = {							#bonuses for each free city in the HRE.. as emperor
-	global_tax_income = 2
-	global_manpower = 1
-	land_forcelimit	= 0.5
+	global_tax_income = 1 #2
+	global_manpower = 0.25 #1
+	land_forcelimit	= 0.25 #0.5
 }
 
 free_city_in_hre = {
 	global_tax_income = 3
 	diplomatic_reputation = 1
+
+	#SM2
+	global_tax_income = 2
 }
 
 member_in_hre = {
 	diplomatic_reputation = 1
 	#SM2
-	land_forcelimit	= -0.5
-	global_manpower = -0.5
+	land_forcelimit	= -0.25
+	global_manpower = -0.25
 	diplomatic_reputation = 1
 	diplomatic_upkeep = 1
 }
@@ -1308,6 +1319,9 @@ corruption = {
 	monthly_ottoman_decadence = 10
 	monthly_arabic_trade_influence_power = -0.5
 	monthly_authority_power = 0.5
+
+	#SM2
+	yearly_corruption = -1
 }
 
 root_out_corruption = {
@@ -1373,6 +1387,7 @@ luck = {
 
 	#SM2
 	legitimacy = 0.5
+	military_tactics = 0.1
 
 }
 

@@ -9,7 +9,7 @@ country_event = {
 	id = SM2_autonomy.1
 	title = SM2_autonomy.1.t
 	desc = SM2_autonomy.1.d
-	picture = INVENTION_eventPicture
+	picture = CITY_DEVELOPMENT_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	trigger = {
@@ -64,7 +64,7 @@ country_event = {
 				# 如果省份数>40，分成4个子事件处理；否则直接处理
 				if = {
 					limit = {
-						num_of_provinces_in_states = 100
+						num_of_provinces_in_states = 150
 					}
 					country_event = { id = SM2_autonomy.20 }
 					country_event = { id = SM2_autonomy.21 }
@@ -195,7 +195,7 @@ country_event = {
 	option = {}
 }
 
-# 处理组D
+# 处理组D 以及没有标号的省份
 country_event = {
 	id = SM2_autonomy.23
 	title = SM2_autonomy.23.t
@@ -206,7 +206,22 @@ country_event = {
 	trigger = { always = yes }
 	immediate = {
 		every_owned_province = {
-			limit = { has_province_flag = SM2_autonomy_group_d }
+			limit = { 
+				OR = {
+					AND = {
+						NOT = {
+							has_province_flag = SM2_autonomy_group_a
+						}
+						NOT = {
+							has_province_flag = SM2_autonomy_group_b
+						}
+						NOT = {
+							has_province_flag = SM2_autonomy_group_c
+						}
+					}
+					has_province_flag = SM2_autonomy_group_d 
+				}
+			}
 			SM2_autonomy_effect = yes
 		}
 	}
@@ -223,9 +238,13 @@ country_event = {
 	is_triggered_only = yes 
 	trigger = {
 		OR = {
-			is_year = 1444
-			AND = {
+			NOT = {
 				is_year = 1445
+			}
+			AND = {
+				NOT = {
+					is_year = 1446
+				}
 				NOT = {
 					is_month = 6
 				}

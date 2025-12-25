@@ -1,3 +1,7 @@
+SM2_declare_war_selected = {
+	opinion = -1
+}
+
 SM2_declare_war_prepared = {
 	opinion = -10
 	months = 4
@@ -19,3 +23,8 @@ SM2_declare_war_chosen_in_three_years = {
 	opinion = -1
 	months = 36
 }
+
+SM2_event_alliance_rights = {
+	opinion = -10
+	years = 30
+}	

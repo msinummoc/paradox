@@ -43,18 +43,7 @@ country_event = {
 		always = no
 	}
 	immediate = {
-		save_event_target_as = one_country
-		every_country = {
-			limit = {
-				NOT = {
-					tag = event_target:one_country
-				}
-			}
-			every_owned_province = {
-				cede_province = event_target:one_country
-				add_core = event_target:one_country
-			}
-		}
+		SM2_test_effect = yes
 		
     }
 	
@@ -261,4 +250,106 @@ country_event = {
 		}
 	}
 	option = {}
+}
+
+# 测试 every_known_country 变量限制
+country_event = {
+	id = SM2_test.100
+	title = "SM2 Test: Variable Limit in every_known_country"
+	desc = "Testing if variable check in every_known_country limit works to restrict to 5 iterations"
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	immediate = {
+		# 重置测试变量
+		set_variable = {
+			which = SM2_test_counter
+			value = 0
+		}
+		
+		# 测试 every_known_country 变量限制
+		every_known_country = {
+			limit = {
+				ROOT = {
+					NOT = {
+						check_variable = {
+							which = SM2_test_counter
+							value = 5
+						}
+					}
+				}
+				# 简单的过滤条件，避免处理太多国家
+				is_neighbor_of = ROOT
+			}
+			ROOT = {
+				change_variable = {
+					which = SM2_test_counter
+					value = 1
+				}
+			}
+		}
+		
+		# 记录最终计数
+		set_variable = {
+			which = SM2_test_final_count
+			which = SM2_test_counter
+		}
+		
+	}
+	
+	option = {
+		name = "Test Complete"
+	}
+}
+
+# 测试 every_known_country 变量限制
+country_event = {
+	id = SM2_test.101
+	title = "SM2 Test: Variable Limit in every_known_country"
+	desc = "Testing if variable check in every_known_country limit works to restrict to 5 iterations"
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	immediate = {
+		# 重置测试变量
+		set_variable = {
+			which = SM2_test_counter
+			value = 0
+		}
+		
+		# 测试 every_known_country 变量限制
+		every_known_country = {
+			limit = {
+				# 简单的过滤条件，避免处理太多国家
+				is_neighbor_of = ROOT
+			}
+			ROOT = {
+				change_variable = {
+					which = SM2_test_counter
+					value = 1
+				}
+			}
+		}
+		
+		# 记录最终计数
+		set_variable = {
+			which = SM2_test_final_count
+			which = SM2_test_counter
+		}
+		
+	}
+	
+	option = {
+		name = "Test Complete"
+	}
 }

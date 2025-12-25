@@ -30,6 +30,20 @@ country_decisions = {
 		ai_importance = 0
 	}
 
+	SM2_manage_policies_decision = {
+		major = yes
+		potential = {
+			ai = no
+			has_country_flag = SM2_player_open_decisions_group_flag
+		}
+		allow = { always = yes }
+		effect = {
+			country_event = { id = SM2_ai_policies.10 }
+		}
+		ai_will_do = { factor = 0 }
+		ai_importance = 0
+	}
+
 	restore_chinese_empire = {
 		major = yes
 		potential = {

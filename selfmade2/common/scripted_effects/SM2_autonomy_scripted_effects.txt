@@ -512,6 +512,57 @@ SM2_autonomy_effect = {
 			which = var1
 			value = 100
 		}
+
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 64
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 64
+			}
+			multiply_variable = {
+				which = var1
+				value = 0.5
+			}
+			change_variable = {
+				which = var1
+				value = 64
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 32
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 32
+			}
+			multiply_variable = {
+				which = var1
+				value = 0.5
+			}
+			change_variable = {
+				which = var1
+				value = 32
+			}
+		}
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			multiply_variable = {
+				which = var1
+				value = 2
+			}
+		}
 		
 		if = {
 			limit = {

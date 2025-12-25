@@ -7,14 +7,14 @@ country_event = {
 	id = SM2_diplomatic_events.1
 	title = SM2_diplomatic_events.1.t
 	desc = SM2_diplomatic_events.1.d
-	picture = INVENTION_eventPicture
+	picture = LAND_MILITARY_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	trigger = {
 		always = yes
 	}
 	immediate = {
-		every_country = {
+		every_known_country = {
 			limit = {
 				has_opinion_modifier = {
 					who = ROOT
@@ -37,182 +37,85 @@ country_event = {
 	}
 }
 
-# AI每年选择一个目标
+# AI每5年选择一个目标
 country_event = {
 	id = SM2_diplomatic_events.2
 	title = SM2_diplomatic_events.2.t
 	desc = SM2_diplomatic_events.2.d
-	picture = INVENTION_eventPicture
+	picture = DIPLOMACY_eventPicture
 	hidden = yes
 	#is_triggered_only = yes
 	trigger = {
 		ai = yes
-		NOT = {
-			any_country = {
-				has_opinion_modifier = {
-					who = ROOT
-					modifier = SM2_declare_war_prepared
-				}
-			}
-		}
 	}
 	immediate = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_selected
+				}
+			}
+			remove_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_selected
+			}
+		}
+
+		# 根据 AI 人格决定目标选取限制
+		# 判断条件是大于等于0，所以实际上会比这里的数字大一个
+		if = {
+			limit = {
+				personality = ai_militarist
+			}
+			set_variable = {
+				which = SM2_selected_targets_count
+				value = 8
+			}
+		}
+		else_if = {
+			limit = {
+				personality = ai_diplomat
+			}
+			set_variable = {
+				which = SM2_selected_targets_count
+				value = 4
+			}
+		}
+		else = {
+			set_variable = {
+				which = SM2_selected_targets_count
+				value = 6
+			}
+		}
+
+		# T1: 最高优先级 - 核心、联统、王位继承
 		every_known_country = {
 			limit = {
-				# 预筛：优先考虑邻国和近距离国家
-				OR = {
-					is_neighbor_of = ROOT
-					NOT = {
-						border_distance = {
-							who = ROOT
-							distance = 300
-						}
-					}
-					ROOT = { personality = ai_colonialist }
-				}
-				ROOT = {
-					has_casus_belli_against = PREV
-					NOT = {
-						has_saved_event_target = SM2_declare_war_target
-					}
-				}
-				NOT = {
-					truce_with = ROOT
-				}
+				NOT = { truce_with = ROOT }
 				NOT = {
 					has_opinion_modifier = {
 						who = ROOT
 						modifier = SM2_declare_war_active
 					}
 				}
+				ROOT = {
+					OR = {
+						core_claim = PREV
+						has_casus_belli = {
+							type = cb_restore_personal_union
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_claim_throne
+							target = PREV
+						}
+					}
+				}
 			}
 			random_list = {
-				10 = {
-					save_event_target_as = SM2_declare_war_target
-					modifier = {
-						factor = 3
-						ROOT = {
-							core_claim = PREV
-						}
-					}
-					
-					modifier = {
-						factor = 1.25
-						any_owned_province = {
-							development = 10
-							is_claim = ROOT
-						}
-					}
-					
-					modifier = {
-						factor = 1.25
-						any_owned_province = {
-							development = 20
-							is_claim = ROOT
-						}
-					}
-					
-					modifier = {
-						factor = 1.25
-						any_owned_province = {
-							development = 30
-							is_claim = ROOT
-						}
-					}
-
-					modifier = {
-						factor = 1.3
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							is_claim = ROOT
-							value = 5
-						}
-						factor = 1.3
-					}
-					modifier = {
-						factor = 1.3
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							is_claim = ROOT
-							value = 10
-						}
-						factor = 1.3
-					}
-
-
-					modifier = {
-						factor = 10
-						151 = {
-							owned_by = PREV
-							OR = {
-								is_claim = ROOT
-								is_core = ROOT
-							}
-						}
-					}
-					modifier = {
-						factor = 1.25
-						NOT = {
-							has_opinion = {
-								who = ROOT
-								value = -100
-							}
-						}
-					}
-					modifier = {
-						factor = 1.25
-						NOT = {
-							reverse_has_opinion = {
-								who = ROOT
-								value = -100
-							}
-						}
-					}
-					modifier = {
-						factor = 1.5
-						ROOT = {
-							OR = {
-								has_opinion_modifier = {
-									who = PREV
-									modifier = SM2_declare_war_prepared
-								}
-								has_opinion_modifier = {
-									who = PREV
-									modifier = SM2_declare_war_active
-								}
-							}
-						}
-					}
-					modifier = {
-						factor = 1.5
-						is_rival = ROOT
-					}
-					modifier = {
-						factor = 20
-						ROOT = {
-							has_casus_belli = {
-								type = cb_restore_personal_union
-								target = PREV
-							}
-						}
-					}
-					modifier = {
-						factor = 10
-						ROOT = {
-							has_casus_belli = {
-								type = cb_super_badboy
-								target = PREV
-							}
-						}
-					}
-					modifier = {
-						factor = 10
-						ROOT = {
-							has_casus_belli = {
-								type = cb_nationalist
-								target = PREV
-							}
-						}
-					}
-
+				99 = {
+					SM2_record_war_target_with_ally_check = yes
 					modifier = {
 						factor = 1.5
 						NOT = {
@@ -246,7 +149,340 @@ country_event = {
 							who = ROOT
 							value = 1.5
 						}
-						
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 5
+						}
+					}
+					
+				}
+				1 = { }
+			}
+		}
+		
+		# T2: 高优先级 - 天命、包围网
+		
+		every_known_country = {
+			limit = {
+				NOT = { truce_with = ROOT }
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_active
+					}
+				}
+				ROOT = {
+					OR = {
+						has_casus_belli = {
+							type = cb_super_badboy
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_take_mandate
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_independence_war
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_colonial_independence_war
+							target = PREV
+						}
+					}
+				}
+				
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_selected
+					}
+				}
+			}
+			random_list = {
+				60 = {
+					SM2_record_war_target_with_ally_check = yes
+					
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.3
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.75
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 1.5
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 5
+						}
+					}
+					# 中立态度
+					modifier = {
+						factor = 0.5
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_neutral
+							}
+						}
+					}
+					# 支配态度
+					modifier = {
+						factor = 1.25
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_domineering
+							}
+						}
+					}
+					# 合并高侵略性态度（敌对/愤怒/宿敌）
+					modifier = {
+						factor = 1.5
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_hostile
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_outraged
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_rivalry
+								}
+							}
+						}
+					}
+					# 叛逆态度（附庸）
+					modifier = {
+						factor = 2
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_rebellious
+							}
+						}
+					}
+					modifier = {
+						factor = 0.01
+						NOT = {
+							OR = {
+								any_owned_province = {
+									has_port = yes
+								}
+								is_neighbor_of = ROOT
+							}
+						}
+					}
+					# modifier = {
+					# 	factor = 0.1
+					# 	has_opinion_modifier = {
+					# 		who = ROOT
+					# 		modifier = SM2_declare_war_chosen_in_three_years
+					# 	}
+					# }
+				}
+				40 = { 
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 2
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 4
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 6
+						}
+					}
+				}
+			}
+		}
+		
+
+		# T3: 中等优先级 - 征服宣称
+		every_known_country = {
+			limit = {
+				NOT = { truce_with = ROOT }
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_active
+					}
+				}
+				ROOT = {
+					OR = {
+						has_casus_belli = {
+							type = cb_conquest
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_nationalist
+							target = PREV
+						}
+						claim = PREV
+					}
+				}
+				
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_selected
+					}
+				}
+			}
+			random_list = {
+				40 = {
+					SM2_record_war_target_with_ally_check = yes
+					modifier = {
+						factor = 1.25
+						any_owned_province = {
+							development = 10
+							is_claim = ROOT
+						}
+					}
+					modifier = {
+						factor = 1.25
+						any_owned_province = {
+							development = 20
+							is_claim = ROOT
+						}
+					}
+					modifier = {
+						factor = 1.25
+						any_owned_province = {
+							development = 30
+							is_claim = ROOT
+						}
+					}
+					modifier = {
+						factor = 1.3
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							is_claim = ROOT
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 1.3
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							is_claim = ROOT
+							value = 10
+						}
+					}
+					modifier = {
+						factor = 10
+						151 = {
+							owned_by = PREV
+							OR = {
+								is_claim = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.3
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.75
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 1.5
+						}
 					}
 					modifier = {
 						factor = 0.5
@@ -264,7 +500,7 @@ country_event = {
 					}
 					# 合并友好态度检查（极低侵略性）
 					modifier = {
-						factor = 0.01
+						factor = 0.1
 						ROOT = {
 							OR = {
 								ai_attitude = {
@@ -280,7 +516,7 @@ country_event = {
 					}
 					# 友好/保护态度（低侵略性）
 					modifier = {
-						factor = 0.15
+						factor = 0.2
 						ROOT = {
 							OR = {
 								ai_attitude = {
@@ -345,12 +581,280 @@ country_event = {
 						}
 					}
 					modifier = {
-						factor = 2
-						ROOT = {
-							culture_group_claim = PREV
+						factor = 0.75
+						border_distance = {
+							who = ROOT
+							distance = 75
 						}
 					}
+					modifier = {
+						factor = 0.7
+						border_distance = {
+							who = ROOT
+							distance = 150
+						}
+					}
+					modifier = {
+						factor = 0.01
+						NOT = {
+							OR = {
+								any_owned_province = {
+									has_port = yes
+								}
+								is_neighbor_of = ROOT
+							}
+						}
+					}
+					# modifier = {
+					# 	factor = 0.1
+					# 	has_opinion_modifier = {
+					# 		who = ROOT
+					# 		modifier = SM2_declare_war_chosen_in_three_years
+					# 	}
+					# }
+				}
+				60 = {
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 2
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 4
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 6
+						}
+					}	
+				}
+			}
+		}
+		
 
+		# T4: 最低优先级 - 帝国主义和其他CB，保留所有判断条件
+		
+		every_known_country = {
+			limit = {
+				NOT = { truce_with = ROOT }
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_active
+					}
+				}
+				ROOT = {
+					has_casus_belli_against = PREV
+				}
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = {
+						border_distance = {
+							who = ROOT
+							distance = 300
+						}
+					}
+					ROOT = { personality = ai_colonialist }
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_selected
+					}
+				}
+			}
+			random_list = {
+				20 = {
+					SM2_record_war_target_with_ally_check = yes
+					modifier = {
+						factor = 1.25
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = -100
+							}
+						}
+					}
+					modifier = {
+						factor = 1.25
+						NOT = {
+							reverse_has_opinion = {
+								who = ROOT
+								value = -100
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						ROOT = {
+							OR = {
+								has_opinion_modifier = {
+									who = PREV
+									modifier = SM2_declare_war_prepared
+								}
+								has_opinion_modifier = {
+									who = PREV
+									modifier = SM2_declare_war_active
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						is_rival = ROOT
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.3
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.75
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 1.5
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.5
+						army_strength = {
+							who = ROOT
+							value = 5
+						}
+					}
+					# 合并友好态度检查（极低侵略性）
+					modifier = {
+						factor = 0.1
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_allied
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_loyal
+								}
+							}
+						}
+					}
+					# 友好/保护态度（低侵略性）
+					modifier = {
+						factor = 0.2
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_friendly
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_protective
+								}
+							}
+						}
+					}
+					# 中立态度
+					modifier = {
+						factor = 0.5
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_neutral
+							}
+						}
+					}
+					# 支配态度
+					modifier = {
+						factor = 1.25
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_domineering
+							}
+						}
+					}
+					# 合并高侵略性态度（敌对/愤怒/宿敌）
+					modifier = {
+						factor = 1.5
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_hostile
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_outraged
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_rivalry
+								}
+							}
+						}
+					}
+					# 叛逆态度（附庸）
+					modifier = {
+						factor = 2
+						ROOT = {
+							ai_attitude = {
+								who = PREV
+								attitude = attitude_rebellious
+							}
+						}
+					}
 					modifier = {
 						factor = 0.75
 						border_distance = {
@@ -406,9 +910,8 @@ country_event = {
 							personality = ai_colonialist
 						}
 					}
-
 					modifier = {
-						factor = 0.1
+						factor = 0.01
 						NOT = {
 							OR = {
 								any_owned_province = {
@@ -418,51 +921,13 @@ country_event = {
 							}
 						}
 					}
-
-					modifier = {
-						factor = 5
-						check_variable = {
-							which = SM2_ai_declared_war_fail_counter
-							value = 5
-						}
-					}
-					modifier = {
-						factor = 5
-						check_variable = {
-							which = SM2_ai_declared_war_fail_counter
-							value = 10
-						}
-					}
-					modifier = {
-						factor = 5
-						check_variable = {
-							which = SM2_ai_declared_war_fail_counter
-							value = 15
-						}
-					}
-					modifier = {
-						factor = 5
-						check_variable = {
-							which = SM2_ai_declared_war_fail_counter
-							value = 20
-						}
-					}
-					modifier = {
-						factor = 5
-						check_variable = {
-							which = SM2_ai_declared_war_fail_counter
-							value = 25
-						}
-					}
-
-					modifier = {
-						factor = 0.01
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = SM2_declare_war_chosen_in_three_years
-						}
-					}
-
+					# modifier = {
+					# 	factor = 0.1
+					# 	has_opinion_modifier = {
+					# 		who = ROOT
+					# 		modifier = SM2_declare_war_chosen_in_three_years
+					# 	}
+					# }
 					##special ones
 					modifier = {
 						factor = 10
@@ -471,17 +936,14 @@ country_event = {
 							tag = TUR
 						}
 					}
-
 					modifier = {
-						factor = 0.01
+						factor = 0.1
 						ROOT = {
 							OR = {
 								has_reform = celestial_empire
-								has_reform = chinese_warlord
 							}
 							NOT = { 
 								AND = {
-									#is_year = 1800
 									num_of_provinces_owned_or_owned_by_subjects_with = {
 										superregion = china_superregion
 										value = 200
@@ -496,127 +958,65 @@ country_event = {
 						}
 					}
 				}
-				70 = {
-
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				has_saved_event_target = SM2_declare_war_target
-			}
-			event_target:SM2_declare_war_target = {
-				add_opinion = {
-					who = ROOT
-					modifier = SM2_declare_war_prepared
-				}
-				reverse_add_opinion = {
-					who = ROOT
-					modifier = SM2_declare_war_prepared
-				}
-				add_opinion = {
-					who = ROOT
-					modifier = SM2_declare_war_chosen_in_three_years
-				}
-				if = {
-					limit = {
-						NOT = {
-							army_strength = {
-								who = ROOT
-								value = 0.3
-							}
-						}
-					}
-					add_country_modifier = {
-						name = SM2_prepared_declare_war_modifier_1
-						duration = 360
-					}
-					ROOT = {
-						set_variable = {
-							which = var1
-							value = 1
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						NOT = {
-							army_strength = {
-								who = ROOT
-								value = 0.5
-							}
-						}
-					}
-					add_country_modifier = {
-						name = SM2_prepared_declare_war_modifier_2
-						duration = 360
-					}
-					ROOT = {
-						set_variable = {
-							which = var1
+				80 = { 
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
 							value = 2
 						}
 					}
-				}
-				else_if = {
-					limit = {
-						NOT = {
-							army_strength = {
-								who = ROOT
-								value = 0.8
-							}
-						}
-					}
-					add_country_modifier = {
-						name = SM2_prepared_declare_war_modifier_3
-						duration = 360
-					}
-					ROOT = {
-						set_variable = {
-							which = var1
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
 							value = 3
 						}
 					}
-				}else = {
-					ROOT = {
-						set_variable = {
-							which = var1
-							value = 0
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 4
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 0.3
+						check_variable = {
+							which = SM2_ai_declared_war_fail_counter
+							value = 6
 						}
 					}
 				}
-				
 			}
-			every_enemy_country = {
-				SM2_diplomatic_helper_scripted_effects = yes
-			}
-			every_country = {
-				limit = {
-					OR = {
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_outraged
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_hostile
-						}
+		}
+		
+
+		# 如果选中了足够目标，重置失败计数器；否则增加计数器
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = SM2_selected_targets_count
+						value = 2
 					}
 				}
-				SM2_diplomatic_helper_scripted_effects = yes
-				
 			}
-			country_event = {
-				id = SM2_diplomatic_events.1
-				days = 90
-			}
+			# 选中了足够目标（计数器降到2以下），重置失败计数器
 			set_variable = {
 				which = SM2_ai_declared_war_fail_counter
-				value = 1
+				value = 0
 			}
 		}
 		else = {
+			# 没选中足够目标，增加失败计数器
 			if = {
 				limit = {
 					NOT = {
@@ -645,17 +1045,267 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 48
 		modifier = {
-			factor = 0.5
-			personality = ai_militarist
+			factor = 0.75
+			NOT = {
+				calc_true_if = {
+					all_country = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = SM2_declare_war_selected
+						}
+					}
+					amount = 4
+				}
+			}
 		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				calc_true_if = {
+					all_country = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = SM2_declare_war_selected
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+	}
+}
+
+# AI准备宣战 - 找盟友和战争准备
+country_event = {
+	id = SM2_diplomatic_events.3
+	title = SM2_diplomatic_events.3.t
+	desc = SM2_diplomatic_events.3.d
+	picture = LAND_MILITARY_eventPicture
+	hidden = yes
+	#is_triggered_only = yes
+	trigger = {
+		ai = yes
+		any_known_country = {
+			has_opinion_modifier = {
+				who = ROOT
+				modifier = SM2_declare_war_selected
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_active
+				}
+			}
+		}
+		is_at_war = no
+		NOT = {
+			truce_with = ROOT
+		}
+	}
+	immediate = {
+		# 找到被选中的目标
+		random_known_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_selected
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_prepared
+					}
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_active
+					}
+				}
+			}
+			save_event_target_as = SM2_declare_war_target
+			
+			# 标记为准备中
+			add_opinion = {
+				who = ROOT
+				modifier = SM2_declare_war_prepared
+			}
+			# add_opinion = {
+			# 	who = ROOT
+			# 	modifier = SM2_declare_war_chosen_in_three_years
+			# }
+			
+			# 根据军力差距设置不同的准备modifier
+			if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.3
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_1
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_2
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.8
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_3
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 3
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 0
+					}
+				}
+			}
+		}
+		
+		# 与敌人和敌对国家建立关系修正
+		every_enemy_country = {
+			limit = {
+				NOT = { tag = event_target:SM2_declare_war_target }
+			}
+			SM2_diplomatic_helper_scripted_effects = yes
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = event_target:SM2_declare_war_target }
+				OR = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_hostile
+					}
+				}
+			}
+			SM2_diplomatic_helper_scripted_effects = yes
+		}
+		
+		# 进攻方盟友呼叫机制 - 检查是否有其他国家也选定了同一目标
+		every_known_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				event_target:SM2_declare_war_target = {
+					has_opinion_modifier = {
+						who = PREV
+						modifier = SM2_declare_war_selected
+					}
+				}
+				event_target:SM2_declare_war_target = {
+					NOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = SM2_declare_war_prepared
+						}
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = SM2_declare_war_active
+						}
+					}
+				}
+				NOT = {
+					truce_with = event_target:SM2_declare_war_target
+				}
+			}
+			random_list = {
+				60 = {
+					event_target:SM2_declare_war_target = {
+						add_opinion = {
+							who = PREV
+							modifier = SM2_declare_war_prepared
+						}
+					}
+					# 触发该国家的战争准备事件
+					country_event = {
+						id = SM2_diplomatic_events.4
+					}
+					modifier = {
+						factor = 1.5
+						personality = ai_militarist
+					}
+					modifier = {
+						factor = 0.7
+						personality = ai_diplomat
+					}
+				}
+				40 = { }
+			}
+		}
+		
+		# 90天后允许宣战
+		country_event = {
+			id = SM2_diplomatic_events.1
+			days = 90
+		}
+	}
+	
+	option = {
+		
+	}
+
+	mean_time_to_happen = {
+		months = 6
 		modifier = {
 			factor = 2
-			personality = ai_diplomat
-		}
-		modifier = {
-			factor = 3
 			is_emperor_of_china = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				superregion = china_superregion
@@ -663,38 +1313,287 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = 0.75
-			years_of_income = 1
-		}
-		modifier = {
-			factor = 0.75
-			years_of_income = 2
-		}
-		modifier = {
-			factor = 0.75
-			years_of_income = 3
-		}
-		modifier = {
 			factor = 0.5
-			calc_true_if = {
-				all_neighbor_country = {
-					ROOT = {
-						claim = PREV
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 1.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+# 其他进攻方准备宣战 - 完整逻辑
+country_event = {
+	id = SM2_diplomatic_events.4
+	title = SM2_diplomatic_events.4.t
+	desc = SM2_diplomatic_events.4.d
+	picture = LAND_MILITARY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		is_at_war = no
+	}
+	immediate = {
+		# FROM是触发该事件的国家，event_target:SM2_declare_war_target是目标
+		# 找到被选中的目标
+		random_known_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_selected
+				}
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = SM2_declare_war_prepared
+				}
+			}
+			save_event_target_as = SM2_declare_war_target
+			
+			
+			# 根据军力差距设置不同的准备modifier
+			if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.3
+						}
 					}
 				}
-				amount = 5
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_1
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_2
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.8
+						}
+					}
+				}
+				add_country_modifier = {
+					name = SM2_prepared_declare_war_modifier_3
+					duration = 360
+				}
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 3
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = var1
+						value = 0
+					}
+				}
 			}
 		}
-		modifier = {
-			factor = 0.5
-			calc_true_if = {
-				all_neighbor_country = {
-					ROOT = {
-						claim = PREV
+		
+		# 与敌人和敌对国家建立关系修正
+		# 排除ROOT自己和TARGET本身
+		every_enemy_country = {
+			limit = {
+				NOT = { tag = event_target:SM2_declare_war_target }
+			}
+			SM2_diplomatic_helper_scripted_effects = yes
+		}
+		every_country = {
+			limit = {
+				# 排除ROOT自己和TARGET本身
+				NOT = { tag = event_target:SM2_declare_war_target }
+				OR = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_hostile
 					}
 				}
-				amount = 10
+			}
+			SM2_diplomatic_helper_scripted_effects = yes
+		}
+		
+		# 90天后允许宣战
+		country_event = {
+			id = SM2_diplomatic_events.1
+			days = 90
+		}
+	}
+	
+	option = {
+		
+	}
+}
+
+# Rights-based alliance decay check
+country_event = {
+	id = SM2_diplomatic_events.90
+	title = SM2_diplomatic_events.90.t
+	desc = SM2_diplomatic_events.90.d
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		any_ally = {
+			has_opinion_modifier = {
+				who = ROOT
+				modifier = SM2_event_alliance_rights
 			}
 		}
 	}
+	immediate = {
+		if = {
+			limit = {			
+				is_at_war = no
+			}
+			every_ally = {
+				limit = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_event_alliance_rights
+					}
+				}
+				random_list = {
+					25 = {
+						break_alliance = ROOT
+						remove_opinion = {
+							who = ROOT
+							modifier = SM2_event_alliance_rights
+						}
+						reverse_remove_opinion = {
+							who = ROOT
+							modifier = SM2_event_alliance_rights
+						}
+					}
+					75 = { }
+				}
+			}
+		}
+		
+	}
+	option = { }
+}
+
+# 月度AI经济管理：按发展度借款和还款
+# 借款目标：国库 = 发展度 * 0.5
+# 借款上限：欠款 <= 发展度 * 5
+# 借款分解：2^13 = 8192
+# 强制还款：达到债务上限、或和平期还清
+country_event = {
+	id = SM2_diplomatic_events.91
+	title = SM2_diplomatic_events.91.t
+	desc = SM2_diplomatic_events.91.d
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { ai = yes }
+	immediate = {
+		export_to_variable = { which = SM2_ai_treasury value = treasury }
+		export_to_variable = { which = SM2_ai_total_dev value = trigger_value:total_development }
+
+		# 计算目标国库 = total_dev * 0.5，债务上限 = total_dev * 5
+		set_variable = { which = SM2_ai_target_treasury which = SM2_ai_total_dev }
+		multiply_variable = { which = SM2_ai_target_treasury value = 0.5 }
+		set_variable = { which = SM2_ai_debt_cap which = SM2_ai_total_dev }
+		multiply_variable = { which = SM2_ai_debt_cap value = 5 }
+
+		# 还款判定：和平期或已达债务上限，直接用borrowed进行二进制分解
+		if = {
+			limit = {
+				OR = {
+					NOT = { is_at_war = yes }
+					check_variable = { which = SM2_ai_borrowed which = SM2_ai_debt_cap }
+				}
+				check_variable = { which = SM2_ai_borrowed value = 1 }
+			}
+			# 用二进制分解还款（2^16为最大单位）
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 65536 } } add_treasury = -65536 change_variable = { which = SM2_ai_borrowed value = -65536 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 32768 } } add_treasury = -32768 change_variable = { which = SM2_ai_borrowed value = -32768 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 16384 } } add_treasury = -16384 change_variable = { which = SM2_ai_borrowed value = -16384 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 8192 } } add_treasury = -8192 change_variable = { which = SM2_ai_borrowed value = -8192 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 4096 } } add_treasury = -4096 change_variable = { which = SM2_ai_borrowed value = -4096 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 2048 } } add_treasury = -2048 change_variable = { which = SM2_ai_borrowed value = -2048 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 1024 } } add_treasury = -1024 change_variable = { which = SM2_ai_borrowed value = -1024 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 512 } } add_treasury = -512 change_variable = { which = SM2_ai_borrowed value = -512 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 256 } } add_treasury = -256 change_variable = { which = SM2_ai_borrowed value = -256 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 128 } } add_treasury = -128 change_variable = { which = SM2_ai_borrowed value = -128 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 64 } } add_treasury = -64 change_variable = { which = SM2_ai_borrowed value = -64 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 32 } } add_treasury = -32 change_variable = { which = SM2_ai_borrowed value = -32 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 16 } } add_treasury = -16 change_variable = { which = SM2_ai_borrowed value = -16 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 8 } } add_treasury = -8 change_variable = { which = SM2_ai_borrowed value = -8 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 4 } } add_treasury = -4 change_variable = { which = SM2_ai_borrowed value = -4 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 2 } } add_treasury = -2 change_variable = { which = SM2_ai_borrowed value = -2 } }
+			if = { limit = { check_variable = { which = SM2_ai_borrowed value = 1 } } add_treasury = -1 change_variable = { which = SM2_ai_borrowed value = -1 } }
+		}
+
+		# 战争期：国库不足时借款补充到目标值（仅在未达债务上限时）
+		if = {
+			limit = {
+				is_at_war = yes
+				check_variable = { which = SM2_ai_target_treasury which = SM2_ai_treasury }
+				NOT = { check_variable = { which = SM2_ai_borrowed which = SM2_ai_debt_cap } }
+			}
+			# 计算缺额 = target - current，可借额 = min(deficit, debt_cap - borrowed)
+			set_variable = { which = SM2_ai_deficit which = SM2_ai_target_treasury }
+			subtract_variable = { which = SM2_ai_deficit which = SM2_ai_treasury }
+			set_variable = { which = SM2_ai_can_borrow which = SM2_ai_debt_cap }
+			subtract_variable = { which = SM2_ai_can_borrow which = SM2_ai_borrowed }
+			if = { limit = { NOT = { check_variable = { which = SM2_ai_can_borrow which = SM2_ai_deficit } } }
+				set_variable = { which = SM2_ai_deficit which = SM2_ai_can_borrow }
+			}
+
+			# 用二进制分解借款（2^13为最大单位），直接操作deficit和borrowed
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 8192 } } add_treasury = 8192 change_variable = { which = SM2_ai_borrowed value = 8192 } change_variable = { which = SM2_ai_deficit value = -8192 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 4096 } } add_treasury = 4096 change_variable = { which = SM2_ai_borrowed value = 4096 } change_variable = { which = SM2_ai_deficit value = -4096 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 2048 } } add_treasury = 2048 change_variable = { which = SM2_ai_borrowed value = 2048 } change_variable = { which = SM2_ai_deficit value = -2048 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 1024 } } add_treasury = 1024 change_variable = { which = SM2_ai_borrowed value = 1024 } change_variable = { which = SM2_ai_deficit value = -1024 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 512 } } add_treasury = 512 change_variable = { which = SM2_ai_borrowed value = 512 } change_variable = { which = SM2_ai_deficit value = -512 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 256 } } add_treasury = 256 change_variable = { which = SM2_ai_borrowed value = 256 } change_variable = { which = SM2_ai_deficit value = -256 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 128 } } add_treasury = 128 change_variable = { which = SM2_ai_borrowed value = 128 } change_variable = { which = SM2_ai_deficit value = -128 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 64 } } add_treasury = 64 change_variable = { which = SM2_ai_borrowed value = 64 } change_variable = { which = SM2_ai_deficit value = -64 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 32 } } add_treasury = 32 change_variable = { which = SM2_ai_borrowed value = 32 } change_variable = { which = SM2_ai_deficit value = -32 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 16 } } add_treasury = 16 change_variable = { which = SM2_ai_borrowed value = 16 } change_variable = { which = SM2_ai_deficit value = -16 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 8 } } add_treasury = 8 change_variable = { which = SM2_ai_borrowed value = 8 } change_variable = { which = SM2_ai_deficit value = -8 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 4 } } add_treasury = 4 change_variable = { which = SM2_ai_borrowed value = 4 } change_variable = { which = SM2_ai_deficit value = -4 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 2 } } add_treasury = 2 change_variable = { which = SM2_ai_borrowed value = 2 } change_variable = { which = SM2_ai_deficit value = -2 } }
+			if = { limit = { check_variable = { which = SM2_ai_deficit value = 1 } } add_treasury = 1 change_variable = { which = SM2_ai_borrowed value = 1 } change_variable = { which = SM2_ai_deficit value = -1 } }
+		}
+	}
+	option = { }
 }

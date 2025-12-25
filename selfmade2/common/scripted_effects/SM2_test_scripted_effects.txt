@@ -1,15 +1,6 @@
 SM2_test_effect = {
-	set_variable = {
-		which = test1
-		value = 5.5
-	}
-	round_variable = {
-		which = test1
-		value = 0
-	}
-	set_variable = {
-		which = test2
-		which = test1
+	MNG = {
+		SM2_record_war_target = yes
 	}
 }
 

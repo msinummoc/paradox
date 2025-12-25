@@ -101,3 +101,346 @@ SM2_prepared_declare_war_modifier_3 = {
 	diplomatic_reputation = 1
 	diplomats = 1
 }
+
+# Policy tracks: reform vs. stability
+SM2_policy_reform_1 = {
+	global_unrest = -0.5
+	stability_cost_modifier = -0.05
+	yearly_innovativeness = 0.01
+	yearly_corruption = 0.02
+}
+
+SM2_policy_reform_2 = {
+	global_unrest = -1
+	stability_cost_modifier = -0.1
+	yearly_innovativeness = 0.015
+	yearly_corruption = 0.04
+}
+
+SM2_policy_reform_3 = {
+	global_unrest = -1.5
+	stability_cost_modifier = -0.15
+	yearly_innovativeness = 0.02
+	yearly_corruption = 0.06
+}
+
+SM2_policy_reform_4 = {
+	global_unrest = -2
+	stability_cost_modifier = -0.2
+	yearly_innovativeness = 0.025
+	yearly_corruption = 0.08
+}
+
+SM2_policy_reform_5 = {
+	global_unrest = -2.5
+	stability_cost_modifier = -0.25
+	yearly_innovativeness = 0.03
+	yearly_corruption = 0.1
+}
+
+# Policy tracks: centralize local administration
+SM2_policy_centralization_1 = {
+	global_autonomy = -0.02
+	yearly_corruption = 0.01
+}
+
+SM2_policy_centralization_2 = {
+	global_autonomy = -0.04
+	yearly_corruption = 0.02
+}
+
+SM2_policy_centralization_3 = {
+	global_autonomy = -0.06
+	yearly_corruption = 0.03
+}
+
+SM2_policy_centralization_4 = {
+	global_autonomy = -0.08
+	yearly_corruption = 0.04
+}
+
+SM2_policy_centralization_5 = {
+	global_autonomy = -0.1
+	yearly_corruption = 0.05
+}
+
+# Policy tracks: elevate capital status (province only)
+SM2_policy_capital_focus_1 = {
+	local_autonomy = -0.1
+	local_tax_modifier = 0.05
+	local_manpower_modifier = 0.05
+}
+
+SM2_policy_capital_focus_2 = {
+	local_autonomy = -0.15
+	local_tax_modifier = 0.075
+	local_manpower_modifier = 0.075
+}
+
+SM2_policy_capital_focus_3 = {
+	local_autonomy = -0.2
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.1
+}
+
+SM2_policy_capital_focus_4 = {
+	local_autonomy = -0.25
+	local_tax_modifier = 0.125
+	local_manpower_modifier = 0.125
+}
+
+SM2_policy_capital_focus_5 = {
+	local_autonomy = -0.3
+	local_tax_modifier = 0.15
+	local_manpower_modifier = 0.15
+}
+
+# Policy tracks: land force infrastructure
+SM2_policy_army_infrastructure_1 = {
+	land_forcelimit_modifier = 0.05
+	manpower_recovery_speed = 0.02
+	yearly_corruption = 0.01
+}
+
+SM2_policy_army_infrastructure_2 = {
+	land_forcelimit_modifier = 0.1
+	manpower_recovery_speed = 0.04
+	yearly_corruption = 0.02
+}
+
+SM2_policy_army_infrastructure_3 = {
+	land_forcelimit_modifier = 0.15
+	manpower_recovery_speed = 0.06
+	yearly_corruption = 0.03
+}
+
+SM2_policy_army_infrastructure_4 = {
+	land_forcelimit_modifier = 0.2
+	manpower_recovery_speed = 0.08
+	yearly_corruption = 0.04
+}
+
+SM2_policy_army_infrastructure_5 = {
+	land_forcelimit_modifier = 0.25
+	manpower_recovery_speed = 0.1
+	yearly_corruption = 0.05
+}
+
+# Policy tracks: naval infrastructure
+SM2_policy_navy_infrastructure_1 = {
+	naval_forcelimit_modifier = 0.05
+	sailors_recovery_speed = 0.02
+	yearly_corruption = 0.01
+}
+
+SM2_policy_navy_infrastructure_2 = {
+	naval_forcelimit_modifier = 0.1
+	sailors_recovery_speed = 0.04
+	yearly_corruption = 0.02
+}
+
+SM2_policy_navy_infrastructure_3 = {
+	naval_forcelimit_modifier = 0.15
+	sailors_recovery_speed = 0.06
+	yearly_corruption = 0.03
+}
+
+SM2_policy_navy_infrastructure_4 = {
+	naval_forcelimit_modifier = 0.2
+	sailors_recovery_speed = 0.08
+	yearly_corruption = 0.04
+}
+
+SM2_policy_navy_infrastructure_5 = {
+	naval_forcelimit_modifier = 0.25
+	sailors_recovery_speed = 0.1
+	yearly_corruption = 0.05
+}
+
+# Policy tracks: land defense training
+SM2_policy_land_defense_1 = {
+	defensiveness = 0.05
+	hostile_attrition = 0.25
+	garrison_growth = 0.05
+	yearly_corruption = 0.005
+}
+
+SM2_policy_land_defense_2 = {
+	defensiveness = 0.1
+	hostile_attrition = 0.5
+	garrison_growth = 0.075
+	yearly_corruption = 0.01
+}
+
+SM2_policy_land_defense_3 = {
+	defensiveness = 0.15
+	hostile_attrition = 0.75
+	garrison_growth = 0.1
+	yearly_corruption = 0.015
+}
+
+SM2_policy_land_defense_4 = {
+	defensiveness = 0.2
+	hostile_attrition = 1
+	garrison_growth = 0.125
+	yearly_corruption = 0.02
+}
+
+SM2_policy_land_defense_5 = {
+	defensiveness = 0.25
+	hostile_attrition = 1.25
+	garrison_growth = 0.15
+	yearly_corruption = 0.025
+}
+
+# Policy tracks: land offense training
+SM2_policy_land_offense_1 = {
+	siege_ability = 0.05
+	land_attrition = -0.01
+	morale_damage_received = -0.005
+	yearly_corruption = 0.01
+}
+
+SM2_policy_land_offense_2 = {
+	siege_ability = 0.1
+	land_attrition = -0.02
+	morale_damage_received = -0.01
+	yearly_corruption = 0.02
+}
+
+SM2_policy_land_offense_3 = {
+	siege_ability = 0.15
+	land_attrition = -0.03
+	morale_damage_received = -0.015
+	yearly_corruption = 0.03
+}
+
+SM2_policy_land_offense_4 = {
+	siege_ability = 0.2
+	land_attrition = -0.04
+	morale_damage_received = -0.02
+	yearly_corruption = 0.04
+}
+
+SM2_policy_land_offense_5 = {
+	siege_ability = 0.25
+	land_attrition = -0.05
+	morale_damage_received = -0.025
+	yearly_corruption = 0.05
+}
+
+# Policy tracks: land and naval quality
+SM2_policy_force_quality_1 = {
+	drill_gain_modifier = 0.05
+	drill_decay_modifier = -0.02
+	naval_morale = 0.05
+	yearly_corruption = 0.02
+}
+
+SM2_policy_force_quality_2 = {
+	drill_gain_modifier = 0.1
+	drill_decay_modifier = -0.04
+	naval_morale = 0.075
+	yearly_corruption = 0.04
+}
+
+SM2_policy_force_quality_3 = {
+	drill_gain_modifier = 0.15
+	drill_decay_modifier = -0.06
+	naval_morale = 0.1
+	yearly_corruption = 0.06
+}
+
+SM2_policy_force_quality_4 = {
+	drill_gain_modifier = 0.2
+	drill_decay_modifier = -0.08
+	naval_morale = 0.125
+	yearly_corruption = 0.08
+}
+
+SM2_policy_force_quality_5 = {
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.1
+	naval_morale = 0.15
+	yearly_corruption = 0.1
+}
+
+# Policy tracks: diplomacy
+SM2_policy_diplomacy_1 = {
+	diplomats = 1
+	diplomatic_upkeep = 1
+	diplomatic_reputation = 0.25
+	yearly_corruption = 0.01
+}
+
+SM2_policy_diplomacy_2 = {
+	diplomats = 1
+	diplomatic_upkeep = 2
+	diplomatic_reputation = 0.5
+	yearly_corruption = 0.02
+}
+
+SM2_policy_diplomacy_3 = {
+	diplomats = 2
+	diplomatic_upkeep = 2
+	diplomatic_reputation = 0.75
+	yearly_corruption = 0.03
+}
+
+SM2_policy_diplomacy_4 = {
+	diplomats = 2
+	diplomatic_upkeep = 3
+	diplomatic_reputation = 1
+	yearly_corruption = 0.04
+}
+
+SM2_policy_diplomacy_5 = {
+	diplomats = 3
+	diplomatic_upkeep = 3
+	diplomatic_reputation = 1.25
+	yearly_corruption = 0.05
+}
+
+# Policy tracks: trade
+SM2_policy_trade_1 = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.05
+	trade_steering = 0.05
+	yearly_corruption = 0.01
+}
+
+SM2_policy_trade_2 = {
+	trade_efficiency = 0.1
+	global_trade_power = 0.1
+	trade_steering = 0.075
+	yearly_corruption = 0.02
+}
+
+SM2_policy_trade_3 = {
+	trade_efficiency = 0.15
+	global_trade_power = 0.15
+	trade_steering = 0.1
+	yearly_corruption = 0.03
+}
+
+SM2_policy_trade_4 = {
+	trade_efficiency = 0.2
+	global_trade_power = 0.2
+	trade_steering = 0.125
+	yearly_corruption = 0.04
+}
+
+SM2_policy_trade_5 = {
+	trade_efficiency = 0.25
+	global_trade_power = 0.25
+	trade_steering = 0.15
+	yearly_corruption = 0.05
+}
+
+# Penalty applied whenever a policy changes
+SM2_policy_change_penalty = {
+	global_unrest = 2
+	stability_cost_modifier = 0.2
+	reform_progress_growth = -0.1
+}
+

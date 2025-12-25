@@ -47,7 +47,7 @@ country_event = {
 		# 如果省份数>40，分成4个子事件处理；否则直接处理
 		if = {
 			limit = {
-				num_of_provinces_in_states = 100
+				num_of_provinces_in_states = 150
 			}
 			country_event = { id = SM2_unrest_spread.20 }
 			country_event = { id = SM2_unrest_spread.21 }

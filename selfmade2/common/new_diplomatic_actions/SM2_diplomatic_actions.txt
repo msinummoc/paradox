@@ -33,14 +33,10 @@ SM2_active_declare_war = {
 				who = ROOT
 				modifier = SM2_declare_war_prepared
 			}
-			reverse_add_opinion = {
-				who = ROOT
-				modifier = SM2_declare_war_prepared
-			}
-			add_opinion = {
-				who = ROOT
-				modifier = SM2_declare_war_chosen_in_three_years
-			}
+			# add_opinion = {
+			# 	who = ROOT
+			# 	modifier = SM2_declare_war_chosen_in_three_years
+			# }
 			if = {
 				limit = {
 					NOT = {
@@ -110,11 +106,16 @@ SM2_active_declare_war = {
 			}
 			
 		}
+		# 与敌人和敌对国家建立关系修正
 		every_enemy_country = {
+			limit = {
+				NOT = { tag = ROOT }
+			}
 			SM2_diplomatic_helper_scripted_effects = yes
 		}
 		every_country = {
 			limit = {
+				NOT = { tag = event_target:SM2_declare_war_target }
 				OR = {
 					ai_attitude = {
 						who = ROOT
