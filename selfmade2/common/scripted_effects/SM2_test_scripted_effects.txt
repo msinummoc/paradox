@@ -1,0 +1,174 @@
+SM2_test_effect = {
+	
+	capital_scope = {
+		set_variable = {
+			which = test1
+			which = SM2_autonomy_above_average
+		}
+		set_variable = {
+			which = test2
+			which = SM2_autonomy_above_average_2
+		}
+		set_variable = {
+			which = test3
+			which = SM2_average_autonomy_at_start
+		}
+	}
+	2988 = {
+		set_variable = {
+			which = test1
+			which = SM2_autonomy_above_average
+		}
+		set_variable = {
+			which = test2
+			which = SM2_autonomy_above_average_2
+		}
+		set_variable = {
+			which = test3
+			which = SM2_average_autonomy_at_start
+		}
+
+	}
+	export_to_variable = {
+		which = test4
+		value = trigger_value:average_autonomy
+	}
+	set_variable = {
+		which = test5
+		which = SM2_average_autonomy_at_start
+	}
+}
+
+SM2_test_heavy_computation_effect = {
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+	SM2_test_heavy_computation_effect_2 = yes
+}
+
+SM2_test_heavy_computation_effect_2 = {
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+	SM2_test_heavy_computation_effect_1 = yes
+
+}
+
+# 重计算负载效果：模拟复杂的邻省迭代与条件判断
+SM2_test_heavy_computation_effect_1 = {
+	# 导出当前省份的开发度和自治度
+	export_to_variable = {
+		which = var1
+		value = trigger_value:base_tax
+	}
+	export_to_variable = {
+		which = var2
+		value = trigger_value:base_production
+	}
+	export_to_variable = {
+		which = var3
+		value = trigger_value:base_manpower
+	}
+	
+	# 模拟复杂计算
+	set_variable = { which = var_result value = 0 }
+	
+	# 对每个邻省进行多重条件判断
+	every_neighbor_province = {
+		export_to_variable = {
+			which = var4
+			value = trigger_value:base_tax
+		}
+		if = {
+			limit = {
+				check_variable = { which = var4 which = PREV }
+			}
+			set_variable = { which = var5 value = 1 }
+			if = { limit = { culture = PREV } change_variable = { which = var5 value = 0.5 } }
+			if = { limit = { religion = PREV } change_variable = { which = var5 value = 0.3 } }
+			if = { limit = { owned_by = ROOT } change_variable = { which = var5 value = 0.2 } }
+			
+			PREV = {
+				change_variable = { which = var_result which = PREV }
+			}
+		}
+	}
+	
+	# 再做一次地形检查（模拟原有的地形判断开销）
+	set_variable = { which = var_terrain value = 0 }
+	if = { limit = { has_terrain = glacier } set_variable = { which = var_terrain value = 0.4 } }
+	else_if = { limit = { has_terrain = farmlands } set_variable = { which = var_terrain value = 0.05 } }
+	else_if = { limit = { has_terrain = forest } set_variable = { which = var_terrain value = 0.15 } }
+	else_if = { limit = { has_terrain = hills } set_variable = { which = var_terrain value = 0.2 } }
+	else_if = { limit = { has_terrain = woods } set_variable = { which = var_terrain value = 0.15 } }
+	else_if = { limit = { has_terrain = mountain } set_variable = { which = var_terrain value = 0.3 } }
+	else_if = { limit = { has_terrain = grasslands } set_variable = { which = var_terrain value = 0.1 } }
+	else_if = { limit = { has_terrain = jungle } set_variable = { which = var_terrain value = 0.3 } }
+	else_if = { limit = { has_terrain = marsh } set_variable = { which = var_terrain value = 0.25 } }
+	else_if = { limit = { has_terrain = desert } set_variable = { which = var_terrain value = 0.2 } }
+	else_if = { limit = { has_terrain = coastal_desert } set_variable = { which = var_terrain value = 0.15 } }
+	else_if = { limit = { has_terrain = coastline } set_variable = { which = var_terrain value = 0.1 } }
+	else_if = { limit = { has_terrain = drylands } set_variable = { which = var_terrain value = 0.1 } }
+	else_if = { limit = { has_terrain = highlands } set_variable = { which = var_terrain value = 0.2 } }
+	else_if = { limit = { has_terrain = savannah } set_variable = { which = var_terrain value = 0.2 } }
+	else_if = { limit = { has_terrain = steppe } set_variable = { which = var_terrain value = 0.2 } }
+	
+	change_variable = { which = var_result which = var_terrain }
+}

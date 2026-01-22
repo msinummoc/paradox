@@ -1,0 +1,159 @@
+namespace = SM2_event_control
+
+# 事件系统控制菜单
+country_event = {
+	id = SM2_event_control.1
+	title = SM2_event_control.1.t
+	desc = SM2_event_control.1.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	
+	
+	# 查看当前状态
+	option = {
+		name = SM2_event_control.1.status
+		custom_tooltip = SM2_event_control_status_tooltip
+		# 显示当前所有系统的启用/禁用状态
+		tooltip = {
+			if = {
+				limit = { NOT = { has_global_flag = SM2_disable_unrest_spread } }
+				custom_tooltip = SM2_unrest_spread_enabled
+			}
+			if = {
+				limit = { has_global_flag = SM2_disable_unrest_spread }
+				custom_tooltip = SM2_unrest_spread_disabled
+			}
+			if = {
+				limit = { NOT = { has_global_flag = SM2_disable_autonomy_spread } }
+				custom_tooltip = SM2_autonomy_spread_enabled
+			}
+			if = {
+				limit = { has_global_flag = SM2_disable_autonomy_spread }
+				custom_tooltip = SM2_autonomy_spread_disabled
+			}
+			if = {
+				limit = { NOT = { has_global_flag = SM2_disable_ai_policies } }
+				custom_tooltip = SM2_ai_policies_enabled
+			}
+			if = {
+				limit = { has_global_flag = SM2_disable_ai_policies }
+				custom_tooltip = SM2_ai_policies_disabled
+			}
+			if = {
+				limit = { NOT = { has_global_flag = SM2_disable_ai_diplomacy } }
+				custom_tooltip = SM2_ai_diplomacy_enabled
+			}
+			if = {
+				limit = { has_global_flag = SM2_disable_ai_diplomacy }
+				custom_tooltip = SM2_ai_diplomacy_disabled
+			}
+		}
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# 叛乱度传播系统控制
+	option = {
+		name = SM2_event_control.1.unrest
+		if = {
+			limit = { has_global_flag = SM2_disable_unrest_spread }
+			clr_global_flag = SM2_disable_unrest_spread
+			custom_tooltip = SM2_unrest_spread_enabled_tooltip
+		}
+		else = {
+			set_global_flag = SM2_disable_unrest_spread
+			custom_tooltip = SM2_unrest_spread_disabled_tooltip
+		}
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# 自治度传播系统控制
+	option = {
+		name = SM2_event_control.1.autonomy
+		if = {
+			limit = { has_global_flag = SM2_disable_autonomy_spread }
+			clr_global_flag = SM2_disable_autonomy_spread
+			custom_tooltip = SM2_autonomy_spread_enabled_tooltip
+		}
+		else = {
+			set_global_flag = SM2_disable_autonomy_spread
+			custom_tooltip = SM2_autonomy_spread_disabled_tooltip
+		}
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# AI政策系统控制
+	option = {
+		name = SM2_event_control.1.policies
+		if = {
+			limit = { has_global_flag = SM2_disable_ai_policies }
+			clr_global_flag = SM2_disable_ai_policies
+			custom_tooltip = SM2_ai_policies_enabled_tooltip
+		}
+		else = {
+			set_global_flag = SM2_disable_ai_policies
+			custom_tooltip = SM2_ai_policies_disabled_tooltip
+		}
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# AI外交系统控制
+	option = {
+		name = SM2_event_control.1.diplomacy
+		if = {
+			limit = { has_global_flag = SM2_disable_ai_diplomacy }
+			clr_global_flag = SM2_disable_ai_diplomacy
+			custom_tooltip = SM2_ai_diplomacy_enabled_tooltip
+		}
+		else = {
+			set_global_flag = SM2_disable_ai_diplomacy
+			custom_tooltip = SM2_ai_diplomacy_disabled_tooltip
+		}
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# 全部启用
+	option = {
+		name = SM2_event_control.1.enable_all
+		trigger = {
+			OR = {
+				has_global_flag = SM2_disable_unrest_spread
+				has_global_flag = SM2_disable_autonomy_spread
+				has_global_flag = SM2_disable_ai_policies
+				has_global_flag = SM2_disable_ai_diplomacy
+			}
+		}
+		clr_global_flag = SM2_disable_unrest_spread
+		clr_global_flag = SM2_disable_autonomy_spread
+		clr_global_flag = SM2_disable_ai_policies
+		clr_global_flag = SM2_disable_ai_diplomacy
+		custom_tooltip = SM2_enable_all_events_tooltip
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# 全部禁用
+	option = {
+		name = SM2_event_control.1.disable_all
+		trigger = {
+			NOT = {
+				AND = {
+					has_global_flag = SM2_disable_unrest_spread
+					has_global_flag = SM2_disable_autonomy_spread
+					has_global_flag = SM2_disable_ai_policies
+					has_global_flag = SM2_disable_ai_diplomacy
+				}
+			}
+		}
+		set_global_flag = SM2_disable_unrest_spread
+		set_global_flag = SM2_disable_autonomy_spread
+		set_global_flag = SM2_disable_ai_policies
+		set_global_flag = SM2_disable_ai_diplomacy
+		custom_tooltip = SM2_disable_all_events_tooltip
+		country_event = { id = SM2_event_control.1 }
+	}
+	
+	# 退出
+	option = {
+		name = SM2_event_control.1.close
+	}
+}

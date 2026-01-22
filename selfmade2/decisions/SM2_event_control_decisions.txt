@@ -1,0 +1,84 @@
+# SM2 循环事件控制决议
+# 用于启用/禁用各种循环事件系统以优化性能
+
+country_decisions = {
+
+	# 事件系统总控制面板
+	SM2_event_control_menu = {
+		potential = {
+			ai = no
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			country_event = { id = SM2_event_control.1 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# 快速启用所有系统
+	SM2_enable_all_events = {
+		potential = {
+			ai = no
+			OR = {
+				has_global_flag = SM2_disable_unrest_spread
+				has_global_flag = SM2_disable_autonomy_spread
+				has_global_flag = SM2_disable_ai_policies
+				has_global_flag = SM2_disable_ai_diplomacy
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			clr_global_flag = SM2_disable_unrest_spread
+			clr_global_flag = SM2_disable_autonomy_spread
+			clr_global_flag = SM2_disable_ai_policies
+			clr_global_flag = SM2_disable_ai_diplomacy
+			custom_tooltip = SM2_enable_all_events_tooltip
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# 快速禁用所有系统
+	SM2_disable_all_events = {
+		potential = {
+			ai = no
+			NOT = {
+				AND = {
+					has_global_flag = SM2_disable_unrest_spread
+					has_global_flag = SM2_disable_autonomy_spread
+					has_global_flag = SM2_disable_ai_policies
+					has_global_flag = SM2_disable_ai_diplomacy
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			set_global_flag = SM2_disable_unrest_spread
+			set_global_flag = SM2_disable_autonomy_spread
+			set_global_flag = SM2_disable_ai_policies
+			set_global_flag = SM2_disable_ai_diplomacy
+			custom_tooltip = SM2_disable_all_events_tooltip
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

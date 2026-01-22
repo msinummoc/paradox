@@ -4,14 +4,14 @@ namespace = SM2_autonomy
 
 #和叛乱度一样，自治度也会传播，也就是低自治度的省份会降低周围省份的自治度。跨国的情况也成立，系数自然更低
 
-#游戏开始后执行，每30天计算一次自治度
+#游戏开始后执行
 country_event = {
 	id = SM2_autonomy.1
 	title = SM2_autonomy.1.t
 	desc = SM2_autonomy.1.d
-	picture = INVENTION_eventPicture
+	picture = CITY_DEVELOPMENT_eventPicture
 	hidden = yes
-	is_triggered_only = yes 
+	is_triggered_only = yes
 	trigger = {
 		always = yes
 	}
@@ -27,10 +27,111 @@ country_event = {
 				SM2_autonomy_game_start_effect = yes
 			}
 			set_country_flag = SM2_autonomy_init_flag
+			country_event = { 
+				id = SM2_autonomy.3
+				days = 15
+			}
 		}
-		every_owned_province = {
-			SM2_autonomy_effect = yes
+
+		
+	}
+	
+	option = {
+		
+	}
+}
+
+
+
+
+# 平均180天计算一次自治度
+country_event = {
+	id = SM2_autonomy.2
+	title = SM2_autonomy.2.t
+	desc = SM2_autonomy.2.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			AND = {
+				is_year = 1445
+				is_month = 6
+			}
+			is_year = 1446
 		}
+	}
+	immediate = {
+		random_list = {
+			5 = {}
+			1 = {
+				# 如果省份数>40，分成4个子事件处理；否则直接处理
+				if = {
+					limit = {
+						num_of_provinces_in_states = 150
+					}
+					country_event = { id = SM2_autonomy.20 }
+					country_event = { id = SM2_autonomy.21 }
+					country_event = { id = SM2_autonomy.22 }
+					country_event = { id = SM2_autonomy.23 }
+				}
+				else = {
+					every_owned_province = {
+						SM2_autonomy_effect = yes
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		
+	}
+}
+
+# 在游戏开始后10天减少行政容量 计算确保自治度数值正确
+
+country_event = {
+	id = SM2_autonomy.3
+	title = SM2_autonomy.3.t
+	desc = SM2_autonomy.3.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_modifier = SM2_governing_capacity
+		}
+	}
+	immediate = {
+		add_country_modifier = {
+			name = SM2_governing_capacity
+			duration = -1
+			hidden = yes
+		}
+		SM2_autonomy_game_start_balance_effect_1 = yes
+	}
+
+	option = {
+		
+	}
+}
+
+
+#用来使新释放国家也进行周期性计算
+country_event = {
+	id = SM2_autonomy.4
+	title = SM2_autonomy.4.t
+	desc = SM2_autonomy.4.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes 
+	trigger = {
+		NOT = {
+			has_country_flag = SM2_autonomy_init_flag
+		}
+	}
+	immediate = {
 		country_event = { 
 			id = SM2_autonomy.1
 			days = 30
@@ -42,29 +143,126 @@ country_event = {
 	}
 }
 
-
-#用来使新释放国家也进行周期性计算
+# 处理组A
 country_event = {
-	id = SM2_autonomy.2
-	title = SM2_autonomy.2.t
-	desc = SM2_autonomy.2.d
+	id = SM2_autonomy.20
+	title = SM2_autonomy.20.t
+	desc = SM2_autonomy.20.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { always = yes }
+	immediate = {
+		every_owned_province = {
+			limit = { has_province_flag = SM2_autonomy_group_a }
+			SM2_autonomy_effect = yes
+		}
+	}
+	option = {}
+}
+
+# 处理组B
+country_event = {
+	id = SM2_autonomy.21
+	title = SM2_autonomy.21.t
+	desc = SM2_autonomy.21.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { always = yes }
+	immediate = {
+		every_owned_province = {
+			limit = { has_province_flag = SM2_autonomy_group_b }
+			SM2_autonomy_effect = yes
+		}
+	}
+	option = {}
+}
+
+# 处理组C
+country_event = {
+	id = SM2_autonomy.22
+	title = SM2_autonomy.22.t
+	desc = SM2_autonomy.22.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { always = yes }
+	immediate = {
+		every_owned_province = {
+			limit = { has_province_flag = SM2_autonomy_group_c }
+			SM2_autonomy_effect = yes
+		}
+	}
+	option = {}
+}
+
+# 处理组D 以及没有标号的省份
+country_event = {
+	id = SM2_autonomy.23
+	title = SM2_autonomy.23.t
+	desc = SM2_autonomy.23.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { always = yes }
+	immediate = {
+		every_owned_province = {
+			limit = { 
+				OR = {
+					AND = {
+						NOT = {
+							has_province_flag = SM2_autonomy_group_a
+						}
+						NOT = {
+							has_province_flag = SM2_autonomy_group_b
+						}
+						NOT = {
+							has_province_flag = SM2_autonomy_group_c
+						}
+					}
+					has_province_flag = SM2_autonomy_group_d 
+				}
+			}
+			SM2_autonomy_effect = yes
+		}
+	}
+	option = {}
+}
+
+# 开局的时候快速趋近
+country_event = {
+	id = SM2_autonomy.5
+	title = SM2_autonomy.5.t
+	desc = SM2_autonomy.5.d
 	picture = INVENTION_eventPicture
 	hidden = yes
 	is_triggered_only = yes 
 	trigger = {
-		always = yes
-	}
-	immediate = {
-		if = {
-			limit = {
+		OR = {
+			NOT = {
+				is_year = 1445
+			}
+			AND = {
 				NOT = {
-					has_country_flag = SM2_autonomy_init_flag
+					is_year = 1446
+				}
+				NOT = {
+					is_month = 6
 				}
 			}
-			country_event = { 
-				id = SM2_autonomy.1
-				days = 30
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			SM2_autonomy_at_start_effect = yes
+		}
+		if = {
+			limit = {
+				is_year = 1445
+				is_month = 5
 			}
+			SM2_autonomy_game_start_balance_effect_2 = yes
 		}
     }
 	
@@ -72,3 +270,43 @@ country_event = {
 		
 	}
 }
+# 加点钱
+country_event = {
+	id = SM2_autonomy.6
+	title = SM2_autonomy.6.t
+	desc = SM2_autonomy.6.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes 
+	trigger = {
+	}
+	immediate = {
+		add_years_of_income = 5
+    }
+	
+	option = {
+		
+	}
+}
+
+
+country_event = {
+	id = SM2_autonomy.7
+	title = SM2_autonomy.6.t
+	desc = SM2_autonomy.6.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	is_triggered_only = yes 
+	trigger = {
+	}
+	immediate = {
+		capital_scope = {
+			SM2_autonomy_game_start_effect = yes
+		}
+    }
+	
+	option = {
+		
+	}
+}
+

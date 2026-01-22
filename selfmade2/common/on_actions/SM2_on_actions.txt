@@ -1,18 +1,133 @@
 on_startup = {
-	country_event = {
-		id = SM2_unrest_spread.1
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_unrest_spread
+			}
+		}
+		country_event = {
+			id = SM2_unrest_spread.1
+		}
 	}
-	country_event = {
-		id = SM2_autonomy.1
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_ai_policies
+			}
+		}
+		country_event = {
+			id = SM2_ai_policies.2
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_autonomy_spread
+			}
+		}
+		country_event = {
+			id = SM2_autonomy.1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_ai_diplomacy
+			}
+		}
+		country_event = {
+			id = SM2_diplomatic_events.2
+			days = 31
+		}
 	}
 }
 
-on_yearly_pulse = {
-	country_event = {
-		id = SM2_unrest_spread.2
+on_monthly_pulse = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_unrest_spread
+			}
+		}
+		country_event = {
+			id = SM2_unrest_spread.2
+		}
 	}
-	country_event = {
-		id = SM2_autonomy.2
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_autonomy_spread
+			}
+		}
+		country_event = {
+			id = SM2_autonomy.2
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_autonomy_spread
+			}
+		}
+		country_event = {
+			id = SM2_autonomy.5
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_ai_diplomacy
+			}
+		}
+		country_event = {
+			id = SM2_diplomatic_events.91
+		}
+	}
+	
+}
+
+
+
+on_yearly_pulse = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_unrest_spread
+			}
+		}
+		country_event = {
+			id = SM2_unrest_spread.4
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_autonomy_spread
+			}
+		}
+		country_event = {
+			id = SM2_autonomy.4
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_ai_policies
+			}
+		}
+		country_event = {
+			id = SM2_ai_policies.1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = SM2_disable_ai_diplomacy
+			}
+		}
+		country_event = {
+			id = SM2_diplomatic_events.90
+		}
 	}
 }
 

@@ -7,23 +7,369 @@ SM2_autonomy_init_effect = {
 		value = 100
 	}
 	#自治度增加基础值
-	#如果数值为1，意味着会趋近于邻居省份的最低值
+	#如果数值为1，意味着会趋近于邻居省份的最低值（不考虑自身自治度降低导致自治度增加值提高）
 	set_variable = {
 		which = SM2_autonomy_base
 		value = 0.85
+	}
+
+	set_variable = {
+		which = SM2_autonomy_upper
+		value = 0.9
+	}
+
+	set_variable = {
+		which = SM2_old_autonomy
+		value = 100
 	}
 	# set_variable = {
 	# 	which = SM2_autonomy_different_country
 	# 	value = -0.25
 	# }
 	#地形修正直接到下面去改
-	#趋近速度为100，则1个月就会完成趋近
+	# #趋近速度为100，则（按照当前恒定速度）1个月就会完成趋近
+	# set_variable = {
+	# 	which = SM2_autonomy_speed_base
+	# 	value = 2
+	# }
+
+	## 根据趋近速度和自治度自然增长的速度，以及最终希望趋近于的数值，可以得到一个实际的比值
+
+	#每点叛乱增加的自治度
 	set_variable = {
-		which = SM2_autonomy_speed_base
-		value = 1
+		which = SM2_autonomy_per_unrest
+		value = 0.02
+	}
+	
+	# 缓存地形与气候修正（不可变），避免每月重复判断
+	set_variable = {
+		which = SM2_autonomy_terrain_modifier
+		value = 0
+	}
+	if = {
+		limit = { has_terrain = glacier }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.4 }
+	}
+	else_if = {
+		limit = { has_terrain = farmlands }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.05 }
+	}
+	else_if = {
+		limit = { has_terrain = forest }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.15 }
+	}
+	else_if = {
+		limit = { has_terrain = hills }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+	}
+	else_if = {
+		limit = { has_terrain = woods }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.15 }
+	}
+	else_if = {
+		limit = { has_terrain = mountain }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.3 }
+	}
+	else_if = {
+		limit = { has_terrain = grasslands }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.1 }
+	}
+	else_if = {
+		limit = { has_terrain = jungle }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.3 }
+	}
+	else_if = {
+		limit = { has_terrain = marsh }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.25 }
+	}
+	else_if = {
+		limit = { has_terrain = desert }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+	}
+	else_if = {
+		limit = { has_terrain = coastal_desert }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.15 }
+	}
+	else_if = {
+		limit = { has_terrain = coastline }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.1 }
+	}
+	else_if = {
+		limit = { has_terrain = drylands }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.1 }
+	}
+	else_if = {
+		limit = { has_terrain = highlands }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+	}
+	else_if = {
+		limit = { has_terrain = savannah }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+	}
+	else_if = {
+		limit = { has_terrain = steppe }
+		set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+	}
+	
+	if = {
+		limit = { has_climate = tropical }
+		change_variable = { which = SM2_autonomy_terrain_modifier value = 0.05 }
+	}
+	else_if = {
+		limit = { has_climate = arctic }
+		change_variable = { which = SM2_autonomy_terrain_modifier value = 0.05 }
+	}
+	
+	# 为省份随机分配4个组，用于分批计算
+	random_list = {
+		1 = { set_province_flag = SM2_autonomy_group_a }
+		1 = { set_province_flag = SM2_autonomy_group_b }
+		1 = { set_province_flag = SM2_autonomy_group_c }
+		1 = { set_province_flag = SM2_autonomy_group_d }
 	}
 }
 
+# 用来在最开始的一年计算出所有省份应有的自治度数值
+SM2_autonomy_at_start_effect = {
+	#本地自治度 注意是trigger_value，否则会得出变化量
+	export_to_variable = {
+		which = var1
+		value = trigger_value:local_autonomy
+	}
+	set_variable = {
+		which = var2
+		which = var1
+	}
+	#获得周围自治度的最低值
+	every_neighbor_province = {
+		limit = {
+			owned_by = ROOT
+		}
+		export_to_variable = {
+			which = var2
+			value = trigger_value:local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = var2
+						which = PREV
+					}
+				}
+			}
+			PREV = {
+				set_variable = {
+					which = var2
+					which = PREV
+				}
+			}
+		}
+	}
+	# 同一海区的也算
+	if = {
+		limit = {
+			has_port = yes
+		}
+		sea_zone = {
+			set_variable = {
+				which = var2
+				which = PREV
+			}
+			every_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				export_to_variable = {
+					which = var2
+					value = trigger_value:local_autonomy
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = var2
+								which = PREV
+							}
+						}
+					}
+					PREV = {
+						set_variable = {
+							which = var2
+							which = PREV
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = var2
+							which = PREV
+						}
+					}
+				}
+				PREV = {
+					set_variable = {
+						which = var2
+						which = PREV
+					}
+				}
+			}
+		}
+	}
+	change_variable = {
+		which = var2
+		value = 0.5
+	}
+	#加一下避免自己和自己比大小还赢了
+	if = {
+		limit = {
+			check_variable = {
+				which = var1
+				which = var2
+			}
+		}
+		subtract_variable = {
+			which = var1
+			which = var2
+		}
+		
+
+		SM2_autonomy_modifier_effect = yes
+
+		#这里直接按照比例加减就可以了，但是注意，比值只是在当前自治度均衡的情况下成立。也就是说需要根据local_autonomy的变化值得到一个均衡值计算，而不是直接用当前的自治度计算
+
+		export_to_variable = {
+			which = var3
+			value = modifier:local_autonomy
+		}
+		export_to_variable = {
+			which = var4
+			value = modifier:global_autonomy
+			who = owner
+		}
+		change_variable = {
+			which = var3
+			which = var4
+		}
+		multiply_variable = {
+			which = var3
+			value = 10000
+		}
+		divide_variable = {
+			which = var3
+			which = SM2_autonomy_decade
+		}
+
+		change_variable = {
+			which = var1
+			which = var3
+		}
+		multiply_variable = {
+			which = var1
+			which = var2
+		}
+		subtract_variable = {
+			which = var1
+			which = var3
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 64
+				}
+			}
+			add_local_autonomy = -64
+			subtract_variable = {
+				which = var1
+				value = 64
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 32
+				}
+			}
+			add_local_autonomy = -32
+			subtract_variable = {
+				which = var1
+				value = 32
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 16
+				}
+			}
+			add_local_autonomy = -16
+			subtract_variable = {
+				which = var1
+				value = 16
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 8
+				}
+			}
+			add_local_autonomy = -8
+			subtract_variable = {
+				which = var1
+				value = 8
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 4
+				}
+			}
+			add_local_autonomy = -4
+			subtract_variable = {
+				which = var1
+				value = 4
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 2
+				}
+			}
+			add_local_autonomy = -2
+			subtract_variable = {
+				which = var1
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 1
+				}
+			}
+			add_local_autonomy = -1
+			subtract_variable = {
+				which = var1
+				value = 1
+			}
+		}
+
+	}
+}
 
 SM2_autonomy_effect = {
 	#本地自治度 注意是trigger_value，否则会得出变化量
@@ -61,12 +407,74 @@ SM2_autonomy_effect = {
 			}
 		}
 	}
+	# 同一海区的也算
+	if = {
+		limit = {
+			has_port = yes
+		}
+		sea_zone = {
+			set_variable = {
+				which = var2
+				which = PREV
+			}
+			every_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				export_to_variable = {
+					which = var2
+					value = trigger_value:local_autonomy
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = var2
+								which = PREV
+							}
+						}
+					}
+					PREV = {
+						set_variable = {
+							which = var2
+							which = PREV
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = var2
+							which = PREV
+						}
+					}
+				}
+				PREV = {
+					set_variable = {
+						which = var2
+						which = PREV
+					}
+				}
+			}
+		}
+	}
+	
+	
 	change_variable = {
 		which = var2
 		value = 0.5
 	}
 	#加一下避免自己和自己比大小还赢了
 	#结算
+	remove_province_modifier = SM2_autonomy_modifier_1
+	remove_province_modifier = SM2_autonomy_modifier_2
+	remove_province_modifier = SM2_autonomy_modifier_3
+	remove_province_modifier = SM2_autonomy_modifier_4
+	remove_province_modifier = SM2_autonomy_modifier_5
+	remove_province_modifier = SM2_autonomy_modifier_6
+	remove_province_modifier = SM2_autonomy_modifier_7
 	if = {
 		limit = {
 			check_variable = {
@@ -78,155 +486,89 @@ SM2_autonomy_effect = {
 			which = var1
 			which = var2
 		}
-		#然后用var2来表示修正
+		SM2_autonomy_modifier_effect = yes
+		### 这里我们需要计算一个实际的比值
+		## 假设当前自治度 - 周围最低自治度 = Δautonomy1，最终自治度 - 周围最低自治度 = Δautonomy2
+		## 可以得出在当前自治度趋近于不变的时候，自治度增加减少的值和当前的增加值一致，也就是：
+		## decade_speed * (Δautonomy2 - Δautonomy1) + close_speed * (Δautonomy2 - Δautonomy1) = close_speed * Δautonomy1
+		## 现在的var2是我们希望的(Δautonomy2 - Δautonomy1)/Δautonomy1
+		## 所以close_speed应该大于decade_speed * var2/(1-var2)
+		
 		set_variable = {
+			which = var3
+			value = 1
+		}
+		subtract_variable = {
+			which = var3
 			which = var2
-			which = SM2_autonomy_base
+		}
+		divide_variable = {
+			which = var2
+			which = var3
+		}
+		multiply_variable = {
+			which = var1
+			which = var2
+		}
+		multiply_variable = {
+			which = var1
+			which = SM2_autonomy_decade
+		}
+		divide_variable = {
+			which = var1
+			value = 100
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 64
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 64
+			}
+			multiply_variable = {
+				which = var1
+				value = 0.5
+			}
+			change_variable = {
+				which = var1
+				value = 64
+			}
 		}
 		if = {
 			limit = {
-				has_terrain = glacier
+				check_variable = {
+					which = var1
+					value = 32
+				}
 			}
 			subtract_variable = {
-				which = var2
+				which = var1
+				value = 32
+			}
+			multiply_variable = {
+				which = var1
 				value = 0.5
 			}
-		}else_if = {
-			limit = {
-				has_terrain = farmlands
-			}
-			subtract_variable = {
-				which = var2
-				value = 0
-			}
-		}else_if = {
-			limit = {
-				has_terrain = forest
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.2
-			}
-		}else_if = {
-			limit = {
-				has_terrain = hills
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.25
-			}
-		}else_if = {
-			limit = {
-				has_terrain = woods
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.15
-			}
-		}else_if = {
-			limit = {
-				has_terrain = mountain
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.35
-			}
-		}else_if = {
-			limit = {
-				has_terrain = grasslands
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.1
-			}
-		}else_if = {
-			limit = {
-				has_terrain = jungle
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.4
-			}
-		}else_if = {
-			limit = {
-				has_terrain = marsh
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.3
-			}
-		}else_if = {
-			limit = {
-				has_terrain = desert
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.25
-			}
-		}else_if = {
-			limit = {
-				has_terrain = coastal_desert
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.25
-			}
-		}else_if = {
-			limit = {
-				has_terrain = coastline
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.2
-			}
-		}else_if = {
-			limit = {
-				has_terrain = drylands
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.15
-			}
-		}else_if = {
-			limit = {
-				has_terrain = highlands
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.25
-			}
-		}else_if = {
-			limit = {
-				has_terrain = savannah
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.25
-			}
-		}else_if = {
-			limit = {
-				has_terrain = steppe
-			}
-			subtract_variable = {
-				which = var2
-				value = 0.3
+			change_variable = {
+				which = var1
+				value = 32
 			}
 		}
-		multiply_variable = {
-			which = var1
-			which = var2
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			multiply_variable = {
+				which = var1
+				value = 2
+			}
 		}
-		multiply_variable = {
-			which = var1
-			which = SM2_autonomy_speed_base
-		} 
-		remove_province_modifier = SM2_autonomy_modifier_1
-		remove_province_modifier = SM2_autonomy_modifier_2
-		remove_province_modifier = SM2_autonomy_modifier_3
-		remove_province_modifier = SM2_autonomy_modifier_4
-		remove_province_modifier = SM2_autonomy_modifier_5
-		remove_province_modifier = SM2_autonomy_modifier_6
-		remove_province_modifier = SM2_autonomy_modifier_7
 		
 		if = {
 			limit = {
@@ -239,7 +581,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 64
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_7
 				duration = -1
 				hidden = yes
@@ -256,7 +598,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 32
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_6
 				duration = -1
 				hidden = yes
@@ -273,7 +615,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 16
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_5
 				duration = -1
 				hidden = yes
@@ -290,7 +632,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 8
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_4
 				duration = -1
 				hidden = yes
@@ -307,7 +649,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 4
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_3
 				duration = -1
 				hidden = yes
@@ -324,7 +666,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 2
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_2
 				duration = -1
 				hidden = yes
@@ -341,7 +683,7 @@ SM2_autonomy_effect = {
 				which = var1
 				value = 1
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = SM2_autonomy_modifier_1
 				duration = -1
 				hidden = yes
@@ -349,7 +691,182 @@ SM2_autonomy_effect = {
 		}
 
 	}
+	remove_province_modifier = SM2_autonomy_positive_modifier_1
+	remove_province_modifier = SM2_autonomy_positive_modifier_2
+	remove_province_modifier = SM2_autonomy_positive_modifier_3
+	remove_province_modifier = SM2_autonomy_positive_modifier_4
+	remove_province_modifier = SM2_autonomy_positive_modifier_5
+	remove_province_modifier = SM2_autonomy_positive_modifier_6
+	remove_province_modifier = SM2_autonomy_positive_modifier_7
+	if = {
+		limit = {
+			unrest = 0
+		}
+		export_to_variable = {
+			which = var1
+			value = unrest
+		}
+
+		multiply_variable = {
+			which = var1
+			value = 100
+		}
+		multiply_variable = {
+			which = var1
+			which = SM2_autonomy_per_unrest
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 64
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 64
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_7
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 32
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 32
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_6
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 16
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 16
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_5
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 8
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 8
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_4
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 4
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 4
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_3
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 2
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 2
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_2
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = var1
+					value = 1
+				}
+			}
+			subtract_variable = {
+				which = var1
+				value = 1
+			}
+			add_province_modifier = {
+				name = SM2_autonomy_positive_modifier_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	# 做个小修改，让自治度不要低于最低值，每次最多提高8，减少算力消耗
+	add_local_autonomy = 1
+	if = {
+		limit = {
+			NOT = {
+				local_autonomy_above_min = 0
+			}
+		}
+		add_local_autonomy = 8
+		if = {
+			limit = {
+				local_autonomy_above_min = 4
+			}
+			add_local_autonomy = -4
+		}
+		if = {
+			limit = {
+				local_autonomy_above_min = 2
+			}
+			add_local_autonomy = -2
+		}
+		if = {
+			limit = {
+				local_autonomy_above_min = 1
+			}
+			add_local_autonomy = -1
+		}
+	}
+	add_local_autonomy = -1
 }
+
 
 SM2_autonomy_game_start_effect = {
 	export_to_variable = {
@@ -373,7 +890,7 @@ SM2_autonomy_game_start_effect = {
 		which = var1
 		which = SM2_autonomy_decade
 	}
-	#修正
+	#随机修正
 	subtract_variable = {
 		which = var1
 		value = 5
@@ -601,4 +1118,872 @@ SM2_autonomy_game_start_effect = {
 		}
 	}
 
+}
+
+
+SM2_autonomy_modifier_effect = {
+	#用var2来表示修正
+	set_variable = {
+		which = var2
+		which = SM2_autonomy_base
+	}
+	
+	# 若已缓存地形修正则直接使用，否则执行一次完整计算并缓存（兼容旧存档）
+	if = {
+		limit = {
+			check_variable = {
+				which = SM2_autonomy_terrain_modifier
+				value = 0
+			}
+		}
+		subtract_variable = {
+			which = var2
+			which = SM2_autonomy_terrain_modifier
+		}
+	}
+	else = {
+		# 缓存变量不存在，执行一次完整计算并保存
+		set_variable = {
+			which = SM2_autonomy_terrain_modifier
+			value = 0
+		}
+		if = {
+			limit = { has_terrain = glacier }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.4 }
+		}
+		else_if = {
+			limit = { has_terrain = farmlands }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.05 }
+		}
+		else_if = {
+			limit = { has_terrain = forest }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.15 }
+		}
+		else_if = {
+			limit = { has_terrain = hills }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+		}
+		else_if = {
+			limit = { has_terrain = woods }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.15 }
+		}
+		else_if = {
+			limit = { has_terrain = mountain }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.3 }
+		}
+		else_if = {
+			limit = { has_terrain = grasslands }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.1 }
+		}
+		else_if = {
+			limit = { has_terrain = jungle }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.3 }
+		}
+		else_if = {
+			limit = { has_terrain = marsh }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.25 }
+		}
+		else_if = {
+			limit = { has_terrain = desert }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+		}
+		else_if = {
+			limit = { has_terrain = coastal_desert }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.15 }
+		}
+		else_if = {
+			limit = { has_terrain = coastline }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.1 }
+		}
+		else_if = {
+			limit = { has_terrain = drylands }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.1 }
+		}
+		else_if = {
+			limit = { has_terrain = highlands }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+		}
+		else_if = {
+			limit = { has_terrain = savannah }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+		}
+		else_if = {
+			limit = { has_terrain = steppe }
+			set_variable = { which = SM2_autonomy_terrain_modifier value = 0.2 }
+		}
+		
+		if = {
+			limit = { has_climate = tropical }
+			change_variable = { which = SM2_autonomy_terrain_modifier value = 0.05 }
+		}
+		else_if = {
+			limit = { has_climate = arctic }
+			change_variable = { which = SM2_autonomy_terrain_modifier value = 0.05 }
+		}
+		
+		subtract_variable = {
+			which = var2
+			which = SM2_autonomy_terrain_modifier
+		}
+	}
+	export_to_variable = {
+		which = var5
+		value = trigger_value:num_of_buildings_in_province
+	}
+	divide_variable = {
+		which = var5
+		value = 100
+	}
+	change_variable = {
+		which = var2
+		which = var5
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = var2
+				which = SM2_autonomy_upper
+			}
+		}
+		set_variable = {
+			which = var2
+			which = SM2_autonomy_upper
+		}
+	}
+}
+
+# 新的基于广播机制的自治度系统
+SM2_autonomy_effect_by_llm = {
+	# 如果有被征服flag，使用旧逻辑重新计算
+	if = {
+		limit = {
+			has_province_flag = SM2_autonomy_recalculate
+		}
+		clr_province_flag = SM2_autonomy_recalculate
+		set_province_flag = SM2_autonomy_initialized
+		
+		# 初始化广播变量（neighbor_min已经在old中设置）
+		export_to_variable = {
+			which = SM2_autonomy_last_broadcast
+			value = trigger_value:local_autonomy
+		}
+	}
+	else = {
+		# 正常的广播机制
+		
+		# 1. 获取当前自治度
+		export_to_variable = {
+			which = var1
+			value = trigger_value:local_autonomy
+		}
+		
+		# 2. 初始化机制
+		if = {
+			limit = {
+				NOT = { has_province_flag = SM2_autonomy_initialized }
+			}
+			# 标记初始化状态
+			set_province_flag = SM2_autonomy_initialized
+			
+			# 暂存当前值
+			set_variable = {
+				which = SM2_autonomy_last_broadcast
+				which = var1
+			}
+			set_variable = {
+				which = SM2_autonomy_neighbor_min
+				which = var1
+			}
+			
+			# 标记下个月重新计算以获取正确值
+			set_province_flag = SM2_autonomy_recalculate
+		}
+		
+		# 3. 检查是否需要广播（差值>=3）
+		set_variable = {
+			which = var2
+			which = var1
+		}
+		subtract_variable = {
+			which = var2
+			which = SM2_autonomy_last_broadcast
+		}
+		
+		# 取绝对值
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = var2
+						value = 0
+					}
+				}
+			}
+			multiply_variable = {
+				which = var2
+				value = -1
+			}
+		}
+		
+		# 4. 如果差值>=3，广播给周围省份
+		if = {
+			limit = {
+				check_variable = {
+					which = var2
+					value = 3
+				}
+			}
+			
+			# 更新Last Broadcast
+			set_variable = {
+				which = SM2_autonomy_last_broadcast
+				which = var1
+			}
+			
+			# 准备广播数据
+			set_variable = {
+				which = SM2_broadcast_value
+				which = var1
+			}
+			
+			# 广播给陆地邻居
+			every_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				
+				# 获取广播值
+				set_variable = {
+					which = SM2_broadcast_value
+					which = PREV
+				}
+				
+				# 如果广播值 < 邻居保存的最低值，则更新邻居的最低值
+				# (只有变小才更新，忽略变大)
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = SM2_autonomy_neighbor_min
+								which = SM2_broadcast_value
+							}
+						}
+					}
+					set_variable = {
+						which = SM2_autonomy_neighbor_min
+						which = SM2_broadcast_value
+					}
+				}
+			}
+			
+			# 广播给海区邻居
+			if = {
+				limit = {
+					has_port = yes
+				}
+				sea_zone = {
+					# 传给海区
+					set_variable = {
+						which = SM2_broadcast_value
+						which = PREV
+					}
+					every_neighbor_province = {
+						limit = {
+							owned_by = ROOT
+							has_port = yes
+						}
+						
+						# 从海区获取
+						set_variable = {
+							which = SM2_broadcast_value
+							which = PREV
+						}
+						
+						# 如果广播值 < 邻居保存的最低值，则更新邻居的最低值
+						if = {
+							limit = {
+								NOT = {
+									check_variable = {
+										which = SM2_autonomy_neighbor_min
+										which = SM2_broadcast_value
+									}
+								}
+							}
+							set_variable = {
+								which = SM2_autonomy_neighbor_min
+								which = SM2_broadcast_value
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# 5. 根据保存的neighbor_min计算变化量
+		set_variable = {
+			which = var3
+			which = var1
+		}
+		
+		# 自增机制：防止“坏消息”缺失导致数值永远偏低
+		# 每个月neighbor_min增加0.5
+		change_variable = {
+			which = SM2_autonomy_neighbor_min
+			value = 0.5
+		}
+		
+		set_variable = {
+			which = var4
+			which = SM2_autonomy_neighbor_min
+		}
+		change_variable = {
+			which = var4
+			value = 0.5
+		}
+		
+		# 6. 清除旧modifier
+		remove_province_modifier = SM2_autonomy_modifier_1
+		remove_province_modifier = SM2_autonomy_modifier_2
+		remove_province_modifier = SM2_autonomy_modifier_3
+		remove_province_modifier = SM2_autonomy_modifier_4
+		remove_province_modifier = SM2_autonomy_modifier_5
+		remove_province_modifier = SM2_autonomy_modifier_6
+		remove_province_modifier = SM2_autonomy_modifier_7
+		
+		# 7. 如果当前自治度高于neighbor_min，计算降低量
+		if = {
+			limit = {
+				check_variable = {
+					which = var3
+					which = var4
+				}
+			}
+			subtract_variable = {
+				which = var3
+				which = var4
+			}
+			
+			SM2_autonomy_modifier_effect = yes
+			
+			# 计算趋近速度
+			set_variable = {
+				which = var5
+				value = 1
+			}
+			subtract_variable = {
+				which = var5
+				which = var2
+			}
+			divide_variable = {
+				which = var2
+				which = var5
+			}
+			multiply_variable = {
+				which = var3
+				which = var2
+			}
+			multiply_variable = {
+				which = var3
+				which = SM2_autonomy_decade
+			}
+			divide_variable = {
+				which = var3
+				value = 100
+			}
+			
+			# 二分降低优化
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 64
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 64
+				}
+				multiply_variable = {
+					which = var3
+					value = 0.5
+				}
+				change_variable = {
+					which = var3
+					value = 64
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 32
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 32
+				}
+				multiply_variable = {
+					which = var3
+					value = 0.5
+				}
+				change_variable = {
+					which = var3
+					value = 32
+				}
+			}
+			
+			# 首都加倍
+			if = {
+				limit = {
+					is_capital = yes
+				}
+				multiply_variable = {
+					which = var3
+					value = 2
+				}
+			}
+			
+			# 应用modifier
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 64
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 64
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_7
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 32
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 32
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_6
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 16
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 16
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_5
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 8
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 8
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_4
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 4
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 4
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_3
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 2
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 2
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_2
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 1
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_modifier_1
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		
+		# 8. 叛乱度增加自治度
+		remove_province_modifier = SM2_autonomy_positive_modifier_1
+		remove_province_modifier = SM2_autonomy_positive_modifier_2
+		remove_province_modifier = SM2_autonomy_positive_modifier_3
+		remove_province_modifier = SM2_autonomy_positive_modifier_4
+		remove_province_modifier = SM2_autonomy_positive_modifier_5
+		remove_province_modifier = SM2_autonomy_positive_modifier_6
+		remove_province_modifier = SM2_autonomy_positive_modifier_7
+		if = {
+			limit = {
+				unrest = 0
+			}
+			export_to_variable = {
+				which = var3
+				value = unrest
+			}
+			
+			multiply_variable = {
+				which = var3
+				value = 100
+			}
+			multiply_variable = {
+				which = var3
+				which = SM2_autonomy_per_unrest
+			}
+			
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 64
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 64
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_7
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 32
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 32
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_6
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 16
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 16
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_5
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 8
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 8
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_4
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 4
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 4
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_3
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 2
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 2
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_2
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = var3
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = var3
+					value = 1
+				}
+				add_province_modifier = {
+					name = SM2_autonomy_positive_modifier_1
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		
+		# 9. 确保自治度不低于最小值
+		add_local_autonomy = 1
+		if = {
+			limit = {
+				NOT = {
+					local_autonomy_above_min = 0
+				}
+			}
+			add_local_autonomy = 8
+			if = {
+				limit = {
+					local_autonomy_above_min = 4
+				}
+				add_local_autonomy = -4
+			}
+			if = {
+				limit = {
+					local_autonomy_above_min = 2
+				}
+				add_local_autonomy = -2
+			}
+			if = {
+				limit = {
+					local_autonomy_above_min = 1
+				}
+				add_local_autonomy = -1
+			}
+		}
+		add_local_autonomy = -1
+	}
+}
+
+SM2_autonomy_game_start_balance_effect_1 = {
+	export_to_variable = {
+		which = SM2_average_autonomy_at_start
+		value = trigger_value:average_autonomy
+	}
+	every_owned_province = {
+		set_variable = {
+			which = SM2_average_autonomy_at_start
+			which = PREV
+		}
+		export_to_variable = {
+			which = SM2_autonomy_above_average
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable = {
+			which = SM2_autonomy_above_average
+			which = SM2_average_autonomy_at_start
+		}
+	}
+}
+
+SM2_autonomy_game_start_balance_effect_2 = {
+	export_to_variable = {
+		which = SM2_average_autonomy_2
+		value = trigger_value:average_autonomy
+	}
+	every_owned_province = {
+		limit = {
+			check_variable = {
+				which = SM2_autonomy_above_average
+				value = 0
+			}
+		}
+		set_variable = {
+			which = SM2_average_autonomy_2
+			which = PREV
+		}
+		export_to_variable = {
+			which = SM2_autonomy_above_average_2
+			value = trigger_value:local_autonomy
+		}
+		subtract_variable = {
+			which = SM2_autonomy_above_average_2
+			which = SM2_average_autonomy_2
+		}
+		subtract_variable = {
+			which = SM2_autonomy_above_average
+			which = SM2_autonomy_above_average_2
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 64
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 64
+			}
+			add_local_autonomy = 64
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 32
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 32
+			}
+			add_local_autonomy = 32
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 16
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 16
+			}
+			add_local_autonomy = 16
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 8
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 8
+			}
+			add_local_autonomy = 8
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 4
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 4
+			}
+			add_local_autonomy = 4
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 2
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 2
+			}
+			add_local_autonomy = 2
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = SM2_autonomy_above_average
+					value = 1
+				}
+			}
+			subtract_variable = {
+				which = SM2_autonomy_above_average
+				value = 1
+			}
+			add_local_autonomy = 1
+		}
+	}
 }

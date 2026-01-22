@@ -1,0 +1,532 @@
+SM2_historical_war_target_effects = {
+	if = {
+		limit = {
+			tag = TUR
+		}
+		every_neighbor_country = {
+			limit = {
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_selected
+					}
+				}
+				OR = {
+					any_owned_province = {
+						OR = {
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
+						OR = {
+							region = anatolia_region
+							region = balkan_region
+						}
+					}
+					tag = BYZ
+				}
+				
+			}
+			if = {
+				limit = { NOT = { alliance_with = ROOT } }
+				add_opinion = { who = ROOT modifier = SM2_war_target_t1 }
+			}
+			SM2_record_war_target_with_ally_check = yes
+		
+		}
+
+	}else_if = {
+		limit = {
+			government_rank = 2
+		}
+		capital = {
+			region = {
+				save_event_target_as = SM2_capital_region
+			}
+		}
+		every_neighbor_country = {
+			limit = {
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = SM2_declare_war_selected
+					}
+				}
+				OR = {
+					any_owned_province = {
+						region = event_target:SM2_capital_region
+						OR = {
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
+					}
+					
+				}
+			}
+			if = {
+				limit = { NOT = { alliance_with = ROOT } }
+				add_opinion = { who = ROOT modifier = SM2_war_target_t1 }
+			}
+			SM2_record_war_target_with_ally_check = yes
+		}
+	}
+
+}
+
+
+
+SM2_diplomatic_helper_scripted_effects = {
+
+	if = {
+		limit = {
+			ROOT = {
+				check_variable = {
+					which = var1
+					value = 1
+				}
+				NOT = {
+					check_variable = {
+						which = var1
+						value = 2
+					}
+				}
+			}
+		}
+		add_opinion = {
+			who = event_target:SM2_declare_war_target
+			modifier = SM2_fight_against_enemy
+			multiplier = 75
+		}
+		reverse_add_opinion = {
+			who = event_target:SM2_declare_war_target
+			modifier = SM2_fight_against_enemy
+			multiplier = 75
+		}
+	}
+	if = {
+		limit = {
+			ROOT = {
+				check_variable = {
+					which = var1
+					value = 2
+				}
+				NOT = {
+					check_variable = {
+						which = var1
+						value = 3
+					}
+				}
+			}
+		}
+		add_opinion = {
+			who = event_target:SM2_declare_war_target
+			modifier = SM2_fight_against_enemy
+			multiplier = 50
+		}
+		reverse_add_opinion = {
+			who = event_target:SM2_declare_war_target
+			modifier = SM2_fight_against_enemy
+			multiplier = 50
+		}
+	}
+	if = {
+		limit = { 
+			ROOT = {
+				check_variable = {
+					which = var1
+					value = 3
+				}
+			}
+		}
+		add_opinion = {
+			who = event_target:SM2_declare_war_target
+			modifier = SM2_fight_against_enemy
+			multiplier = 25
+		}
+		reverse_add_opinion = {
+			who = event_target:SM2_declare_war_target
+			modifier = SM2_fight_against_enemy
+			multiplier = 25
+		}
+	}
+	if = {
+		limit = {
+			ai = yes
+			event_target:SM2_declare_war_target = {
+				ai = yes
+			}
+		}
+		export_to_variable = {
+			which = var2
+			value = modifier:diplomatic_upkeep
+		}
+		export_to_variable = {
+			which = var3
+			value = trigger_value:num_of_diplomatic_relations  
+		}
+		subtract_variable = {
+			which = var2
+			which = var3
+		}
+		set_variable = {
+			which = SM2_ai_diplomatic_relation_exceed
+			which = var2
+		}
+		multiply_variable = {
+			which = SM2_ai_diplomatic_relation_exceed
+			value = -1
+		}
+		random_list = {
+			20 = {
+				# guarantee independence
+				create_guarantee = event_target:SM2_declare_war_target
+				modifier = {
+					factor = 0
+					has_guaranteed = event_target:SM2_declare_war_target
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						army_strength = {
+							who = event_target:SM2_declare_war_target
+							value = 2
+						}
+					}
+				}
+			}
+			15 = {
+				create_alliance = event_target:SM2_declare_war_target
+				add_opinion = {
+					who = event_target:SM2_declare_war_target
+					modifier = SM2_event_alliance_rights
+				}
+				reverse_add_opinion = {
+					who = event_target:SM2_declare_war_target
+					modifier = SM2_event_alliance_rights
+				}
+				modifier = {
+					factor = 1.25
+					has_opinion = {
+						who = event_target:SM2_declare_war_target
+						value = 150
+					}
+				}
+				modifier = {
+					factor = 0.1
+					NOT = {
+						has_opinion = {
+							who = event_target:SM2_declare_war_target
+							value = 50
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_opinion = {
+							who = event_target:SM2_declare_war_target
+							value = -50
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					army_strength = {
+						who = event_target:SM2_declare_war_target
+						value = 1.5
+					}
+				}
+				modifier = {
+					factor = 0.5
+					army_strength = {
+						who = event_target:SM2_declare_war_target
+						value = 2.5
+					}
+				}
+				
+				modifier = {
+					factor = 0.5
+					army_strength = {
+						who = event_target:SM2_declare_war_target
+						value = 3.5
+					}
+				}
+			}
+			60 = {
+				# do nothing
+				modifier = {
+					factor = 0.66
+					religion_group = event_target:SM2_declare_war_target
+				}
+				modifier = {
+					factor = 0.66
+					NOT = {
+						religion_group = ROOT
+					}
+				}
+				modifier = {
+					factor = 0.66
+					religion = event_target:SM2_declare_war_target
+				}
+				
+				modifier = {
+					factor = 0.66
+					NOT = {
+						religion = ROOT
+					}
+				}
+
+
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = 0
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = -1
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = -2
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						check_variable = {
+							which = var2
+							value = -3
+						}
+					}
+				}
+				modifier = {
+					factor = 0.8
+					num_of_free_diplomatic_relations = 1
+				}
+				modifier = {
+					factor = 0.8
+					num_of_free_diplomatic_relations = 2
+				}
+				modifier = {
+					factor = 0.8
+					num_of_free_diplomatic_relations = 3
+				}
+				modifier = {
+					factor = 5
+					ROOT = {
+						NOT = {
+							check_variable = {
+								which = var1
+								value = 1
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0.8
+					event_target:SM2_declare_war_target = {
+						diplomatic_reputation = 2
+					}
+				}
+				modifier = {
+					factor = 0.8
+					event_target:SM2_declare_war_target = {
+						diplomatic_reputation = 4
+					}
+				}
+				modifier = {
+					factor = 0.8
+					event_target:SM2_declare_war_target = {
+						diplomatic_reputation = 6
+					}
+				}
+				modifier = {
+					factor = 0.8
+					event_target:SM2_declare_war_target = {
+						diplomatic_reputation = 8
+					}
+				}
+				modifier = {
+					factor = 0.8
+					is_neighbor_of = event_target:SM2_declare_war_target
+				}
+				modifier = {
+					factor = 0.8
+					NOT = {
+						border_distance = {
+							who = event_target:SM2_declare_war_target
+							distance = 50
+						}
+					}
+				}
+				modifier = {
+					factor = 0.8
+					NOT = {
+						border_distance = {
+							who = event_target:SM2_declare_war_target
+							distance = 50
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 100
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 150
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 200
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 250
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 300
+					}
+				}
+				modifier = {
+					factor = 2
+					border_distance = {
+						who = event_target:SM2_declare_war_target
+						distance = 400
+					}
+				}
+				modifier = {
+					factor = 3
+					event_target:SM2_declare_war_target = {
+						army_strength = {
+							who = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					event_target:SM2_declare_war_target = {
+						army_strength = {
+							who = ROOT
+							value = 1.5
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					event_target:SM2_declare_war_target = {
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.25
+					war_exhaustion = 3
+				}
+				modifier = {
+					factor = 1.25
+					war_exhaustion = 6
+				}
+				modifier = {
+					factor = 2
+					war_exhaustion = 10
+				}
+
+			}
+		}
+	}
+}
+
+# 记录目标（含盟友检查）：盟友则互减信任，不计入选择；非盟友正常记录
+
+
+SM2_record_war_target_with_ally_check = {
+	if = {
+		limit = { alliance_with = ROOT }
+		# 盟友：减信任，不计入目标
+		add_trust = {
+			who = ROOT
+			value = -10
+			mutual = yes
+		}
+	}
+	# 不要改，else会导致add_opinion不生效
+	if = {
+		limit = { NOT = { alliance_with = ROOT } }
+		# 非盟友：添加标记并更新计数器
+		add_opinion = {
+			who = ROOT
+			modifier = SM2_declare_war_selected
+		}
+		ROOT = {
+			# 增加实际选中计数
+			change_variable = {
+				which = SM2_selected_targets_count
+				value = 1
+			}
+			# 减少剩余需求
+			change_variable = {
+				which = SM2_need_select_count
+				value = -1
+			}
+		}
+	}
+}

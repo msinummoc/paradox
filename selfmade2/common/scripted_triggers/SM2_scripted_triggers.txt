@@ -1,0 +1,12 @@
+SM2_ai_should_declare_war_target_trigger = {
+	ROOT = {
+		has_casus_belli_against = PREV
+		NOT = {
+			has_opinion_modifier = {
+				who = ROOT
+				modifier = SM2_declare_war_active
+			}
+		}
+	}
+	
+}

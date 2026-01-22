@@ -129,8 +129,9 @@ feudalism = {
 	}
 
 	embracement_speed = {
+		# 0.6 
 		modifier = {
-			factor = 0.3
+			factor = 0.1
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = FRIENDLY_NEIGHBOR_OR_COAST_PROVINCE_HAS_EMBRACED
@@ -140,7 +141,33 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 0.15
+			factor = 0.2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = FRIENDLY_NEIGHBOR_OR_COAST_PROVINCE_HAS_EMBRACED_SAME_RELIGION_GROUP
+				any_friendly_coast_border_province = {
+					feudalism = 100
+					religion_group = PREV
+					NOT = {
+						religion = PREV
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = FRIENDLY_NEIGHBOR_OR_COAST_PROVINCE_HAS_EMBRACED_SAME_RELIGION
+				any_friendly_coast_border_province = {
+					feudalism = 100
+					religion = PREV
+				}
+			}
+		}
+		# 0.1
+		modifier = {
+			factor = 0.02
 			scale = yes
 			potential = {
 				NOT = {
@@ -158,7 +185,48 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.04
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						feudalism = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NEIGHBOR_NOT_OWNED_IS_FEUDAL_SAME_RELIGION_GROUP
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					feudalism = 100
+					religion_group = PREV
+					NOT = {
+						religion = PREV
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.04
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						feudalism = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NEIGHBOR_NOT_OWNED_IS_FEUDAL_SAME_RELIGION
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					feudalism = 100
+					religion = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.04
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
@@ -168,6 +236,63 @@ feudalism = {
 				tooltip = FEUDALISM_AND_NOBLES
 				any_neighbor_province = {
 					feudalism = 100
+				}
+				owner = {
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					estate_influence = {
+						estate = estate_nobles
+						influence = 50
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.06
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_nobles }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FEUDALISM_AND_NOBLES
+				any_neighbor_province = {
+					feudalism = 100
+					religion_group = PREV
+					NOT = {
+						religion = PREV
+					}
+				}
+				owner = {
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					estate_influence = {
+						estate = estate_nobles
+						influence = 50
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_nobles }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FEUDALISM_AND_NOBLES
+				any_neighbor_province = {
+					feudalism = 100
+					religion = PREV
 				}
 				owner = {
 					has_estate = estate_nobles
@@ -192,10 +317,10 @@ feudalism = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = PORT_OR_CAPITAL_IN_COLONY_FEUDAL
-				#OR = {
-				#	has_port = yes
-				#	is_capital = yes
-				#}
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
 				owner = {
 					is_colonial_nation = yes
 					overlord = { has_institution = feudalism }
@@ -223,7 +348,7 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 1
+			factor = 0.5
 			scale = yes
 			potential = {
 				owner = {
@@ -305,9 +430,9 @@ renaissance = {
 	bonus = {
 		development_cost = -0.05
 		build_cost = -0.05
-		technology_cost = 0.05
+		technology_cost = -0.05
 		embracement_cost = 0.05
-		global_autonomy = -0.025
+		global_autonomy = 0.02
 	}
 
 	trade_company_efficiency = 0.4
@@ -372,10 +497,21 @@ renaissance = {
 		is_year = 1450
 		is_institution_enabled = feudalism
 		OR = {
-			region = italy_region
+			AND = {
+				region = italy_region
+				NOT = {
+					any_country = {
+						num_of_owned_provinces_with = {
+							value = 5
+							development = 20
+							num_of_times_improved = 5
+						}
+					}
+				}
+			}
 			owner = {
 				num_of_owned_provinces_with = {
-					value = 10
+					value = 5
 					development = 30
 					num_of_times_improved = 5
 				}
@@ -410,7 +546,7 @@ renaissance = {
 	embracement_speed = {
 		modifier = {
 			scale = yes
-			factor = 0.3
+			factor = 0.1
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_renaissance
 				any_friendly_coast_border_province = {
@@ -419,7 +555,32 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.15
+			scale = yes
+			factor = 0.2
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_renaissance_same_religion_group
+				any_friendly_coast_border_province = {
+					renaissance = 100
+					religion_group = PREV
+					NOT = {
+						religion = PREV
+					}
+				}
+			}
+		}
+		modifier = {
+			scale = yes
+			factor = 0.3
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_renaissance_same_religion
+				any_friendly_coast_border_province = {
+					renaissance = 100
+					religion = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
 			scale = yes
 			potential = {
 				NOT = {
@@ -437,9 +598,51 @@ renaissance = {
 			}
 		}
 		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						renaissance = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_renaissance_same_religion_group
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					renaissance = 100
+					religion_group = PREV
+					NOT = {
+						religion = PREV
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						renaissance = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_renaissance_same_religion
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					renaissance = 100
+					religion = PREV
+				}
+			}
+		}
+		modifier = {
 			factor = 1
 			potential = {
 				region = italy_region
+				
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_italian_capital
@@ -448,7 +651,19 @@ renaissance = {
 				culture_group = latin
 			}
 			
-			
+		}
+
+		modifier = {
+			factor = 1
+			potential = {
+				region = event_target:birthplace_of_the_renaissance_region
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_same_region_of_birthplace_of_renaissance_capital
+				is_capital = yes
+				region = event_target:birthplace_of_the_renaissance_region
+				culture_group = event_target:birthplace_of_the_renaissance
+			}
 		}
 		modifier = {
 			factor = 0.08
@@ -983,7 +1198,7 @@ printing_press = {
 		stability_cost_modifier = -0.05
 		technology_cost = -0.1
 		embracement_cost = 0.05
-		global_autonomy = -0.025
+		global_autonomy = 0.02
 	}
 
 	trade_company_efficiency = 0.8
@@ -1978,7 +2193,7 @@ manufactories = {
 		global_trade_goods_size_modifier = 0.1
 		technology_cost = -0.1		
 		embracement_cost = 0.1
-		global_autonomy = -0.03
+		global_autonomy = 0.02
 	}
 
 	trade_company_efficiency = 1.25
@@ -2544,7 +2759,7 @@ enlightenment = {
 		technology_cost = -0.15
 		global_unrest = 3
 		embracement_cost = 0.1
-		global_autonomy = -0.05
+		global_autonomy = 0.02
 	}
 
 	trade_company_efficiency = 1.5
@@ -3028,7 +3243,7 @@ industrialization = {
 		global_allowed_num_of_manufactories = 1
 		technology_cost = -0.2
 		global_unrest = 2
-		global_autonomy = -0.05
+		global_autonomy = 0.02
 	}
 
 	historical_start_date = 1750.1.1

@@ -1,0 +1,47 @@
+﻿l_simp_chinese:
+ # 决议
+ SM2_event_control_menu_title: "循环事件系统控制"
+ SM2_event_control_menu_desc: "打开控制面板，管理各种循环事件系统的启用/禁用状态。\n\n§Y注意：§!禁用这些系统可以显著提升游戏运行速度，尤其是在后期大国游玩时。但会影响一些游戏机制的运作。"
+ 
+ SM2_enable_all_events_title: "启用所有循环事件"
+ SM2_enable_all_events_desc: "快速启用所有被禁用的循环事件系统。"
+ SM2_enable_all_events_tooltip: "已启用所有循环事件系统"
+ 
+ SM2_disable_all_events_title: "禁用所有循环事件"
+ SM2_disable_all_events_desc: "快速禁用所有循环事件系统以提升性能。\n\n§Y警告：§!这会影响叛乱度传播、自治度传播、AI政策和AI外交等系统。"
+ SM2_disable_all_events_tooltip: "已禁用所有循环事件系统\n\n§Y游戏性能将会显著提升§!"
+ 
+ # 事件
+ SM2_event_control.1.t: "循环事件系统控制"
+ SM2_event_control.1.d: "你可以在这里控制各种循环事件系统的启用/禁用状态。\n\n当前状态：\n叛乱度传播系统：[Select_CString(EQ, '(0)', '§G已启用§!', '§R已禁用§!', GetFlagName('SM2_disable_unrest_spread'))]\n自治度传播系统：[Select_CString(EQ, '(0)', '§G已启用§!', '§R已禁用§!', GetFlagName('SM2_disable_autonomy_spread'))]\nAI政策系统：[Select_CString(EQ, '(0)', '§G已启用§!', '§R已禁用§!', GetFlagName('SM2_disable_ai_policies'))]\nAI外交系统：[Select_CString(EQ, '(0)', '§G已启用§!', '§R已禁用§!', GetFlagName('SM2_disable_ai_diplomacy'))]\n\n§Y提示：§!禁用这些系统可以显著提升游戏速度，尤其是在省份数量较多时。"
+ SM2_event_control.1.status: "查看当前状态"
+ SM2_event_control.1.unrest: "切换叛乱度传播系统"
+ SM2_event_control.1.autonomy: "切换自治度传播系统"
+ SM2_event_control.1.policies: "切换AI政策系统"
+ SM2_event_control.1.diplomacy: "切换AI外交系统"
+ SM2_event_control.1.enable_all: "§G全部启用§!"
+ SM2_event_control.1.disable_all: "§R全部禁用§!"
+ SM2_event_control.1.close: "关闭"
+ 
+ # Tooltips
+ SM2_event_control_status_tooltip: "当前系统状态："
+ 
+ SM2_unrest_spread_enabled: "§G叛乱度传播系统：已启用§!"
+ SM2_unrest_spread_disabled: "§R叛乱度传播系统：已禁用§!"
+ SM2_unrest_spread_enabled_tooltip: "叛乱度传播系统已§G启用§!\n\n高叛乱度省份会影响周围省份的叛乱度"
+ SM2_unrest_spread_disabled_tooltip: "叛乱度传播系统已§R禁用§!\n\n§Y性能提升：中等§!"
+ 
+ SM2_autonomy_spread_enabled: "§G自治度传播系统：已启用§!"
+ SM2_autonomy_spread_disabled: "§R自治度传播系统：已禁用§!"
+ SM2_autonomy_spread_enabled_tooltip: "自治度传播系统已§G启用§!\n\n低自治度省份会降低周围省份的自治度"
+ SM2_autonomy_spread_disabled_tooltip: "自治度传播系统已§R禁用§!\n\n§Y性能提升：中等§!"
+ 
+ SM2_ai_policies_enabled: "§GAI政策系统：已启用§!"
+ SM2_ai_policies_disabled: "§RAI政策系统：已禁用§!"
+ SM2_ai_policies_enabled_tooltip: "AI政策系统已§G启用§!\n\nAI会定期调整其政策设置"
+ SM2_ai_policies_disabled_tooltip: "AI政策系统已§R禁用§!\n\n§Y性能提升：较小§!"
+ 
+ SM2_ai_diplomacy_enabled: "§GAI外交系统：已启用§!"
+ SM2_ai_diplomacy_disabled: "§RAI外交系统：已禁用§!"
+ SM2_ai_diplomacy_enabled_tooltip: "AI外交系统已§G启用§!\n\nAI会更智能地选择战争目标和外交行为"
+ SM2_ai_diplomacy_disabled_tooltip: "AI外交系统已§R禁用§!\n\n§Y性能提升：中等§!"
