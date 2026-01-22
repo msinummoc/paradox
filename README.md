@@ -8,3 +8,6 @@ here are some mods made or modified by me to improve gaming, please put them as 
 + chinese language mod for 1.36
 + chinese language supplementary mod for 1.36: this mod should be replaced by what has been modified by me because it will overlap some history file in the selfmade and make things bad
 + automatic operation: from workshop to make build buildings a much easier task.
+
+now modifying selfmade2 which is a total overhaul of basic system (not working on missions, events, ideas or something else but base functions
+should be use with 简简单单中国细化
