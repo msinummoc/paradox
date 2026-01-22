@@ -5,45 +5,14 @@ on_startup = {
 	country_event = {
 		id = SM2_autonomy.1
 	}
-	country_event = {
-		id = SM2_ai_policies.2
-	}
-	country_event = {
-		id = SM2_diplomatic_events.2
-		days = 31
-	}
 }
 
-on_monthly_pulse = {
+on_yearly_pulse = {
 	country_event = {
 		id = SM2_unrest_spread.2
 	}
 	country_event = {
 		id = SM2_autonomy.2
-	}
-	country_event = {
-		id = SM2_autonomy.5
-	}
-	country_event = {
-		id = SM2_diplomatic_events.91
-	}
-	
-}
-
-
-
-on_yearly_pulse = {
-	country_event = {
-		id = SM2_unrest_spread.4
-	}
-	country_event = {
-		id = SM2_autonomy.4
-	}
-	country_event = {
-		id = SM2_ai_policies.1
-	}
-	country_event = {
-		id = SM2_diplomatic_events.90
 	}
 }
 

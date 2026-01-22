@@ -15,9 +15,9 @@ NDefines.NDiplomacy.SPY_NETWORK_TECH_EFFECT_MAX = -0.5 --0.3
 NDefines.NDiplomacy.FABRICATE_CLAIM_COST_MODIFIER_PER_CLAIM = 0.1    --0.25
 NDefines.NDiplomacy.PO_FORM_PU_AE = 0.1   --0.20
 NDefines.NDiplomacy.AE_SAME_RELIGION = 0.75  --0.5
-NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.6 --0.6
-NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.5   --0.5
-NDefines.NDiplomacy.PO_TRANSFER_VASSAL_AE = 0.2   --0.3
+NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.4  --0.6
+NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.3   --0.5
+NDefines.NDiplomacy.PO_TRANSFER_VASSAL_AE = 0.15   --0.3
 NDefines.NDiplomacy.AE_HRE_INTERNAL = 1  --0.5
 NDefines.NDiplomacy.AE_DISTANCE_BASE = 0.85 --0.75
 NDefines.NDiplomacy.AE_INFIDEL_CONQUEST = 0.5  --0.25
@@ -27,18 +27,16 @@ NDefines.NDiplomacy.AE_PROVINCE_CAP = 60  --30
 NDefines.NDiplomacy.MAX_PEACE_TREATY_AE = 200  --50
 
 --peace cost
-NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.8   --0.8
+NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.65   --0.8
 NDefines.NDiplomacy.PEACE_COST_CONVERSION = 0.4 --0.8
-NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 0.8   --0.8
-NDefines.NDiplomacy.PEACE_COST_BECOME_VASSAL = 0.6    --0.8
+NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 0.65   --0.8
+NDefines.NDiplomacy.PEACE_COST_BECOME_VASSAL = 0.5    --0.8
 NDefines.NDiplomacy.PEACE_COST_RETURN_CORE = 0.5    --0.8
 NDefines.NDiplomacy.PEACE_COST_RELEASE_ANNEXED = 0.6   --0.8
 NDefines.NDiplomacy.PEACE_COST_RELEASE_VASSAL = 0.2 --0.4
 NDefines.NDiplomacy.PEACE_COST_DEMAND_NON_OCCUPIED_PROVINCE_MULT = 2.5  --1.1
 NDefines.NDiplomacy.AUTONOMY_WARSCORE_COST_MODIFIER = 0.5 --0.33
--- NDefines.NDiplomacy.CLAIM_PEACE_COST_DIP_FRACTION = -0.1 -- -0.1
--- NDefines.NDiplomacy.CORE_PEACE_COST_DIP_FRACTION = -0.2 -- -0.1
-NDefines.NDiplomacy.ALLY_PEACE_COST_MULT = 2.5 --2
+-- NDefines.NDiplomacy.ALLY_PEACE_COST_MULT = 10 --2
 
 --天命
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STATE_WITH_PROSPERITY = 0.04 --0.04
@@ -86,9 +84,9 @@ NDefines.NCountry.ENFORCE_CULTURE_TAX_MULTIPLIER = 0 --2
 
 --finance
 NDefines.NCountry.STATE_MAINTENANCE_CONTINENT_FACTOR = 0.1 --0.25
-NDefines.NCountry.STATE_MAINTENANCE_CULTURE_FACTOR = 0.25   --0.25
-NDefines.NCountry.STATE_MAINTENANCE_DEV_FACTOR = 0.007  --0.007
-NDefines.NCountry.STATE_MAINTENANCE_DISTANCE_FACTOR = 0.0015  --0.001
+NDefines.NCountry.STATE_MAINTENANCE_CULTURE_FACTOR = 0.15   --0.25
+NDefines.NCountry.STATE_MAINTENANCE_DEV_FACTOR = 0.022  --0.007
+NDefines.NCountry.STATE_MAINTENANCE_DISTANCE_FACTOR = 0.001  --0.001
 NDefines.NCountry.CORRUPTION_COST = 0.1 --0.05
 
 --institution
@@ -105,13 +103,9 @@ NDefines.NCountry.CULTURAL_UNION_MIN_RANK = 3 -- 3
 NDefines.NCountry.CULTURAL_UNION_MIN_DEV = 999999 --1000
 
 
-NDefines.NEconomy.ADVISOR_COST = 0.75 --1.0
+NDefines.NEconomy.ADVISOR_COST = 1 --1.0
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.25  --2
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CORE = 20 --0
-NDefines.NEconomy.COLONY_MIN_AUTONOMY = 0 --50
-NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0 --25
-NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0 --25
-
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.04 --0.02
 NDefines.NEconomy.NAVAL_TECH_MAINTENANCE_IMPACT = 0.03 -- 0.02
 NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.12 --0.08
@@ -124,16 +118,15 @@ NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 8 --3
 NDefines.NMilitary.ASSAULT_WIDTH_LIMIT = 10 --5
 NDefines.NMilitary.MORALE_RECOVERY_SPEED = 0.12  --0.15
 NDefines.NMilitary.MORALE_RECOVERY_SPEED_OWN_TERRITORY = 0.1 --0.05
-NDefines.NMilitary.HOSTILE_TERRITORY_SPEED_MODIFIER = 0 -- -0.15  -- 0
+NDefines.NMilitary.HOSTILE_TERRITORY_SPEED_MODIFIER = -0.15  -- 0
 NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.35 --0.25
 NDefines.NMilitary.CONTROL_DEVASTATION_IMPACT = -2  -- -1
 NDefines.NMilitary.FORT_DEVASTATION_IMPACT = -7.2 -- -10
-NDefines.NMilitary.FORTRESS_COST = 0.3 --0.5
 NDefines.NMilitary.MONTHLY_REINFORCE = 0.05  --0.1
 NDefines.NMilitary.EXTRA_LAND_REINFORCE_COST = 0.75  --2
 
 NDefines.NMilitary.LOOTED_SCALE = 3  --1
-NDefines.NMilitary.LOOT_DEVASTATION_IMPACT = 10  --10
+NDefines.NMilitary.LOOT_DEVASTATION_IMPACT = 20  --10
 NDefines.NMilitary.LOOTED_MAX = 30 --5
 NDefines.NMilitary.INF_LOOT = 0.4  --0.1
 NDefines.NMilitary.CAV_LOOT = 1  --0.3

@@ -1,37 +1,6 @@
 
 namespace = SM2_test
 
-# 初始化省份分组（用于并发测试）
-country_event = {
-	id = SM2_test.10
-	title = SM2_test.10.t
-	desc = SM2_test.10.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = {
-		tag = MNG
-	}
-	immediate = {
-		every_owned_province = {
-			random_list = {
-				1 = { set_province_flag = SM2_test_group_0 }
-				1 = { set_province_flag = SM2_test_group_1 }
-				1 = { set_province_flag = SM2_test_group_2 }
-				1 = { set_province_flag = SM2_test_group_3 }
-				1 = { set_province_flag = SM2_test_group_4 }
-				1 = { set_province_flag = SM2_test_group_5 }
-				1 = { set_province_flag = SM2_test_group_6 }
-				1 = { set_province_flag = SM2_test_group_7 }
-			}
-		}
-	}
-	
-	option = {
-		name = SM2_test.10.a
-	}
-}
-
 country_event = {
 	id = SM2_test.3
 	title = SM2_test.3.t
@@ -43,7 +12,18 @@ country_event = {
 		always = no
 	}
 	immediate = {
-		SM2_test_effect = yes
+		save_event_target_as = one_country
+		every_country = {
+			limit = {
+				NOT = {
+					tag = event_target:one_country
+				}
+			}
+			every_owned_province = {
+				cede_province = event_target:one_country
+				add_core = event_target:one_country
+			}
+		}
 		
     }
 	
@@ -52,304 +32,23 @@ country_event = {
 	}
 }
 
-# 测试方法A：串行处理所有省份（every_owned_province）
 country_event = {
 	id = SM2_test.2
 	title = SM2_test.2.t
 	desc = SM2_test.2.d
 	picture = INVENTION_eventPicture
-	hidden = no
+	hidden = yes
 	is_triggered_only = yes
 	trigger = {
-		tag = MNG
+		always = no
 	}
 	immediate = {
-		set_variable = { which = test_start_time value = 1 }
-		every_owned_province = {
-			SM2_test_heavy_computation_effect = yes
+		capital_scope = {
+			SM2_test_effect = yes
 		}
-		set_variable = { which = test_end_time value = 1 }
-	}
+    }
 	
 	option = {
-		name = SM2_test.2.a
-		custom_tooltip = SM2_test.2.a.tt
-	}
-}
-
-# 测试方法B：并行处理（分组+多个country_event）
-country_event = {
-	id = SM2_test.20
-	title = SM2_test.20.t
-	desc = SM2_test.20.d
-	picture = INVENTION_eventPicture
-	hidden = no
-	is_triggered_only = yes
-	trigger = {
-		tag = MNG
-	}
-	immediate = {
-		set_variable = { which = test_start_time value = 1 }
-		# 触发8个事件分别处理各组
-		country_event = { id = SM2_test.21 }
-		country_event = { id = SM2_test.22 }
-		country_event = { id = SM2_test.23 }
-		country_event = { id = SM2_test.24 }
-		country_event = { id = SM2_test.25 }
-		country_event = { id = SM2_test.26 }
-		country_event = { id = SM2_test.27 }
-		country_event = { id = SM2_test.28 }
-		set_variable = { which = test_end_time value = 1 }
-	}
-	
-	option = {
-		name = SM2_test.20.a
-		custom_tooltip = SM2_test.20.a.tt
-	}
-}
-
-# 处理第0组
-country_event = {
-	id = SM2_test.21
-	title = SM2_test.21.t
-	desc = SM2_test.21.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_0 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第1组
-country_event = {
-	id = SM2_test.22
-	title = SM2_test.22.t
-	desc = SM2_test.22.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_1 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第2组
-country_event = {
-	id = SM2_test.23
-	title = SM2_test.23.t
-	desc = SM2_test.23.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_2 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第3组
-country_event = {
-	id = SM2_test.24
-	title = SM2_test.24.t
-	desc = SM2_test.24.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_3 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第4组
-country_event = {
-	id = SM2_test.25
-	title = SM2_test.25.t
-	desc = SM2_test.25.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_4 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第5组
-country_event = {
-	id = SM2_test.26
-	title = SM2_test.26.t
-	desc = SM2_test.26.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_5 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第6组
-country_event = {
-	id = SM2_test.27
-	title = SM2_test.27.t
-	desc = SM2_test.27.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_6 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 处理第7组
-country_event = {
-	id = SM2_test.28
-	title = SM2_test.28.t
-	desc = SM2_test.28.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	trigger = { always = yes }
-	immediate = {
-		every_owned_province = {
-			limit = { has_province_flag = SM2_test_group_7 }
-			SM2_test_heavy_computation_effect = yes
-		}
-	}
-	option = {}
-}
-
-# 测试 every_known_country 变量限制
-country_event = {
-	id = SM2_test.100
-	title = "SM2 Test: Variable Limit in every_known_country"
-	desc = "Testing if variable check in every_known_country limit works to restrict to 5 iterations"
-	picture = DIPLOMACY_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		always = yes
-	}
-	
-	immediate = {
-		# 重置测试变量
-		set_variable = {
-			which = SM2_test_counter
-			value = 0
-		}
 		
-		# 测试 every_known_country 变量限制
-		every_known_country = {
-			limit = {
-				ROOT = {
-					NOT = {
-						check_variable = {
-							which = SM2_test_counter
-							value = 5
-						}
-					}
-				}
-				# 简单的过滤条件，避免处理太多国家
-				is_neighbor_of = ROOT
-			}
-			ROOT = {
-				change_variable = {
-					which = SM2_test_counter
-					value = 1
-				}
-			}
-		}
-		
-		# 记录最终计数
-		set_variable = {
-			which = SM2_test_final_count
-			which = SM2_test_counter
-		}
-		
-	}
-	
-	option = {
-		name = "Test Complete"
-	}
-}
-
-# 测试 every_known_country 变量限制
-country_event = {
-	id = SM2_test.101
-	title = "SM2 Test: Variable Limit in every_known_country"
-	desc = "Testing if variable check in every_known_country limit works to restrict to 5 iterations"
-	picture = DIPLOMACY_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		always = yes
-	}
-	
-	immediate = {
-		# 重置测试变量
-		set_variable = {
-			which = SM2_test_counter
-			value = 0
-		}
-		
-		# 测试 every_known_country 变量限制
-		every_known_country = {
-			limit = {
-				# 简单的过滤条件，避免处理太多国家
-				is_neighbor_of = ROOT
-			}
-			ROOT = {
-				change_variable = {
-					which = SM2_test_counter
-					value = 1
-				}
-			}
-		}
-		
-		# 记录最终计数
-		set_variable = {
-			which = SM2_test_final_count
-			which = SM2_test_counter
-		}
-		
-	}
-	
-	option = {
-		name = "Test Complete"
 	}
 }
